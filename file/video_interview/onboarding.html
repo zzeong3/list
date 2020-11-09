@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+    <title>영상면접 홈</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="ko-KR">
+    <link href="sri_css/layout_video_interview.css?v=20201105103216" media="all" rel="stylesheet" type="text/css">
+    <link href="http://www.saramin.co.kr/sri_css/vix/pattern.css?v=20201105103216" media="all" rel="stylesheet" type="text/css">
+    <link href="http://www.saramin.co.kr/sri_css/vix/applicant.css?v=20201105103216" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://www.saramin.co.kr/sri_css/vix/schedule.css?v=20201105103216" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://www.saramin.co.kr/sri_css/vix/schedule_tui.css?v=20201105103216" media="screen" rel="stylesheet" type="text/css">
+    <link href="sri_css/video_interview.css" media="screen" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/libs/saramin/common.js?v=20201105103216"></script>
+    <!--[if lt IE 9]> <script type="text/javascript" src="//www.saramin.co.kr/js/html5shiv.min.js"></script><![endif]-->
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/ui/common/dist/ui-module.js?v=20201105103216"></script>
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/ui/company/dist/ui-company.js?v=20201105103216"></script>
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/company-common-layout.js?v=20201105103216"></script>
+    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/tui/tui-code-snippet.js"></script>
+    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/tui/tui-calendar.js"></script>
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/company/schedule/tui-calendar.js?v=20201105103216"></script>
+    <script charset="utf-8" src="http://www.saramin.co.kr/js/ui/common/dist/vendors~Datepicker.chunk.js?v=f9ec9e0fbec1964247c9"></script>
+</head>
+<body class="video_interview"><!-- [dev] 영상면접 video_interview로 분기 -->
+<!-- skip navi -->
+<div id="skipnavigation">
+    <a href="#content">본문 바로가기</a>
+</div>
+<!-- //skip navi -->
+<header id="sri_header" class="header">
+    <div class="area_logo">
+        <a href="##" class="link_logo" title="사람인 live">
+            <img src="//www.saraminimage.co.kr/sri/live/home/logo_live.png" alt="">
+        </a>
+    </div>
+    <ul id="utility" class="utility">
+        <li>
+            <a href="##" class="img_interview link_register">영상면접 등록</a>
+        </li>
+        <li class="member_menu member_corp">
+            <div class="area_logo">
+                <a href="javascript:void(0)" class="logo_corp bg">
+                    <img src="http://pds.saramin.co.kr/company/logo/202002/25/q68u2t_7g3y-1meg1pn_logo.JPG" width="42" alt="기업로고" style="">
+                </a>
+            </div>
+            <a href="javascript:void(0)" class="btn_menu btn_corp" id="btn_corp_name" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my');"><strong>SRT</strong></a>
+            <div class="layer_member" id="layer_corp_info">
+                <div class="member_info">
+                    <div class="area_logo">
+                        <a href="javascript:void(0)" class="logo_corp bg" id="gnb_layer_logo"><img src="http://pds.saramin.co.kr/company/logo/202002/25/q68u2t_7g3y-1meg1pn_logo.JPG" alt="기업로고" style=""></a>
+                    </div>
+                    <a href="javascript:void(0)" class="btn_corp"><strong>SRT</strong></a>
+                    <p class="member_condition" data-company_cd="1">기업인증 완료</p>
+                </div>
+                <div class="member_point">
+                    <dl>
+                        <dt>미결제</dt>
+                        <dd>
+                            <a href="/zf_user/memcom/service-manage/payment-history?pay_result=pending" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'unpaid');"><strong id="gnb_layer_pending_cnt">5</strong>건</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>쿠폰</dt>
+                        <dd><a href="/zf_user/memcom/service-manage/coupon-history?status=y" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'coupon');"><strong id="gnb_layer_coupon_cnt">2</strong>장</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>S포인트</dt>
+                        <dd><a href="/zf_user/memcom/service-manage/point-history" class="spoint" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'Spoint');"><strong id="gnb_layer_spoint">7,652,416</strong></a><span>P</span>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="btnGroup area_button">
+                    <span class="inBtn"><a href="/zf_user/payment/manage/oneclick" class="btnSizeM colorWhite" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'oneclick');">원클릭 결제</a></span>
+                    <span class="inBtn"><a href="/zf_user/memcom/service-manage/tax-history" class="btnSizeM colorWhite" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'tax-history');">세금계산서</a></span>
+                    <span class="inBtn"><a href="/zf_user/memcom/service-manage/payment-history" class="btnSizeM colorWhite" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'payment-manage');">결제내역 조회</a></span>
+                </div>
+                <div class="area_bottom">
+                    <a href="/zf_user/company-join/edit" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'company-manage');">기업정보 관리</a>
+                    <a href="javascript:void(0)" class="_recruitin_domain_manage_btn" style="" onclick="pushDataLayer('ga_lead','company_gnb-company_my','homepage-manage')">채용홈페이지 관리</a>
+                    <a href="/zf_user/memcom/acceptance" onclick="pushDataLayer('ga_lead', 'company_gnb-company_my', 'acceptance-manage');">합격자 관리</a>
+                </div>
+            </div>
+        </li>
+        <!--인사담당자(마스터) 정보-->
+        <li id="member_person" class="member_menu member_person">
+            <!--휴대폰 인증에 필요한 정보들 -->
+            <form name="certify-form" id="certify-form" target="popupCertify2" action="https://check.namecheck.co.kr/checkplus_new_model4/checkplus.cb" method="post" style="display: none;">
+                <input type="hidden" name="m" value="checkplusSerivce" id="m">                    <input type="hidden" name="EncodeData" value="AgAFRzMyMTZoEGsZotP0seDLrbz/Ms3h8nA5bGbKdiE76pd22Wxj20NbcRpamqhnV8/TY1SItVcsh/vPQtvOfBRAeWXERyun2ayiI4e3Nc4poWYwL6jA/C5hhKzQCk/OcdrD/YEhBYGs4AwB5aDvss/86UmFktPFGtBA5GisT/JOimWgn5rrgYmdIgy1dBKecPk21nbQqL1vzm/ZRtnmX4kf93cFT7ddtTdPDkw0O/R5kcM9Cu8be04ikYOb1aRObpzcqIxiAnlgnO/3LD+kHZR19K3T1vMlD5o1M6SMZPSlMoyjOWs+D+41NgcTI7P9ByxHbv8Wbc1LfZTMaILUJ8NLT27oOb7+4QWrMzgpgnEq2Qe8rSbZ63WWbvLF88yRA2QBnfqTScYqa0l+1Ay0SgbIluqE80qfWkcojNrPQv/DdEuB1qM7LSlGJsMrp2LQ71djHo6SllKFIcTBaKabVSJDoKsKhK+wiQ6Pmb5PpsEvZdgdEz/JnQ==" id="EncodeData">                    <input type="hidden" name="param_r1" value="/zf_user/member/opt-in/identification-verification" id="param_r1">                    <input type="hidden" name="param_r2" value="/zf_user/member/opt-in/identification-verification" id="param_r2">                    <input type="hidden" name="param_r3" value="" id="param_r3">                </form>
+            <!-- //휴대폰 인증에 필요한 정보들 -->
+            <a href="javascript:void(0)" class="btn_menu btn_person" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my');"><strong id="gnb_manager_nm">조시원</strong><span>님</span></a>
+            <div class="layer_member">
+                <div class="member_info">
+                    <dl>
+                        <dt class="blind">담당자 이메일</dt>
+                        <dd>
+                            <span id="gnb_manager_email">siwon@saramin.co.kr</span>
+                            <a href="/zf_user/company-join/edit" class="btnSizeXS colorWhite" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'mail-change');">변경</a>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt class="blind">담당자 전화번호</dt>
+                        <dd>
+                            <span id="gnb_manager_cell">010-7352-5623</span>
+                            <a href="javascript:void(0)" class="btnSizeXS colorWhite" id="modify_cell_btn" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'CP-change');">수정</a>
+                        </dd>
+                    </dl>
+                </div>
+                <ul class="list_menu">
+                    <li><a href="/zf_user/company/edit-passwd" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'PW-change');">PW 변경</a></li>
+                    <li><a href="/zf_user/company/login-history" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'login-history');">로그인 기록</a></li>
+                    <li><a href="/zf_user/company/email-receive-manage" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'marketing-manage');">마케팅 수신 관리</a></li>
+                    <li><a href="/zf_user/member/my-logins" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'my-logins');">간편 로그인 관리</a></li>
+                    <li><a href="/zf_user/applicant/evaluation/list" class="gnb_has_must" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'collabo-manage');" style="">협업 평가자 관리</a></li>
+                    <li><a href="/zf_user/applicant/screening/main" class="gnb_has_must" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'collabo-evaluation');" style="">협업 평가하기</a></li>
+                </ul>
+                <div class="area_bottom">
+                    <a href="/zf_user/auth/logout?url=%252Fzf_user%252Fmemcom%252Ftalent-pool%252Fmain" class="btn_link" onclick="pushDataLayer('ga_lead', 'company_gnb-hrmanager_my', 'master', 'logout');">로그아웃</a>
+                </div>
+            </div>
+        </li>
+        <li id="total_menu" class="total_menu">
+            <a href="javascript:void(0)" class="btn_menu btn_total"><span class="blind">전체메뉴 보기</span></a>
+            <div class="layer_total">
+                <ul class="list_menu">
+                    <li>
+                        <strong class="title">지원자채용</strong>
+                        <a href="/zf_user/memcom/recruit/select-recruit-type" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','recruit-manage','recruit-add');" class="btnSizeM colorBlue"><span class="icoArrWhite reverse">채용 등록</span></a>
+                        <ul>
+                            <li><a href="/zf_user/company/recruit-manage" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','recruit-manage','recruit-manage');" class="link_menu">채용공고 관리</a></li>
+                            <li><a href="#" class="link_menu" data-uilayer-btn="ly_recruit_type" data-type="evaluation" id="gnb_evaluation_btn">평가 설정</a></li>
+                            <li><a href="#" class="link_menu" data-uilayer-btn="ly_recruit_type" data-type="applicant">지원자 관리</a></li>
+                            <li><a href="#" class="link_menu" data-uilayer-btn="ly_recruit_type" data-type="announcement">합격 발표</a></li>
+                            <li><a href="/zf_user/memcom/service-product" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','recruit-manage','AD-manage');" class="link_menu">유료서비스 관리</a></li>
+                            <li><a href="/zf_user/memcom/service-manage/ai-recommend-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','recruit-manage','recommend-history');" class="link_menu">추천 히스토리</a></li>
+                            <li><a href="/zf_user/memcom/service-manage/keyword-service-history?result=total" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','recruit-manage','searchword-manage');" class="link_menu">검색키워드 상품 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="title">인재Pool</strong>
+                        <a href="/zf_user/memcom/position/add" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','talent-search');" class="btnSizeM colorBlue"><span class="icoArrWhite reverse">인재풀 등록</span></a>
+                        <ul>
+                            <li><a href="http://www.saramin.co.kr/zf_user/memcom/talent-pool/main#/" class="link_menu">인재Pool 관리</a></li>
+                            <li><a href="http://www.saramin.co.kr/zf_user/memcom/talent-pool/main#/announcement" class="link_menu">합격 발표</a></li>
+                            <li><a href="/zf_user/talent/search" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','talent-search');" class="link_menu">인재 검색</a></li>
+                            <li><a href="/zf_user/memcom/talent-manage/scrap-talent" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','scrap-talent');" class="link_menu">관심 인재</a></li>
+                            <li><a href="/zf_user/memcom/talent-manage/today-talent" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','today-talent');" class="link_menu">오늘 본 인재</a></li>
+                            <li><a href="/zf_user/memcom/talent-manage/serv-talent" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','serv-talent');" class="link_menu">연락처확인 인재</a></li>
+                            <li><a href="/zf_user/memcom/service-manage/talent-service-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','talent-service-history');" class="link_menu">인재정보 상품 사용내역</a></li>
+                            <li><a href="/zf_user/memcom/talent-manage/send-sms-email-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','talent-search','send-sms-email-history');" class="link_menu">문자・이메일 발송 내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="title">Preview/인적성</strong>
+                        <a href="/zf_user/memcom/preview" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','prove-manage','prove_main');" class="btnSizeM colorBlue"><span class="icoArrWhite reverse">검증 현황 관리</span></a>
+                        <ul>
+                            <li><a href="/zf_user/memcom/preview/guide" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','prove-manage','preview_guide');" class="link_menu">Preview 가이드</a></li>
+                            <li><a href="/zf_user/memcom/service-guide/siat?type=utilize#utilize" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','prove-manage','siat_utilize');" class="link_menu">인적성검사 활용법</a></li>
+                            <li><a href="/zf_user/memcom/service-guide/siat?type=process#process" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','prove-manage','siat_process');" class="link_menu">인적성검사 이용절차</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <!-- WMG-26415 추가 -->
+                        <strong class="title">일정·합격자관리</strong>
+                        <a href="##" class="btnSizeM colorBlue"><span class="icoArrWhite reverse">영상면접 등록</span></a>
+                        <ul>
+                            <li><a href="" class="link_menu">영상면접 관리</a></li>
+                        </ul>
+                        <!-- //WMG-26415 추가 -->
+                        <strong class="title">일정·합격자관리</strong>
+                        <a href="/zf_user/memcom/schedule/manage" onclick="pushDataLayer('ga_lead','btn_menu','btn_total','schedule-check');" class="btnSizeM colorBlue"><span class="icoArrWhite reverse">일정 확인</span></a>
+                        <ul>
+                            <li><a href="/zf_user/memcom/schedule/manage" onclick="pushDataLayer('ga_lead','btn_menu','btn_total','btn_total_schedule_management');" class="link_menu">전체일정 관리</a></li>
+                            <li><a href="/zf_user/memcom/interview/interview-manage" onclick="pushDataLayer('ga_lead','btn_menu','btn_total','btn_total_interviewer_management');" class="link_menu">면접 일정 전체보기</a></li>
+                            <li><a href="/zf_user/memcom/acceptance" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','recruit-manage','acceptance-manage');" class="link_menu">합격자 관리</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="title">채용 상품 안내</strong>
+                        <ul>
+                            <li><a href="/zf_user/service/company/order?category=recruit_solution" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','AD-guide','MUST');" class="link_menu" id="gnb_must_order_btn">인재선발솔루션 MUST</a></li>
+                            <li><a href="/zf_user/service/company/order" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','AD-guide','BEST');" class="link_menu">베스트 상품</a></li>
+                            <li><a href="/zf_user/service/company/order?part_id=recruit_ads" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','AD-guide','Realtime');" class="link_menu">즉시구매 채용광고</a></li>
+                            <li><a href="/zf_user/service/company/order?part_id=talent_search" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','AD-guide','talent');" class="link_menu">인재 열람</a></li>
+                            <li><a href="/zf_user/service/company/order?part_id=siat" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','AD-guide','SIAT');" class="link_menu">SIAT 인적성검사</a></li>
+                            <li><a href="/zf_user/service/company/order?part_id=recruit_banner_ads" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','AD-guide','inquiry');" class="link_menu">채용광고 신청문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="title">결제내역</strong>
+                        <ul>
+                            <li><a href="/zf_user/memcom/service-manage/payment-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','payment-history');" class="link_menu">결제내역 조회</a></li>
+                            <li><a href="/zf_user/memcom/service-manage/tax-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','tax-history');" class="link_menu">전자세금계산서 조회</a></li>
+                            <li><a href="/zf_user/memcom/service-manage/coupon-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','coupon-history');" class="link_menu">쿠폰 사용내역</a></li>
+                            <li><a href="/zf_user/memcom/service-manage/point-history" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','point-history');" class="link_menu">S-포인트 사용 내역</a></li>
+                            <li><a href="/zf_user/memcom/sms/sms-service-history-detail" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','sms-service-history');" class="link_menu">문자(SMS)사용 내역</a></li>
+                            <li><a href="/zf_user/payment/manage/oneclick" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','oneclick');" class="link_menu">원클릭 결제 관리</a></li>
+                            <li><a href="/zf_user/memcom/service-guide/point-coupon" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','pay-manage','point-guide');" class="link_menu">S-포인트 안내</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong class="title">채용 안내</strong>
+                        <ul>
+                            <li><a href="/zf_user/memcom/tutorial" target="_blank" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','service-guide','recruit-guide');" class="link_menu">채용 가이드</a></li>
+                            <li><a href="/zf_user/hr-magazine/solution" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','service-guide','hr-solution-3');" class="link_menu">등용문 3.0</a></li>
+                            <li><a href="/zf_user/hr-magazine/outsourcing" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','service-guide','hr-outsourcing');" class="link_menu">등용문 공채대행</a></li>
+                            <li><a href="http://www.saraminhs.co.kr" target="_blank" onclick="pushDataLayer('ga_lead','company_gnb-total_menu','service-guide','saraminstaff');" class="link_menu">인재파견 [사람인HS]</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <!-- //인사담당자(마스터) 정보- -->
+    </ul>
+</header>
+<div id="sri_section">
+    <div id="content">
+        <div class="wrap_video_interview onborading">
+            <div class="onborading_video_interview1 motion">
+                <h1 class="blind">영상면접 홈</h1>
+                <div class="inner">
+                    <h2><span class="blind">보다 편리하고 쉬운 사람인 영상면접 서비스</span></h2>
+                    <p><span class="blind">지금 바로 영상면접 서비스를 이용해 인재를 채용해보세요.</span></p>
+                    <a href="##" class="link_onborading"><span class="blind">영상면접 자세히보기</span></a>
+                    <a href="##" class="link_onborading_arrow"><span class="blind">영상면접 자세히보기</span></a>
+                </div>
+                <div class="wrap_motion">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                    <div class="circle5"></div>
+                    <div class="circle6"></div>
+                    <div class="circle7"></div>
+                </div>
+            </div>
+            <div class="onborading_video_interview2">
+                <div class="inner">
+                    <h2 class="blind">영상면접 자세히보기</h2>
+                    <strong><span class="blind">코로나 바이러스 19 장기화로 면접 전형 진행이 어렵지 않으신가요?</span></strong>
+                    <p><span class="blind">이러한 문제를 해결하기 위한 비대면 방식의 면접 서비스가 새로이 탄생하였습니다. 보다 편리하고 쉬운 언택트 면접 서비스! 사람인Live 입니다.</span></p>
+                </div>
+            </div>
+            <div class="onborading_video_interview3">
+                <div class="inner">
+                    <strong><span class="blind">어떻게 사용하나요?</span></strong>
+                    <p><span class="blind">인사담당자는 우측상단 영상면접 등록 버튼을 통해 간편하게 면접을 등록합니다. 응시자는 면접 요청을 받으면 일정을 확인하고 참석 여부를 알려드립니다.</span></p>
+                </div>
+            </div>
+            <div class="onborading_video_interview4">
+                <div class="inner">
+                    <div class="slide_onborading">
+                       
+                        
+                    <div class="bg_slide bg_slide1" style="opacity: 1;"></div><div class="bg_slide bg_slide2" style="opacity: 0;"></div></div>
+                    <a href="javascript:slides_prev();" class="btn_pre"><span class="blind">이전</span></a>
+                    <a href="javascript:slides_next();" class="btn_next"><span class="blind">다음</span></a>
+                    <div class="btn_area"><a href="javascript:slides_move_page('0');" idx="0" class="on"></a>
+<a href="javascript:slides_move_page('1');" idx="1" class=""></a>
+</div>
+                    <p><span class="blind">사람인 Live는 최대 면접관 4명, 응사자 4명까지 실시 가능하며 영상면접과 함께 이력서도 확인 가능합니다.</span></p>
+                    <a href="##" class="link_go"><span class="blind">영상면접 등록하러 가기</span></a>
+                </div>
+            </div>
+        </div><!-- //wrap_video_interview -->
+    </div>
+</div>
+<div id="dimmed" style="display:none"></div>
+<!-- 영상면접 등록 레이어 -->
+<div id="add_interviewee_area">
+    <div class="modalDrawer wrap_manage_tool interview_regist" id="interview_regist_layer">
+        <div class="modalTit">
+            <h3 class="title">면접 일정 등록 및 수정</h3>
+        </div>
+        <div class="modalCont">
+            <form name="write_interview_frm " id="write_interview_frm" method="post">
+                <input type="hidden" name="interviewee_idx" value="" id="interviewee_idx"><input type="hidden" name="rec_idx" value="" id="rec_idx"><input type="hidden" name="new_mail_template_key" value="" id="new_mail_template_key"><input type="hidden" name="template_key" value="e72f9bcf1e1f" id="template_key"><input type="hidden" name="mcom_idx" value="6475265" id="mcom_idx"><input type="hidden" name="msg_type" value="add" id="msg_type"><input type="hidden" name="is_change_manager" value="n" id="is_change_manager"><input type="hidden" name="is_change_date" value="y" id="is_change_date"><input type="hidden" name="intervieweeCnt" value="1" id="intervieweeCnt"><input type="hidden" name="date_info" value="" id="date_info"><input type="hidden" name="interview_idx" value="0" id="interview_idx">
+                <div class="inner">
+                    <!-- WMG-26415 기존 면접 일정 등록에서 삭제
+                    <dl class="category interview_request">
+                        <dt>면접 안내 발송
+                            <div class="toolTipWrap over">
+                                <button type="button"><span class="blind">도움말</span></button>
+                                <div class="toolTip">
+                                    <span class="tail tail_top_left"></span>
+                                    <div class="toolTipCont">
+                                        <p>
+                                            면접 안내 발송시 면접대상자는 이메일과 카카오 알림톡 내에서 면접 참석여부를 응답할 수 있으며, 응답 즉시 인사담당자는 면접 대상자의 답변을 확인할 수 있습니다.<br>
+                                            발송하지않기 선택 시 면접 일정이 등록되어도 면접대상자에게 별도 안내가 되지 않으며, 인사담당자가 원하실 때 '일정관리 면접 일정 전체보기' 에서 발송이 가능합니다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </dt>
+                        <dd>
+						<span class="inpRdo">
+						<input type="radio" class="_auto_alarm_ck" name="auto_alarm_ck" id="auto_alarm_ck_send" value="y" checked="">
+						<label class="lbl" for="auto_alarm_ck_send">발송하기</label>
+						</span>
+                            <span class="inpRdo">
+						<input type="radio" class="_auto_alarm_ck" name="auto_alarm_ck" id="auto_alarm_ck_not_send" value="n">
+						<label class="lbl" for="auto_alarm_ck_not_send">발송하지않기 (일정만등록)</label>
+						</span>
+                            <div class="detail" style="display:block" id="set_alarm_div">
+							<span class="inpChk">
+							<input type="checkbox" id="use_mail_ck" name="use_mail_ck" value="y" checked="">
+							<label class="lbl" for="use_mail_ck">이메일</label>
+							</span>
+                                <span class="inpChk">
+							<input type="checkbox" id="use_sms_ck" name="use_sms_ck" value="y" checked="">
+							<label class="lbl" for="use_sms_ck">카카오 알림톡 (불가 시 SMS)</label>
+							</span>
+                            </div>
+                        </dd>
+                    </dl>
+                    -->
+                    <div class="category_bundle">
+                        <dl class="category candidates"><!-- WMG-26415 기존 면접 일정 border 클래스 삭제 -->
+                            <dt>대상자</dt>
+                            <dd>
+                                <div id="candidates_list_area" style="display: block;">
+                                    <button type="button" class="btn_layer btn_all_candidate" data-click-open="box_layer" id="btn_all_candidate"><span id="set_interviewee_cnt">총 3명</span><span class="blind">모든 대상자 확인하기</span></button>
+                                    <div class="box_layer layer_all_candidate" data-click-layer="box_layer" id="set_interviewee_list">
+                                        <dl class="screening">
+                                            <dt class="tit">인재풀 제의 수락자<span class="cnt">(3)</span></dt>
+                                            <dd>
+                                                <div class="item _interviewee_list" data-division_idx="3" data-name="삼테스" data-type="interview_pool" data-ident_seq="488744" data-interviewee_idx="0" data-mem_idx="8405967" data-email="andbhappy@naver.com" data-phone_num="010-3277-6391" data-last_school_name="사람인고등학교" data-picture="http://pds.saramin.co.kr/person/photo/2017/12/p1k1hh_eil0-1meg1l2_p1k1hg5k9t1meg1l2p1k1gy3ihv1meg1l2.jpg">
+                                                    <div class="thumb">
+                                                        <img src="http://pds.saramin.co.kr/person/photo/2017/12/p1k1hh_eil0-1meg1l2_p1k1hg5k9t1meg1l2p1k1gy3ihv1meg1l2.jpg" alt="삼테스사진">
+                                                    </div>
+                                                    <div class="name">
+                                                        <span class="ellipsis">삼테스</span><span class="bio">(여, 31세)</span>
+                                                    </div>
+                                                    <button type="button" class="btn_del _interviewee_list_del" style="display:block">삭제</button>
+                                                </div>
+                                                <div class="item _interviewee_list" data-division_idx="3" data-name="오테스" data-type="interview_pool" data-ident_seq="630802" data-interviewee_idx="0" data-mem_idx="8444994" data-email="andbhappy@saramin.co.kr" data-phone_num="010-3277-6391" data-last_school_name="대입 검정고시(고졸,2018년)" data-picture="http://pds.saramin.co.kr/person/photo/2020/06/qcihml_v95n-1meg1s8_qcihmkbwmu1meg1s8qcihme7ujf1meg1s8b885ed5f6ea94ea099ed56c890dc891a.jpg">
+                                                    <div class="thumb">
+                                                        <img src="http://pds.saramin.co.kr/person/photo/2020/06/qcihml_v95n-1meg1s8_qcihmkbwmu1meg1s8qcihme7ujf1meg1s8b885ed5f6ea94ea099ed56c890dc891a.jpg" alt="오테스사진">
+                                                    </div>
+                                                    <div class="name">
+                                                        <span class="ellipsis">오테스</span><span class="bio">(여, 22세)</span>
+                                                    </div>
+                                                    <button type="button" class="btn_del _interviewee_list_del" style="display:block">삭제</button>
+                                                </div>
+                                                <div class="item _interviewee_list" data-division_idx="3" data-name="사테스" data-type="interview_pool" data-ident_seq="492479" data-interviewee_idx="0" data-mem_idx="8442213" data-email="testsr@test.com" data-phone_num="010-3277-6391" data-last_school_name="광주공업고등학교" data-picture="http://pds.saramin.co.kr/person/photo/2019/12/q2yawl_dqoa-1meg1l1_q2yawlhfzd1meg1l1q2yawfjfj71meg1l10050056120180313.jpg">
+                                                    <div class="thumb">
+                                                        <img src="http://pds.saramin.co.kr/person/photo/2019/12/q2yawl_dqoa-1meg1l1_q2yawlhfzd1meg1l1q2yawfjfj71meg1l10050056120180313.jpg" alt="사테스사진">
+                                                    </div>
+                                                    <div class="name">
+                                                        <span class="ellipsis">사테스</span><span class="bio">(여, 30세)</span>
+                                                    </div>
+                                                    <button type="button" class="btn_del _interviewee_list_del" style="display:block">삭제</button>
+                                                </div>
+                                            </dd>
+                                        </dl>
+                                        <button type="button" class="btn_close" id="btn_close_candidate" data-click-close="box_layer"><span class="blind">닫기</span></button>
+                                    </div>
+                                </div>
+                                <div id="candidates_area" style="display: none;">
+                                    <span class="txt name"><span class="name">삼테스</span> (여, 31세)</span>
+                                </div>
+                                <div class="area_add_button">
+                                    <button type="button" class="btnSizeM colorBlue colorInvert" id="set_interviewee_button">면접 대상자 불러오기</button>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="category" style="display: block">
+                            <dt>면접명<em class="require">필수</em></dt>
+                            <dd>
+                                <div class="inpSel sizeL inp_interview_title">
+                                    <select id="select_interview_title" name="select_interview_title" title="기존 면접명 선택 또는 직접입력">
+                                        <option value="write_interview_title" selected="">직접입력</option>
+                                        <option value="1차 면접">1차 면접(2020.07.28 10:33 등록)</option>
+                                        <option value="1차 면접">1차 면접(2020.07.25 22:18 등록)</option>
+                                        <option value="테스트">테스트(2020.07.17 16:02 등록)</option>
+                                        <option value="테스트">테스트(2020.07.10 16:01 등록)</option>
+                                        <option value="테스트">테스트(2020.07.10 10:42 등록)</option>
+                                        <option value="면접 수정 테스트">면접 수정 테스트(2020.07.10 08:53 등록)</option>
+                                        <option value="입사지원취소 테스트">입사지원취소 테스트(2020.07.09 18:53 등록)</option>
+                                        <option value="이력서 검토요청 테스트">이력서 검토요청 테스트(2020.07.09 18:00 등록)</option>
+                                        <option value="test">test(2020.07.09 17:05 등록)</option>
+                                        <option value="지원자관리 면접 등록">지원자관리 면접 등록(2020.07.09 13:35 등록)</option>
+                                        <option value="신규 면접 등록">신규 면접 등록(2020.07.09 13:10 등록)</option>
+                                        <option value="면접제의">면접제의(2020.07.09 09:54 등록)</option>
+                                        <option value="면접제의 테스트">면접제의 테스트(2020.07.09 08:56 등록)</option>
+                                        <option value="인재풀 면접 제의">인재풀 면접 제의(2020.07.08 18:24 등록)</option>
+                                        <option value="담당자 ">담당자(2020.07.08 17:46 등록)</option>
+                                        <option value="인재풀면접">인재풀면접(2020.07.08 17:03 등록)</option>
+                                        <option value="담당자정보 테스트">담당자정보 테스트(2020.07.08 16:36 등록)</option>
+                                        <option value="면접 테스트">면접 테스트(2020.07.08 16:28 등록)</option>
+                                        <option value="일정만 등록 테스트">일정만 등록 테스트(2020.07.08 11:28 등록)</option>
+                                        <option value="지원자 관리에서 면접 등록">지원자 관리에서 면접 등록(2020.07.08 09:45 등록)</option>
+                                        <option value="컬럼 타입 변경건">컬럼 타입 변경건(2020.07.08 09:44 등록)</option>
+                                        <option value="test">test(2020.07.08 08:28 등록)</option>
+                                        <option value="ttttt">ttttt(2020.07.06 15:55 등록)</option>
+                                        <option value="test">test(2020.07.06 15:52 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.07.06 15:18 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.07.02 13:32 등록)</option>
+                                        <option value="면접 등록한다요">면접 등록한다요(2020.07.01 10:38 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.06.29 15:09 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.06.29 10:01 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.06.29 10:00 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.06.26 11:38 등록)</option>
+                                        <option value="일정만 등록 테스트">일정만 등록 테스트(2020.06.24 12:32 등록)</option>
+                                        <option value="테스트 면접">테스트 면접(2020.06.24 12:27 등록)</option>
+                                        <option value="비로그인 진입 불가 테스트">비로그인 진입 불가 테스트(2020.06.24 10:38 등록)</option>
+                                        <option value="비로그인 진입 테스트">비로그인 진입 테스트(2020.06.24 09:08 등록)</option>
+                                        <option value="신규요청">신규요청(2020.06.18 16:41 등록)</option>
+                                        <option value="신규요청">신규요청(2020.06.18 15:25 등록)</option>
+                                        <option value="일정만등록">일정만등록(2020.06.18 14:45 등록)</option>
+                                        <option value="면접요청하기">면접요청하기(2020.06.16 13:53 등록)</option>
+                                        <option value="면접요청하기">면접요청하기(2020.06.16 13:53 등록)</option>
+                                        <option value="지원자 면접">지원자 면접(2020.06.16 07:11 등록)</option>
+                                        <option value="관심인재 면접 테스트">관심인재 면접 테스트(2020.06.16 06:25 등록)</option>
+                                    </select>
+                                </div>
+                                <div class="detail" id="interview_title_div" style="display: block;">
+                                    <input type="text" id="interview_title" class="inpTypo sizeL" placeholder="면접명 직접입력" title="면접명 직접입력">
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="category">
+                            <dt>면접유형<em class="require">필수</em></dt>
+                            <dd>
+                                <div class="inpSel sizeL inp_interview_type">
+                                    <select id="layer_interview_tp_cd" name="interview_tp_cd" title="면접유형">
+                                        <option value="">면접 유형 선택</option>
+                                        <option value="itc001">대면면접</option>
+                                        <option value="itc002">화상면접</option>
+                                        <option value="itc003">전화면접</option>
+                                        <option value="itc004">AI면접</option>
+                                        <option>영상면접</option><!-- WMG-26415 추가 -->
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="category interview_date">
+                            <dt>면접 일시<em class="require">필수</em></dt>
+                            <dd>
+                                <a href="javascript:void(0);" class="btnSizeM colorBlue colorInvert" id="btn_sel_dates">면접 일시 선택</a>
+                                <div id="list_date" class="list_interview_date">
+                                    <div class="item">
+                                        8/6 (목) 20:00 ~ 20:30<button type="button" class="btn_delete" name="del_choice_date" data-id="i_620020300" data-calendarid="ready"><span class="blind">해당시간 지우기</span></button>
+                                    </div>
+                                    <div class="item">
+                                        8/6 (목) 21:00 ~ 21:30<button type="button" class="btn_delete" name="del_choice_date" data-id="i_621021301" data-calendarid="ready"><span class="blind">해당시간 지우기</span></button>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl class="category interview_answerdate">
+                            <dt>답변 기한<em class="require">필수</em></dt>
+                            <dd>
+                                <input type="text" id="answer_limit_day" name="answer_limit_day" class="inpTypo sizeL type_calendar" title="면접일 선택" value="2020-08-04" readonly="" autocomplete="off">
+                                <span class="txt">까지 답변 가능</span>
+                            </dd>
+                        </dl>
+                        <dl class="category interview_location">
+                            <dt>면접 장소</dt>
+                            <dd>
+                                <div class="set_location">
+                                    <a href="javascript:;" id="search_address" class="btnSizeS">주소검색</a>
+                                    <input type="hidden" name="zipcode" value="61763" id="zipcode"><input type="hidden" name="latitude" value="35.0607145545115" id="latitude"><input type="hidden" name="longitude" value="126.796452680768" id="longitude"><input type="hidden" name="old_address" value="광주 남구 양촌동" id="old_address"><input type="hidden" name="old_zipcode" value="61763" id="old_zipcode"><input type="hidden" name="old_address_details" value="77-4" id="old_address_details"><input type="hidden" name="new_address" value="광주 남구 판촌길" id="new_address"><input type="hidden" name="new_zipcode" value="61763" id="new_zipcode"><input type="hidden" name="new_address_details" value="23-3" id="new_address_details"><input type="hidden" name="new_address_extra" value="23-3" id="new_address_extra"><input type="hidden" name="zip_use_type" value="R" id="zip_use_type">
+                                    <a href="javascript:;" class="btnSizeS" id="popup_map">위치확인</a>
+                                    <span class="inpChk sizeM">
+								<input type="checkbox" id="keep_address" name="keep_address">
+								<label class="lbl" for="keep_address">입력장소 유지</label>
+								</span>
+                                </div>
+                                <input type="text" id="address" class="inpTypo sizeL" value="광주 남구 판촌길" readonly="" maxlength="120">
+                                <input type="text" id="address_details" class="inpTypo sizeL" value="23-3" maxlength="120">
+                            </dd>
+                        </dl>
+                        <dl class="category interview_message">
+                            <dt>메시지 <a href="javascript:void(0);" class="btn_modify" id="load_msg">이전 메세지<br>
+                                불러오기</a></dt>
+                            <dd>
+                                <textarea id="msg" name="msg" class="inpTarea" cols="200" rows="5" placeholder="" style="width:100%;height:275px;">안녕하세요. (주)사람인에이치알 인사담당자 입니다. {[대상자N명]}님의 면접일정을 다음과 같이 안내 드립니다. 면접일정 확인 후 하단의 면접참석 여부 응답 부탁 드리겠습니다. 면접참석 응답을 했지만 불가피한 일로 참석하지 못할 경우 다시 응답을 해주시거나, 인사담당자에게 꼭 연락 해주십시오. 좋은 결과 있으시길 바랍니다. 감사합니다.</textarea>
+                                <p class="notice_txt">
+                                    * {[대상자N명]}은 각 안내 발송 시, 지원자 이름으로 자동 변경됩니다.
+                                </p>
+                            </dd>
+                        </dl>
+                    </div>
+                    <dl class="category interview_manager border">
+                        <dt>담당자 <a href="javascript:void(0);" class="btn_modify" id="hr_manager_modi_btn">수정하기</a>
+                        </dt>
+                        <dd>
+                            <dl class="detail_info">
+                                <dt>담당자</dt>
+                                <dd>
+                                    <span class="txt_result" id="span_manager_nm">지메일3277</span>
+                                    <input type="text" id="manager_nm" name="manager_nm" class="inpTypo" value="" placeholder="내용을 입력해주세요">
+                                </dd>
+                                <dt>전화번호</dt>
+                                <dd>
+                                    <span class="txt_result" id="span_manager_tel">010-3277-6391</span>
+                                    <input type="text" id="manager_tel" name="manager_tel" class="inpTypo" value="" placeholder="내용을 입력해주세요">
+                                </dd>
+                                <dt>이메일</dt>
+                                <dd>
+                                    <span class="txt_result" id="span_manager_mail">andbhappy@gmail.com</span>
+                                    <input type="text" id="manager_mail" name="manager_mail" class="inpTypo" value="" placeholder="내용을 입력해주세요">
+                                </dd>
+                                <dd class="btn_area"><a href="javascript:slides_move_page('0');" idx="0"></a>
+<a href="javascript:slides_move_page('1');" idx="1"></a>
+</dd>
+                            </dl>
+                            <p class="notice_txt">
+                                * 대상자가 다수일 경우, 담당자 정보가 상이할 수 있습니다.<br>
+                                * 담당자 정보 수정 시 일괄 수정 후 발송됩니다.
+                            </p>
+                        </dd>
+                    </dl>
+                    <dl class="category interview_interviewer">
+                        <dt>면접관</dt>
+                        <dd>
+                            <!--
+                                                        <input type="text" id="interviewer_name" name="interviewer_name" class="inpTypo sizeL" value="" placeholder="면접관 입력 (* 면접 대상자에게는 공개되지 않습니다.)" title="면접관 입력" maxlength="100">
+                            -->
+                            <!-- WMG-26415 추가 -->
+                            <button type="button" class="btnSizeL colorBlue colorInvert">면접관 설정</button>
+                            <strong class="blind">선택된 면접관</strong>
+                            <ul class="select_interviewer">
+                                <li>오진하(master)</li>
+                                <li>홍길동 <span class="uncertified">(미인증)</span></li>
+                                <li>김말이</li>
+                                <li>홍길동<span class="uncertified">(미인증)</span></li>
+                            </ul>
+                            <p class="notice_txt">
+                                * 영상면접의 면접관이 다수인 경우 추가해주세요.<br>&nbsp;&nbsp;(면접관은 영상면접 홈에서도 추가/수정 가능합니다.)<br><br>
+                                * 등록된 면접관은 면접 대상자에게는 공개되지 않습니다.
+                            </p>
+                            <!-- //WMG-26415 추가 -->
+                        </dd>
+                    </dl>
+                </div>
+            </form>
+        </div>
+        <div class="modalBtn">
+            <button type="button" class="btnSizeL colorBlue colorInvert _btnClose">취소</button>
+            <button type="button" class="btnSizeL colorBlue">수정</button>
+        </div>
+        <button type="button" class="btnClose _btnClose"><span class="blind">닫기</span></button>
+    </div>
+    <form name="preview_form" method="post">
+        <input type="hidden" name="template_key">
+        <input type="hidden" name="interview_title">
+        <input type="hidden" name="address">
+        <input type="hidden" name="address_details">
+        <input type="hidden" name="latitude">
+        <input type="hidden" name="longitude">
+        <input type="hidden" name="interviewee_list_json">
+        <input type="hidden" name="interview_date_list_json">
+        <input type="hidden" name="interviewee_idx">
+        <input type="hidden" name="interview_message">
+        <input type="hidden" name="manager_nm">
+        <input type="hidden" name="manager_tel">
+        <input type="hidden" name="manager_mail">
+        <input type="hidden" name="interview_tp_cd">
+        <input type="hidden" name="answer_limit_day">
+        <input type="hidden" name="interview_msg_type" value="add">
+    </form>
+    <script src="http://www.saramin.co.kr/js/map/mapControl.js?ts=20200730163107"></script>
+    <script src="http://www.saramin.co.kr/js/interview/add-interview-form.js?ts=20200730163107"></script>
+    <!-- WMG-26415 추가 -->
+    <div class="modalDrawer wrap_manage_tool" id="add_interviewee_layer">
+        <div class="modalTit">
+            <h3 class="title">면접 대상자 불러오기</h3>
+        </div>
+        <div class="modalCont">
+            <dl class="category interviewee_type">
+                <dt>대상자 유형</dt>
+                <dd class="wrap_box_rdo">
+                    <div class="inpSel sizeL">
+                        <select title="대상자 유형" name="person_type" id="person_type" selected="selected">
+                            <option value="recruit">공고 지원자</option>
+                            <option value="talent">관심 인재</option>
+                            <option value="pool">인재Pool 연락처 공개자</option>
+                            <option>직접추가</option><!-- WMG-26415 추가 -->
+                        </select>
+                    </div>
+                </dd>
+            </dl>
+            <div class="wrap_apply_member">
+                <!-- WMG-26415 추가 -->
+                <dl class="category border direct" style="display: block;">
+                    <dt>대상자 정보<button type="button" class="btnSizeM colorBlue colorInvert">추가</button></dt>
+                    <dd>
+                        <div class="tblWrap">
+                            <table>
+                                <caption class="blind">대상자 정보 추가/삭제</caption>
+                                <colgroup>
+                                    <col style="width:76px">
+                                    <col style="width:78px">
+                                    <col style="width:180px">
+                                    <col style="width:133px">
+                                    <col style="width:auto">
+                                </colgroup>
+                                <thead>
+                                <tr>
+                                    <th>
+                                            <span class="inpChk">
+                                                <input type="checkbox" id="selectall">
+                                                <label class="lbl" for="selectall"><span class="blind">전체선택</span></label>
+                                            </span>
+                                    </th>
+                                    <th>이름</th>
+                                    <th>이메일</th>
+                                    <th>휴대폰</th>
+                                    <th><span class="blind">행 삭제</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                            <span class="inpChk">
+                                                <input type="checkbox" id="select1">
+                                                <label class="lbl" for="select1"><span class="blind">행 선택</span></label>
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <input type="text" title="이름 입력" class="inpTypo inp_name">
+                                    </td>
+                                    <td>
+                                        <input type="text" title="이메일 입력" class="inpTypo inp_email">
+                                    </td>
+                                    <td>
+                                        <input type="text" title="휴대폰 입력" class="inpTypo inp_phone">
+                                    </td>
+                                    <td><button type="button" class="btn_del">삭제</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <span class="inpChk">
+                                                <input type="checkbox" id="select2">
+                                                <label class="lbl" for="select2"><span class="blind">행 선택</span></label>
+                                            </span>
+                                    </td>
+                                    <td>
+                                        <input type="text" title="이름 입력" class="inpTypo inp_name">
+                                    </td>
+                                    <td>
+                                        <input type="text" title="이메일 입력" class="inpTypo inp_email">
+                                    </td>
+                                    <td>
+                                        <input type="text" title="휴대폰 입력" class="inpTypo inp_phone">
+                                    </td>
+                                    <td><button type="button" class="btn_del">삭제</button></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="category direct" style="display: block;">
+                    <dt>대상자 정보 수집 유형</dt>
+                    <dd>
+                        <textarea class="inpTarea" cols="" rows="" title="대상자 정보 수집 유형 입력" placeholder="직접 추가의 경우 면접 대상자 정보 수집에 대한 유형을 입력해야합니다.
+(헤드헌터 추천, 지인 추천 등)" style="width:100%"></textarea>
+                        <p class="notice_txt">
+                            * 응시자 직접 추가 시 입력된 이름, 이메일, 휴대폰 번호로 응시자 개인회원 가입 후<br>
+                            &nbsp;&nbsp;인증을 완료해야 영상면접이 가능하며 면접 당 응시자는 최대 4명까지 등록할 수 있습니다.<br><br>
+                            * 응시자의 개인정보는 면접 요청일로부터 1개월 후 또는 응시자 회원 탈퇴 시 즉시 삭제됩니다.
+                        </p>
+                    </dd>
+                </dl>
+                <!-- //WMG-26415 추가 -->
+                <dl class="category border" style="display: none;">
+                    <dt>검색</dt>
+                    <dd>
+                        <input type="text" id="talent_name" class="inpTypo sizeL inp_search_keyword" title="관심 인재 이름 검색" placeholder="이름 검색">
+                        <button type="button" id="search_talent" class="btnSizeL colorBlack btn_add">검색</button>
+                    </dd>
+                </dl>
+                <dl class="category border" style="display: none;">
+                    <dt>공고명</dt>
+                    <dd>
+                        <div class="inpSel sizeL">
+                            <select title="공고명 선택" name="recruit" id="recruit">
+                                <option value="">공고명 선택</option>
+                                <optgroup label="진행중 공고">
+                                    <option value="38433717">사람인 테스트공고입니다. 절대 지원하지마세요( 7/15)</option>
+                                    <option value="38329623">[테스트] 절대 지원하지 마세요(자사)</option>
+                                </optgroup><optgroup label="마감된 공고">
+                                <option value="38433062">[지원불가] 테스트공고 7/9</option>
+                                <option value="38388820">[지원불가] 테스트 공고 7/1</option>
+                                <option value="38329760">[테스트공고]지원불가합니다</option>
+                                <option value="38311995">[지원불가] 테스트공고입니다 불러오기영업6/18</option>
+                                <option value="38088717">요리·제빵사·영양사 정규직 채용 공고 - 경력무관</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="category interviewee_folder" style="display: none;">
+                    <dt>모집분야/폴더</dt>
+                    <dd>
+                        <div class="inpSel sizeL">
+                            <select id="recruitment_field" name="recruitment_field" title="모집분야 선택">
+                                <option value="">모집분야</option>
+                            </select>
+                        </div>
+                        <div class="inpSel sizeL">
+                            <select id="recruit_folder" name="recruit_folder" title="지원자폴더 선택">
+                                <option value="">지원자폴더</option>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <dl class="category border" style="display: none;">
+                    <dt>직무명</dt>
+                    <dd>
+                        <div class="inpSel sizeL">
+                            <select title="직무명 선택" name="pool_position" id="pool_position">
+                                <option value="">직무명 선택</option>
+                                <optgroup label="진행중 직무">
+                                    <option value="22307">지메일3277</option>
+                                    <option value="20348">보석감성사 신입+경력</option>
+                                    <option value="16758">보석감정사</option>
+                                    <option value="13831">요청취소,거절,열람제한</option>
+                                    <option value="13828">7/8 10:34 stg2등록</option>
+                                    <option value="12406">탭별로 한명씩 있는 case 변경하지 말아주세요</option>
+                                    <option value="9316">ㅂ</option>
+                                    <option value="5031">(테스트) 보석2</option>
+                                    <option value="17">(LAB) 테스트1</option>
+                                    <option value="5">보석&amp;영상</option>
+                                </optgroup><optgroup label="종료된 직무">
+                                <option value="12003">알림톡테스트</option>
+                                <option value="11990">하나더2</option>
+                                <option value="11940">하나더</option>
+                                <option value="11277">테스트삼 </option>
+                                <option value="5050">서비스기획</option>
+                                <option value="137">(테스트) 이력서검토요청불가 직무</option>
+                            </optgroup>
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+                <div class="added_interviewee on" style="display: none;">
+                    <div class="inner">
+                        <p class="txt_nodata">
+                            선택한 면접 대상자가 없습니다.
+                        </p>
+                    </div>
+                </div>
+                <div class="added_interviewee on" style="display: none;">
+                    <div class="inner">
+                        <p class="txt_count">
+                            선택한 면접 대상자<span class="cnt" id="set_interviewee_cnt">(4)</span>
+                        </p>
+                        <!-- 200206 마크업 추가 -->
+                        <div class="box_layer layer_all_candidate" id="set_interviewee_list">
+                        </div>
+                    </div>
+                    <button type="button" class="btn_expand"><span class="blind">펼치기</span></button>
+                </div>
+                <div id="applicant_list_div" class="">
+                </div>
+            </div>
+        </div>
+        <div class="modalBtn">
+            <button type="button" class="btnSizeL colorWhite _btnClose">취소</button>
+            <button type="button" id="btn_add_interviewee" class="btnSizeL colorBlack">불러오기</button>
+        </div>
+        <button type="button" class="btnClose _btnClose"><span class="blind">닫기</span></button>
+    </div>
+    <div class="modalDrawer wrap_manage_tool interview_setting_tool">
+        <div class="modalTit">
+            <h3 class="title">면접관 설정</h3>
+        </div>
+        <div class="modalCont">
+            <div class="inner">
+                <dl class="category">
+                    <dt>
+                        면접관 선택
+                        <button type="button" class="btn_modify" id="hr_manager_modi_btn">신규등록</button>
+                    </dt>
+                    <dd>
+                        <div class="interview_list">
+                            <div class="wrap_search">
+                                <input type="text" class="inpTypo sizeL" placeholder="면접명/부서명 검색" title="면접명/부서명 검색">
+                                <div class="box_search">
+                                    <div class="inner_box">
+                                        <ul class="list_box">
+                                            <li><a href="##" class="info_box"><span class="name">오진하</span> (<span class="department">RX기획팀</span>, <span class="master">master</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">한솔은</span> (<span class="department">디자인실</span>, <span class="uncertified">미인증</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">일이삼사오육칠팔구십</span> (<span class="department">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>, <span class="uncertified">미인증</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</a></li>
+                                            <li><a href="##" class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="list_box select">
+                                <li><span class="info_box"><span class="name">오진하</span> (<span class="department">RX기획팀</span>, <span class="master">master</span>)</span></li>
+                                <li><span class="info_box"><span class="name">한솔은</span> (<span class="department">디자인실</span>, <span class="uncertified">미인증</span>)</span></li>
+                                <li>
+                                    <span class="info_box"><span class="name">일이삼사오육칠팔구십</span> (<span class="department">일이삼사오육칠팔구십일이삼사오육칠팔구십</span>, <span class="uncertified">미인증</span>)</span>
+                                    <span class="wrap_btn_layer">
+                                        <button type="button" class="btn_setting">master 설정</button>
+                                        <button type="button" class="btn_del">삭제</button>
+                                    </span>
+                                </li>
+                                <li><span class="info_box"><span class="name">이지은</span> (<span class="department">인사팀</span>)</span></li>
+                            </ul>
+                            <dl class="list_master">
+                                <dt>master란?</dt>
+                                <dd>실제 영상면접방에서 참여자 관리 및 면접시작 종료 연장에 대한 권한을 가지는 면접관입니다.</dd>
+                            </dl>
+                            <p class="notice_txt">
+                                * 초대 후 72시간 내 인증 및 비밀번호 설정을 마쳐야 면접관 계정 사용이 가능합니다.
+                            </p>
+                            <p class="notice_txt">
+                                * 면접관 정보는 기업의 정보로 분류되며, 작성한 개인정보에 대한 책임은 기업에 있습니다.
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="modalBtn">
+            <button type="button" class="btnSizeL colorBlue colorInvert _btnClose">취소</button>
+            <button type="button" class="btnSizeL colorBlue">등록 후 인증 요청</button>
+        </div>
+        <button type="button" class="btnClose _btnClose"><span class="blind">닫기</span></button>
+        <!-- //WMG-26415 추가 -->
+    </div>
+    <div class="modalDrawer wrap_manage_tool interview_regist_tool">
+        <div class="modalTit">
+            <h3 class="title">면접관 신규등록</h3>
+            <button type="button" class="btn_prev"><span class="blind">이전 페이지 이동</span></button>
+        </div>
+        <div class="modalCont">
+            <div class="inner">
+                <dl class="category direct">
+                    <dt class="bind"></dt>
+                    <dd>
+                        <div class="interview_register single"><!-- [dev] 면접관 한명 일때 single 클래스 추가 -->
+                            <p class="desc_necessary">하단 입력 내용은 필수사항입니다.</p>
+                            <div class="wrap_register_list"><!-- [dev] fold 클래스 추가시 리스트 접힘 -->
+                                <strong class="tit_register_list">신규 면접관1</strong>
+                                <ul class="list_register">
+                                    <li><label for="asideName2" class="lab_register">이름</label><input type="text" id="asideName2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideId2" class="lab_register">아이디</label><input type="text" id="asideId2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideDepartment2" class="lab_register">부서명</label><input type="text" id="asideDepartment2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asidePhone2" class="lab_register">휴대폰</label><input type="text" id="asidePhone2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideEmail2" class="lab_register">이메일</label><input type="text" id="asideEmail2" class="inpTypo" autocomplete="off"></li>
+                                </ul>
+                                <button type="button" class="img_interview btn_fold"><span class="blind">등록 리스트 접기/펼치기</span></button>
+                                <button type="button" class="img_interview btn_del">삭제</button>
+                            </div>
+                            <button type="button" class="img_interview btn_interview_layer">면접관 추가</button>
+                            <p class="notice_txt">
+                                * 초대 후 72시간 내 인증 및 비밀번호 설정을 마쳐야 면접관 계정 사용이 가능합니다.
+                            </p>
+                            <p class="notice_txt">
+                                * 면접관 정보는 기업의 정보로 분류되며, 작성한 개인정보에 대한 책임은 기업에 있습니다.
+                            </p>
+                        </div>
+                        <div class="interview_register">
+                            <p class="desc_necessary">하단 입력 내용은 필수사항입니다.</p>
+                            <div class="wrap_register_list fold"><!-- [dev] fold 클래스 추가시 리스트 접힘 -->
+                                <strong class="tit_register_list">신규 면접관1</strong>
+                                <ul class="list_register">
+                                    <li><label for="asideName2" class="lab_register">이름</label><input type="text" id="asideName2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideId2" class="lab_register">아이디</label><input type="text" id="asideId2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideDepartment2" class="lab_register">부서명</label><input type="text" id="asideDepartment2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asidePhone2" class="lab_register">휴대폰</label><input type="text" id="asidePhone2" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideEmail2" class="lab_register">이메일</label><input type="text" id="asideEmail2" class="inpTypo" autocomplete="off"></li>
+                                </ul>
+                                <button type="button" class="img_interview btn_fold"><span class="blind">등록 리스트 접기/펼치기</span></button>
+                                <button type="button" class="img_interview btn_del">삭제</button>
+                            </div>
+                            <div class="wrap_register_list">
+                                <strong class="tit_register_list">신규 면접관1</strong>
+                                <ul class="list_register">
+                                    <li><label for="asideName1" class="lab_register">이름</label><input type="text" id="asideName1" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideId1" class="lab_register">아이디</label><input type="text" id="asideId1" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideDepartment1" class="lab_register">부서명</label><input type="text" id="asideDepartment1" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asidePhone1" class="lab_register">휴대폰</label><input type="text" id="asidePhone1" class="inpTypo" autocomplete="off"></li>
+                                    <li><label for="asideEmail1" class="lab_register">이메일</label><input type="text" id="asideEmail1" class="inpTypo" autocomplete="off"></li>
+                                </ul>
+                                <button type="button" class="img_interview btn_fold"><span class="blind">등록 리스트 접기/펼치기</span></button>
+                                <button type="button" class="img_interview btn_del">삭제</button>
+                            </div>
+                            <button type="button" class="img_interview btn_interview_layer">면접관 추가</button>
+                            <p class="notice_txt">
+                                * 초대 후 72시간 내 인증 및 비밀번호 설정을 마쳐야 면접관 계정 사용이 가능합니다.
+                            </p>
+                            <p class="notice_txt">
+                                * 면접관 정보는 기업의 정보로 분류되며, 작성한 개인정보에 대한 책임은 기업에 있습니다.
+                            </p>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="modalBtn">
+            <button type="button" class="btnSizeL colorBlue colorInvert _btnClose">취소</button>
+            <button type="button" class="btnSizeL colorBlue">등록 후 인증 요청</button>
+        </div>
+        <button type="button" class="btnClose _btnClose"><span class="blind">닫기</span></button>
+        <!-- //WMG-26415 추가 -->
+    </div>
+    <!-- //WMG-26415 추가 -->
+    <script src="http://www.saramin.co.kr/js/interview/add-interviewee.js?ts=20200730163107"></script>
+    <div class="modalDrawer wrap_manage_tool" id="load_message_layer">
+        <div class="modalTit">
+            <h3 class="title">이전 메세지 불러오기</h3>
+        </div>
+        <div class="modalCont">
+            <div class="inner">
+                <div class="wrap_interview_message">
+                    <p class="notice_txt">
+                        최근 날짜 기준 10개의 메세지가 노출됩니다.
+                    </p>
+                    <ul class="wrap_list" id="previous_msg_list_ul">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modalBtn">
+            <button type="button" class="btnSizeL colorWhite colorInvert _btnClose">취소</button>
+            <button type="button" id="btn_load_msg" class="btnSizeL">불러오기</button>
+        </div>
+        <button type="button" class="btnClose _btnClose"><span class="blind">닫기</span></button>
+    </div>
+    <script src="http://www.saramin.co.kr/js/interview/load-message.js?ts=20200730163107"></script>
+    <div class="modalDrawer wrap_interview_calendar" id="interview_calendar_layer">
+        <div class="modalTit">
+            <h3 class="title">면접 일시 선택</h3>
+        </div>
+        <div class="modalCont">
+            <div class="calendar_inner">
+                <div class="side_left">
+                    <div id="calendar_menu" class="calendar_menu">
+                        <button type="button" class="btn_calendar btn_prev" data-change-date="2020-07-26">
+                            <span class="blind">전주보기</span>
+                        </button>
+                        <span class="date">2020.08.02~2020.08.08</span>
+                        <button type="button" class="btn_calendar btn_next" data-change-date="2020-08-09">
+                            <span class="blind">차주보기</span>
+                        </button>
+                    </div>
+                    <div id="pop_calendar" class="pop_calendar">
+                        <div class="tui-full-calendar-layout" style="background-color: transparent;">
+                            <div class="tui-view-86 tui-full-calendar-week-container">
+                                <div class="tui-full-calendar-dayname-layout">
+                                    <div class="tui-full-calendar-dayname-container tui-view-87" style="border-top: 0px; border-bottom: 1px solid rgb(235, 235, 235); height: 42px; background-color: inherit; text-align: left;">
+                                        <div class="tui-full-calendar-dayname-leftmargin" style="margin-left: 70px;">
+                                            <div class="tui-full-calendar-dayname tui-full-calendar-holiday-sun" data-date="2020-08-02" style="width:14.285714285714286%;left:0%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">2</span>일 </span>
+                                            </div>
+                                            <div class="tui-full-calendar-dayname tui-full-calendar-today " data-date="2020-08-03" style="width:14.285714285714286%;left:14.285714285714286%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">3</span>월 </span>
+                                            </div>
+                                            <div class="tui-full-calendar-dayname " data-date="2020-08-04" style="width:14.285714285714286%;left:28.571428571428573%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">4</span>화 </span>
+                                            </div>
+                                            <div class="tui-full-calendar-dayname " data-date="2020-08-05" style="width:14.285714285714286%;left:42.85714285714286%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">5</span>수 </span>
+                                            </div>
+                                            <div class="tui-full-calendar-dayname " data-date="2020-08-06" style="width:14.285714285714286%;left:57.142857142857146%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">6</span>목 </span>
+                                            </div>
+                                            <div class="tui-full-calendar-dayname " data-date="2020-08-07" style="width:14.285714285714286%;left:71.42857142857143%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">7</span>금 </span>
+                                            </div>
+                                            <div class="tui-full-calendar-dayname tui-full-calendar-holiday-sat" data-date="2020-08-08" style="width:14.285714285714286%;left:85.71428571428572%; line-height: 42px; border-left: inherit; padding-left: 0;">
+												<span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+												<span class="d_date">8</span>토 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tui-full-calendar-vlayout-area tui-view-88 tui-full-calendar-vlayout-container" style="height: 697px;">
+                                    <div class="tui-view-90" data-panel-index="0" data-auto-height="true" style="height: 697px; position: relative;">
+                                        <div class="tui-full-calendar-timegrid-container tui-view-91">
+                                            <div class="tui-full-calendar-timegrid-left" style="width: 70px; font-size: 11px;">
+                                                <div class="tui-full-calendar-timegrid-timezone" data-timezone-index="0" style="position: absolute; top: 0; width: 100%; left: 0%; border-right: 1px solid #e5e5e5; background-color: white;">
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="display:none">08:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">09:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">10:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">11:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">12:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">13:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">14:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">15:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">16:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="display:none">17:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">18:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">19:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">20:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">21:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">22:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                                                        <span style="">23:00</span>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hourmarker" style="top: 55.1045%; margin-top: calc(-44px); height: 50px;">
+                                                        <div class="tui-full-calendar-timegrid-hourmarker-time" style="color: #515ce6; font-size: 11px; font-weight: normal">
+                                                            16:49
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tui-full-calendar-timegrid-right" style="margin-left: 70px;">
+                                                <div class="tui-full-calendar-timegrid-h-grid">
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; border-bottom: 1px solid #e5e5e5; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-gridline" style="height: 100px; ">
+                                                        <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tui-full-calendar-timegrid-schedules">
+                                                    <div class="tui-full-calendar-timegrid-schedules-container">
+                                                        <div class="tui-full-calendar-time-date tui-view-111" style="width: 14.2857%; left: 0%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-full-calendar-time-date tui-view-112 tui-full-calendar-today" style="width: 14.2857%; left: 14.2857%; border-right: 1px solid rgb(229, 229, 229);">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-full-calendar-time-date tui-view-113" style="width: 14.2857%; left: 28.5714%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-full-calendar-time-date tui-view-114" style="width: 14.2857%; left: 42.8571%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-full-calendar-time-date tui-view-115" style="width: 14.2857%; left: 57.1429%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                                <div class="tui-full-calendar-time-date-schedule-block " data-id="102" style="top:1200px;left:0%;width:auto;height:48px; ">
+                                                                    <div data-schedule-id="i_620020300" data-calendar-id="ready" class="tui-full-calendar-time-schedule " style=" border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; border-top-left-radius: 2px; border-top-right-radius: 2px; color:#000; background-color:#ebf7ff; border-color:#1286ff; ">
+                                                                        <div class="tui-full-calendar-time-schedule-content tui-full-calendar-time-schedule-content-time" style="height: 50px; border-color:#1286ff; ">
+                                                                            <span class="task_item" title=""><em class="type type_ready">8/6(목)<span class="time">20:00~20:30</span></em></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tui-full-calendar-time-resize-handle handle-x" style="margin-left: 2px;">
+                                                                        &nbsp;
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tui-full-calendar-time-date-schedule-block " data-id="110" style="top:1300px;left:0%;width:auto;height:48px; ">
+                                                                    <div data-schedule-id="i_621021301" data-calendar-id="ready" class="tui-full-calendar-time-schedule " style=" border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; border-top-left-radius: 2px; border-top-right-radius: 2px; color:#000; background-color:#ebf7ff; border-color:#1286ff; ">
+                                                                        <div class="tui-full-calendar-time-schedule-content tui-full-calendar-time-schedule-content-time" style="height: 50px; border-color:#1286ff; ">
+                                                                            <span class="task_item" title=""><em class="type type_ready">8/6(목)<span class="time">21:00~21:30</span></em></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="tui-full-calendar-time-resize-handle handle-x" style="margin-left: 2px;">
+                                                                        &nbsp;
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-full-calendar-time-date tui-view-116" style="width: 14.2857%; left: 71.4286%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-full-calendar-time-date tui-view-117" style="width: 14.2857%; left: 85.7143%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;">
+                                                            <div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tui-full-calendar-timegrid-hourmarker" style="top: 55.1045%;">
+                                                    <div class="tui-full-calendar-timegrid-hourmarker-line-left" style="width:14.285714285714286%; border-top: none;">
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-todaymarker" style="left: 14.2857%; background-color: transparent; display: block;">
+                                                        today
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hourmarker-line-today" style="left:14.285714285714286%; width: 14.285714285714286%; border-top: none;">
+                                                    </div>
+                                                    <div class="tui-full-calendar-timegrid-hourmarker-line-right" style="left:28.571428571428573%; border-top: none;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tui-full-calendar-timegrid-sticky-container" style="display: none; width: 70px; height: 40px; border-bottom: 1px solid rgb(229, 229, 229);">
+                                            <div class="tui-full-calendar-timegrid-timezone-label-container" style="background-color: white; height: 100%; width: 100%; left: 0%; font-size: 11px; border-right: 1px solid #e5e5e5;">
+                                                <div title="Seoul" class="tui-full-calendar-timegrid-timezone-label-cell" data-timezone="GMT+09:00" style="height: 100%; width: 100%;">
+                                                    <div class="tui-full-calendar-timegrid-timezone-label">
+                                                        GMT+09:00
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="tui-full-calendar-layout" style="background-color: transparent;"><div class="tui-view-16 tui-full-calendar-week-container"><div class="tui-full-calendar-dayname-layout"><div class="tui-full-calendar-dayname-container tui-view-17" style="border-top: 0px; border-bottom: 1px solid rgb(235, 235, 235); height: 42px; background-color: inherit; text-align: left;"><div class="tui-full-calendar-dayname-leftmargin" style="margin-left: 70px;">
+<div class="tui-full-calendar-dayname  tui-full-calendar-holiday-sun" data-date="2020-08-02" style="width:14.285714285714286%;left:0%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">2</span>일
+    </span>
+</div>
+<div class="tui-full-calendar-dayname  " data-date="2020-08-03" style="width:14.285714285714286%;left:14.285714285714286%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">3</span>월
+    </span>
+</div>
+<div class="tui-full-calendar-dayname  " data-date="2020-08-04" style="width:14.285714285714286%;left:28.571428571428573%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">4</span>화
+    </span>
+</div>
+<div class="tui-full-calendar-dayname  " data-date="2020-08-05" style="width:14.285714285714286%;left:42.85714285714286%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">5</span>수
+    </span>
+</div>
+<div class="tui-full-calendar-dayname  " data-date="2020-08-06" style="width:14.285714285714286%;left:57.142857142857146%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">6</span>목
+    </span>
+</div>
+<div class="tui-full-calendar-dayname  " data-date="2020-08-07" style="width:14.285714285714286%;left:71.42857142857143%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">7</span>금
+    </span>
+</div>
+<div class="tui-full-calendar-dayname  tui-full-calendar-holiday-sat" data-date="2020-08-08" style="width:14.285714285714286%;left:85.71428571428572%; line-height: 42px; border-left: inherit; padding-left: 0;">
+    <span class="tui-full-calendar-dayname-date-area" style="color: #222;">
+        <span class="d_date">8</span>토
+    </span>
+</div>
+</div>
+</div></div><div class="tui-full-calendar-vlayout-area tui-view-18 tui-full-calendar-vlayout-container" style="height: 0px;"><div class="tui-view-20" data-panel-index="0" data-auto-height="true" style="position: relative;"><div class="tui-full-calendar-timegrid-container tui-view-21"><div class="tui-full-calendar-timegrid-left" style="width: 70px; font-size: 11px;">
+<div class="tui-full-calendar-timegrid-timezone" data-timezone-index="0" style="position: absolute; top: 0; width: 100%; left: 0%; border-right: 1px solid #e5e5e5; background-color: white;">
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="display:none">08:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">09:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">10:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">11:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">12:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">13:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">14:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">15:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">16:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">17:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">18:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">19:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">20:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">21:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">22:00</span>
+                </div>
+<div class="tui-full-calendar-timegrid-hour" style="height: 100px; color: #949494; font-weight: normal;">
+                    <span style="">23:00</span>
+                </div>
+        </div>
+</div>
+<div class="tui-full-calendar-timegrid-right" style="margin-left: 70px;">
+    <div class="tui-full-calendar-timegrid-h-grid">
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+            border-bottom: 1px solid #e5e5e5;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+<div class="tui-full-calendar-timegrid-gridline" style="height: 100px;
+        ">
+            <div class="tui-full-calendar-timegrid-gridline-half" style="height: 50px; border-bottom: none;"></div>
+        </div>
+</div>
+    <div class="tui-full-calendar-timegrid-schedules">
+        <div class="tui-full-calendar-timegrid-schedules-container"><div class="tui-full-calendar-time-date tui-view-25" style="width: 14.2857%; left: 0%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div><div class="tui-full-calendar-time-date tui-view-26" style="width: 14.2857%; left: 14.2857%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div><div class="tui-full-calendar-time-date tui-view-27" style="width: 14.2857%; left: 28.5714%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div><div class="tui-full-calendar-time-date tui-view-28" style="width: 14.2857%; left: 42.8571%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div><div class="tui-full-calendar-time-date tui-view-29" style="width: 14.2857%; left: 57.1429%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div><div class="tui-full-calendar-time-date tui-view-30" style="width: 14.2857%; left: 71.4286%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div><div class="tui-full-calendar-time-date tui-view-31" style="width: 14.2857%; left: 85.7143%; border-right: 1px solid rgb(229, 229, 229); background-color: inherit;"><div class="tui-full-calendar-time-date-schedule-block-wrap" style="margin-right: 8px;">
+</div>
+</div></div>
+    </div>
+
+</div>
+</div><div class="tui-full-calendar-timegrid-sticky-container" style="display: none; width: 70px; height: 40px; border-bottom: 1px solid rgb(229, 229, 229);"><div class="tui-full-calendar-timegrid-timezone-label-container" style="background-color: white; height: 100%; width: 100%; left: 0%; font-size: 11px; border-right: 1px solid #e5e5e5;">
+    <div title="Seoul" class="tui-full-calendar-timegrid-timezone-label-cell" data-timezone="GMT+09:00" style="height: 100%; width: 100%;">
+        <div class="tui-full-calendar-timegrid-timezone-label">GMT+09:00</div>
+    </div>
+</div>
+</div></div></div></div></div></div>
+                </div>
+                <div class="side_right">
+                    <div id="list_time" class="list_time">
+                        <h3 class="tit">면접 가능 시간 <span id="limit_cnt">(최대 5개)</span></h3>
+                        <div id="sel_date_list" class="list">
+                            <div class="no_result item" style="display: none;">
+                                원하는 시간을<br>
+                                드래그해주세요.
+                            </div>
+                            <div class="item">
+                                8/6 (목) 20:00 ~ 20:30<button type="button" class="btn_close" name="del_choice_date" data-id="i_620020300" data-calendarid="ready"><span class="blind">해당시간 지우기</span></button>
+                            </div>
+                            <div class="item">
+                                8/6 (목) 21:00 ~ 21:30<button type="button" class="btn_close" name="del_choice_date" data-id="i_621021301" data-calendarid="ready"><span class="blind">해당시간 지우기</span></button>
+                            </div>
+                        </div>
+                        <div class="wrap_btn">
+                            <button type="button" id="done_choice_date_btn" class="btnSizeL colorBlue">시간 선택완료</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="btnClose btn_apply_modal_close"><span class="blind">닫기</span></button>
+        <script src="http://www.saramin.co.kr/js/interview/layer_calendar.js?ts=20200730163107"></script>
+        <script>
+            (function () {
+                var viewType = 'week';
+                var curDate = '2020-08-03';
+                var tuiCalendarData = [{"id":"r_38433717","calendarId":"recruit","title":"\uc0ac\ub78c\uc778 \ud14c\uc2a4\ud2b8\uacf5\uace0\uc785\ub2c8\ub2e4. \uc808\ub300 \uc9c0\uc6d0\ud558\uc9c0\ub9c8\uc138\uc694( 7\/15)","isAllDay":true,"category":"allday","start":"2020-08-03T17:40+09:00","end":"2020-08-03T18:00:00+09:00","start_dt":"2020-08-03 17:40","end_dt":"2020-08-03 18:00:00","rec_idx":"38433717","raw":"{\"isAllDay\":true,\"typeText\":\"\\uc624\\ub298 \\uacf5\\uace0 \\ub9c8\\uac10\",\"class\":\"recruit\",\"rec_idx\":\"38433717\",\"period\":\"8\\\/3\",\"interviewee_idx\":\"\",\"dataType\":\"closing\",\"category\":\"allday\"}","isReadOnly":"true"}];
+                addFormEvent = typeof addInterviewFormEvent !== "undefined" ? addInterviewFormEvent : null;
+                var thmemConfig = {
+                    'common.border': '1px solid #e5e5e5', 'common.backgroundColor': 'transparent', 'common.holiday.color': '#222',
+                    'common.saturday.color': '#222', 'common.dayname.color': '#222', 'common.today.color': '#0073f1',
+                    // creation guide style
+                    'common.creationGuide.backgroundColor': '#2e8ef6', 'common.creationGuide.border': '1px solid #2e8ef6',
+                    // month header 'dayname'
+                    'month.dayname.height': '31px','month.dayname.borderLeft': '1px solid #e5e5e5','month.dayname.paddingLeft': '10px',
+                    'month.dayname.paddingRight': '10px','month.dayname.backgroundColor': 'inherit','month.dayname.fontSize': '12px',
+                    'month.dayname.fontWeight': 'normal','month.dayname.textAlign': 'left',
+                    // month day grid cell 'day'
+                    'month.holidayExceptThisMonth.color': 'rgba(255, 64, 64, 0.4)','month.dayExceptThisMonth.color': 'rgba(51, 51, 51, 0.4)',
+                    'month.weekend.backgroundColor': 'inherit','month.day.fontSize': '14px',
+                    // month schedule style
+                    'month.schedule.borderRadius': '2px','month.schedule.height': '24px','month.schedule.marginTop': '2px',
+                    'month.schedule.marginLeft': '8px','month.schedule.marginRight': '8px',
+                    // month more view
+                    'month.moreView.border': '1px solid #d5d5d5','month.moreView.boxShadow': '0 2px 6px 0 rgba(0, 0, 0, 0.1)',
+                    'month.moreView.backgroundColor': 'white','month.moreView.paddingBottom': '17px','month.moreViewTitle.height': '44px',
+                    'month.moreViewTitle.marginBottom': '12px', 'month.moreViewTitle.backgroundColor': 'inherit', 'month.moreViewTitle.borderBottom': 'none',
+                    'month.moreViewTitle.padding': '12px 17px 0 17px', 'month.moreViewList.padding': '0 17px',
+                    // week header 'dayname'
+                    'week.dayname.height': '42px', 'week.dayname.borderTop': '0', 'week.dayname.borderBottom': '1px solid #ebebeb', 'week.dayname.borderLeft': 'inherit',
+                    'week.dayname.paddingLeft': '0', 'week.dayname.backgroundColor': 'inherit', 'week.dayname.textAlign': 'left', 'week.today.color': '#222',
+                    'week.pastDay.color': '#222',
+                    // week vertical panel 'vpanel'
+                    'week.vpanelSplitter.border': '1px solid #e5e5e5', 'week.vpanelSplitter.height': '3px',
+                    // week daygrid 'daygrid'
+                    'week.daygrid.borderRight': '1px solid #e5e5e5', 'week.daygrid.backgroundColor': 'inherit',
+                    'week.daygridLeft.width': '70px','week.daygridLeft.backgroundColor': 'inherit','week.daygridLeft.paddingRight': '0','week.daygridLeft.borderRight': '0',
+                    'week.today.backgroundColor': 'none','week.weekend.backgroundColor': 'inherit',
+                    // week timegrid 'timegrid'
+                    'week.timegridLeft.width': '70px', 'week.timegridLeft.backgroundColor': 'inherit', 'week.timegridLeft.borderRight': '1px solid #e5e5e5',
+                    'week.timegridLeft.fontSize': '11px', 'week.timegridLeftTimezoneLabel.height': '40px', 'week.timegridLeftAdditionalTimezone.backgroundColor': 'white',
+                    'week.timegridOneHour.height': '100px', 'week.timegridHalfHour.height': '50px', 'week.timegridHalfHour.borderBottom': 'none',
+                    'week.timegridHorizontalLine.borderBottom': '1px solid #e5e5e5',
+                    'week.timegrid.paddingRight': '8px', 'week.timegrid.borderRight': '1px solid #e5e5e5', 'week.timegridSchedule.borderRadius': '2px', 'week.timegridSchedule.paddingLeft': '2px',
+                    'week.pastTime.color': '#949494', 'week.pastTime.fontWeight': 'normal',
+                    'week.futureTime.color': '#949494', 'week.futureTime.fontWeight': 'normal',
+                    'week.currentTimeLinePast.border': 'none','week.currentTimeLineBullet.backgroundColor': 'transparent','week.currentTimeLineToday.border': 'none',
+                    'week.currentTimeLineFuture.border': 'none',
+                    // week creation guide style
+                    'week.creationGuide.color': '#fff','week.creationGuide.fontSize': '12px','week.creationGuide.fontWeight': 'bold',
+                    // week daygrid schedule style
+                    'week.dayGridSchedule.borderRadius': '2px','week.dayGridSchedule.height': '24px','week.dayGridSchedule.marginTop': '2px',
+                    'week.dayGridSchedule.marginLeft': '8px','week.dayGridSchedule.marginRight': '8px'
+                };
+                tuiCalendarOption.theme = thmemConfig;
+                tuiCalendarOption.isReadOnly = false;
+                tuiCalendarOption.scheduleView = ['time'];
+                tuiCalendarOption.week.hourStart = 8;
+                tuiCalendarOption.week.daynames = ['일', '월', '화', '수', '목', '금', '토'];
+                var popCalendar = new tui.Calendar('#pop_calendar', tuiCalendarOption);
+                // 전형 별 색상
+                popCalendar.setCalendarColor('recruit', {bgColor: '#f8f8f8', borderColor: '#dbdbdb', borderStyle: 'dashed'});
+                popCalendar.setCalendarColor('evaluation', {bgColor: '#f8f8f8', borderColor: '#dbdbdb', borderStyle: 'dashed'});
+                popCalendar.setCalendarColor('interviewrec', {bgColor: '#f8f8f8', borderColor: '#dbdbdb', borderStyle: 'dashed'});
+                popCalendar.setCalendarColor('interviewonly', {bgColor: '#f8f8f8', borderColor: '#dbdbdb', borderStyle: 'dashed'});
+                popCalendar.setCalendarColor('announcement', {bgColor: '#f8f8f8', borderColor: '#dbdbdb', borderStyle: 'dashed'});
+                popCalendar.setCalendarColor('injaeful', {bgColor: '#f8f8f8', borderColor: '#dbdbdb', borderStyle: 'dashed'});
+                popCalendar.setCalendarColor('ready', {bgColor: '#ebf7ff', borderColor: '#1286ff'});
+                popCalendar.setDate(new Date(curDate));
+                popCalendar.changeView(viewType, true);
+                popCalendar.createSchedules(tuiCalendarData);
+                popCalendar.render();
+                window.tui.popCalendar = popCalendar;
+                // 이미 선택 한 값 셋팅.
+                var interviewDates = addFormEvent.getInterviewDates();
+                var interviewDatesKeys = Object.keys(interviewDates);
+                if(interviewDatesKeys.length > 0) {
+                    for(var i = 0; i < interviewDatesKeys.length; i++){
+                        var schedule = interviewDates[interviewDatesKeys[i]];
+                        popCalendar.createSchedules([schedule]);
+                        addFormEvent.makeSelectDate(schedule);
+                    }
+                }
+                //면접 날짜에 따른 선택 완료 버튼 활성화/비활성화
+                calendarEvent.checkInterviewDateCnt();
+                var week = ['일', '월', '화', '수', '목', '금', '토'];
+                popCalendar.on('beforeCreateSchedule', function(event) {
+                    var startTime = event.start;
+                    var endTime = event.end;
+                    var isAllDay = event.isAllDay;
+                    var interviewDatesCnt = Object.keys(addFormEvent.getInterviewDates()).length;
+                    var intervieweeCnt = Number(jQuery('#intervieweeCnt').val());
+                    var dayOfWeek = week[startTime.getDay()];
+                    var typeText = (startTime.getMonth() + 1) + '/' + startTime.getDate() + '(' + dayOfWeek + ')';
+                    var eventName = event.triggerEventName;
+                    if(new Date() > startTime) {
+                        alert("현재 날짜 보다 이전 날짜는 선택 불가 합니다.");
+                        popCalendar.createSchedules([{}]);
+                        return false;
+                    }
+                    if(interviewDatesCnt === 1 && intervieweeCnt > 1) {
+                        alert('복수 면접자일 경우 하나의 날짜만 선택 가능합니다.');
+                        popCalendar.createSchedules([{}]);
+                        return false;
+                    }
+                    if (intervieweeCnt === 1 && interviewDatesCnt > 4) {
+                        alert('면접 가능 시간은 최대 5개까지 선택가능합니다.');
+                        popCalendar.createSchedules([{}]);
+                        return false;
+                    }
+                    if (intervieweeCnt > 1 && interviewDatesCnt > 1) {
+                        alert('면접자가 다수 일때는 면접 날짜를 하나만 선택해주세요.');
+                        popCalendar.createSchedules([{}]);
+                        return false;
+                    }
+                    // 동일 시간대 체크
+                    var interviewDates = addFormEvent.getInterviewDates();
+                    var interviewDatesKeys = Object.keys(interviewDates);
+                    var interviewDatesLen = interviewDatesKeys.length;
+                    var isSameStartDate = false;
+                    var newDate = startTime.getFullYear() + '-' + startTime.getMonth() + '-' + startTime.getDate() + " " + startTime.getHours() + ':' + startTime.getMinutes();
+                    for(var i = 0; i < interviewDatesLen; i++) {
+                        var beforeDate = interviewDates[interviewDatesKeys[i]].start;
+                        beforeDate = beforeDate.getFullYear() + '-' + beforeDate.getMonth() + '-' + beforeDate.getDate() + " " + beforeDate.getHours() + ':' + beforeDate.getMinutes();
+                        if (beforeDate === newDate) {
+                            isSameStartDate = true;
+                            break;
+                        }
+                    }
+                    if (isSameStartDate) {
+                        alert('동일 시간대에는 선택이 불가합니다.');
+                        popCalendar.createSchedules([{}]);
+                        return false;
+                    }
+                    var period = startTime.getHours().toString().padStart(2, '0') + ":" + startTime.getMinutes().toString().padStart(2, '0') + '~' + endTime.getHours().toString().padStart(2, '0') + ":" + endTime.getMinutes().toString().padStart(2, '0');
+                    var id = '' + startTime.getDate() + startTime.getHours() + startTime.getMinutes() + endTime.getHours() + endTime.getMinutes() + interviewDatesCnt;
+                    var schedule = {
+                        id: 'i_' + id,
+                        calendarId: 'ready',
+                        title: '',
+                        category: 'time',
+                        dueDateClass: '',
+                        start: startTime,
+                        end: endTime,
+                        raw: '{"isAllDay":' + isAllDay + ',"typeText":"' + typeText + '","class":"ready","period":"' + period + '","interviewee_idx":"","dataType":"","category":"time"}'
+                    };
+                    addFormEvent.setInterviewDates(schedule);
+                    popCalendar.createSchedules([schedule]);
+                    calendarEvent.checkInterviewDateCnt();
+                });
+                // 날짜 삭제 버튼 처리
+                jQuery(document).on('click', 'button[name=del_choice_date]', function () {
+                    var target = jQuery(this);
+                    window.tui.popCalendar.deleteSchedule(target.data('id'), target.data('calendarid'));
+                    addFormEvent.updateInterviewDates(target.data('id'));
+                    target.parent().remove();
+                    calendarEvent.checkInterviewDateCnt();
+                });
+                // 최대 면접 날짜 선택 개수
+                jQuery(document).ready(function() {
+                    var $limitCnt = jQuery('#limit_cnt');
+                    if(Number(jQuery('#intervieweeCnt').val() > 1)) {
+                        $limitCnt.text('(최대 1개)');
+                    } else {
+                        $limitCnt.text('(최대 5개)');
+                    }
+                })
+            })();
+        </script>
+    </div>
+</div>
+<script>
+        //스크롤
+        var pos1 = $('.video_interview .header').offset().top;
+
+        $(window).on('scroll', function(){
+            var scroll = $(this).scrollTop();
+            if(scroll >pos1) {
+                $('.video_interview .header').addClass('scroll');
+                $('.onborading_video_interview2').removeClass('on');
+                $('.onborading_video_interview2').addClass('on');
+            }else {
+                $('.video_interview .header').removeClass('scroll');
+            }
+        });
+        $('.link_onborading_arrow, .link_onborading').on('click', function(){
+            var target = $('.onborading_video_interview2').offset().top;
+            $('html, body').stop().animate({scrollTop : target}, 1000);
+        })
+
+        //슬라이드
+        var slides_auto_time = 3000;
+        var slides_ani_time = 300;
+        var slides;
+        var slides_pagination;
+        var slides_total = 0;
+        var slides_idx = 0;
+        var slides_time = null;
+        var slides_click_page = -1;
+        var slides_move_img = -1;
+        var slides_button_lock = 0;
+
+        slides_main();
+
+        function slides_main() {
+            slides = $('.slide_onborading'); //슬라이드 컨텐츠 영역
+            slides_pagination = $('.btn_area'); // 슬라이드 페이지 영역
+
+            slides_total = slides.find('.bg_slide').length;
+
+            var btn_page_html = "";
+            for(i=0;i<slides_total;i++) {
+                btn_page_html += "<a href=\"javascript:slides_move_page('"+i+"');\" idx='"+i+"'></a>\n";
+            }
+            slides.find('.bg_slide').first().stop(true).animate({'opacity':1},200);
+            slides_pagination.html(btn_page_html);
+            slides_pagination.find('a').eq(0).addClass('on');
+            slides_time = setTimeout('slides_next()', slides_auto_time);
+        }
+
+        function slides_page_next() {
+            if(slides_click_page == -1) {
+                slides_idx--;
+
+                if(slides_idx < 0) {
+                    slides_idx = slides_total-1;
+                }
+            } else {
+                slides_idx = slides_click_page;
+                slides_click_page = -1;
+            }
+            slides_pagination.find('a').removeClass('on');
+            slides_pagination.find('a').eq(slides_idx).addClass('on');
+        };
+
+        function slides_page_prev() {
+            if(slides_click_page == -1) {
+                slides_idx++;
+
+                if(slides_idx >= slides_total) {
+                    slides_idx = 0;
+                }
+            } else {
+                slides_idx = slides_click_page;
+                slides_click_page = -1;
+            }
+            slides_pagination.find('a').removeClass('on');
+            slides_pagination.find('a').eq(slides_idx).addClass('on');
+        };
+
+        function slides_next() {
+            if(slides_button_lock) return ;
+            slides_button_lock = 1;
+
+            if(slides_time != null) {
+                clearTimeout(slides_time);
+                slides_time = null;
+            }
+
+            slides.find('.bg_slide').eq(0).animate({ opacity: '1' }, slides_ani_time, function () {
+                var tmp = slides.find('.bg_slide').first();
+                slides.append(tmp);
+                slides.find('.bg_slide').first().stop(true).animate({'opacity':1},400);
+                slides.find('.bg_slide').css('opacity','0');
+                slides_page_prev();
+
+                if(slides_move_img > -1) sortSlides();
+
+                slides_button_lock = 0;
+
+                slides_time = setTimeout('slides_next()', slides_auto_time);
+            });
+        };
+
+        function slides_prev() {
+            if(slides_button_lock) return ;
+            slides_button_lock = 1;
+
+            if(slides_time != null) {
+                clearTimeout(slides_time);
+                slides_time = null;
+            }
+
+            slides.find('.bg_slide').eq(0).animate({ opacity: '1'  }, slides_ani_time, function () {
+                var tmp = slides.find('.bg_slide').last();
+                slides.prepend(tmp);
+                slides.find('.bg_slide').first().stop(true).animate({'opacity':1},400);
+                slides.find('.bg_slide').css('opacity','0');
+                slides_page_next();
+
+                if(slides_move_img > -1) sortSlides();
+
+                slides_button_lock = 0;
+
+                slides_time = setTimeout('slides_next()', slides_auto_time);
+            });
+        };
+
+        function slides_move_page(idx) {
+            var tmp;
+            slides.find('.bg_slide').each(function () {
+                if(idx == $(this).attr('idx')) {
+                    tmp = $(this);
+                }
+            });
+
+            slides_click_page = idx;
+            slides_move_img = idx;
+
+            if(slides_idx > idx && idx > -1) {
+                slides.append(tmp);
+                slides_next();
+            } else if(slides_idx < idx && idx < slides_total) {
+                slides.find('.bg_slide').eq(0).after(tmp)
+                slides_prev();
+            } else {
+                slides_click_page = -1;
+                slides_move_img = -1;
+            }
+        }
+
+        function sortSlides() {
+            var tmp = new Array();
+
+            slides_move_img = slides.find('a').eq(0).attr('idx');
+            slides.find('.bg_slide').each(function () {
+                var idx = $(this).attr('idx');
+                tmp[idx] = $(this);
+            });
+            var i = 0;
+            while(i < slides_total) {
+                slides.append(tmp[slides_move_img]);
+
+                slides_move_img++;
+                if(slides_move_img >= slides_total) {
+                    slides_move_img = 0;
+                }
+                i++;
+            }
+            slides_move_img = -1;
+        }
+
+        //우측 모달 확인
+        $('.header .link_register').on('click',function () {
+            $('.interview_regist').addClass('show');
+            $('#dimmed').css({display:'block'});
+        });
+
+        $('.interview_interviewer .btnSizeL').on('click',function () {
+            $('.interview_setting_tool').addClass('show');
+        });
+        $('.interview_setting_tool .btnClose').on('click',function () {
+            $('.interview_setting_tool').removeClass('show');
+            $('.interview_setting_tool .wrap_search').removeClass('on');
+        });
+        $('.interview_setting_tool ._btnClose').on('click',function () {
+            $('.interview_setting_tool').removeClass('show');
+            $('.interview_setting_tool .wrap_search').removeClass('on');
+        });
+        $('.interview_setting_tool .wrap_search .inpTypo').on('click',function () {
+            $('.interview_setting_tool .wrap_search').addClass('on');
+        });
+        $('.interview_setting_tool .wrap_search .info_box').on('click',function () {
+            $('.interview_setting_tool .wrap_search').removeClass('on');
+        });
+
+        $('.interview_setting_tool .btn_modify').on('click',function () {
+            $('.interview_regist_tool').addClass('show');
+        });
+
+        $('.interview_regist_tool .btnClose').on('click',function () {
+            $('.interview_regist_tool').removeClass('show');
+        });
+        $('.interview_regist_tool ._btnClose').on('click',function () {
+            $('.interview_regist_tool').removeClass('show');
+        });
+        $('.interview_regist_tool .btn_prev').on('click',function () {
+            $('.interview_regist_tool').removeClass('show');
+        });
+
+</script>
+
+</body></html>

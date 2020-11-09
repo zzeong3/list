@@ -1,0 +1,155 @@
+{
+    "data" : [
+        {   
+            "img" : "zzeong1",
+            "category" : "반응형",
+            "tit": "개인포트폴리오",
+            "link": "##",
+            "period": "20.01.11 ~ 20.04.17",
+            "persent": "100%",
+            "tags" : "#html #scss #gulp #jquery #design",
+            "desc" : "프로젝트 전체를 작업해 볼 수는 스터디가 있어 작업하게 된 개인포트폴리오. 실무에서는 작업하지 못해 보았던 디자인 뿐만 아니라 api도 배워 페이지에 적용해 볼 수 있었음. scss, gulp, jquery를 정리하고 새로 배울 수 있었던 프로젝트."
+        },
+        {   
+            "img" : "portfolio16",
+            "category" : "PC",
+            "tit": "사람인 영상면접 온보딩",
+            "link": "file/video_interview/onboarding.html",
+            "period": "20.07.28 ~ 20.07.29",
+            "persent": "100%",
+            "tags" : "#html #css #jquery",
+            "desc" : "영상면접 시작 화면"
+        },
+        {   
+            "img" : "portfolio15",
+            "category" : "PC",
+            "tit": "사람인 영상면접",
+            "link": "file/video_interview/video_interview.html",
+            "period": "20.07.20 ~ 20.07.24",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "영상면접 일정이 있을 때와 없을 때 타입이 나뉨. 면접 일정 있을 때는 상단 원에 모션이 들어감."
+        },
+        {   
+            "img" : "portfolio14",
+            "category" : "PC,M",
+            "tit": "사람인 채용 템플릿",
+            "link": "file/templete/editor.html",
+            "period": "19.05.10 ~ 19.05.15",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "에디터+브라우저에서는 display:inline-block 이슈로 한글을 써지지 않는 이슈 등 에디터 환경으로 예상치 못한 이슈 많았던 프로젝트. 기획, 디자인, 개발의 커뮤니케이션이 많이 필요했고, 많은 검색과 테스트로 에디터 이슈에 대응함. 페이지별로 있는 동일한 css를 한파일로 묶어 운영이 편리하게 함."
+        },
+        {   
+            "img" : "portfolio13",
+            "category" : "M",
+            "tit": "사람인 채용정보 홈",
+            "link": "https://m.saramin.co.kr/recruit-home",
+            "period": "19.12.03 ~ 19.12.06",
+            "persent": "100%",
+            "tags" : "#html #css #jquery",
+            "desc" : "배경 모서리의 둥근 부분을 어떻게 처리할지 고민을 했던 프로젝트. css3 도형 변형으로 이미지 사용을 최소화 하고자 함."
+        },
+        {   
+            "img" : "portfolio12",
+            "category" : "M",
+            "tit": "사람인 기업리뷰",
+            "link": "http://m.saramin.co.kr/company-review",
+            "period": "19.05.10 ~ 19.05.15",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "설문조사가 스텝 별로 진행되는 이벤트 페이지로 각 스텝에 사용되는 공통 요소들을 잡고 진행"
+        },
+        {   
+            "img" : "portfolio10",
+            "category" : "PC",
+            "tit": "사람인 기업정보 개편",
+            "link": "file/company_interview/info.html",
+            "period": "18.12.19 ~ 18.01.03",
+            "persent": "10r0%",
+            "tags" : "#html #css",
+            "desc" : "기업 업종에 따라서 컬러 템플릿이 있어 초기 작업 시 잘 고려하여 운영이 쉽게 작업. 개수마다 넓이가 달라지는 다양한 형태의 리스트에는 CSS만으로 컨트롤 할 수 있게 작업"
+        },
+        {   
+            "img" : "portfolio8",
+            "category" : "PC",
+            "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
+            "link": "https://www.saramin.co.kr/zf_user/helpdesk/idpw-find",
+            "period": "18.03.19 ~ 18.04.03",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "기존 테이블로 되어진 불필요한 코드 제거로 UI 간소화. 웹표준/접근성 향상으로 코드품질 개선"
+        },
+        {   
+            "img" : "portfolio8-1",
+            "category" : "M",
+            "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
+            "link": "http://m.saramin.co.kr/helpdesk/person-find-id",
+            "period": "18.03.19 ~ 18.04.03",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "기존 페이지가 없었음. 모바일을 통해 아이디/비밀번호 변경 할 수 있게 됨"
+        },
+        {   
+            "img" : "portfolio7",
+            "category" : "M",
+            "tit": "카카오 번역서비스",
+            "link": "https://translate.kakao.com/m/",
+            "period": "17.10.18 ~ 17.10.19",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "채팅창으로 된 작업은 처음 해보아 흥미로웠던 작업.아이폰 키패드 높이 이슈가 있었지만, 개발자들과의 커뮤니케이션으로 무사히 오픈을 마칠 수 있었음."
+        },
+        {   
+            "img" : "portfolio6",
+            "category" : "M",
+            "tit": "Daum 백과사전 통합아티클",
+            "link": "https://m.search.daum.net/search?w=enc&articleId=11230&q=%ED%83%9C%EC%A1%B0",
+            "period": "16.11.21 ~ 16.11.25",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "페이지 레이아웃이 정해지지 않고, 위아래로 콘텐츠가 위치할 수 있는 경우의 수가 많아 라인, 여백 등으로 이슈가 있었지만 css선택자를 이용해 많은 경우의 수를 대응했던 작업."
+        },
+        {   
+            "img" : "portfolio5",
+            "category" : "반응형",
+            "tit": "카카오맵 프로모션",
+            "link": "https://map.kakao.com/info/kakao_map",
+            "period": "16.05.30 ~ 16.06.03",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "크로스브라우징 이슈로 제약이 많았던 애니메이션을 많이 사용해 볼 수 있었던 프로젝트. 하위 브라우저는 애니메이션이 없는 형태로 대응"
+        },
+        {   
+            "img" : "portfolio4",
+            "category" : "PC",
+            "tit": "Daum 영화 개편",
+            "link": "https://movie.daum.net/main/new#slide-1-0",
+            "period": "16.02.17 ~ 16.06.27",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "기존 반응형 페이지를 PC/M 분리 시키고, 순차 개편으로 이루어져 기존 페이지 수정과 개편 페이지 작업을 같이 진행해야 했던 프로젝트. 순차 개편으로 css 버전 관리 대해 다시 한번 생각해 볼 수 있었던 프로젝트."
+        },
+        {   
+            "img" : "portfolio3",
+            "category" : "반응형",
+            "tit": "Daum 티스토리 스킨 개편",
+            "link": "https://blog.kinesis.kr/85?category=534845",
+            "period": "15.11.03 ~ 15.11.12",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "PC/Tablet/M 대응 + 메뉴/댓글 기능 + 해상도마다 레이아웃 위치도 많이 바뀌는 편이라 생각할 것이 많았지만, 그만큼 재미있게 작업했던 프로젝트."
+        },
+        {   
+            "img" : "portfolio1",
+            "category" : "PC",
+            "tit": "Daum 백과사전",
+            "link": "https://100.daum.net/",
+            "period": "14.08.19 ~ 14.10.31",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "처음으로 맡았던 장기 프로젝트로 우여곡절도 많았지만, 장기 프로젝트에서 느낄 수 있는 일정 관리 및 커뮤니케이션 등 새로운 점을 많이 배우고 느낄 수 있었던 프로젝트."
+        }
+        
+    ]
+}

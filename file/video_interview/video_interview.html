@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+    <title>영상면접 홈</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link href="sri_css/layout_video_interview.css" media="all" rel="stylesheet" type="text/css">
+    <link href="https://www.saramin.co.kr/sri_css/components.css?v=20200806163851" media="all" rel="stylesheet" type="text/css">
+    <link href="https://www.saramin.co.kr/sri_css/person/contents.css?v=20200806163851" media="all" rel="stylesheet" type="text/css">
+    <link href="sri_css/video_interview.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="//www.saraminimage.co.kr/js/libs/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/libs/saramin/common.js?v=20200730163107"></script>
+    <!--[if lt IE 9]> <script type="text/javascript" src="//www.saramin.co.kr/js/html5shiv.min.js"></script><![endif]-->
+    <script type="text/javascript" src="http://www.saramin.co.kr/js/ui/common/dist/ui-module.js?v=20200730163107"></script>
+
+<script charset="utf-8" src="https://www.saramin.co.kr/js/ui/common/dist/vendors~Datepicker.chunk.js?v=f9ec9e0fbec1964247c9"></script></head>
+<body class="video_interview person"><!-- [dev] 영상면접 video_interview로 분기 -->
+<!-- skip navi -->
+<div id="skipnavigation">
+    <a href="#content">본문 바로가기</a>
+</div>
+<!-- //skip navi -->
+<header id="sri_header" class="header">
+    <!-- QA532 -->
+    <div class="area_logo">
+        <a href="https://www.saramin.co.kr/zf_user/" class="link_saramin_logo" title="사람인 홈으로 이동">
+            <svg width="21" height="21" viewBox="0 0 21 21">
+                <g fill="none" fill-rule="evenodd">
+                    <g>
+                        <g>
+                            <g>
+                                <g transform="translate(-54 -53) translate(54 40) translate(0 13)">
+                                    <circle cx="4.435" cy="4.435" r="4.435" fill="#4876EF"></circle>
+                                    <circle cx="16.261" cy="4.435" r="4.435" fill="#E2ECFB"></circle>
+                                    <circle cx="4.435" cy="16.261" r="4.435" fill="#E2ECFB"></circle>
+                                    <circle cx="16.35" cy="16.35" r="4.435" fill="#00BEAB"></circle>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <svg width="96" height="24" viewBox="0 0 96 24">
+                <g fill="none" fill-rule="evenodd">
+                    <g fill="#FFF">
+                        <g>
+                            <path d="M35.03 8.555c1.88 0 3.743.504 4.637 1.254.428.36.548.804.572 1.112.037.46-.119.94-.413 1.282-.528.588-1.442.67-2.328.207-.711-.36-1.832-.632-2.607-.632-1.87 0-2.071.912-2.071 1.305 0 .678.521 1.085 1.746 1.36l2.188.453c2.733.637 4.061 2.018 4.061 4.219 0 2.895-2.298 4.84-5.719 4.84-3.228 0-4.913-1.135-5.487-1.623-.659-.556-.81-1.614-.321-2.264.32-.438.763-.662 1.248-.662.344 0 .71.113 1.066.343.883.578 2.3.95 3.612.95 1.894 0 2.176-.85 2.176-1.357 0-.699-.52-1.136-1.688-1.417-.42-.095-.693-.145-.955-.192-.367-.067-.683-.125-1.316-.29-1.847-.478-4.05-1.604-4.05-4.247 0-2.82 2.218-4.64 5.65-4.64zm13.648 0c4.023 0 6.063 1.852 6.063 5.505V20.8c0 .613-.153.91-.632 1.226-.523.352-2.491 1.5-5.82 1.5-4.266 0-5.786-2.46-5.786-4.762 0-1.033.407-4.404 5.647-4.404 1.221 0 2.042.17 3.067.41l.102.025v-.847c0-1.562-.815-2.228-2.724-2.228-.997 0-2.016.257-2.695.472-.755.236-1.422.183-1.878-.147-.37-.268-.573-.697-.573-1.206 0-.747.395-1.286 1.173-1.604.775-.328 2.374-.68 4.056-.68zm48.083 0c3.811 0 5.664 1.956 5.664 5.978v7.166c0 1.025-.79 1.827-1.798 1.827-.943 0-1.74-.836-1.74-1.827v-7.083c0-1.702-.802-2.6-2.319-2.6-1.206 0-1.929.467-2.2.643l-.092.057V21.7c0 1.025-.777 1.827-1.768 1.827-.959 0-1.769-.836-1.769-1.827v-7.11c0-1.708-.78-2.574-2.32-2.574-1.205 0-1.928.468-2.2.644l-.09.057V21.7c0 1.042-.76 1.827-1.77 1.827-.958 0-1.767-.836-1.767-1.827V11.406c0-.594.172-.92.685-1.29 1.278-.978 3.139-1.56 4.977-1.56 1.708 0 2.97.492 3.973 1.55l.052.055.058-.047c1.289-1.02 2.818-1.559 4.424-1.559zm-23.186 0c4.023 0 6.063 1.852 6.063 5.505V20.8c0 .613-.154.91-.631 1.226-.524.352-2.492 1.5-5.822 1.5-4.265 0-5.785-2.46-5.785-4.762 0-1.033.407-4.404 5.647-4.404 1.221 0 2.041.17 3.067.41l.101.025v-.847c0-1.562-.814-2.228-2.724-2.228-.996 0-2.015.257-2.695.472-.754.236-1.42.183-1.877-.147-.37-.269-.573-.697-.573-1.206 0-.747.395-1.286 1.174-1.604.774-.328 2.373-.68 4.055-.68zm-11.06 0c.921 0 1.832.084 2.376.22 1.074.285 1.665.935 1.665 1.829 0 .67-.531 1.66-1.672 1.66-.279 0-.557-.054-.85-.111-.38-.075-.773-.154-1.243-.137-1.029.031-1.528.646-1.528 1.88v7.83c0 1.01-.783 1.8-1.79 1.8h-.002l-.03-.003-.032.003c-.945 0-1.714-.763-1.714-1.702v-8.62c0-2.954 1.757-4.649 4.82-4.649zm55.63 0c4.071 0 6.223 2.067 6.223 5.978v7.166c0 1.042-.765 1.827-1.78 1.827-.963 0-1.777-.837-1.777-1.827v-7c0-1.979-1.435-2.684-2.777-2.684-1.161 0-2.213.351-2.731.677l-.038.024V21.7c0 1.042-.764 1.827-1.779 1.827-.964 0-1.778-.837-1.778-1.827V11.35c0-.632.16-.957.632-1.289.356-.252 2.275-1.507 5.805-1.507zm-69.69 8.202c-1.496 0-2.502.752-2.502 1.87 0 1.224.943 1.925 2.585 1.925 1.584 0 2.456-.548 2.742-.728l.039-.024v-2.582l-.06-.017c-.942-.274-1.739-.444-2.804-.444zm24.897 0c-1.496 0-2.501.752-2.501 1.87 0 1.224.942 1.925 2.585 1.925 1.584 0 2.455-.548 2.741-.728l.038-.024v-2.582l-.059-.017c-.941-.274-1.739-.444-2.804-.444zm33.714-9.913c.947 0 1.688.798 1.688 1.817v9.627c0 1.019-.741 1.816-1.688 1.816-.915 0-1.688-.83-1.688-1.816V8.661c0-1.036.726-1.817 1.688-1.817zm0-6.844c1.42 0 2.532 1.111 2.532 2.53 0 1.411-1.16 2.603-2.532 2.603-1.42 0-2.531-1.143-2.531-2.603 0-1.442 1.088-2.53 2.531-2.53z" transform="translate(-83 -49) translate(54 40) translate(0 9)"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </a>
+        <a href="##" class="link_live_logo" title="사람인 영상면접 Live으로 이동">
+            <svg width="79" height="22" viewBox="0 0 79 22">
+                <g fill="none" fill-rule="evenodd">
+                    <g fill="#FFF" fill-rule="nonzero">
+                        <g>
+                            <path d="M161.031 15.25c.746 0 1.603.107 2.259.32.656.211 1.229.523 1.72.933.49.41.876.913 1.159 1.507.283.594.425 1.266.425 2.016s-.142 1.422-.425 2.016c-.283.595-.67 1.097-1.16 1.507-.49.41-1.063.722-1.72.934-.655.213-1.512.319-2.258.319s-1.603-.106-2.259-.319c-.656-.212-1.229-.523-1.719-.934-.49-.41-.877-.912-1.16-1.507-.283-.594-.424-1.266-.424-2.016s.141-1.422.424-2.016c.283-.594.67-1.097 1.16-1.507.49-.41 1.063-.722 1.72-.934.655-.212 1.512-.318 2.258-.318zm-18.315 0c.746 0 1.603.107 2.259.32.656.211 1.229.523 1.719.933.49.41.877.913 1.16 1.507.283.594.424 1.266.424 2.016s-.141 1.422-.424 2.016c-.283.595-.67 1.097-1.16 1.507-.49.41-1.063.722-1.72.934-.655.213-1.512.319-2.258.319s-1.603-.106-2.259-.319c-.656-.212-1.229-.523-1.719-.934-.49-.41-.877-.912-1.16-1.507-.283-.594-.424-1.266-.424-2.016s.141-1.422.424-2.016c.283-.594.67-1.097 1.16-1.507.49-.41 1.063-.722 1.72-.934.655-.212 1.512-.318 2.258-.318zm64.48.517c.858 0 1.473.705 1.473 1.574v4.584l-.016.017c-.042.623-.582 1.156-1.109 1.492-.181.115-2.716.864-5.256.864-2.574 0-5.108-.844-5.256-.93-.478-.271-.914-.737-.978-1.3l-.008-.143V17.34c0-.87.746-1.574 1.603-1.574.807 0 1.288.624 1.342 1.422l.005.152-.001.502h6.775v-.502c0-.87.569-1.574 1.426-1.574zm-29.065.144c.818 0 1.482.68 1.482 1.52v3.355c1.354.34 3.872 1.095 7.615-.338.785-.24 1.52-.065 1.844.875.273.791-.245 1.608-.996 1.89-2.002.752-3.283.916-4.833.916-3.412 0-5.587-.916-5.702-.979-.502-.275-.892-.788-.892-1.393V17.43c0-.839.663-1.519 1.482-1.519zm-17.1 1.913c-.68 0-1.379.195-1.792.584-.414.39-.62.927-.62 1.61 0 .684.206 1.22.62 1.61.413.39 1.112.585 1.792.585.68 0 1.379-.195 1.793-.585.413-.39.62-.926.62-1.61 0-.683-.207-1.22-.62-1.61-.414-.39-1.112-.584-1.793-.584zm-18.315 0c-.68 0-1.379.195-1.792.584-.414.39-.62.927-.62 1.61 0 .684.206 1.22.62 1.61.413.39 1.111.585 1.792.585.68 0 1.379-.195 1.792-.585.414-.39.62-.926.62-1.61 0-.683-.206-1.22-.62-1.61-.413-.39-1.111-.584-1.792-.584zm63.054 2.273h-6.775v1.054c2.563.528 3.791.647 6.774-.062l.001-.992zM146.918 3.713c.815 0 1.414.62 1.478 1.41l.006.141v8.164c0 .856-.621 1.55-1.484 1.55-.816 0-1.415-.619-1.48-1.41l-.005-.14v-.302h-1.128c-.768 0-1.39-.621-1.39-1.388 0-.768.622-1.39 1.39-1.39h1.128V8.805l-1.128.001c-.768 0-1.39-.622-1.39-1.389s.622-1.389 1.39-1.389h1.128v-.764c0-.809.554-1.473 1.343-1.545l.142-.006zm41.06 0c.815 0 1.415.62 1.479 1.41l.006.141v8.164c0 .856-.622 1.55-1.485 1.55-.815 0-1.415-.619-1.479-1.41l-.005-.14v-.302h-1.129c-.767 0-1.389-.621-1.389-1.388 0-.768.622-1.39 1.39-1.39h1.127V8.805l-1.128.001c-.767 0-1.389-.622-1.389-1.389s.622-1.389 1.39-1.389h1.127v-.764c0-.809.555-1.473 1.343-1.545l.142-.006zm19.385 0c.815 0 1.414.632 1.478 1.438l.006.144v7.792c0 .874-.621 1.582-1.484 1.582-.816 0-1.415-.632-1.479-1.438l-.006-.144v-2.836h-1.502c-.783 0-1.417-.634-1.417-1.416 0-.783.634-1.417 1.417-1.417h1.502V5.294c0-.825.554-1.503 1.343-1.575l.142-.007zm-38.167 0c.862 0 1.561.716 1.561 1.6 0 .883-.699 1.442-1.56 1.442-1.57 0-2.08.947-2.08 1.88v4.434c0 .883-.622 1.567-1.484 1.567s-1.485-.684-1.485-1.567V8.635c0-1.839.258-4.922 5.048-4.922zm12.376.3c.87 0 1.575.715 1.575 1.457v5.601c0 .84-.312 1.499-.879 1.992-.628.547-2.074 1.292-6.06 1.45-.487.02-1.012-.092-1.905-.23-.746-.116-1.297-.767-1.297-1.607V5.535c0-.807.705-1.522 1.575-1.522zm-45.309-.3c2.933 0 5.31 2.41 5.31 5.382 0 2.972-2.377 5.382-5.31 5.382-2.932 0-5.309-2.41-5.309-5.382 0-2.972 2.377-5.382 5.31-5.382zm65.89.3c.37 0 .653.127.851.381.2.255.298.571.298.949s-.099.687-.298.927c-.198.24-.482.36-.85.36h-2.258v.148c0 .582-.106 1.178-.319 1.788l3.076 2.639c.37.232.586.552.65.96.063.406-.018.777-.245 1.111-.227.335-.529.546-.905.633-.376.087-.734.007-1.074-.24l-2.757-2.748c-.483.64-1.06 1.232-1.735 1.778-.674.545-1.436 1.006-2.287 1.384-.412.19-.791.244-1.139.164-.348-.08-.62-.287-.82-.622-.198-.32-.272-.672-.223-1.057.05-.386.273-.68.67-.883.639-.335 1.203-.71 1.692-1.123.49-.415.898-.84 1.224-1.276.326-.436.575-.869.745-1.298.17-.429.255-.832.255-1.21V6.63h-2.83c-.369 0-.653-.12-.851-.36-.199-.24-.298-.55-.298-.927 0-.378.099-.694.298-.949.198-.254.482-.381.85-.381zm-45.232-.3c.483 0 .88.11 1.192.327.312.218.468.53.468.938v.803c0 .727-.135 1.475-.404 2.246l3.98 2.856c.41.291.641.647.691 1.069.05.422-.067.821-.351 1.2-.284.377-.614.588-.99.632-.376.043-.755-.088-1.138-.393l-3.448-2.9c-.454.654-.99 1.265-1.607 1.832-.617.567-1.322 1.068-2.117 1.504-.426.247-1.93-.05-2.17-.414-.228-.334-.316-.709-.267-1.123.05-.414.273-.745.67-.992 1.306-.814 2.27-1.687 2.895-2.617.624-.93.936-1.897.936-2.9v-.803c0-.407.156-.72.468-.938.313-.218.71-.327 1.192-.327zm22.976 3.147h-3.643c-.105 0-.19.086-.19.193v4.411c0 .101.076.18.175.194 1.569.215 3.073-.08 3.85-.557V7.055c0-.108-.085-.195-.192-.195zm-43.634-.263c-1.36 0-2.464 1.118-2.464 2.498 0 1.38 1.103 2.498 2.464 2.498 1.362 0 2.465-1.118 2.465-2.498 0-1.38-1.103-2.498-2.465-2.498z" transform="translate(-184 -52) translate(54 40) translate(0 9)"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="13" viewBox="0 0 33 13">
+                <g fill="none" fill-rule="evenodd">
+                    <g>
+                        <g>
+                            <g>
+                                <path fill="#FF3B3B" d="M6.5 0h20C30.09 0 33 2.91 33 6.5S30.09 13 26.5 13h-20C2.91 13 0 10.09 0 6.5S2.91 0 6.5 0z" transform="translate(-269 -49) translate(54 40) translate(215 9)"></path>
+                                <path fill="#FFF" fill-rule="nonzero" d="M10.04 10.1c.42 0 .761-.286.761-.681 0-.385-.261-.693-.75-.693H6.947l.955-5.485c.091-.528-.216-.913-.739-.913-.364 0-.67.231-.75.693L5.378 9.045c-.125.681.205 1.055.91 1.055h3.751zm3.858-6.573c.49 0 .842-.418.842-.847 0-.418-.319-.747-.762-.747-.5 0-.864.395-.864.835 0 .429.318.759.784.759zm-1.125 6.617c.341 0 .67-.22.75-.681l.75-4.376c.092-.527-.215-.912-.727-.912-.375 0-.67.23-.75.693l-.762 4.375c-.09.527.216.901.739.901zm5.303.044c.602 0 .955-.363 1.341-1.066l2.126-3.793c.341-.604 0-1.154-.614-1.154-.34 0-.58.176-.773.539l-1.25 2.352c-.387.726-.512 1.22-.637 1.572-.034.099-.159.088-.17-.01-.012-.353-.08-1.034-.17-1.562l-.41-2.22c-.08-.43-.387-.67-.773-.67-.49 0-.887.384-.762 1.01l.807 3.859c.148.703.591 1.143 1.285 1.143zm7.076.022c.603 0 1.217-.143 1.74-.418.227-.12.488-.351.488-.692 0-.341-.261-.649-.636-.649-.137 0-.262.033-.398.088-.364.132-.694.33-1.194.33-.67 0-1.228-.308-1.114-1.044l.023-.143h2.899c.511 0 .773-.297.886-.77l.046-.198c.386-1.703-.853-2.616-2.285-2.616-1.194 0-2.399.594-2.808 2.287-.091.362-.193.945-.227 1.374-.103 1.517.954 2.451 2.58 2.451zm1.228-3.595h-2.126c.16-.791.546-1.275 1.33-1.275.67 0 1.137.352.966 1.133-.022.11-.068.142-.17.142z" transform="translate(-269 -49) translate(54 40) translate(215 9)"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </a>
+    </div>
+    <!-- //QA532 -->
+    <!-- WMG-26415 수정 -->
+    <ul id="utility" class="utility">
+        <li class="member_menu">
+            <span class="thumb_candidate"><img src="http://pds.saramin.co.kr/person/photo/2019/12/q2lbxh_5jwt-1meg1l1_q2lbxhy8kk1meg1l1q2lbxbsi9q1meg1l1.jpg" alt="응시자"></span>
+            <strong>한솔은</strong>님 안녕하세요.
+        </li>
+        <li class="mypage_menu">
+            <a href="##" class="btn_menu">마이페이지</a>
+        </li>
+    </ul>
+    <!-- WMG-26415 수정 -->
+</header>
+<div id="sri_section">
+    <div id="content">
+        <div class="wrap_video_interview my">
+            <h1 class="blind">영상면접 홈</h1>
+            <div class="top_video_interview motion"><!-- [dev] 당일 면접이 있을시 motion 클래스 추가 -->
+                <div class="wrap_motion">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                    <div class="circle5"></div>
+                    <div class="circle6"></div>
+                    <div class="circle7"></div>
+                </div>
+                <div class="inner_interview">
+                    <div class="box_interview">
+                        <!-- [dev]
+                        오늘 일정없음 5일내 일정 있음 : type2 추가
+                        입장 불가 : disabled 추가
+                        오늘 일정없음 5일내 일정 없음 : type3 추가
+                        -->
+                                                <div class="info_interview_other">
+                            <strong class="tit_interview_other"><span class="txt">오전 10시 30분의 다른 일정 </span>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 일이삼사오육칠팔구십 일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 </strong>
+                            <div class="paging_interview">
+                                <button type="button" class="img_interview btn_prev" disabled=""><span class="blind">이전</span></button>
+                                <span class="blind">현재페이지</span>
+                                <strong class="num_now">1</strong>
+                                <span class="bar">/</span>
+                                <span class="blind">총페이지</span>
+                                <span class="num_total">3</span>
+                                <button type="button" class="img_interview btn_next"><span class="blind">다음</span></button>
+                            </div>
+                        </div>
+                        <div class="info_interview">
+                            <div class="wrap_interview">
+                                <div class="inner_info">
+                                                                        <p class="txt_interview"><strong class="emph">20분</strong>뒤에 시작합니다.</p>
+                                                                        <strong class="tit_interview">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                                    <em class="name_company"><spa class="blind">기업명</spa>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</em>
+                                    <dl class="list_interview">
+                                        <dt>면접관</dt>
+                                        <dd>3명</dd>
+                                        <dt>응시자</dt>
+                                        <dd>4명</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                            <a href="##" class="img_interview link_enter">입장하기</a>
+                            <div class="img_interview tooltip_interview" style="display:block">1시간 전부터<br>입장 가능합니다.</div>
+                            <span class="blind">면접시간</span>
+                            <span class="img_interview date_interview">7월 10일 오전 10시 30분</span>
+                        </div>
+                                            </div>
+                    <a href="##" class="img_interview link_guide"><span class="txt">사용법이 어려우신가요?</span>영상면접 Check 가이드</a>
+                </div>
+            </div><!-- //top_video_interview -->
+            <div class="cont_video_interview">
+                <div class="aside_interview">
+                    <div class="tit_aside">
+                        <h2><span class="txt_date">7월 4일 수요일</span>오늘의 일정</h2>
+                    </div>
+                    <div class="slider_calendar">
+                        <div class="inner_calendar">
+                            <ul class="list_calendar" style="width: 602px; margin-left: -43px;">
+                                
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>tue</span>
+                                    <button type="button">2</button>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>wed</span>
+                                    <button type="button" class="on">3</button>
+                                    <span class="ico_dot"><span class="blind">일정있음</span></span>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>thu</span>
+                                    <button type="button">4</button>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>fri</span>
+                                    <button type="button">5</button>
+                                    <span class="ico_dot"><span class="blind">일정있음</span></span>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>sat</span>
+                                    <button type="button">6</button>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>sun</span>
+                                    <button type="button">7</button>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>mon</span>
+                                    <button type="button">8</button>
+                                    <span class="ico_dot"><span class="blind">일정있음</span></span>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>tue</span>
+                                    <button type="button">9</button>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>wed</span>
+                                    <button type="button">10</button>
+                                    <span class="ico_dot"><span class="blind">일정있음</span></span>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>thu</span>
+                                    <button type="button">11</button>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>fri</span>
+                                    <button type="button">12</button>
+                                    <span class="ico_dot"><span class="blind">일정있음</span></span>
+                                </li>
+                                <li>
+                                    <span class="txt_day"><span class="blind">요일</span>sat</span>
+                                    <button type="button">13</button>
+                                </li>
+                                
+                            <li>
+                                    <span class="txt_day"><span class="blind">요일</span>sun</span>
+                                    <button type="button">14</button>
+                                </li><li>
+                                    <span class="txt_day"><span class="blind">요일</span>mon</span>
+                                    <button type="button">1</button>
+                                    <span class="ico_dot"><span class="blind">일정있음</span></span>
+                                </li></ul>
+                        </div>
+                        <button type="button" class="img_interview btn_prev"><span class="blind">이전</span></button>
+                        <button type="button" class="img_interview btn_next"><span class="blind">다음</span></button>
+                    </div>
+                    <h3><span class="txt_num">5건</span>의 영상면접</h3>
+                    <ul class="list_time"><!-- 전체펼침 open 클래스 추가 -->
+                        <li><button type="button" class="btn_time">10:30</button></li>
+                        <li><button type="button" class="btn_time on">13:30</button></li>
+                        <li><button type="button" class="btn_time">15:30</button></li>
+                        <li><button type="button" class="btn_time">16:00</button></li>
+                        <li><button type="button" class="btn_time">17:30</button></li>
+                        <li class="more"><button type="button" class="btn_more">+2건</button></li>
+                    </ul>
+                    <div class="box_calendar">
+                        <em class="name_company"><span class="blind">기업명</span>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</em>
+                        <span class="time_calendar">10 : 30</span>
+                        <strong class="tit_calendar">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                        <div class="wrap_interview_view">
+                            <button type="button" class="img_interview btn_view"><span class="blind">면접관 정보</span></button>
+                            <div class="wrap_layer_interview">
+                                <div class="img_interview layer_interview">
+                                    <strong class="tit_layer">면접관 리스트</strong>
+                                    <ul class="list_interview">
+                                        <li><span class="name">일이삼사오일이삼사오</span> (<span class="department">일이삼사오육칠일이삼사오육칠</span>)</li>
+                                        <li><span class="name">오진하</span> (<span class="department">RX기획팀</span>)</li>
+                                        <li><span class="name">한솔은</span> (<span class="department">인사팀</span>)</li>
+                                        <li><span class="name">김보경</span> (<span class="department">퍼포먼스디자인기획팀</span>)</li>
+                                    </ul>
+                                    <button type="button" class="img_interview btn_close"><span class="blind">면접관 리스트 레이어 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_btn">
+                            <span class="txt_expected">참석 예정</span>
+                            <a href="##" class="link_enter">입장하기</a>
+                        </div>
+                    </div>
+                    <div class="box_calendar on">
+                        <em class="name_company"><span class="blind">기업명</span>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</em>
+                        <span class="time_calendar">13 : 30</span>
+                        <strong class="tit_calendar">일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                        <div class="wrap_interview_view">
+                            <button type="button" class="img_interview btn_view"><span class="blind">면접관 정보</span></button>
+                            <div class="wrap_layer_interview">
+                                <div class="img_interview layer_interview">
+                                    <strong class="tit_layer">면접관 리스트</strong>
+                                    <ul class="list_interview">
+                                        <li><span class="name">일이삼사오일이삼사오</span> (<span class="department">일이삼사오육칠일이삼사오육칠</span>)</li>
+                                        <li><span class="name">오진하</span> (<span class="department">RX기획팀</span>)</li>
+                                        <li><span class="name">한솔은</span> (<span class="department">인사팀</span>)</li>
+                                        <li><span class="name">김보경</span> (<span class="department">퍼포먼스디자인기획팀</span>)</li>
+                                    </ul>
+                                    <button type="button" class="img_interview btn_close"><span class="blind">면접관 리스트 레이어 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_btn">
+                            <span class="txt_expected">참석 예정</span>
+                            <a href="##" class="link_enter">입장하기</a>
+                        </div>
+                    </div>
+                    <div class="box_calendar">
+                        <em class="name_company"><span class="blind">기업명</span>일이삼사오</em>
+                        <span class="time_calendar">15 : 30</span>
+                        <strong class="tit_calendar">일이삼사오육칠팔구십</strong>
+                        <div class="wrap_interview_view">
+                            <button type="button" class="img_interview btn_view"><span class="blind">면접관 정보</span></button>
+                            <div class="wrap_layer_interview">
+                                <div class="img_interview layer_interview">
+                                    <strong class="tit_layer">면접관 리스트</strong>
+                                    <ul class="list_interview">
+                                        <li><span class="name">일이삼사오일이삼사오</span> (<span class="department">일이삼사오육칠일이삼사오육칠</span>)</li>
+                                        <li><span class="name">오진하</span> (<span class="department">RX기획팀</span>)</li>
+                                        <li><span class="name">한솔은</span> (<span class="department">인사팀</span>)</li>
+                                        <li><span class="name">김보경</span> (<span class="department">퍼포먼스디자인기획팀</span>)</li>
+                                    </ul>
+                                    <button type="button" class="img_interview btn_close"><span class="blind">면접관 리스트 레이어 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_btn">
+                            <span class="txt_expected">참석 예정</span>
+                            <a href="##" class="link_enter">입장하기</a>
+                        </div>
+                    </div>
+                    <div class="box_calendar">
+                        <em class="name_company"><span class="blind">기업명</span>일이삼사오</em>
+                        <span class="time_calendar">16 : 00</span>
+                        <strong class="tit_calendar">일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                        <div class="wrap_interview_view">
+                            <button type="button" class="img_interview btn_view"><span class="blind">면접관 정보</span></button>
+                            <div class="wrap_layer_interview">
+                                <div class="img_interview layer_interview">
+                                    <strong class="tit_layer">면접관 리스트</strong>
+                                    <ul class="list_interview">
+                                        <li><span class="name">일이삼사오일이삼사오</span> (<span class="department">일이삼사오육칠일이삼사오육칠</span>)</li>
+                                        <li><span class="name">오진하</span> (<span class="department">RX기획팀</span>)</li>
+                                        <li><span class="name">한솔은</span> (<span class="department">인사팀</span>)</li>
+                                        <li><span class="name">김보경</span> (<span class="department">퍼포먼스디자인기획팀</span>)</li>
+                                    </ul>
+                                    <button type="button" class="img_interview btn_close"><span class="blind">면접관 리스트 레이어 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_btn">
+                            <span class="txt_expected">참석 예정</span>
+                            <a href="##" class="link_enter">입장하기</a>
+                        </div>
+                    </div>
+                    <div class="box_calendar">
+                        <em class="name_company"><span class="blind">기업명</span>일이삼사오</em>
+                        <span class="time_calendar">17 : 30</span>
+                        <strong class="tit_calendar">일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                        <div class="wrap_interview_view">
+                            <button type="button" class="img_interview btn_view"><span class="blind">면접관 정보</span></button>
+                            <div class="wrap_layer_interview">
+                                <div class="img_interview layer_interview">
+                                    <strong class="tit_layer">면접관 리스트</strong>
+                                    <ul class="list_interview">
+                                        <li><span class="name">일이삼사오일이삼사오</span> (<span class="department">일이삼사오육칠일이삼사오육칠</span>)</li>
+                                        <li><span class="name">오진하</span> (<span class="department">RX기획팀</span>)</li>
+                                        <li><span class="name">한솔은</span> (<span class="department">인사팀</span>)</li>
+                                        <li><span class="name">김보경</span> (<span class="department">퍼포먼스디자인기획팀</span>)</li>
+                                    </ul>
+                                    <button type="button" class="img_interview btn_close"><span class="blind">면접관 리스트 레이어 닫기</span></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_btn">
+                            <span class="txt_expected">참석 예정</span>
+                            <a href="##" class="link_enter">입장하기</a>
+                        </div>
+                    </div>
+                    <p class="no_schedule">오늘 일정이 없습니다.</p>
+                    <div class="wrap_certify">
+                        <form action="#">
+                            <fieldset>
+                                <legend class="blind">인증코드 입력 폼</legend>
+                                <div class="cont_certify">
+                                <strong class="tit_certify">인증코드 입력</strong>
+                                    <p class="desc_certify">기업에게 단독으로 영상면접 제의를<br> 받으셨다면 면접 요청시<br> 수신된 <strong>인증코드를 입력</strong>해주세요</p>
+                                    <input type="text" class="inp_certify" title="인증코드 입력" placeholder="숫자 · 영문 11자 입력 ">
+                                </div>
+                                <button type="submit" class="btn_certify">확인</button><!-- [dev] 인증 코드 입력시 on 클랙스 추가 -->
+                            </fieldset>
+                        </form>
+                    </div>
+                </div><!-- //aisde_interview -->
+                <div class="cont_interview">
+                    <div class="tit_cont_interview">
+                        <h2>영상면접 리스트</h2>
+                        <span class="num_result">검색결과 16건</span>
+                        <select id="" class="img_interview inpSelTxt" title="영상면접 정렬순">
+                            <option value="">영상면접 임박순</option>
+                            <option value="">영상면접 일순</option>
+                            <option value="">영상면접 등록일순</option>
+                        </select>
+                    </div>
+                    <div class="filter_interview">
+                        <div class="area_filter date">
+                            <strong class="tit_filter">면접일자</strong>
+                            <input type="text" class="cls_input2a" title="면접일자기간 선택" placeholder="전체" autocomplete="off">
+                            <span class="btn_filter"></span>
+                        </div>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                UI.Datepicker('.cls_input2a', {
+                                    rangeSelect : true,
+                                    valueFormat : 'y-m-d',
+                                    valueLeadingZero : true,
+                                    masterClassName : 'datepicker_video'
+                                });
+                            });
+                        </script>
+                        <div class="area_filter">
+                            <strong class="tit_filter">면접 진행 상태</strong>
+                            <button type="button" class="btn_filter" title="선택 박스 펼기기"><span class="txt_all">전체</span></button>
+                            <ul class="box_progress">
+                                <li class="select"><button type="button" class="btn_list"><span class="txt_all">전체</span></button></li>
+                                <li><button type="button" class="btn_list">면접 답변대기</button></li>
+                                <li><button type="button" class="btn_list">면접 기한만료</button></li>
+                                <li><button type="button" class="btn_list">면접 참석</button></li>
+                                <li><button type="button" class="btn_list">면접 불참</button></li>
+                                <li><button type="button" class="btn_list">면접 변경요청</button></li>
+                                <li><button type="button" class="btn_list">연락전</button></li>
+                            </ul>
+                        </div>
+                        <div class="area_filter">
+                            <strong class="tit_filter">면접명/응시자명</strong>
+                            <input type="text" class="inp_filter" title="면접명/응시자명 입력" placeholder="입력" autocomplete="off">
+                        </div>
+                        <button type="button" class="btn_search">검색</button>
+                    </div>
+                    <div class="wrap_interview_list">
+                        <div class="info_tit">
+                            <em class="state expected">예정</em>
+                            <a href="##" class="name" target="_blank">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a>
+                            <strong class="tit">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                            <span class="data">6월17일 14:00 외 1건</span>
+                        </div>
+                        <div class="info_history"><!-- [dev] 자세히보기 버튼 클릭스 open 클래스 추가 -->
+                            <p class="img_interview tit_info">영상 면접 요청에 대한 답변을 11월 6일까지 전달해주세요.</p>
+                            <div class="state_info">
+                                <button type="button" class="state">면접 요청 답변</button>
+                                <span class="bar"></span>
+                                <button type="button" class="img_interview btn_detail">자세히 보기</button>
+                            </div>
+                            <strong class="blind">면접 진행 현황</strong>
+                            <ol class="list_history" reversed="">
+                                <li class="now"><!-- [dev] 현재 진행 now 클래스 추가 -->
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접일 확정</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">면접 참석 여부<span class="txt_history">참석</span></span>
+                                        <span class="desc_history">면접일<span class="txt_history num">2019-03-01 15:00</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접 요청</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">공고<span class="txt_history">사람인 웹 서비스 기획자 경력지 채용</span></span>
+                                        <span class="desc_history"><button type="button">요청 내용 보기</button></span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="wrap_interview_list">
+                        <div class="info_tit">
+                            <em class="state ing">진행중</em>
+                            <a href="##" class="name" target="_blank">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</a>
+                            <strong class="tit">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                            <span class="data">6월17일 14:00 외 1건</span>
+                        </div>
+                        <div class="info_history"><!-- [dev] 자세히보기 버튼 클릭스 open 클래스 추가 -->
+                            <p class="img_interview tit_info">영상면접이 확정 되었습니다.</p>
+                            <div class="state_info">
+                                <span class="state type2">참석 응답</span>
+                                <span class="bar"></span>
+
+                                <button type="button" class="img_interview btn_detail">자세히 보기</button>
+                            </div>
+                            <strong class="blind">면접 진행 현황</strong>
+                            <ol class="list_history" reversed="">
+                                <li class="now"><!-- [dev] 현재 진행 now 클래스 추가 -->
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접일 확정</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">면접 참석 여부<span class="txt_history">참석</span></span>
+                                        <span class="desc_history">면접일<span class="txt_history num">2019-03-01 15:00</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접 요청</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">공고<span class="txt_history">사람인 웹 서비스 기획자 경력지 채용</span></span>
+                                        <span class="desc_history"><button type="button">요청 내용 보기</button></span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="wrap_interview_list">
+                        <div class="info_tit">
+                            <em class="state">완료</em>
+                            <a href="##" class="name" target="_blank">일이삼사오육칠팔구십</a>
+                            <strong class="tit">일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                            <span class="data">6월17일 14:00</span>
+                        </div>
+                        <div class="info_history open"><!-- [dev] 자세히보기 버튼 클릭스 open 클래스 추가 -->
+                            <p class="img_interview tit_info">6월 8일자로 면접이 완료되었습니다.</p>
+                            <div class="state_info">
+                                <span class="bar"></span>
+                                <button type="button" class="img_interview btn_detail">자세히 보기</button>
+                            </div>
+                            <strong class="blind">면접 진행 현황</strong>
+                            <ol class="list_history" reversed="">
+                                <li class="now"><!-- [dev] 현재 진행 now 클래스 추가 -->
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접일 확정</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">면접 참석 여부<span class="txt_history">참석</span></span>
+                                        <span class="desc_history">면접일<span class="txt_history num">2019-03-01 15:00</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접 요청</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">공고<span class="txt_history">사람인 웹 서비스 기획자 경력지 채용</span></span>
+                                        <span class="desc_history"><button type="button">요청 내용 보기</button></span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="wrap_interview_list">
+                        <div class="info_tit">
+                            <em class="state cancel">취소</em>
+                            <a href="##" class="name" target="_blank">일이삼사오육칠팔구십</a>
+                            <strong class="tit">일이삼사오육칠팔구십</strong>
+                            <span class="data">6월17일 14:00</span>
+                        </div>
+                        <div class="info_history"><!-- [dev] 자세히보기 버튼 클릭스 open 클래스 추가 -->
+                            <p class="img_interview tit_info">기업에 의해 면접이 취소되었습니다.</p>
+                            <div class="state_info">
+                                <span class="bar"></span>
+                                <button type="button" class="img_interview btn_detail">자세히 보기</button>
+                            </div>
+                            <strong class="blind">면접 진행 현황</strong>
+                            <ol class="list_history" reversed="">
+                                <li class="now"><!-- [dev] 현재 진행 now 클래스 추가 -->
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접일 확정</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">면접 참석 여부<span class="txt_history">참석</span></span>
+                                        <span class="desc_history">면접일<span class="txt_history num">2019-03-01 15:00</span></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="head_history">
+                                        <strong class="tit_history">면접 요청</strong>
+                                        <span class="blind">날짜 및 시간</span><span class="date_history">2019-03-01 15:00</span>
+                                    </div>
+                                    <div class="cont_history">
+                                        <span class="desc_history">공고<span class="txt_history">사람인 웹 서비스 기획자 경력지 채용</span></span>
+                                        <span class="desc_history"><button type="button">요청 내용 보기</button></span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <p class="wrap_nodata">영상면접 일정이 없습니다.</p>
+                    <div class="pagination">
+                        <a href="##" class="btnPrev"><span class="blind">이전</span></a>
+                        <span class="page"><span>1</span></span>
+                        <a href="##" class="page"><span>2</span></a>
+                        <a href="##" class="page"><span>3</span></a>
+                        <a href="##" class="page"><span>4</span></a>
+                        <a href="##" class="page"><span>5</span></a>
+                        <a href="##" class="page"><span>6</span></a>
+                        <a href="##" class="page"><span>7</span></a>
+                        <a href="##" class="page"><span>8</span></a>
+                        <a href="##" class="page"><span>9</span></a>
+                        <a href="##" class="page"><span>10</span></a>
+                        <a href="##" class="btnNext"><span class="blind">다음</span></a>
+                    </div>
+                </div><!-- //cont_interview -->
+            </div><!-- //cont_video_interview -->
+        </div><!-- //wrap_video_interview -->
+            </div>
+</div>
+
+<div id="dimmed" style="display:none"></div>
+<!-- 영상면접 check 가이드 레이어 -->
+<div class="modal_check_guide check_guide" style="display:none">
+    <div class="modal_tit">
+        <strong>영상면접 Check 가이드</strong>
+    </div>
+    <div class="modal_cont">
+        <!-- QA56 -->
+        <div class="area_video">
+            <button type="button" class="btn_play"><span class="blind">영상면접 check 가이드 동영상 보기</span></button>
+        </div>
+        <!-- //QA56 -->
+        <ul class="tab_guide">
+            <li class="on"><button type="button" class="btn_tab">윈도우 PC</button></li>
+            <li><button type="button" class="btn_tab">맥(MAC) PC</button></li>
+        </ul>
+        <!-- 윈도우 메뉴 -->
+        <div class="menu_guide on">
+            <div class="guide_list">
+                <strong class="tit_list">화면설정</strong>
+                <div class="cont_list">웹캠 작동 확인<button type="button" class="img_interview btn_list btn_window_webcam"><span class="blind">페이지 이동</span></button></div>
+                <div class="cont_list">카메라 허용<button type="button" class="img_interview btn_list btn_window_camera"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <div class="guide_list">
+                <strong class="tit_list">마이크 설정</strong>
+                <div class="cont_list">마이크 허용<button type="button" class="img_interview btn_list btn_window_micpermit"><span class="blind">페이지 이동</span></button></div>
+                <div class="cont_list">마이크 인식<button type="button" class="img_interview btn_list btn_window_miccognize"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <div class="guide_list">
+                <strong class="tit_list">소리 설정</strong>
+                <div class="cont_list">오디오 확인<button type="button" class="img_interview btn_list btn_window_audio"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <div class="guide_list">
+                <strong class="tit_list">면접 돌발 사항 가이드</strong>
+                <div class="cont_list">돌발 대처법<button type="button" class="img_interview btn_list btn_window_cope"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <!-- QA534 -->
+            <div class="guide_list">
+                <div class="guide_browser">
+                    <strong class="img_interview tit_guide_browser">영상면접 지원 사양 확인하기</strong>
+                    <p class="desc_guide_browser">특정 사양에서 영상면접이 원활하게 진행되지 않사오니 면접 전 지원사양을 확인해주세요.</p>
+                    <dl class="list_guide_browser">
+                        <dt>지원브라우저</dt>
+                        <dd>
+                            <ul>
+                                <li class="img_interview chrome">크롬(Chrome) 78 버전 이상 (Mac, Windows, Ubuntu LTS 16.04 이상)</li>
+                                <li class="img_interview edge">엣지(Edge) 크로미움 기반 79 버전 이상 (Windows)</li>
+                                <li class="img_interview firefox">파이어폭스(Firefox) 60 버전 이상 (Mac, Window)</li>
+                                <li class="img_interview safari">사파리(Safari) 12 버전 이상 (Mac)<br>
+                                    - macOS Sierra 10. 12. 6 이상<br>
+                                    - macOS High Sierra 10. 13. 6 이상<br>
+                                    - macOS Mojave 10. 14 이상
+                                </li><li>
+                            </li></ul>
+                        </dd>
+                        <dt>PC 사양</dt>
+                        <dd>
+                            <ul>
+                                <li class="img_interview windows">Windows 10 권장<br>
+                                    - cam HD 화질 지원 권장<br>
+                                    - 그래픽 카드 드라이버 최신 업데이트 권장
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p class="noti_guide_browser">회사에서 영상면접 접속시 사내 인터넷망 정책에 따라 영상면접방(AWS) 접속이<br>차단된 경우 이용이 불가할 수 있습니다.</p>
+                </div>
+            </div>
+            <!-- //QA534 -->
+        </div>
+        <!-- 맥 메뉴 -->
+        <div class="menu_guide">
+            <div class="guide_list">
+                <strong class="tit_list">화면설정</strong>
+                <div class="cont_list">웹캠 작동 확인<button type="button" class="img_interview btn_list btn_mac_webcam"><span class="blind">페이지 이동</span></button></div>
+                <div class="cont_list">카메라 허용<button type="button" class="img_interview btn_list btn_mac_camera"><span class="blind">페이지 이동</span></button></div>
+                <div class="cont_list">카메라 체크<button type="button" class="img_interview btn_list btn_mac_cameracheck"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <div class="guide_list">
+                <strong class="tit_list">마이크 설정</strong>
+                <div class="cont_list">마이크 작동 확인<button type="button" class="img_interview btn_list btn_mac_micactivate"><span class="blind">페이지 이동</span></button></div>
+                <div class="cont_list">마이크 허용<button type="button" class="img_interview btn_list btn_mac_micpermit"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <div class="guide_list">
+                <strong class="tit_list">소리 설정</strong>
+                <div class="cont_list">오디오 확인<button type="button" class="img_interview btn_list btn_mac_audio"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <div class="guide_list">
+                <strong class="tit_list">면접 돌발 사항 가이드</strong>
+                <div class="cont_list">돌발 대처법<button type="button" class="img_interview btn_list btn_mac_cope"><span class="blind">페이지 이동</span></button></div>
+            </div>
+            <!-- QA534 -->
+            <div class="guide_list">
+                <div class="guide_browser">
+                    <strong class="img_interview tit_guide_browser">영상면접 지원 사양 확인하기</strong>
+                    <p class="desc_guide_browser">특정 사양에서 영상면접이 원활하게 진행되지 않사오니 면접 전 지원사양을 확인해주세요.</p>
+                    <dl class="list_guide_browser">
+                        <dt>지원브라우저</dt>
+                        <dd>
+                            <ul>
+                                <li class="img_interview chrome">크롬(Chrome) 78 버전 이상 (Mac, Windows, Ubuntu LTS 16.04 이상)</li>
+                                <li class="img_interview edge">엣지(Edge) 크로미움 기반 79 버전 이상 (Windows)</li>
+                                <li class="img_interview firefox">파이어폭스(Firefox) 60 버전 이상 (Mac, Window)</li>
+                                <li class="img_interview safari">사파리(Safari) 12 버전 이상 (Mac)<br>
+                                    - macOS Sierra 10. 12. 6 이상<br>
+                                    - macOS High Sierra 10. 13. 6 이상<br>
+                                    - macOS Mojave 10. 14 이상
+                                </li><li>
+                            </li></ul>
+                        </dd>
+                        <dt>PC 사양</dt>
+                        <dd>
+                            <ul>
+                                <li class="img_interview windows">Windows 10 권장<br>
+                                    - cam HD 화질 지원 권장<br>
+                                    - 그래픽 카드 드라이버 최신 업데이트 권장
+                                </li>
+                            </ul>
+                        </dd>
+                    </dl>
+                    <p class="noti_guide_browser">회사에서 영상면접 접속시 사내 인터넷망 정책에 따라 영상면접방(AWS) 접속이<br>차단된 경우 이용이 불가할 수 있습니다.</p>
+                </div>
+            </div>
+            <!-- //QA534 -->
+        </div>
+    </div>
+    <button type="button" class="img_interview btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- QA56 -->
+<!-- 영상면접 check 가이드 동영상 레이어 -->
+<div class="video_iframe">
+    <div class="area_iframe">
+        <div id="player"></div>
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('player', {
+                    height: '565',
+                    width: '1024',
+                    videoId: 'mTtx1CSqYX0',
+                    events: {
+                        'onReady': onPlayerReady,
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+            var done = false;
+            function onPlayerStateChange(event) {
+                if (event.data == YT.PlayerState.PLAYING && !done) {
+                    setTimeout(stopVideo, 6000);
+                    done = true;
+                }
+            }
+            function stopVideo() {
+                player.stopVideo();
+            }
+        </script>
+    </div>
+    <button type="button" class="btn_iframe_close"><span class="blind">영상면접 check 가이드 동영상 닫기</span></button>
+</div>
+<!-- //QA56 -->
+<!-- 윈도우 웹캠 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_window_webcam" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>웹캠 작동 확인</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/win_webcam_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_webcam_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_webcam_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. PC의 왼쪽 하단 윈도우 버튼 옆에 있는 검색 버튼을 선택 후  "카메라"를 검색하여 선택합니다.</li>
+                <li>2. 카메라 화면에 내 얼굴이 나타난다면 웹캠이 정상 작동 상태 입니다.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">카메라 허용<button type="button" class="img_interview btn_list btn_window_camera"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 윈도우 카메라 허용 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_window_camera" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>카메라 허용</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/win_camera_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_camera_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_camera_4.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_camera_5.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_camera_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. PC의 왼쪽 하단 윈도우 버튼 옆에 있는 검색 버튼을 선택 후 "카메라"를 검색하여 선택합니다.</li>
+                <li>2. 카메라가 허용이 안되어 있다면 카메라 앱에서 "개인정보 설정"을 선택합니다.</li>
+                <li>3. 설정창이 뜨면 "변경" 버튼을 선택하여 이 장치에 대한 카메라 액세스를 "켬"으로 해줍니다.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">웹캡 작동 확인<button type="button" class="img_interview btn_list btn_window_webcam"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 윈도우 마이크 허용 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_window_micpermit" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>마이크 허용</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/win_micpermit_1.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_micpermit_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_micpermit_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_micpermit_4.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. PC의 왼쪽 하단 윈도우 버튼 옆에 있는 검색 버튼을 선택 후 "마이크"를 검색하여 선택합니다.</li>
+                <li>2. 카메라가 허용이 안되어 있다면 카메라 앱에서 "개인정보 설정"을 선택합니다.</li>
+                <li>3. 설정창이 뜨면 "변경" 버튼을 선택하여 이 장치에 대한 카메라 액세스를 "켬"으로 해줍니다.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">마이크 인식<button type="button" class="img_interview btn_list btn_window_miccognize"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 윈도우 마이크 인식 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_window_miccognize" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>마이크 인식</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/win_miccognize_5.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_miccognize_6.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_miccognize_1.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_miccognize_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_miccognize_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/win_miccognize_4.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. PC의 왼쪽 하단 윈도우 버튼 옆에 있는 검색 버튼을 선택 후 "소리 설정"을 검색하여 선택합니다.</li>
+                <li>2. 마이크 잭 연결이 정상적으로 되었으나 마이크 테스트 시 소리 볼륨바가 좌우로 움직이지 않는다면 마이크가 정상적으로 인식이 안된 상태입니다.<br>이런 경우 하단 또는 우측 관련 설정의 "사운드 제어판" 을 선택해
+                    주세요.</li>
+                <li>3. 소리 설정 화면이 나타나면 녹음 메뉴의 마이크를 선택 후 우클릭을 하여 나타난 리스트에서 "사용"으로 선택합니다.</li>
+                <li>4. 이후 하단 "속성"을 선택 하여 상단 "수준" 메뉴의 "마이크" , "마이크증폭"을 확인해주세요.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">마이크 허용<button type="button" class="img_interview btn_list btn_window_micpermit"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 윈도우 오디오 확인 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_window_audio" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>오디오 확인</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <div class="list_guide">
+                    <img src="//www.saraminimage.co.kr/sri/live/home/win_audio.png" alt="">
+                </div>
+            </div>
+            <ol class="list_detail">
+                <li>1. 소리가 정상적으로 작동하지 않는 경우 PC 우측 하단의 볼륨 버튼을 마우스 우클릭하여 "소리 설정 열기"를 선택해 줍니다.</li>
+                <li>2. 소리 설정 화면이 나타나면 출력 장치에 사용자의 스피커 또는 헤드셋이 선택해주세요.</li>
+            </ol>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 윈도우 돌발 대처법 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_window_cope" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>돌발 대처법</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="list_guide">
+                <img src="//www.saraminimage.co.kr/sri/live/home/win_cope.png" alt="">
+            </div>
+            <ol class="list_detail">
+                <li>1. 영상면접 진행 중 의도치 않게 화면이 종료되었어도 걱정하지 마세요.<br>- 단, 나가기 선택 시에는 재입장이 불가합니다.</li>
+                <li>2. 영상면접 홈에서 영상면접에 재입장 할 수 있도록 안내해 드립니다</li>
+            </ol>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+
+<!-- 맥 웹캠 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_webcam" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>웹캠 작동 확인</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/mac_webcam_1.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_webcam_2.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. PC의 하단 Dock에서 Launch pad를 선택합니다.</li>
+                <li>2. 맥북 카메라를 이용하기 위해서는 Face Time 또는 Photo Booth 중 하나를 선택하세요.</li>
+                <li>3. 위의 앱 실행 후 맥북 카메라 상단 녹색 불이 들어온다면 카메라가 정상 작동 상태입니다.</li>
+                <li>4. 만약 위의 방법으로 진행 시 카메라가 정상 작동되지 않을 경우 시스템 정보보기  (응용 프로그램 폴더 안의 유틸리티 폴더)를 확인하세요.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">카메라 허용<button type="button" class="img_interview btn_list btn_mac_camera"><span class="blind">페이지 이동</span></button></div>
+            <div class="cont_list">카메라 체크<button type="button" class="img_interview btn_list btn_mac_cameracheck"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 맥 카메라 허용 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_camera" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>카메라 허용</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/mac_camera_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_camera_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_camera_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. 일부 앱 및 웹사이트는 맥(MAC)의 카메라를 사용하도록 허용할 수 있습니다.</li>
+                <li>2. 맥(MAC)에서 상단 Apple 메뉴 선택 후 '시스템 환경설정'을 선택 또는 하단 Dock에서 시스템 환경설정을 선택하세요</li>
+                <li>3. 이후 노출된 화면에서 '보안 및 개인정보 보호'  선택 후 '개인 정보 보호' TAB을 선택, 좌측 하단의 '카메라'를 선택합니다.</li>
+                <li>4. 카메라에 접근하도록 허용하려면 사용하고자 하는 앱 및 웹 사이트 옆에 있는 체크상자를 선택하세요.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">웹캡 작동 확인<button type="button" class="img_interview btn_list btn_mac_webcam"><span class="blind">페이지 이동</span></button></div>
+            <div class="cont_list">카메라 체크<button type="button" class="img_interview btn_list btn_mac_cameracheck"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 맥 카메라 체크 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_cameracheck" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>카메라 체크</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/mac_cameracheck_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_cameracheck_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_cameracheck_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. 맥(MAC)에서 상단 Apple 메뉴 선택 후 '이 Mac에 관하여'를 선택 하세요.
+                </li><li>2. 이후 노출된 시스템 개요에서 하단 '시스템 리포트'를 선택합니다.
+                </li><li>3. 시스템 리포트가 펼쳐지면 좌측의 'usb' 선택 후 우측 영역에 내장형 카메라가 감지되는지 확인하세요.<br>
+                    내장형 카메라가 감지되지 않는 경우 재부팅하여 재 확인하고 이후에도 감지되지 않는 경우 내장 카메라의 고장일 수 있습니다
+            </li></ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">웹캡 작동 확인<button type="button" class="img_interview btn_list btn_mac_webcam"><span class="blind">페이지 이동</span></button></div>
+            <div class="cont_list">카메라 허용<button type="button" class="img_interview btn_list btn_mac_camera"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 맥 마이크 작동 확인 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_micactivate" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>마이크 작동 확인</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/mac_micactivate_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_micactivate_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_micactivate_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. 맥(MAC)에서 상단 Apple 메뉴 선택 후 '시스템 환경설정' 선택 또는 하단 Dock에서 시스템 환경설정을 선택하세요</li>
+                <li>2. 이후 노출된 화면에서 '사운드'  선택 후 사운드 설정 화면에서 '입력' TAB을 선택합니다.</li>
+                <li>3. 하단 레코딩(녹음) 기기 목록이 나오면, '내부 마이크'를 선택하여 마이크에 말을 해 보세요.</li>
+                <li>4. 마이크 정상 작동 시 하단 마이크 입력 레벨 막대가 움직입니다.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">마이크 허용<button type="button" class="img_interview btn_list btn_mac_micpermit"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 맥 마이크 허용 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_micpermit" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>마이크 허용</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/mac_micpermit_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_micpermit_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_micpermit_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. 일부 앱 및 웹사이트는 맥(MAC)의 마이크를 사용하도록 허용할 수 있습니다.</li>
+                <li>2. 맥(MAC)에서 상단 Apple 메뉴  선택 후 '시스템 환경설정'을 선택 또는 하단 Dock에서 시스템 환경설정을 선택하세요</li>
+                <li>3. 이후 노출된 화면에서 '보안 및 개인정보 보호'  선택 후 '개인 정보 보호' TAB을 선택, 좌측 하단의 '마이크'를 선택합니다.</li>
+                <li>4. 마이크에 접근하도록 허용하려면 사용하고자 하는 앱 및 웹 사이트 옆에 있는 체크상자를 선택하세요.</li>
+            </ol>
+        </div>
+        <div class="guide_list">
+            <strong class="tit_list">다른 Check 가이드 보기</strong>
+            <div class="cont_list">마이크 작동 확인<button type="button" class="img_interview btn_list btn_mac_micactivate"><span class="blind">페이지 이동</span></button></div>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 맥 오디오 확인 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_audio" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>오디오 확인</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <ul class="list_guide" style="width: 13825px; height: 211px; left: 0px;">
+                    
+                    
+                    
+                <li><img src="//www.saraminimage.co.kr/sri/live/home/mac_audio_2.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_audio_3.png" alt=""></li><li><img src="//www.saraminimage.co.kr/sri/live/home/mac_audio_1.png" alt=""></li></ul>
+            </div>
+            <ol class="list_detail">
+                <li>1. 일부 앱 및 웹사이트는 맥(MAC)의 마이크를 사용하도록 허용할 수 있습니다.</li>
+                <li>2. 맥(MAC)에서 상단 Apple 메뉴 선택 후 '시스템 환경설정'을 선택 또는 하단 Dock에서 시스템 환경설정을 선택하세요.</li>
+                <li>3. 이후 노출된 화면에서 '사운드'  선택 후 사운드 설정 화면에서 '출력' TAB을 선택합니다.</li>
+                <li>4. 사용하는 오디오 장비를 선택하고 출력 음량을 설정해주세요.</li>
+            </ol>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+<!-- 맥 돌발 대처법 가이드 레이어 -->
+<div class="modal_check_guide modal_detail_view detail_mac_cope" style="display:none">
+    <div class="modal_tit">
+        <button type="button" class="img_interview btn_prev"><span class="blind">가이드 리스트 화면으로 돌아가기</span></button>
+        <strong>돌발 대처법</strong>
+    </div>
+    <div class="modal_cont">
+        <div class="cont_detail">
+            <div class="bg_guide">
+                <div class="list_guide">
+                    <img src="//www.saraminimage.co.kr/sri/live/home/mac_cope.png" alt="">
+                </div>
+            </div>
+            <ol class="list_detail">
+                <li>1. 영상면접 진행 중 의도치 않게 화면이 종료되었어도 걱정하지 마세요.<br>- 단, 나가기 선택 시에는 재입장이 불가합니다.</li>
+                <li>2. 영상면접 홈에서 영상면접에 재입장 할 수 있도록 안내해 드립니다</li>
+            </ol>
+        </div>
+    </div>
+    <button type="button" class="btn_close"><span class="blind">영상면접 Check 가이드 레이어 닫기</span></button>
+</div>
+
+<!-- QA533 -->
+<!-- 지원 브라우저 안내 레이어 -->
+<div class="modalWrap modal_interview_confirm modal_interview_browser" style="display:none"><!-- 개발적용시 style 삭제 -->
+    <div class="title_layer">
+        <a href="##" class="img_interview logo_live"><span class="blind">saramin live</span></a>
+        <h3 class="blind">지원 브라우저 안내 레이어</h3>
+    </div>
+    <div class="modalCont">
+        <strong class="txt_layer">사람인 영상면접 서비스 안내</strong>
+        <p class="desc_layer">
+            아래의 브라우저 및 환경에서는 원활한 면접이 진행되지 않을 수 있사오니, 면접 전 지원사양을 꼭 확인해주세요.
+        </p>
+        <dl class="list_layer">
+            <dt>지원브라우저</dt>
+            <dd>
+                <ul>
+                    <li>• 크롬(Chrome) 78 버전 이상 (Mac, Windows, Ubuntu LTS 16.04 이상)</li>
+                    <li>• 엣지(Edge) 크로미움 기반 79 버전 이상 (Windows)</li>
+                    <li>• 파이어폭스(Firefox) 60 버전 이상 (Mac, Window)</li>
+                    <li>• 사파리(Safari) 12 버전 이상 (Mac)<br>
+                        - macOS Sierra 10. 12. 6 이상<br>
+                        - macOS High Sierra 10. 13. 6 이상<br>
+                        - macOS Mojave 10. 14 이상
+                    </li><li>
+                </li></ul>
+            </dd>
+            <dt>PC 사양</dt>
+            <dd>
+                <ul>
+                    <li>• Windows 10 권장<br>
+                        - cam HD 화질 지원 권장<br>
+                        - 그래픽 카드 드라이버 최신 업데이트 권장
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <p class="noti_layer">회사에서 영상면접 접속시 사내 인터넷망 정책에 따라 영상면접방(AWS) 접속이 차단된 경우 이용이 불가할 수 있습니다.</p>
+    </div>
+    <button type="button" class="img_interview btn_close"><span class="blind">지원 브라우저 안내 레이어 닫기</span></button>
+</div>
+<!-- //QA533 -->
+<!-- 영상면접 완료 레이어 -->
+<div class="modalWrap modal_interview_confirm" style="display:none">
+    <div class="title_layer">
+        <a href="##" class="img_interview logo_live"><span class="blind">saramin live</span></a>
+        <h3 class="blind">영상면접 완료 레이어</h3>
+    </div>
+    <div class="modalCont">
+        <strong class="txt_layer">오진하님, 수고하셨습니다.</strong>
+        <p class="desc_layer">
+            <em>사람인에이치알</em>의<br>
+            웹서비스 기획자 경력직 채용 2차 영상면접이 완료되었습니다.
+        </p>
+        <dl class="list_layer">
+            <dt>공고명공고명공고명공고명</dt><dd>일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</dd>
+            <dt>면접명</dt><dd>2020년 웹서비스 기획자 2차 면접</dd>
+            <dt>면접일시</dt><dd>2020. 06. 25 15 : 00 ~ 16 : 00</dd>
+            <dt>소요시간</dt><dd>48분</dd>
+        </dl>
+        <p class="noti_layer">의도치 않게 영상면접이 종려된 경우 상단의 영상면접 일정 보기를 통해 재 입장이 가능합니다.<br>단, 사용자가 직접 종료 처리한 경우 재입장 할 수 없습니다.</p>
+        <p class="desc_person">사람인은 오진하님의 합격을 응원합니다.</p>
+    </div>
+    <button type="button" class="img_interview btn_close"><span class="blind">영상면접 종료 레이어 닫기</span></button>
+</div>
+
+<!-- 확인용 -->
+<script>
+
+    //헤더 스크롤
+    var pos1 = $('.video_interview .header').offset().top;
+    $(window).on('scroll', function(){
+        var scroll = $(this).scrollTop();
+        if(scroll >pos1) {
+            $('.video_interview .header').addClass('scroll');
+        }else {
+            $('.video_interview .header').removeClass('scroll');
+        }
+    });
+
+    //캘린더 슬라이더
+    $(function(){
+        init();
+        bindingEvent();
+    });
+
+    var  calendar, table, panel, btnPrev, btnNext, speed, isAnimated;
+
+    function init() {
+        calendar = $('.slider_calendar .inner_calendar');
+        table = $('.slider_calendar ul');
+        panel = $('.slider_calendar ul li');
+
+        btnPrev = $('.slider_calendar .btn_prev');
+        btnNext = $('.slider_calendar .btn_next');
+        speed = 300;
+        isAnimated = true;
+    }
+
+    function bindingEvent() {
+        panel.last().prependTo(table);
+        calcWidth(table);
+
+        btnNext.on('click',function(){
+            if (isAnimated){
+                isAnimated = false;
+                doNext(table);
+            }
+        })
+
+        btnPrev.on('click',function(){
+            if (isAnimated){
+                isAnimated = false;
+                doPrev(table);
+            }
+        })
+    }
+
+    function doNext(item){
+        item.stop().animate({'margin-left':'-86px'},speed,function(){
+            $(this).children('li').first().appendTo(item);
+            $(this).css({'margin-left':'-43px'});
+            isAnimated = true;
+        })
+    }
+
+    function doPrev(item){
+        item.stop().animate({'margin-left':'0px'},speed,function(){
+            $(this).children('li').last().prependTo(item);
+            $(this).css({'margin-left':'-43px'});
+            isAnimated = true;
+        })
+    }
+
+    function calcWidth(item){
+        var len = item.children('li').length;
+        item.css({'width':(43*len)+'px'});
+        item.children('tbody').children('tr').css({'width':(43/len)+'px'});
+    }
+
+
+    //캘린더 날짜 on/off
+    $('.list_calendar button').on('click',function () {
+        $('.list_calendar button').removeClass('on');
+        $(this).addClass('on');
+    });
+
+    //오늘 일정 박스 on/off
+    $('.list_time .btn_more').on('click',function () {
+        $('.list_time').addClass('open');
+    });
+    $('.list_time .btn_time').on('click',function () {
+        $('.list_time .btn_time').removeClass('on');
+        $(this).addClass('on');
+    });
+
+    //인종코드 입력
+    $('.wrap_certify .inp_certify').focus(function () {
+        $('.wrap_certify .btn_certify').addClass('on');
+    });
+    $('.wrap_certify .inp_certify').blur(function () {
+        $('.wrap_certify .btn_certify').removeClass('on');
+    });
+
+    //검색옵션 확인
+    $('.area_filter .btn_filter').on('click', function() {
+        $('.area_filter').removeClass('folder');
+        $(this).parents('.area_filter').addClass('folder');
+    });
+
+    $('.area_filter .btn_list').on('click', function() {
+        $('.area_filter').removeClass('folder');
+    });
+
+    $('.area_filter .inp_filter').focusin('click', function() {
+        $('.area_filter').removeClass('input');
+        $(this).parents('.area_filter').addClass('input');
+    });
+
+    $('.area_filter .inp_filter').focusout('click', function() {
+        $('.area_filter').removeClass('input');
+    });
+
+
+    //면접접관 정보 보기 레이어
+    $('.wrap_interview_view .btn_view').on('click',function () {
+        $(this).parent('.wrap_interview_view').addClass('on');
+    });
+    $('.wrap_interview_view .btn_close').on('click',function () {
+        $('.wrap_interview_view').removeClass('on');
+    });
+
+   //면접 리스트 자세히보기 펼침/접힘
+    $('.wrap_interview_list').on('click', '.btn_detail', function(){
+        $('.info_history').not($(this).closest('.info_history')).removeClass('open');
+        $(this).closest('.info_history').toggleClass('open');
+        if ($(this).closest('.info_history').hasClass('open')) {
+            $('html, body').stop().animate({ scrollTop: ($(this).offset().top) - 100 }, 500);
+        }
+    });
+
+    //체크 가이드 확인
+    $('.link_guide').on('click',function () {
+        $('#dimmed').css({display:'block'});
+        $('.check_guide').css({display:'block'});
+    });
+
+    $('.tab_guide li').on('click',function(){
+        var i = $(this).index();
+        $('.tab_guide li').removeClass('on');
+        $('.tab_guide li').eq(i).addClass('on');
+
+        $('.menu_guide').removeClass('on');
+        $('.menu_guide').eq(i).addClass('on');
+    });
+
+    $('.btn_window_webcam').on('click',function(){
+        $('.modal_detail_view ').css({display:'none'});
+        $('.detail_window_webcam').css({display:'block'});
+    });
+    $('.btn_window_camera').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_window_camera').css({display:'block'});
+    });
+    $('.btn_window_micactivate').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_window_micpermit').css({display:'block'});
+    });
+    $('.btn_window_miccognize').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_window_miccognize').css({display:'block'});
+    });
+    $('.btn_window_audio').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_window_audio').css({display:'block'});
+    });
+    $('.btn_window_cope').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_window_cope').css({display:'block'});
+    });
+
+    $('.btn_mac_webcam').on('click',function(){
+        $('.modal_detail_view ').css({display:'none'});
+        $('.detail_mac_webcam').css({display:'block'});
+    });
+    $('.btn_mac_camera').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_mac_camera').css({display:'block'});
+    });
+    $('.btn_mac_cameracheck').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_mac_cameracheck').css({display:'block'});
+    });
+    $('.btn_mac_micpermit').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_mac_micpermit').css({display:'block'});
+    });
+    $('.btn_mac_micactivate').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_mac_micactivate').css({display:'block'});
+    });
+    $('.btn_mac_audio').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_mac_audio').css({display:'block'});
+    });
+    $('.btn_mac_cope').on('click',function(){
+        $('.modal_detail_view').css({display:'none'});
+        $('.detail_mac_cope').css({display:'block'});
+    });
+
+    $('.modal_check_guide .btn_prev').on('click',function(){
+        $('.modal_detail_view ').css({display:'none'});
+        $('.check_guide ').css({display:'block'});
+    });
+
+    $('.btn_close').on('click',function () {
+        $('#dimmed').css({display:'none'});
+        $('.modal_check_guide').css({display:'none'});
+
+    });
+
+    // 체크 가이드 슬라이드
+    var banner = $(".bg_guide").find("ul");
+
+    var bannerWidth = banner.children().outerWidth();
+    var bannerHeight = banner.children().outerHeight();
+    var bannerLength = banner.children().length;
+    var rollingId;
+
+    rollingId = setInterval(rollingStart, 3000);
+
+    banner.on('mouseenter',function(){
+        clearInterval(rollingId);
+    });
+
+    banner.on('mouseleave',function(){
+        rollingId = setInterval(rollingStart, 3000);
+    });
+
+    function rollingStart() {
+        banner.css("width", bannerWidth * bannerLength + "px");
+        banner.css("height", bannerHeight + "px");
+        banner.animate({left: - bannerWidth + "px"}, 1500, function() {
+            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+            $(this).find("li:first").remove();
+            $(this).css("left", 0);
+        });
+    }
+
+    //체크 가이드 동영상
+    $('.area_video .btn_play').on('click',function(){
+        $('.video_iframe ').css({display:'block'});
+    });
+    $('.video_iframe .btn_iframe_close').on('click',function(){
+        $('.video_iframe ').css({display:'none'});
+    });
+
+
+
+
+</script>
+
+</body></html>

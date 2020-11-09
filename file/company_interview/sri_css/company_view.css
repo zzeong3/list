@@ -1,0 +1,907 @@
+@charset "utf-8";
+
+/* 공통 */
+body {background:#f8f9fc}
+#sri_header {position:absolute}
+#content {margin:0;width:100%}
+.img_info {display:inline-block;vertical-align:top}
+.company_info {min-height:400px;letter-spacing:-1px}
+.company_info .dark {background:#353535}
+.company_info .gray {background:#f8f9fc}
+.company_info .white {background:#fff}
+.company_info .dark + .dark {border-top:1px solid #444}
+.company_info .gray + .gray {border-top:1px solid #e5e6eb}
+.company_info .white + .white {border-top:1px solid #e5e6eb}
+.info_company .desc_interested:before,
+.func_company .interested_corp:before,
+.func_company .btn_share:before,
+.func_company .layer_share:after,
+.func_company .layer_share li button:after,
+.cont_info .list_reason>li .box:before,
+.cont_info .list_reason>li .box:after,
+.cont_info .btn_more:before,
+.cont_info .map .sns,
+.cont_info .list_similar .desc_interested:before,
+.cont_info .salary_matching_list .item_list .interested_corp,
+.cont_info .box_finance .ico_tooltip,
+.tbl_finance .link_tbl:after,
+.news .list_theme .cube,
+.news .info_news + .wrap_btn .btn_folder:before,
+.news .link_more:after,
+.careers .list_employ .btn_tag:after {display:inline-block;overflow:hidden;background:url(//www.saraminimage.co.kr/sri/company/information/img_info.png) no-repeat 0 0}
+
+/* title */
+.header_info {width:100%;background:#fff}
+.title_info {position:relative;margin:0 auto;padding:39px 0 30px;width:1000px;background:#fff}
+.title_info:after {display:table;table-layout:fixed;clear:both;content:""}
+.title_info .thumb_company {display:table;float:left;margin-right:27px;padding:20px 16px;width:220px;height:121px;border:1px solid #e5e6eb;box-sizing:border-box;text-align:center}
+.title_info .thumb_company .inner_thumb {display:table-cell;vertical-align:middle;font-size:0;line-height:0}
+.company_info .txt_name {display:block;overflow:hidden;padding:26px 15px 25px;width:100%;height:100%;box-sizing:border-box;font-size:17px;line-height:19px;color:#929292;text-align:center;text-overflow:ellipsis;white-space:nowrap;background:#f8f9fc}
+.company_info .title_info .txt_name {width:188px}
+.title_info .thumb_company img {display:inline-block}
+.title_info .info_company {overflow:hidden;padding-top:2px}
+.info_company h1 {margin-top:-7px;font-weight:bold;font-size:28px;line-height:38px;color:#333}
+.info_company h1 .name {display:inline}
+.info_company h1 .tit {display:inline-block;margin:13px 7px 0 3px;font-weight:normal;font-size:13px;line-height:13px;color:#777;vertical-align:top}
+.info_company h1 .tit:before {display:inline-block;margin:1px 12px 0 2px;width:1px;height:14px;background:#d8d8d8;;vertical-align:top;content:""}
+.info_company .state {float:left;width:310px;min-height:70px}
+.info_company .link_company {display:inline-block;overflow:hidden;margin-top:13px;width:100%;font-size:13px;line-height:15px;letter-spacing:0;color:#444;text-decoration:underline;text-overflow:ellipsis;white-space:nowrap}
+.info_company .desc_interested {position:relative;margin-top:16px;padding-left:18px;font-size:13px;line-height:16px;color:#ff8148}
+.info_company .desc_interested .num {letter-spacing:0}
+.info_company .desc_interested:before {position:absolute;top:2px;left:0;width:14px;height:12px;background-position:-120px 0;vertical-align:top;content:""}
+.func_company {position:absolute;bottom:39px;right:0}
+.func_company > button {float:left;padding:13px 0 16px;margin-left:8px;width:212px;height:56px;font-size:18px;color:#444;border:1px solid #dbdbdb}
+.func_company .interested_corp {background:none}
+.func_company button.interested_corp span {display:inline;font-size:18px;text-indent:0;color:#444}
+.func_company .interested_corp:before {display:inline-block;margin:6px 7px 0 0;width:20px;height:18px;background-position:0 0;vertical-align:top;content:""}
+.func_company .interested_corp.interested_on:before {background-position:-30px 0}
+.func_company .btn_share:before {display:inline-block;margin:5px 5px 0 0;width:20px;height:20px;background-position:-60px 0;vertical-align:top;content:""}
+.func_company .btn_share.on:before {background-position:-90px 0}
+.func_company .layer_share {position:absolute;top:10px;right:-117px}
+.func_company .layer_share:after {position:absolute;top:50%;left:-6px;margin-top:-6px;width:7px;height:11px;background-position:-90px -20px;content:""}
+.func_company .layer_share .link_sns {padding:3px 0;width:107px;height:36px;border:1px solid #dbdbdb;box-sizing:border-box;background:#fff}
+.func_company .layer_share li {position:relative;float:left;padding:0 2px;width:35px;height:100%;box-sizing:border-box}
+.func_company .layer_share li:after {position:absolute;top:0;left:0;width:1px;height:100%;background:#eee;content:""}
+.func_company .layer_share li:first-child:after {display:none}
+.func_company .layer_share li button {display:block;width:100%;height:100%}
+.func_company .layer_share li button:after {display:block;margin:0 auto;width:22px;height:22px;content:""}
+.func_company .layer_share li .btn_facebook:after {background-position:0 -20px}
+.func_company .layer_share li .btn_twitter:after {background-position:-30px -20px}
+.func_company .layer_share li .btn_url:after {background-position:-60px -20px}
+
+.fixed .header_info {position:fixed;left:0;top:0;z-index:300;width:100%;border-bottom:1px solid #cbcdd6}
+.fixed .title_info {padding:15px 0}
+.fixed .func_company {bottom:15px}
+.fixed .cont_info {padding-top:204px}
+.fixed .info_company .name {display:inline-block;overflow:hidden;max-width:660px;text-overflow:ellipsis;white-space:nowrap}
+
+/* tab */
+.tab_info {background:#f8f9fc}
+.tab_info ul {overflow:hidden;margin:0 auto;width:1000px}
+.tab_info ul li {float:left;width:160px;height:52px;padding:0 1px;box-sizing:border-box}
+.tab_info ul li a {display:block;padding:15px 0;width:100%;height:100%;box-sizing:border-box;font-size:17px;line-height:19px;color:#444;text-align:center}
+.tab_info ul li.on a, .tab_info ul li a:hover {font-weight:bold;color:#fff}
+
+/* cont */
+.cont_info .inner {position:relative;margin:0 auto;width:1000px}
+.cont_info .inner:after {display:table;table-layout:fixed;clear:both;content:""}
+.cont_info .tit_info {font-weight:bold;font-size:34px;line-height:46px;letter-spacing:-2px;color:#333;text-align:center}
+.cont_info .dark .tit_info {color:#fff}
+.cont_info .inner_thumb {display:table-cell;vertical-align:middle;font-size:0;line-height:0}
+
+/* 기업소개 */
+/* 요약정보 */
+.cont_info .intro {position:relative;padding:70px 0;width:100%;height:381px;box-sizing:border-box;text-align:center;background-repeat:no-repeat;background-position:50% 50%;background-size:cover}
+.cont_info .intro:after {position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background-color:rgba(0,0,0,0.3);content:""}
+.cont_info .list_intro {display:inline-block;position:relative;z-index:2;width:1012px;font-size:0;line-height:0;text-align:center;letter-spacing:-6px;vertical-align:top}
+.cont_info .list_intro>li {display:inline-block;overflow:hidden;height:241px;padding:0 6px;box-sizing:border-box;vertical-align:top;letter-spacing:-1px}
+.cont_info .list_intro>li:nth-child(1):nth-last-child(1) {width:337px}
+.cont_info .list_intro>li:nth-child(1):nth-last-child(2),
+.cont_info .list_intro>li:nth-child(2):nth-last-child(1) {width:337px}
+.cont_info .list_intro>li:nth-child(1):nth-last-child(3),
+.cont_info .list_intro>li:nth-child(2):nth-last-child(2),
+.cont_info .list_intro>li:nth-child(3):nth-last-child(1) {width:33.33%}
+.cont_info .list_intro> li:nth-child(1):nth-last-child(4),
+.cont_info .list_intro>li:nth-child(2):nth-last-child(3),
+.cont_info .list_intro>li:nth-child(3):nth-last-child(2),
+.cont_info .list_intro>li:nth-child(4):nth-last-child(1) {width:25%}
+.cont_info .list_intro>li:nth-child(1):nth-last-child(5),
+.cont_info .list_intro>li:nth-child(2):nth-last-child(4),
+.cont_info .list_intro>li:nth-child(3):nth-last-child(3),
+.cont_info .list_intro>li:nth-child(4):nth-last-child(2),
+.cont_info .list_intro>li:nth-child(5):nth-last-child(1) {width:20%}
+.cont_info .list_intro>li .box {position:relative;padding-top:154px;width:100%;height:100%;box-sizing:border-box;text-align:center;background:#fff}
+.cont_info .list_intro .box .desc {overflow:hidden;padding:0 20px;font-weight:bold;font-size:24px;line-height:28px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_intro .box em {position:absolute;bottom:31px;left:0;overflow:hidden;padding:0 20px;width:100%;box-sizing:border-box;font-size:15px;line-height:18px;color:#777;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_intro .box .ico {position:absolute;top:33px;left:50%;margin-left:-53px;width:106px;height:106px;border-radius:50%}
+.cont_info .list_intro .box .ico.state svg {top:30px;margin-left:-22px;width:45px;height:44px}
+.cont_info .list_intro .box .ico svg {position:absolute;top:0;left:0;width:106px;height:106px}
+.cont_info .list_intro .box .ico .txt {position:absolute;left:50%;bottom:35px;margin-left:-12px;font-family:AppleSDGothicNeo-ExtraBold, Apple SD Gothic Neo, Sans-serif;font-weight:bold;font-size:12px;letter-spacing:1px}
+.cont_info .list_intro .box .detail {position:absolute;bottom:-241px;right:0;left:0;height:241px;transition: bottom .2s ease-out}
+.cont_info .list_intro .box .detail .inner_detail {display:table;width:100%;height:100%}
+.cont_info .list_intro .box .detail ul {display:table-cell;width:100%;vertical-align:middle}
+.cont_info .list_intro .box .detail ul li {margin:7px 0;font-weight:bold;font-size:15px;line-height:18px;color:#fff}
+.cont_info .list_intro>li:hover .box .detail {bottom:0}
+
+/* 기업소개 */
+.cont_info .info {padding:89px 0 94px}
+.cont_info .info .tit_info {margin-bottom:53px}
+.cont_info .info .desc_info {float:left;margin-right:75px;width:430px}
+.cont_info .info .thumb {display:block;overflow:hidden;width:430px;max-height:470px;box-shadow:15px 12px 26px 0 rgba(0, 0, 0, 0.13)}
+.cont_info .info .thumb .img_info {max-width:100%}
+.cont_info .info .desc {margin-top:27px;font-weight:bold;font-size:22px;line-height:38px;color:#bdbdbd;letter-spacing:-2px;word-break:break-all}
+.cont_info .info .list_info {float:right;width:495px;padding-bottom:0;margin-top:-8px}
+.cont_info .info .list_info dt {display:block;margin-top:35px;font-weight:bold}
+.cont_info .info .list_info dt:first-child {margin-top:0}
+.cont_info .info .list_info dt .num {display:inline-block;font-size:30px;line-height:32px;letter-spacing:0;vertical-align:top}
+.cont_info .info .list_info dt .txt {display:inline-block;margin:5px 0 0 10px;font-size:20px;line-height:22px;color:#fff;vertical-align:top}
+.cont_info .info .list_info dd {padding:10px 0 0 45px;font-size:15px;line-height:27px;color:#bdbdbd;word-break:break-all}
+
+/* 걸어온 길 */
+.cont_info .history {min-height:350px;padding:89px 0 150px}
+.cont_info .history .tit_info {margin-bottom:45px}
+.cont_info .list_history {overflow:hidden;padding-left:317px}
+.cont_info .list_history li {padding-bottom:10px;font-size:15px;line-height:22px;color:#444;word-break:break-all}
+.cont_info .history .list_source {overflow:hidden;margin:50px 0 0 319px;font-size:13px;color:#777}
+.cont_info .history .list_source dt {float:left;margin-right:5px}
+.cont_info .history .list_source dd {float:left}
+.cont_info .history .thumb {overflow:hidden;position:absolute;top:96px;left:0;z-index:5;width:274px;height:274px;box-shadow:15px 12px 26px 0 rgba(0, 0, 0, 0.13)}
+.cont_info .btn_more {display:block;margin:54px auto 0;padding:14px 0 16px;width:212px;height:58px;border:1px solid #dbdbdb;font-size:18px;color:#444}
+.cont_info .btn_more:before {display:inline-block;margin:10px 7px 0 0;width:11px;height:7px;vertical-align:top;background-position:-100px -20px;content:""}
+.cont_info .btn_more.open:before {background-position:-100px -30px}
+.cont_info .folding_content {overflow:hidden}
+
+/* 복리후생 */
+.cont_info .benefits {min-height:350px;padding:88px 0 100px}
+.cont_info .benefits .tit_info {margin-left:505px;text-align:left;color:#000}
+.cont_info .benefits .tit_info:after {display:table;table-layout:fixed;clear:both;content:""}
+.cont_info .list_benefits li:nth-child(odd) {float:right}
+.cont_info .list_benefits li:nth-child(even) {float:left}
+.cont_info .list_benefits li:nth-child(1){float:none;margin-left:500px}
+.cont_info .list_benefits li:nth-child(2) {float:right}
+.cont_info .list_benefits li:nth-child(3) {float:left;margin-top:-22px}
+.cont_info .list_benefits li {position:relative;margin-top:44px;padding:0 30px 0 104px;width:50%;box-sizing:border-box}
+.cont_info .list_benefits li:after {position:absolute;top:7px;left:0;width:84px;height:84px;border-radius:50%;content:""}
+.cont_info .list_benefits .img_info {position:absolute;top:18px;left:11px;z-index:1;width:62px;height:62px}
+.cont_info .list_benefits .tit {display:block;margin-top:-2px;font-size:20px;color:#444;word-break:break-all}
+.cont_info .list_benefits .desc {min-height:52px;margin-top:8px;font-size:15px;line-height:27px;color:#444;word-break:break-all}
+.cont_info .benefits .thumb {overflow:hidden;position:absolute;top:-125px;left:0;width:455px;height:350px;box-shadow:15px 12px 26px 0 rgba(0,0,0,0.13)}
+
+/* 사내 친목활동 */
+.cont_info .club {padding:90px 0 100px;text-align:center}
+.cont_info .list_club {display:inline-block;margin-top:53px;width:1012px;font-size:0;line-height:0;text-align:center;vertical-align:top;letter-spacing:-6px}
+.cont_info .list_club>li {display:inline-block;overflow:hidden;height:178px;padding:0 6px;box-sizing:border-box;vertical-align:top;letter-spacing:-1px}
+.cont_info .list_club>li:nth-child(1):nth-last-child(1) {width:100%}
+.cont_info .list_club>li:nth-child(1):nth-last-child(2),
+.cont_info .list_club>li:nth-child(2):nth-last-child(1) {width:50%}
+.cont_info .list_club>li:nth-child(1):nth-last-child(3),
+.cont_info .list_club>li:nth-child(2):nth-last-child(2),
+.cont_info .list_club>li:nth-child(3):nth-last-child(1) {width:33.33%}
+.cont_info .list_club> li:nth-child(1):nth-last-child(4),
+.cont_info .list_club>li:nth-child(2):nth-last-child(3),
+.cont_info .list_club>li:nth-child(3):nth-last-child(2),
+.cont_info .list_club>li:nth-child(4):nth-last-child(1) {width:25%}
+.cont_info .list_club>li .box {overflow:hidden;position:relative;width:100%;height:100%;background-repeat:no-repeat;background-position:50% 50%;background-size:cover}
+.cont_info .list_club .desc {display:table;position:absolute;top:0;left:0;z-index:1;width:100%;height:100%;background-color:rgba(0,0,0,0.5)}
+.cont_info .list_club .inner_desc {display:table-cell;padding:0 20px;vertical-align:middle}
+.cont_info .list_club .tit {display:block;overflow:hidden;margin:0 auto;max-width:201px;font-size:20px;line-height:22px;color:#fff;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_club .txt {display:block;overflow:hidden;margin:10px auto 0;max-width:201px;font-size:15px;line-height:17px;color:#bdbdbd;text-overflow:ellipsis;white-space:nowrap}
+
+/* 근무이유 */
+.cont_info .reason {padding:90px 0 80px;text-align:center}
+.cont_info .list_reason {display:inline-block;margin-top:30px;width:1060px;font-size:0;line-height:0;text-align:center;vertical-align:top;letter-spacing:-6px}
+.cont_info .list_reason>li {display:inline-block;overflow:hidden;padding:20px 30px;box-sizing:border-box;vertical-align:top;letter-spacing:-1px}
+.cont_info .list_reason>li:nth-child(1):nth-last-child(1) {width:489px}
+.cont_info .list_reason>li:nth-child(1):nth-last-child(2),
+.cont_info .list_reason>li:nth-child(2):nth-last-child(1) {width:430px}
+.cont_info .list_reason>li:nth-child(1):nth-last-child(3),
+.cont_info .list_reason>li:nth-child(2):nth-last-child(2),
+.cont_info .list_reason>li:nth-child(3):nth-last-child(1) {width:353px}
+.cont_info .list_reason>li .box {overflow:hidden;position:relative;padding:0 58px;width:100%;min-height:120px;box-sizing:border-box}
+.cont_info .list_reason>li:nth-child(1):nth-last-child(1) .box {padding:0 97px}
+.cont_info .list_reason>li .box:before{position:absolute;top:0;left:0;width:58px;height:120px;background-position:0 -50px;content:""}
+.cont_info .list_reason>li .box:after{position:absolute;top:0;right:0;width:58px;height:120px;background-position:-60px -50px;content:""}
+.cont_info .list_reason .tit {display:block;margin-top:17px;font-size:20px;line-height:22px;color:#fff;word-break:break-all}
+.cont_info .list_reason .txt {display:block;margin-top:20px;font-size:13px;line-height:20px;color:#999;word-break:break-all}
+
+/* 보유기술 */
+.cont_info .skill {padding:86px 0 100px;text-align:center}
+.cont_info .list_skill {display:inline-block;margin-top:5px;width:1048px;font-size:0;line-height:0;text-align:center;vertical-align:top;letter-spacing:-8px}
+.cont_info .list_skill>li {display:inline-block;margin-top:48px;padding:0 24px;width:262px;height:290px;box-sizing:border-box;vertical-align:top;letter-spacing:-1px}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) {width:100%}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2),
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) {width:50%}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(3),
+.cont_info .list_skill>li:nth-child(2):nth-last-child(2),
+.cont_info .list_skill>li:nth-child(3):nth-last-child(1) {width:33.33%}
+.cont_info .list_skill>li .box {position:relative;padding:0 17px;width:100%;height:100%;box-sizing:border-box;font-size:13px;line-height:20px;color:#a0a0a0;text-align:center;background:#484848}
+.cont_info .list_skill>li .box:hover {background:#fff}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) .box {padding:0 29px}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2) .box,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) .box {padding:0 29px}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(3) .box,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(2) .box,
+.cont_info .list_skill>li:nth-child(3):nth-last-child(1) .box {padding:0 61px}
+.cont_info .list_skill .box .tit {display:block;overflow:hidden;padding-top:34px;font-weight:bold;font-size:20px;line-height:28px;color:#fff;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_skill .box>.ico {position:absolute;top:86px;left:50%;margin-left:-30px;width:60px;height:80px}
+.cont_info .list_skill .box>.ico svg g {stroke:#919191}
+.cont_info .list_skill .box .desc {overflow:hidden;padding-top:123px;height:40px;word-break:break-all}
+.cont_info .list_skill .box:hover .desc {color:#444}
+.cont_info .list_skill .box .date {display:inline-block;overflow:hidden;margin-top:7px}
+.cont_info .list_skill .box:hover .date {color:#999}
+.cont_info .list_skill .box .date dt {float:left;margin-right:5px}
+.cont_info .list_skill .box .date dd {float:left;letter-spacing:0}
+
+.cont_info .list_skill .box .detail {display:none;position:absolute;top:0;left:0;z-index:1;padding:34px 98px 34px 30px;width:476px;height:100%;box-sizing:border-box;background:#fff}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(3) .detail,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(2) .detail,
+.cont_info .list_skill>li:nth-child(3):nth-last-child(1) .detail {width:650px}
+.cont_info .list_skill li:nth-of-type(4) .box .detail,
+.cont_info .list_skill li:last-of-type .box .detail {left:auto;right:0}
+.cont_info .list_skill .box:hover .detail {display:block;text-align:left}
+.cont_info .list_skill .box .tit_detail {display:block;overflow:hidden;font-size:20px;line-height:24px;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_skill .box .desc_detail {overflow:hidden;height:140px;margin-top:16px;font-size:13px;line-height:20px;color:#444;word-break:break-all}
+.cont_info .list_skill .box .detail .date {position:absolute;bottom:31px;left:30px;color:#999}
+.cont_info .list_skill .box .detail .ico {position:absolute;top:37px;right:30px;width:60px;height:80px}
+
+.cont_info .skill .inner {margin-top:20px}
+.cont_info .skill .list_source {overflow:hidden;float:right;font-size:13px;color:#c2c2c2}
+.cont_info .skill .list_source dt {float:left;margin-right:5px}
+.cont_info .skill .list_source dd {float:left}
+.cont_info .skill .btn_more {margin:9px auto 0;border:1px solid #999;color:#fff}
+
+/* 보유기술 박스 1,2개 일때 */
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) {height:auto}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) .box ,
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2) .box,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) .box {padding:0 104px 70px 30px;text-align:left}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) .box>.ico,
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2) .box>.ico,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) .box>.ico {top:42px;left:auto;right:30px;margin-left:0}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) .box .desc {padding-top:16px;height:auto}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2) .box .desc,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) .box .desc {padding-top:16px;height:160px}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) .box .date ,
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2) .box .date,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) .box .date {position:absolute;bottom:24px;left:30px;margin-top:0}
+.cont_info .list_skill>li:nth-child(1):nth-last-child(1) .detail ,
+.cont_info .list_skill>li:nth-child(1):nth-last-child(2) .detail,
+.cont_info .list_skill>li:nth-child(2):nth-last-child(1) .detail {display:none}
+
+/* 계열사 */
+.cont_info .subsidiary {padding:86px 0 100px;text-align:center}
+.cont_info .tit_subsidiary {overflow:hidden;margin:0 auto;padding:53px 0 20px 0;width:1000px;border-bottom:1px solid #e5e6eb;text-align:left}
+.cont_info .tit_subsidiary .thumb_subsidiary {float:left;margin-right:11px;padding:7px 11px;width:241px;height:70px;border:1px solid #e5e6eb;box-sizing:border-box;background:#fff}
+.cont_info .tit_subsidiary .thumb_subsidiary .txt_name {padding:16px 15px}
+.cont_info .tit_subsidiary .thumb_subsidiary .img_info {width:219px;height:56px}
+.cont_info .tit_subsidiary .info_subsidiary {overflow:hidden;font-size:13px;color:#444}
+.cont_info .info_subsidiary .tit {display:inline-block;margin:11px 0 8px 0}
+
+.cont_info .list_subsidiary {display:inline-block;overflow:hidden;margin-top:8px;width:1012px;font-size:0;line-height:0;text-align:center;vertical-align:top}
+.cont_info .list_subsidiary>li {float:left;overflow:hidden;margin-top:12px;padding:0 6px;width:253px;height:200px;box-sizing:border-box;vertical-align:top}
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(1) {display:inline-block;width:100%;height:115px}
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(2),
+.cont_info .list_subsidiary>li:nth-child(2):nth-last-child(1) {display:inline-block;width:50%;height:115px}
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(3),
+.cont_info .list_subsidiary>li:nth-child(2):nth-last-child(2),
+.cont_info .list_subsidiary>li:nth-child(3):nth-last-child(1) {display:inline-block;width:33.33%}
+.cont_info .list_subsidiary>li .box {position:relative;width:100%;height:100%;border:1px solid #e5e6eb;box-sizing:border-box;text-align:left;background:#fff}
+.cont_info .list_subsidiary .thumb {display:block;overflow:hidden;margin:18px auto 0;width:219px;height:76px}
+.cont_info .list_subsidiary .thumb .img_info {width:100%;height:100%}
+.cont_info .list_subsidiary .desc {padding:18px 24px 0}
+.cont_info .list_subsidiary .tit {display:inline-block;max-width:100%}
+.cont_info .list_subsidiary .name {display:block;overflow:hidden;font-weight:bold;font-size:20px;line-height:28px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_subsidiary .name:hover {text-decoration:underline}
+.cont_info .list_subsidiary .interested_corp {float:right;margin:7px 0 0 5px}
+.cont_info .list_subsidiary .txt {display:block;overflow:hidden;margin-top:5px;max-width:100%;font-size:15px;line-height:18px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+
+/* 계열사 박스 1,2개 일때 */
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(1) .box,
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(2) .box,
+.cont_info .list_subsidiary>li:nth-child(2):nth-last-child(1) .box {padding:20px 10px}
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(1) .thumb,
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(2) .thumb,
+.cont_info .list_subsidiary>li:nth-child(2):nth-last-child(1) .thumb {float:left;margin:0}
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(1) .desc,
+.cont_info .list_subsidiary>li:nth-child(1):nth-last-child(2) .desc,
+.cont_info .list_subsidiary>li:nth-child(2):nth-last-child(1) .desc {overflow:hidden;padding:8px 46px 0 46px}
+
+/* 오시는 길 */
+.cont_info .map {padding:89px 0 99px;text-align:center}
+.cont_info .map .list_map {margin:49px 0 38px 0}
+.cont_info .map .link {display:inline-block;font-size:13px;line-height:15px;color:#4b76ef;text-decoration:underline}
+.cont_info .map .list_map .cont_sns {margin-top:19px;font-size:0;line-height:0}
+.cont_info .map .sns {display:inline-block;margin:0 7px;width:38px;height:38px}
+.cont_info .map .facebook {background-position:0 -170px}
+.cont_info .map .twitter {background-position:-40px -170px}
+.cont_info .map .instagram {background-position:-80px -170px}
+.cont_info .map .youtube {background-position:-120px -170px}
+.cont_info .map .etc {background-position:-160px -170px}
+.cont_info .map .txt_num {margin-top:15px;font-size:15px;color:#444}
+.cont_info .map .txt_address {margin-top:8px;font-weight:bold;font-size:15px;color:#444}
+.cont_info .map .map_view_wrap .desc .noti {color:#444}
+.cont_info .map #mapArea .map_view_wrap .btns button {padding:0;width:92px;height:32px;font-size:13px;text-align:center;color:#444;background:none}
+.cont_info .map .desc_map {margin-top:40px;font-size:13px;color:#777;text-align:right}
+
+/* 알림문구 */
+.cont_info .notice {padding:16px 0 18px}
+.cont_info .notice .desc_notice {font-size:12px;line-height:18px;color:#888;text-align:center}
+
+/* 유사기업 */
+.cont_info .similar {padding:44px 0 55px;text-align:center}
+.cont_info .similar .tit_info {font-weight:normal}
+.cont_info .list_similar {display:inline-block;margin-top:53px;width:1012px;font-size:0;line-height:0;text-align:center;vertical-align:top}
+.cont_info .list_similar>li {display:inline-block;overflow:hidden;padding:0 6px;width:241px;box-sizing:border-box;text-align:left;vertical-align:top}
+.cont_info .list_similar .thumb {display:block;padding:18px 11px;width:100%;height:112px;border:1px solid #e5e6eb;box-sizing:border-box;background:#fff}
+.cont_info .list_similar .thumb .img_info {width:100%;height:100%}
+.cont_info .list_similar .thumb .txt_name {display:block;overflow:hidden;padding:26px 15px 25px;width:100%;height:100%;box-sizing:border-box;font-size:17px;line-height:19px;color:#929292;text-align:center;text-overflow:ellipsis;white-space:nowrap;background:#f8f9fc}
+.cont_info .list_similar .tit {display:inline-block;margin-top:10px;max-width:100%}
+.cont_info .list_similar .name {display:block;overflow:hidden;font-weight:bold;font-size:20px;line-height:28px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_similar .name:hover {text-decoration:underline}
+.cont_info .list_similar .interested_corp {float:right;margin:8px 0 0 5px}
+.cont_info .list_similar .txt {display:block;overflow:hidden;margin-top:10px;max-width:100%;font-size:15px;line-height:18px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.cont_info .list_similar .desc_interested {position:relative;padding-left:18px;margin-top:18px;font-size:13px;line-height:16px;color:#ff8148}
+.cont_info .list_similar .desc_interested .num {letter-spacing:0}
+.cont_info .list_similar .desc_interested:before {position:absolute;top:3px;left:0;width:14px;height:12px;background-position:-120px 0;vertical-align:top;content:""}
+
+/*.연봉정보 */
+.cont_info .salary_view_wrap {padding-bottom:100px;border-top:1px solid #cbcdd6;background:#f8f9fc}
+.cont_info .salary_view_wrap .tab_avg_salary {margin:0 auto;padding:45px 80px;width:1000px;border-color:#e5e6eb;border-top:1px solid #ebebeb;box-sizing:border-box;background:#fff}
+.cont_info .tab_avg_salary .textinfo .info {padding:0}
+.cont_info .salary_view_wrap h2.title {margin:60px auto 20px;width:1000px;font-weight:bold;font-size:24px;color:#333;letter-spacing:-1px}
+.cont_info .salary_view_wrap .content_gird {margin:0 auto;padding:40px 50px;width:1000px;border:1px solid #e5e6eb;box-sizing:border-box;background:#fff}
+.cont_info .salary_view_wrap .content_gird.univ {padding:40px 100px}
+.cont_info .salary_view_wrap .list_info .txt_emph {color:#888}
+.cont_info .salary_view_wrap .category_slide {margin:0 auto;width:1000px;box-sizing:border-box;background:#fff}
+.cont_info .category_slide .category_contents {padding:50px 80px}
+.cont_info .category_slide .category_head {width:1000px}
+.cont_info .box_info {margin:0 auto;width:900px;border:0;background:none}
+.cont_info .salary_view_wrap .list_title {margin:60px auto 18px;width:1000px;font-weight:bold;color:#333;letter-spacing:-1px}
+.cont_info .salary_view_wrap .wrap_result_salary {margin:0 auto;width:1000px;background:#f8f9fc}
+.cont_info .salary_view_wrap .content_gird.result {margin-top:40px;padding:50px 0 50px 60px;width:890px}
+.cont_info .wrap_result_salary .salary_matching_list .item_list {padding:20px 32px 0 32px;width:292px}
+.cont_info .salary_matching_list {margin:0 auto 18px;width:1002px}
+.cont_info .salary_matching_list .item_list {padding:24px 36px 0 36px;width:334px;background:#fff}
+.cont_info .salary_matching_list .item_list .interested_corp {margin-top:4px;width:20px;height:18px}
+.cont_info .salary_matching_list .item_list .interested_corp.interested_on {background-position:-30px 0}
+
+
+/* 재무정보*/
+.cont_info .finance:first-of-type {border-top:1px solid #cbcdd6}
+.cont_info .finance {padding:43px 0 96px}
+.cont_info .finance.white {padding-top:0}
+.cont_info .finance .wrap_finance {margin:0 auto;width:1000px;font-size:0;line-height:0;text-align:center;vertical-align:top;letter-spacing:-6px}
+.cont_info .box_finance {display:inline-block;padding:12px;width:50%;box-sizing:border-box;vertical-align:top;letter-spacing:-1px}
+.cont_info .box_finance:nth-child(1):nth-last-child(1) {width:100%}
+.cont_info .box_finance .inner_box {height:545px;padding:39px 18px 41px;border:1px solid #e5e6eb;background:#fff;box-sizing:border-box}
+.cont_info .tit_finance {display:inline-block;font-weight:bold;font-size:24px;line-height:26px;vertical-align:top;color:#333}
+.cont_info .wrap_tooltip {display:inline-block;position:relative;vertical-align:top}
+.cont_info .box_finance .ico_tooltip {display:block;margin:6px 0 0 7px;width:18px;height:18px;background-position:-120px -20px}
+.cont_info .box_finance .sri_tooltip.size_wide {display:none;top:37px;left:50%;width:300px}
+.cont_info .box_finance .sri_tooltip.size_wide {margin-left:-167px}
+.cont_info .box_finance .sri_tooltip .tooltip_inner {font-size:13px;line-height:20px;color:#444}
+.cont_info .box_finance .list_summary {display:table;table-layout:fixed;;margin-top:33px;width:100%;font-size:0;line-height:0;text-align:center;vertical-align:top}
+.cont_info .box_finance .list_summary li {display:table-cell;position:relative;;padding:20px 18px 0;height:76px;box-sizing:border-box;vertical-align:middle}
+.cont_info .box_finance .list_summary li:after {position:absolute;left:0;top:0;width:1px;height:76px;background:#e5e6eb;content:""}
+.cont_info .box_finance .list_summary li:first-child:after {display:none}
+.cont_info .box_finance .list_summary strong {position:absolute;left:0;top:0;width:100%;font-weight:normal;font-size:13px;line-height:15px;color:#929292;text-align:center}
+.cont_info .box_finance .list_summary .num {display:inline-block;font-size:27px;line-height:28px;color:#333;vertical-align:middle}
+.cont_info .box_finance .list_summary .txt {display:inline-block;margin:1px 4px 0 2px;font-size:22px;line-height:25px;color:#333;vertical-align:top}
+.cont_info .box_finance .triangle:after {display:inline-block;width:0;height:0;vertical-align:middle;border-style:solid;border-width:12px 8px;content:""}
+.cont_info .box_finance .triangle.decrease:after {margin:18px 0 0 9px;border-color:#4597f7 transparent transparent transparent}
+.cont_info .box_finance .triangle.increase:after {margin:0 3px 0 9px;border-color:transparent transparent #fa6a71 transparent}
+.cont_info .box_finance .desc_finance {margin-top:19px;height:90px;font-size:17px;line-height:32px;color:#444}
+.cont_info .box_finance .desc_finance strong {font-weight:normal;font-size:27px}
+.cont_info .box_finance .desc_finance .triangle.decrease:after {margin:12px 3px 0 5px}
+.cont_info .box_finance .desc_finance .triangle.increase:after {margin:0 3px 0 5px}
+
+
+/* 그래프 */
+.wrap_finance .area_graph {padding:92px 24px 0}
+.wrap_finance .graph_info {position:relative;box-sizing:border-box}
+.wrap_finance .graph_info:after {display:table;clear:both;content:"";table-layout:fixed}
+.wrap_finance .graph_info .wrap_graph {float:left;position:relative;height:210px;text-align:center}
+.wrap_finance .graph_info .wrap_graph:after {position:absolute;right:0;bottom:0;width:1px;height:6px;background:#333;content:""}
+.wrap_finance .graph_info .wrap_graph:last-of-type:after {display:none}
+.wrap_finance .graph_info .tit_graph {position:absolute;bottom:-27px;left:0;width:100%;color:#333;font-weight:bold;font-size:15px;line-height:14px;letter-spacing:0;text-align:center}
+.wrap_finance .graph_info .graph {position:relative;margin:0 auto;width:36px;height:100%}
+.wrap_finance .graph_info .graph .inner_graph {position:absolute;bottom:0;left:0;width:100%;height:4px;background-color:#a6a6a6}
+.wrap_finance .graph_info .wrap_graph:nth-child(1) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_horizontal_diagonal.png)}
+.wrap_finance .graph_info .wrap_graph:nth-child(2) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_horizontal_lattice.png)}
+.wrap_finance .graph_info .wrap_graph:nth-child(3) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_horizontal_wave.png)}
+.wrap_finance .graph_info .wrap_graph:nth-child(4) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_horizontal_stripe.png)}
+.wrap_finance .graph_info .graph .txt_value {position:absolute;top:auto;left:50%;margin-left:-29px;padding-bottom:7px;width:58px;color:#444;font-size:13px;line-height:16px;letter-spacing:-1px}
+.wrap_finance .graph_info .emph .graph .txt_value {font-weight:bold}
+.wrap_finance .graph_info .grid_range {position:absolute;right:0;left:0;bottom:-1px;z-index:0}
+.wrap_finance .graph_info .grid_range .range {display:block;position:relative;height:35px;border-bottom:1px solid #eee;box-sizing:border-box;text-align:right}
+.wrap_finance .graph_info .grid_range .range:last-of-type {border-color:#333}
+.wrap_finance .graph_info .grid_range .range span {display:block;position:absolute;top:23px;left:-10px;color:#999;font-size:13px;line-height:20px;letter-spacing:-.5px}
+
+.wrap_finance .graph_info .minus .graph {height:175px}
+.wrap_finance .graph_info .minus .graph .inner_graph {top:0}
+.wrap_finance .graph_info .minus .graph .txt_value {padding-top:7px;padding-bottom:0}
+
+.graph_type2.area_graph {padding:57px 24px 0}
+.graph_type2 .graph_info .wrap_graph {padding-bottom:140px;height:245px;box-sizing:border-box}
+.graph_type2 .graph_info .wrap_graph.minus {padding-top:105px;padding-bottom:0}
+.graph_type2 .graph_info .minus .graph {height:105px}
+
+.cont_info .wrap_finance .wrap_graph:nth-child(1):nth-last-child(1) {width:100%}
+.cont_info .wrap_finance .wrap_graph:nth-child(1):nth-last-child(2),
+.cont_info .wrap_finance .wrap_graph:nth-child(2):nth-last-child(1) {width:50%}
+.cont_info .wrap_finance .wrap_graph:nth-child(1):nth-last-child(3),
+.cont_info .wrap_finance .wrap_graph:nth-child(2):nth-last-child(2),
+.cont_info .wrap_finance .wrap_graph:nth-child(3):nth-last-child(1) {width:33.33%}
+.cont_info .wrap_finance .wrap_graph:nth-child(1):nth-last-child(4),
+.cont_info .wrap_finance .wrap_graph:nth-child(2):nth-last-child(3),
+.cont_info .wrap_finance .wrap_graph:nth-child(3):nth-last-child(2),
+.cont_info .wrap_finance .wrap_graph:nth-child(4):nth-last-child(1) {width:25%}
+
+/* 표 */
+.cont_info .white .tit_finance {margin-top:90px}
+.tbl_finance {margin-top:31px;width:100%;border-top:1px solid #000;border-bottom:1px solid #cbcdd6;border-spacing:0;border-collapse:collapse;font-size:14px;color:#333}
+.tbl_finance thead {border-bottom:1px solid #e5e6eb;font-size:13px;background:#f8f9fc;color:#444}
+.tbl_finance th {padding:0 22px;height:47px}
+.tbl_finance tbody tr:first-child td {padding-top:15px}
+.tbl_finance tbody tr:last-of-type td {padding-bottom:15px}
+.tbl_finance tbody tr td:first-of-type {position:relative;padding-left:45px}
+.tbl_finance tbody td {padding:7px 22px;line-height:20px;vertical-align:top}
+.tbl_finance thead th:first-child {padding-left:45px}
+.tbl_finance .txt_gray {color:#929292}
+.tbl_finance .date {letter-spacing:0}
+.tbl_finance .txt_right {text-align:right}
+.tbl_finance .txt_center {text-align:center}
+.tbl_finance .link_tbl:after {display:inline-block;margin:6px 0 0 5px;width:11px;height:11px;vertical-align:top;background-position:-120px -50px;content:""}
+.tbl_finance .sri_tooltip.size_wide {bottom:-70px;left:20px;max-width:320px}
+.tbl_finance  tr:last-of-type .sri_tooltip.size_wide {bottom:-62px}
+.tbl_finance .sri_tooltip .tooltip_inner {font-size:13px;line-height:18px;color:#444}
+
+/* 인재채용 */
+.cont_info .careers:first-of-type {border-top:1px solid #cbcdd6}
+.cont_info .careers {padding-bottom:100px}
+.cont_info .desc_headhunting {padding:26px 0 29px;height:75px;font-size:15px;text-align:center;color:#333;box-sizing:border-box;background:#ebedf4}
+.cont_info .desc_headhunting em {font-weight:bold}
+
+.careers .tab_careers {overflow:hidden;position:relative;margin-top:46px}
+.careers .tab_careers:after {position:absolute;left:0;bottom:0;width:100%;border-bottom:1px solid #e5e6eb;content:""}
+.careers .tab_careers li {float:left;position:relative;z-index:1;height:52px;margin-right:34px}
+.careers .tab_careers li .btn_careers {display:block;position:relative;z-index:1;padding:3px 4px 26px;height:100%;box-sizing:border-box;font-weight:bold;font-size:17px;letter-spacing:-1px;color:#7b7e8e}
+.careers .tab_careers li .btn_careers .num {display:inline-block;margin:4px 0 0 4px;padding:0 9px;height:20px;border-radius:10px;font-weight:normal;font-size:14px;color:#fff;letter-spacing:0;vertical-align:top;background:#cbcdd6}
+.careers .tab_careers li.on:after, .careers .tab_careers li:hover:after {position:absolute;left:0;bottom:0;z-index:1;width:100%;height:4px;content:""}
+
+.careers .tag_careers {overflow:hidden;position:relative;margin-top:23px;padding-left:83px}
+.careers .tag_careers .tit_tag {position:absolute;left:0;top:2px;font-weight:bold;font-size:13px;color:#8a8c94}
+.careers .list_tag {overflow:hidden}
+.careers .list_tag > li {float:left;position:relative;margin:0 4px 8px}
+.careers .list_tag input[type="checkbox"] {position:absolute;top:0;left:0;z-index:1;margin:0;padding:0;width:100%;height:100%;cursor:pointer;opacity:0;filter:alpha(opacity=0)}
+.careers .list_tag .tag_txt {display:block;padding:5px 12px 7px;height:28px;box-sizing:border-box;font-size:13px;line-height:15px;color:#777;background:#fff}
+.careers .list_tag input[type="checkbox"]:checked + label {color:#fff;background:#444}
+
+/* 채용정보 */
+.careers .list_employ {margin-top:47px}
+.careers .list_employ > li {position:relative;margin-top:9px;padding:27px 149px 24px 46px;width:100%;border:1px solid #e5e6eb;box-sizing:border-box;background:#fff}
+.careers .list_employ > li:hover {border-color:#444}
+.careers .list_employ .tit {display:inline-block;overflow:hidden;max-width:708px;font-weight:bold;font-size:20px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.careers .list_employ .tit:hover {text-decoration:underline}
+.careers .list_employ .btn_scrap {display:inline-block;margin:3px 0 0 2px;width:26px;height:26px;vertical-align:top}
+.careers .list_employ .btn_scrap.on {background-position:-120px -100px}
+.careers .list_employ .ico {display:inline-block;margin:5px 0 0 2px;padding:2px 0;width:55px;height:20px;font-weight:bold;font-size:11px;color:#fff;vertical-align:top;box-sizing:border-box;background:#fa6a71;text-align:center}
+.careers .list_employ .state {overflow:hidden;margin-top:4px}
+.careers .list_employ .state span {font-size:13px;color:#444}
+.careers .list_employ .state span:before {display:inline-block;margin:6px 12px 0;width:1px;height:12px;background:#d8d8d8;vertical-align:top;content:""}
+.careers .list_employ .state span:first-child:before {display:none}
+.careers .list_employ .state span.emph {font-weight:bold}
+.careers .list_employ .list_tag {margin:14px 0 0 -4px;padding-left:0}
+.careers .list_employ .list_tag .tag_txt {background:#f8f9fc}
+.careers .list_employ .list_tag > li.checked .tag_txt {color:#fff;background-color:#444}
+.careers .list_employ .btn_tag {position:absolute;right:46px;bottom:32px;width:30px;height:28px;border:1px solid #e6e6e8}
+.careers .list_employ .btn_tag:after {display:block;margin:0 auto;width:10px;height:10px;background-position:-140px -60px;content:""}
+.careers .list_employ .btn_tag.folder:after {background-position:-160px -60px}
+.careers .list_employ .list_date {position:absolute;right:46px;top:36px;width:103px;font-size:14px;color:#444;text-align:center}
+.careers .list_employ .sri_btn_sm, .careers .list_employ .link_homepage {position:absolute;right:46px;top:74px}
+.careers .list_employ .sri_btn_sm {height:40px}
+.careers .list_employ .sri_btn_sm span.sri_btn_immediately {padding:9px 0 10px;font-size:14px !important;height:38px;color:#ff6d6a;line-height:16px;vertical-align:top;box-sizing:border-box;background:transparent}
+.careers .desc_nodata {padding:250px 0 150px;font-size:17px;color:#929292;text-align:center}
+.page_nation {margin-top:58px}
+.page_nation a, .careers .page_nation strong {color:#444}
+.page_nation .prev, .careers .page_nation .next {background:none}
+
+/* 채용통계 */
+.careers .tit_careers {position:absolute;left:0;top:-98px;width:100%;font-weight:bold;font-size:34px;color:#333;text-align:center}
+.careers .info_careers {overflow:hidden;margin-top:187px;padding:27px 46px 35px;width:100%;height:264px;border:1px solid #e5e6eb;box-sizing:border-box;background:#f8f9fc}
+.careers .info_careers .wrap_careers {float:left;width:50%}
+.careers .wrap_careers .tit {display:block;font-weight:bold;font-size:20px;text-align:center;color:#333}
+.careers .wrap_careers .list_rank {position:relative;margin-top:22px;padding-left:139px}
+.careers .wrap_careers .list_rank li {overflow:hidden;margin-top:8px;height:32px}
+.careers .wrap_careers .list_rank li:first-child {position:absolute;top:0;left:0;margin-top:0;height:auto}
+.careers .wrap_careers .list_rank li:only-child {left:50%;margin-left:-56px}
+.careers .wrap_careers .list_rank .ico {position:relative;width:112px;height:106px}
+.careers .wrap_careers .list_rank .ico svg {position:absolute}
+.careers .wrap_careers .list_rank .trophy {top:-10px}
+.careers .wrap_careers .list_rank .top {left:0;right:0;top:auto;bottom:0}
+.careers .wrap_careers .list_rank li:first-child strong {display:block;overflow:hidden;margin-top:11px;padding:6px 0 7px;width:112px;font-weight:bold;font-size:15px;text-align:center;background:none}
+.careers .wrap_careers .list_rank .rank {float:left;padding:7px 0 8px;width:56px;height:100%;font-weight:bold;font-size:13px;color:#fff;text-align:center;letter-spacing:0;box-sizing:border-box;background:#cbcdd6}
+.careers .wrap_careers .list_rank li:first-child .rank {position:absolute;left:0;bottom:44px;padding:4px 0;width:112px;height:28px;box-sizing:border-box;font-weight:bold;font-size:15px;color:#fff;background:none}
+.careers .wrap_careers .list_rank strong {float:left;overflow:hidden;padding:6px 15px 7px;width:236px;height:100%;font-weight:normal;font-size:13px;color:#333;text-overflow:ellipsis;white-space:nowrap;box-sizing:border-box;background:#fff}
+.careers .wrap_careers .list_number {margin-top:22px;padding-left:15px}
+.careers .wrap_careers .list_number li {overflow:hidden;margin-top:8px;color:#848896}
+.careers .wrap_careers .list_number .txt {float:left;padding:5px 15px 0 0;width:60px;font-size:14px;text-align:right}
+.careers .wrap_careers .list_number .emph .txt {font-weight:bold}
+.careers .wrap_careers .list_number .wrap_graph {float:left;width:326px;height:32px}
+.careers .wrap_careers .list_number .inner_graph {position:relative;width:100%;height:100%;background-color:#a6a6a6}
+.careers .wrap_careers .list_number li:nth-child(1) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_vertical_wave.png)}
+.careers .wrap_careers .list_number li:nth-child(2) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_vertical_diagonal.png)}
+.careers .wrap_careers .list_number li:nth-child(3) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_vertical_lattice.png)}
+.careers .wrap_careers .list_number li:nth-child(4) .inner_graph {background-image:url(//www.saraminimage.co.kr/sri/company/information/pat_vertical_stripe.png)}
+.careers .wrap_careers .list_number .num {position:absolute;right:-58px;top:5px;width:50px;font-size:15px;letter-spacing:0}
+.careers .wrap_careers .list_number .emph .num {font-weight:bold}
+
+/* 지난 채용정보 */
+.careers .list_past li {overflow:hidden;position:relative;padding:24px 46px 25px;height:68px;border-bottom:1px solid #e5e6eb;box-sizing:border-box}
+.careers .list_past strong {float:left;margin-right:20px;font-weight:normal;font-size:15px;color:#949494}
+.careers .list_past .tit {float:left;overflow:hidden;width:330px;font-size:15px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.careers .list_past .state {overflow:hidden;float:right;margin:1px 130px 0 0}
+.careers .list_past .state span {float:left;font-size:13px;color:#888}
+.careers .list_past .state span:before {float:left;margin:4px 10px 0;width:1px;height:12px;background:#d8d8d8;content:""}
+.careers .list_past .state span:first-child:before {display:none}
+.careers .list_past .list_data {position:absolute;right:118px;top:25px;width:38px;font-size:13px;color:#888;text-align:right}
+.careers .list_past .box_past {position:absolute;right:46px;top:26px;width:52px;height:18px;font-size:11px;color:#888;text-align:center;border:1px solid #dce2ef;box-sizing:border-box}
+
+/* 기업소식 */
+.news .tit_news {padding:89px 0 53px 0;font-weight:bold;font-size:34px;color:#333;text-align:center}
+/* 기업비전, 기타정보 */
+.cont_info .news.gray {overflow:hidden}
+.cont_info .news:first-of-type {border-top:1px solid #cbcdd6}
+.cont_info .news.gray:first-of-type + .news.gray {margin-top:-100px;border-top:0}
+.cont_info .news {padding-bottom:100px}
+.news .info_news {overflow:hidden;position:relative;margin-top:55px;padding:0 46px 44px;width:100%;border:1px solid #e5e6eb;box-sizing:border-box;background:#fff}
+.news .info_news .tit {display:block;margin-top:44px;font-size:20px;color:#333}
+.news .info_news .txt {display:inline-block;margin:-1px 11px 0 0;font-family:arial, sans-serif;font-size:30px;vertical-align:top}
+.news .info_news  p {margin-top:28px;font-size:16px;line-height:27px;color:#333;word-break:break-all}
+.news .info_news  p:first-of-type {margin-top:11px}
+.news .info_news .area_img {width:800px;margin:45px auto 0}
+.news .info_news .area_img .img_info {max-width:100%}
+.news .info_news p em {display:block;font-weight:bold}
+.news .btn_folder {display:block;position:relative;z-index:1;padding:10px 0;margin-top:-1px;width:1000px;height:45px;border:1px solid #e5e6eb;box-sizing:border-box;font-size:16px;color:#777;letter-spacing:-1px;background:#fff}
+.news .info_news + .wrap_btn .btn_folder:before {display:inline-block;margin:8px 11px 0 0;width:11px;height:7px;vertical-align:top;background-position:-100px -20px;content:""}
+.news .info_news.open + .wrap_btn .btn_folder:before {background-position:-100px -30px}
+.news .info_news + .wrap_btn:after {position:absolute;left:0;right:0;bottom:44px;width:100%;height:140px;background:url(//www.saraminimage.co.kr/sri/company/information/bg/bg_info.png) repeat-x 0 0;content:""}
+.news .info_news.open + .wrap_btn:after {display:none}
+
+/* 테마별 공채 */
+.news .list_theme {margin-top:-8px}
+.news .list_theme li {margin-top:8px}
+.news .list_theme .link_theme {display:block;position:relative;padding:28px 202px 30px 46px;width:100%;border:1px solid #e5e6eb;box-sizing:border-box;background-repeat:no-repeat;background-size:cover}
+.news .list_theme strong {display:block;font-size:20px;line-height:29px;color:#333}
+.news .list_theme .tag_theme {overflow:hidden;margin-top:4px;padding:1px}
+.news .list_theme .tag {float:left;margin:8px 8px 0 0;padding:5px 10px 5px;height:28px;box-sizing:border-box;font-size:13px;line-height:15px;color:#777;background:#f8f9fc}
+.news .list_theme .time {position:absolute;right:103px;top:50%;margin-top:-9px;font-size:13px;color:#929292;letter-spacing:0}
+.news .list_theme .cube {position:absolute;right:54px;top:50%;margin-top:-10px;width:20px;height:22px}
+.news .list_theme .theme1 .cube {background-position:-140px 0}
+.news .list_theme .theme2 .cube {background-position:-170px 0}
+.news .list_theme .theme3 .cube {background-position:-140px -30px}
+.news .list_theme .theme4 .cube {background-position:-170px -30px}
+.news .list_theme .link_theme:hover strong {color:#fff}
+.news .list_theme .link_theme:hover .tag {color:#fff;box-shadow:0 0 0 1px rgba(255, 255, 255, 0.09);background: rgba(255, 255, 255, 0.07)}
+.news .list_theme .link_theme:hover .time {color:#fff}
+.news .list_theme li.theme1 .link_theme:hover {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0NzZlZmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzY3OGZjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li.theme2 .link_theme:hover {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlYTY0OTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmRhMjQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li.theme3 .link_theme:hover {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzZmI4YmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzlkZWIxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li.theme4 .link_theme:hover {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM5ZTZkYjciIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWE2NmE3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li:first-child .link_theme strong {color:#fff}
+.news .list_theme li:first-child .link_theme .tag {color:#fff;box-shadow:0 0 0 1px rgba(255, 255, 255, 0.09);background: rgba(255, 255, 255, 0.07)}
+.news .list_theme li:first-child .link_theme .time {color:#fff}
+.news .list_theme li:first-child.theme1 .link_theme {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM0NzZlZmEiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzY3OGZjIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li:first-child.theme2 .link_theme {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNlYTY0OTAiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmRhMjQyIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li:first-child.theme3 .link_theme {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiMzZmI4YmUiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjNzlkZWIxIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+.news .list_theme li:first-child.theme4 .link_theme {background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPgogIDxsaW5lYXJHcmFkaWVudCBpZD0iZ3JhZC11Y2dnLWdlbmVyYXRlZCIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjAlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM5ZTZkYjciIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWE2NmE3IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiLz4KPC9zdmc+)}
+
+/* 기업소식 */
+.news .list_news {margin-top:-8px}
+.news .list_news li {margin-top:8px}
+.news .list_news .link {display:block;position:relative;overflow:hidden;padding:35px 148px 35px 46px;width:100%;border:1px solid #e5e6eb;box-sizing:border-box}
+.news .list_news .thumb {float:left;margin-right:25px}
+.news .list_news .desc {overflow:hidden;padding-top:2px}
+.news .list_news .desc strong {display:block;overflow:hidden;margin-top:-7px;font-size:20px;line-height:30px;color:#333;text-overflow:ellipsis;white-space:nowrap}
+.news .list_news .link:hover strong {text-decoration:underline}
+.news .list_news .desc p {overflow:hidden;margin-top:7px;max-height:60px;font-size:13px;line-height:20px;color:#444}
+.news .list_news .date {position:absolute;right:46px;top:50%;margin-top:-9px;font-size:14px;color:#929292;letter-spacing:0}
+.news .link_more {float:right;margin-top:20px;font-size:14px;color:#444}
+.news .link_more:after {display:inline-block;margin:4px 0 0 5px;width:7px;height:13px;vertical-align:top;background-position:-120px -70px;content:""}
+
+/* 홍보자료 */
+.news .promotion {text-align:center}
+.news .promotion .img_info {max-width:100%}
+
+/* 기업업종 컬러 */
+/* tab */
+.blue .tab_info ul li.on,
+.blue .tab_info ul li a:hover {background:#4874e6}
+
+.red .tab_info ul li.on,
+.red .tab_info ul li a:hover {background:#ed483c}
+
+.yellow .tab_info ul li.on,
+.yellow .tab_info ul li a:hover {background:#ecc400}
+
+.green .tab_info ul li.on,
+.green .tab_info ul li a:hover {background:#31b305}
+
+.purple .tab_info ul li.on,
+.purple .tab_info ul li a:hover {background:#6d65e1}
+
+.orange .tab_info ul li.on,
+.orange .tab_info ul li a:hover {background:#ff8953}
+
+/* 네비게이션 */
+.blue .wing_info ul li button.on:before {background:#4874e6}
+.blue .wing_info ul li button.on,
+.blue .wing_info ul li a:hover,
+.blue .wing_info ul li button:hover {color:#4874e6}
+
+.red .wing_info ul li button.on:before {background:#ed483c}
+.red .wing_info ul li button.on,
+.red .wing_info ul li a:hover,
+.red .wing_info ul li button:hover {color:#ed483c}
+
+.yellow .wing_info ul li button.on:before {background:#ecc400}
+.yellow .wing_info ul li button.on,
+.yellow .wing_info ul li a:hover,
+.yellow .wing_info ul li button:hover {color:#ecc400}
+
+.green .wing_info ul li button.on:before {background:#31b305}
+.green .wing_info ul li button.on,
+.green .wing_info ul li a:hover,
+.green .wing_info ul li button:hover {color:#31b305}
+
+.purple .wing_info ul li button.on:before {background:#6d65e1}
+.purple .wing_info ul li button.on,
+.purple .wing_info ul li a:hover,
+.purple .wing_info ul li button:hover {color:#6d65e1}
+
+.orange .wing_info ul li button.on:before {background:#ff8953}
+.orange .wing_info ul li button.on,
+.orange .wing_info ul li a:hover,
+.orange .wing_info ul li button:hover {color:#ff8953}
+
+/* 요약정보 */
+.blue .cont_info .list_intro .box .ico {background:#f6f8fe}
+.blue .cont_info .list_intro .box .ico svg g,
+.blue .cont_info .list_intro .box .ico svg.ceo polyline,
+.blue .cont_info .list_intro .box .ico svg.ceo path,
+.blue .cont_info .list_intro .box .ico svg.ceo rect,
+.blue .cont_info .list_intro .box .ico svg.ceo circle {stroke:#4874e6}
+.blue .cont_info .list_intro .box .ico svg.ceo text {fill:#4874e6;stroke:transparent}
+.blue .cont_info .list_intro .box .detail {background:#4874e6}
+.blue .cont_info .list_intro .box .ico .txt {color:#4874e6}
+
+.red .cont_info .list_intro .box .ico {background:#fef6f5}
+.red .cont_info .list_intro .box .ico svg g,
+.red .cont_info .list_intro .box .ico svg.ceo polyline,
+.red .cont_info .list_intro .box .ico svg.ceo path,
+.red .cont_info .list_intro .box .ico svg.ceo rect,
+.red .cont_info .list_intro .box .ico svg.ceo circle {stroke:#ed483c}
+.red .cont_info .list_intro .box .ico svg.ceo text {fill:#ed483c;stroke:transparent}
+.red .cont_info .list_intro .box .detail {background:#ed483c}
+.red .cont_info .list_intro .box .ico .txt {color:#ed483c}
+
+.yellow .cont_info .list_intro .box .ico {background:#fffbe8}
+.yellow .cont_info .list_intro .box .ico svg g,
+.yellow .cont_info .list_intro .box .ico svg.ceo polyline,
+.yellow .cont_info .list_intro .box .ico svg.ceo path,
+.yellow .cont_info .list_intro .box .ico svg.ceo rect,
+.yellow .cont_info .list_intro .box .ico svg.ceo circle {stroke:#ecc400}
+.yellow .cont_info .list_intro .box .ico svg.ceo text {fill:#ecc400;stroke:transparent}
+.yellow .cont_info .list_intro .box .detail {background:#ecc400}
+.yellow .cont_info .list_intro .box .ico .txt {color:#ecc400}
+
+.green .cont_info .list_intro .box .ico {background:#f4fbf2}
+.green .cont_info .list_intro .box .ico svg g,
+.green .cont_info .list_intro .box .ico svg.ceo polyline,
+.green .cont_info .list_intro .box .ico svg.ceo path,
+.green .cont_info .list_intro .box .ico svg.ceo rect,
+.green .cont_info .list_intro .box .ico svg.ceo circle {stroke:#31b305}
+.green .cont_info .list_intro .box .ico svg.ceo text {fill:#31b305;stroke:transparent}
+.green .cont_info .list_intro .box .detail {background:#31b305}
+.green .cont_info .list_intro .box .ico .txt {color:#31b305}
+
+.purple .cont_info .list_intro .box .ico {background:#f7f7fd}
+.purple .cont_info .list_intro .box .ico svg g,
+.purple .cont_info .list_intro .box .ico svg.ceo polyline,
+.purple .cont_info .list_intro .box .ico svg.ceo path,
+.purple .cont_info .list_intro .box .ico svg.ceo rect,
+.purple .cont_info .list_intro .box .ico svg.ceo circle {stroke:#6d65e1}
+.purple .cont_info .list_intro .box .ico svg.ceo text {fill:#6d65e1;stroke:transparent}
+.purple .cont_info .list_intro .box .detail {background:#6d65e1}
+.purple .cont_info .list_intro .box .ico .txt {color:#6d65e1}
+
+.orange .cont_info .list_intro .box .ico {background:#fff7f3}
+.orange .cont_info .list_intro .box .ico svg g,
+.orange .cont_info .list_intro .box .ico svg.ceo polyline,
+.orange .cont_info .list_intro .box .ico svg.ceo path,
+.orange .cont_info .list_intro .box .ico svg.ceo rect,
+.orange .cont_info .list_intro .box .ico svg.ceo circle {stroke:#ff8953}
+.orange .cont_info .list_intro .box .ico svg.ceo text {fill:#ff8953;stroke:transparent}
+.orange .cont_info .list_intro .box .detail {background:#ff8953}
+.orange .cont_info .list_intro .box .ico .txt {color:#ff8953}
+
+/* 기업소개 */
+.blue .cont_info .info .list_info dt .num {color:#6993ff}
+.red .cont_info .info .list_info dt .num {color:#ed483c}
+.yellow .cont_info .info .list_info dt .num {color:#ecc400}
+.green .cont_info .info .list_info dt .num {color:#31b305}
+.purple .cont_info .info .list_info dt .num {color:#6d65e1}
+.orange .cont_info .info .list_info dt .num {color:#f1753c}
+
+/* 복리후생 */
+.blue .cont_info .list_benefits li:after {background:#4874e6}
+.red .cont_info .list_benefits li:after {background:#ed483c}
+.yellow .cont_info .list_benefits li:after {background:#ecc400}
+.green .cont_info .list_benefits li:after {background:#31b305}
+.purple .cont_info .list_benefits li:after {background:#6d65e1}
+.orange .cont_info .list_benefits li:after {background:#ff8953}
+
+/* 보유기술 */
+.blue .cont_info .list_skill .box:hover .tit,
+.blue .cont_info .list_skill .box .tit_detail {color:#4874e6}
+.blue .cont_info .list_skill .box:hover>.ico svg g,
+.blue .cont_info .list_skill .box .detail .ico svg g {stroke:#4874e6}
+
+.red .cont_info .list_skill .box:hover .tit,
+.red .cont_info .list_skill .box .tit_detail {color:#ed483c}
+.red .cont_info .list_skill .box:hover>.ico svg g,
+.red .cont_info .list_skill .box .detail .ico svg g {stroke:#ed483c}
+
+.yellow .cont_info .list_skill .box:hover .tit,
+.yellow .cont_info .list_skill .box .tit_detail {color:#ecc400}
+.yellow .cont_info .list_skill .box:hover>.ico svg g,
+.yellow .cont_info .list_skill .box .detail .ico svg g {stroke:#ecc400}
+
+.green .cont_info .list_skill .box:hover .tit,
+.green .cont_info .list_skill .box .tit_detail {color:#31b305}
+.green .cont_info .list_skill .box:hover>.ico svg g,
+.green .cont_info .list_skill .box .detail .ico svg g {stroke:#31b305}
+
+.purple .cont_info .list_skill .box:hover .tit,
+.purple .cont_info .list_skill .box .tit_detail {color:#6d65e1}
+.purple .cont_info .list_skill .box:hover>.ico svg g,
+.purple .cont_info .list_skill .box .detail .ico svg g {stroke:#6d65e1}
+
+.orange .cont_info .list_skill .box:hover .tit,
+.orange .cont_info .list_skill .box .tit_detail {color:#ff8953}
+.orange .cont_info .list_skill .box:hover>.ico svg g,
+.orange .cont_info .list_skill .box .detail .ico svg g {stroke:#ff8953}
+
+/* 재무정보 */
+.blue .graph_info .emph .graph .inner_graph {background-color:#4874e6}
+.blue .graph_info .emph .graph .txt_value {color:#4874e6}
+
+.red .graph_info .emph .graph .inner_graph {background-color:#ed483c}
+.red .graph_info .emph .graph .txt_value {color:#ed483c}
+
+.yellow .graph_info .emph .graph .inner_graph {background-color:#ecc400}
+.yellow .graph_info .emph .graph .txt_value {color:#ecc400}
+
+.purple .graph_info .emph .graph .inner_graph {background-color:#6d65e1}
+.purple .graph_info .emph .graph .txt_value {color:#6d65e1}
+
+.green .graph_info .emph .graph .inner_graph {background-color:#31b305}
+.green .graph_info .emph .graph .txt_value {color:#31b305}
+
+.orange .graph_info .emph .graph .inner_graph {background-color:#ff8953}
+.orange .graph_info .emph .graph .txt_value {color:#ff8953}
+
+/* 인재채용 */
+.blue .cont_info .desc_headhunting em {color:#4874e6}
+.blue .careers .tab_careers li.on:after,
+.blue .careers .tab_careers li:hover:after,
+.blue .careers .tab_careers li.on .btn_careers .num,
+.blue .careers .tab_careers li:hover .btn_careers .num {background:#4874e6}
+.blue .careers .tab_careers li.on .btn_careers,
+.blue .careers .tab_careers li:hover .btn_careers {color:#4874e6}
+.blue .careers .list_employ .state span.emph {color:#4874e6}
+.blue .careers .wrap_careers .list_rank li:first-child strong {color:#4874e6}
+.blue .careers .wrap_careers .list_number .emph .txt {color:#4874e6}
+.blue .careers .wrap_careers .list_number .emph .inner_graph {background-color:#4874e6}
+.blue .careers .wrap_careers .list_number .emph .num {color:#4874e6}
+.blue .careers .wrap_careers .list_rank .trophy g {stroke:#4874e6}
+.blue .careers .wrap_careers .list_rank .top path {fill:#4874e6}
+
+.red .cont_info .desc_headhunting em {color:#ed483c}
+.red .careers .tab_careers li.on:after,
+.red .careers .tab_careers li:hover:after,
+.red .careers .tab_careers li.on .btn_careers .num,
+.red .careers .tab_careers li:hover .btn_careers .num {background:#ed483c}
+.red .careers .tab_careers li.on .btn_careers,
+.red .careers .tab_careers li:hover .btn_careers {color:#ed483c}
+.red .careers .list_employ .state span.emph {color:#ed483c}
+.red .careers .wrap_careers .list_rank li:first-child strong {color:#ed483c}
+.red .careers .wrap_careers .list_number .emph .txt {color:#ed483c}
+.red .careers .wrap_careers .list_number .emph .inner_graph {background-color:#ed483c}
+.red .careers .wrap_careers .list_number .emph .num {color:#ed483c}
+.red .careers .wrap_careers .list_rank .trophy g {stroke:#ed483c}
+.red .careers .wrap_careers .list_rank .top  path {fill:#ed483c}
+
+.yellow .cont_info .desc_headhunting em {color:#ecc400}
+.yellow .careers .tab_careers li.on:after,
+.yellow .careers .tab_careers li:hover:after,
+.yellow .careers .tab_careers li.on .btn_careers .num,
+.yellow .careers .tab_careers li:hover .btn_careers .num {background:#ecc400}
+.yellow .careers .tab_careers li.on .btn_careers,
+.yellow .careers .tab_careers li:hover .btn_careers {color:#ecc400}
+.yellow .careers .list_employ .state span.emph {color:#ecc400}
+.yellow .careers .wrap_careers .list_rank li:first-child strong {color:#ecc400}
+.yellow .careers .wrap_careers .list_number .emph .txt {color:#ecc400}
+.yellow .careers .wrap_careers .list_number .emph .inner_graph {background-color:#ecc400}
+.yellow .careers .wrap_careers .list_number .emph .num {color:#ecc400}
+.yellow .careers .wrap_careers .list_rank .trophy g {stroke:#ecc400}
+.yellow .careers .wrap_careers .list_rank .top  path {fill:#ecc400}
+
+.purple .cont_info .desc_headhunting em {color:#6d65e1}
+.purple .careers .tab_careers li.on:after,
+.purple .careers .tab_careers li:hover:after,
+.purple .careers .tab_careers li.on .btn_careers .num,
+.purple .careers .tab_careers li:hover .btn_careers .num {background:#6d65e1}
+.purple .careers .tab_careers li.on .btn_careers,
+.purple .careers .tab_careers li:hover .btn_careers {color:#6d65e1}
+.purple .careers .list_employ .state span.emph {color:#6d65e1}
+.purple .careers .wrap_careers .list_rank li:first-child strong {color:#6d65e1}
+.purple .careers .wrap_careers .list_number .emph .txt {color:#6d65e1}
+.purple .careers .wrap_careers .list_number .emph .inner_graph {background-color:#6d65e1}
+.purple .careers .wrap_careers .list_number .emph .num {color:#6d65e1}
+.purple .careers .wrap_careers .list_rank .trophy g {stroke:#6d65e1}
+.purple .careers .wrap_careers .list_rank .top  path {fill:#6d65e1}
+
+.green .cont_info .desc_headhunting em {color:#31b305}
+.green .careers .tab_careers li.on:after,
+.green .careers .tab_careers li:hover:after,
+.green .careers .tab_careers li.on .btn_careers .num,
+.green .careers .tab_careers li:hover .btn_careers .num {background:#31b305}
+.green .careers .tab_careers li.on .btn_careers,
+.green .careers .tab_careers li:hover .btn_careers {color:#31b305}
+.green .careers .list_employ .state span.emph {color:#31b305}
+.green .careers .wrap_careers .list_rank li:first-child strong {color:#31b305}
+.green .careers .wrap_careers .list_number .emph .txt {color:#31b305}
+.green .careers .wrap_careers .list_number .emph .inner_graph {background-color:#31b305}
+.green .careers .wrap_careers .list_number .emph .num {color:#31b305}
+.green .careers .wrap_careers .list_rank .trophy g {stroke:#31b305}
+.green .careers .wrap_careers .list_rank .top  path {fill:#31b305}
+
+.orange .cont_info .desc_headhunting em {color:#ff8953}
+.orange .careers .tab_careers li.on:after,
+.orange .careers .tab_careers li:hover:after,
+.orange .careers .tab_careers li.on .btn_careers .num,
+.orange .careers .tab_careers li:hover .btn_careers .num {background:#ff8953}
+.orange .careers .tab_careers li.on .btn_careers,
+.orange .careers .tab_careers li:hover .btn_careers {color:#ff8953}
+.orange .careers .list_employ .state span.emph {color:#ff8953}
+.orange .careers .wrap_careers .list_rank li:first-child strong {color:#ff8953}
+.orange .careers .wrap_careers .list_number .emph .txt {color:#ff8953}
+.orange .careers .wrap_careers .list_number .emph .inner_graph {background-color:#ff8953}
+.orange .careers .wrap_careers .list_number .emph .num {color:#ff8953}
+.orange .careers .wrap_careers .list_rank .trophy g {stroke:#ff8953}
+.orange .careers .wrap_careers .list_rank .top path {fill:#ff8953}
+
+/* 기업소식 */
+.blue .news .info_news .txt {color:#4874e6}
+.red .news .info_news .txt {color:#ed483c}
+.yellow .news .info_news .txt {color:#ecc400}
+.green .news .info_news .txt {color:#31b305}
+.purple .news .info_news .txt {color:#6d65e1}
+.orange .news .info_news .txt {color:#ff8953}
+
+/*.wing */
+.wing_info {position:fixed;top:441px;left:50%;z-index:3;margin-left:650px}
+.wing_info.scrolled {position:absolute;top:auto}
+.wing_info ul {width:70px}
+.wing_info ul li {display:block;position:relative;margin-top:10px;height:25px}
+.wing_info ul li:after {display:block;position:absolute;top:-21px;left:6px;z-index:-1;width:1px;height:36px;background:#d8d8d8;content:""}
+.wing_info ul li:first-child {margin-top:0}
+.wing_info ul li:first-child:after {display:none}
+.wing_info ul li button,
+.wing_info ul li a {display:block;position:relative;padding-left:17px;width:70px;height:25px;box-sizing:border-box;color:#666;font-size:11px;letter-spacing:-1px;line-height:25px;text-align:left;cursor:pointer}
+.wing_info ul li button:before,
+.wing_info ul li a:before {display:block;position:absolute;top:10px;left:3px;width:7px;height:7px;border-radius:7px;background:#d8d8d8;content:""}
+.wing_info .btn_top {margin-top:10px;padding:3px 0 6px;width:70px;height:26px;border:1px solid #eaeaea;background:#fff}
+.wing_info>.btn_top span {display:inline-block;color:#666;font-size:13px;letter-spacing:-1px;line-height:17px;vertical-align:top}
+.wing_info>.btn_top span:after {display:inline-block;margin:6px 0 0 4px;width:0;height:0;border-width:0 5px 5px 5px;border-style:solid;border-color:transparent transparent #444 transparent;vertical-align:top;content:""}

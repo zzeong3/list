@@ -1,0 +1,727 @@
+@charset "utf-8";
+
+#sri_company.video_interview {background:#fff;-webkit-font-smoothing:antialiased}
+.video_interview .img_interview:before,
+.video_interview .img_interview:after {overflow:hidden;background:url(//www.saraminimage.co.kr/sri/live/home/img_live_200921.png) no-repeat 0 0}/* QA534 수정 */
+
+/* content */
+.video_interview #sri_section {min-width:1300px }
+.wrap_video_interview {position:relative;letter-spacing:-1px}
+.wrap_video_interview:before {position:absolute;z-index:-1;margin-left:-314px;width:50%;height:100%;background:#f4f7fb;content:""}
+.wrap_video_interview .top_video_interview {position:relative;height:314px;background:url(//www.saraminimage.co.kr/sri/live/home/top_video_interview_motion.jpg) no-repeat 0 0;}
+.wrap_video_interview .top_video_interview:before {position:absolute;left:0;top:0;z-index:-1;width:100%;height:100%;background:url(//www.saraminimage.co.kr/sri/live/home/bg_repeat.jpg) repeat-x 0 0;content:""}
+
+.motion .wrap_motion div[class^=circle] {-webkit-animation-play-state:running;animation-play-state:running}
+.wrap_motion {position:absolute;left:0;top:0;overflow:hidden;width:100%;height:314px}
+.wrap_motion div[class^=circle] {-webkit-animation-play-state:paused;animation-play-state:paused}
+.wrap_motion .circle1 {position:absolute;left:0;top:100px;width:250px;height:250px;-webkit-animation-name:circle1;-webkit-animation-duration:8s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;-webkit-transform-origin:center;animation-name:circle1;animation-duration:8s;animation-timing-function:linear;animation-iteration-count:infinite;transform-origin:center}
+.wrap_motion .circle1:before {position:absolute;left:80px;top:0;width:325px;height:325px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_left.png) no-repeat 0 0;content:""}
+.wrap_motion .circle2 {position:absolute;left:50%;top:-70px;width:250px;height:250px;-webkit-animation-name:circle2;-webkit-animation-duration:8s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;-webkit-transform-origin:center;animation-name:circle2;animation-duration:8s;animation-timing-function:linear;animation-iteration-count:infinite;transform-origin:center}
+.wrap_motion .circle2:before {position:absolute;left:-30%;top:70px;width:314px;height:334px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_center.png) no-repeat 0 0;;content:""}
+.wrap_motion .circle3 {position:absolute;right:5%;top:10%;width:50px;height:50px;animation-name:circle3;animation-duration:8s;animation-timing-function:linear;animation-iteration-count:infinite;transform-origin:center;animation-name:circle3;-webkit-animation-duration:8s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;-webkit-transform-origin:center}
+.wrap_motion .circle3:before {position:absolute;left:-50%;top:-50%;width:402px;height:419px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_left.png) no-repeat 0 0;content:""}
+
+.wrap_motion .circle4 {position:absolute;left:20%;top:25%;width:80px;height:83px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_small_left.png) no-repeat 0 0;-webkit-animation-name:circle4;-webkit-animation-duration:8s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-name:circle4;animation-duration:8s;animation-timing-function:linear;animation-iteration-count:infinite}
+
+.wrap_motion .circle5 {position:absolute;right:50%;top:15%;width:99px;height:102px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_small_right.png) no-repeat 0 0;-webkit-animation-name:circle5;-webkit-animation-duration:16s;-webkit-animation-timing-function:linear;-webkit-nimation-iteration-count:infinite;animation-name:circle5;animation-duration:16s;animation-timing-function:linear;animation-iteration-count:infinite}
+
+.wrap_motion .circle6 {position:absolute;right:15%;top:-10%;width:137px;height:137px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_right.png) no-repeat 0 0;background-size:137px 137px;-webkit-animation-name:circle6;-webkit-animation-duration:4s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-name:circle6;animation-duration:4s;animation-timing-function:linear;animation-iteration-count:infinite}
+
+.wrap_motion .circle7 {position:absolute;right:5%;top:75%;width:99px;height:102px;background:url(//www.saraminimage.co.kr/sri/live/home/circle_small_right.png) no-repeat 0 0;animation-name:circle7;-webkit-animation-duration:10s;-webkit-animation-timing-function:linear;-webkit-animation-iteration-count:infinite;animation-duration:10s;animation-timing-function:linear;animation-iteration-count:infinite}
+
+@keyframes circle1{
+    0% {-webkit-transform:rotate(0);transform:rotate(0);opacity:1}
+    20% {-webkit-transform:rotate(72deg);transform:rotate(72deg);opacity:0.5}
+    40% {-webkit-transform:rotate(144deg);transform:rotate(144deg);opacity:0}
+    60% {-webkit-transform:rotate(216deg);transform:rotate(216deg);opacity:0.5}
+    80% {-webkit-transform:rotate(288deg);transform:rotate(288deg);opacity:0}
+    100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);opacity:0.8}
+
+}
+
+@keyframes circle2{
+    0% {-webkit-transform:rotate(0);transform:rotate(0);opacity:1}
+    20% {-webkit-transform:rotate(72deg);transform:rotate(72deg);opacity:0.5}
+    40% {-webkit-transform:rotate(144deg);transform:rotate(144deg);opacity:0}
+    60% {-webkit-transform:rotate(216deg);transform:rotate(216deg);opacity:0.5}
+    80% {-webkit-transform:rotate(288deg);transform:rotate(288deg);opacity:0}
+    100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);opacity:0.8}
+
+}
+
+@keyframes circle3{
+    0% {-webkit-transform:rotate(0);transform:rotate(0);opacity:0}
+    25% {-webkit-transform:rotate(90deg);transform:rotate(90deg);opacity:0.5}
+    50% {-webkit-transform:rotate(180deg);transform:rotate(180deg);opacity:0}
+    75% {-webkit-transform:rotate(270deg);transform:rotate(270deg);opacity:0.5}
+    100% {-webkit-transform:rotate(360deg);transform:rotate(360deg);opacity:0}
+}
+
+@keyframes circle4{
+    0% {opacity:1}
+    25% {opacity:0.3}
+    50% {opacity:0.5}
+    75% {opacity:0.7}
+    100% {opacity:1}
+}
+
+@keyframes circle5{
+    0% {opacity:0}
+    10% {opacity:1}
+    20% {opacity:0}
+    30% {opacity:1}
+    40% {opacity:0}
+    100% {opacity:0}
+}
+
+@keyframes circle6{
+    0% {opacity:1}
+    25% {opacity:0.3}
+    50% {opacity:0.5}
+    75% {opacity:0.7}
+    100% {opacity:1}
+}
+
+@keyframes circle7{
+    0% {opacity:1}
+    10% {opacity:1}
+    20% {opacity:0}
+    30% {opacity:1}
+    40% {opacity:0}
+    100% {opacity:0}
+}
+
+.wrap_video_interview .inner_interview {position:relative;overflow:hidden;margin:0 auto;padding:175px 20px 30px;width:1260px}
+.wrap_video_interview .inner_interview .box_interview {position:relative;z-index:1;padding:0 52px;width:965px;height:180px;box-shadow: 0 6px 20px 0 rgba(81, 94, 213, 0.39);background:url(//www.saraminimage.co.kr/sri/live/home/top_bnr.png) no-repeat 0 0;box-sizing:border-box}
+.wrap_video_interview button:disabled {cursor:default}
+
+.box_interview .info_interview_other {position:absolute;left:50%;top:-50px;margin-left:-469px;padding:12px 43px 14px 39px;width:938px;height:50px;border-radius:12px;border-bottom-left-radius:0;border-bottom-right-radius:0;box-sizing:border-box;background:rgba(255, 255, 255, .5)}
+.box_interview .info_interview_other .tit_interview_other {float:left;overflow:hidden;max-width:700px;font-size:16px;line-height:24px;color:#626d80;text-overflow:ellipsis;white-space:nowrap}
+.box_interview .info_interview_other .tit_interview_other .txt {font-weight:normal}
+.box_interview .info_interview_other .paging_interview {float:right;font-size:14px;line-height:24px;color:#6c7cbd}
+.box_interview .info_interview_other .num_now {font-weight:bold;color:#3d4c94}
+.box_interview .paging_interview button {display:inline-block;margin-top:4px;width:15px;height:18px;vertical-align:top}
+.box_interview .paging_interview button:after {display:block;margin:0 auto;width:7px;height:12px;content:""}
+.box_interview .paging_interview .btn_prev:after {background-position:-115px -55px}
+.box_interview .paging_interview .btn_next:after {background-position:-125px -55px}
+.box_interview .paging_interview .btn_prev:disabled:after {background-position:-115px -40px}
+.box_interview .paging_interview .btn_next:disabled:after {background-position:-125px -40px}
+.box_interview .info_interview {height:100%}
+.box_interview .wrap_interview {display:table;float:left;height:100%}
+.box_interview .inner_info {display:table-cell;vertical-align:middle}
+.box_interview .txt_interview {font-size:16px;line-height:24px;color:#fff}
+.box_interview .txt_interview .emph {color:#01c4ce}
+.box_interview .tit_interview {display:block;overflow:hidden;width:550px;font-size:22px;line-height:40px;text-overflow:ellipsis;white-space:nowrap;color:#fff}
+.box_interview .area_candidate {overflow:hidden;float:left;margin-top:14px;padding-left:11px}
+.box_interview .thumb_candidate {overflow:hidden;float:left;margin-left:-11px;width:42px;height:42px;border-radius:50%}
+.box_interview .thumb_candidate img {display:block;max-width:42px}
+.box_interview .list_interview {overflow:hidden;float:left;width:auto;height:auto;margin:21px 9px 0 8px;padding:0 8px;border:0;border-radius:6px;font-size:16px;line-height:28px;color:#fff;background:none}
+.box_interview .list_interview:first-of-type {letter-spacing:-0.5px}
+.box_interview .list_interview:first-of-type dt {font-weight:normal}
+.box_interview .list_interview dt {float:left;margin-right:8px;font-weight:bold}
+.box_interview .list_interview dd {float:left}
+.box_interview .list_interview dd .name {display:inline-block;overflow:hidden;margin-right:8px;max-width:100px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top}
+.box_interview .list_interview dd em {color:#f76da0}
+.box_interview .link_enter {position:absolute;top:32px;left:682px;padding:16px 0 12px;width:230px;height:64px;border-radius:12px;box-sizing:border-box;font-weight:bold;font-size:18px;line-height:30px;color:#fff;text-align:center;background:#01c4ce}
+.box_interview .link_enter:after {display:inline-block;margin:4px 0 0 19px;width:23px;height:22px;vertical-align:top;letter-spacing:-1px;background-position:-90px -40px;content:""}
+.box_interview.disabled .link_enter {background:#ced3e9;cursor:default}
+.box_interview .tooltip_interview {display:none;position:absolute;right:80px;top:-52px;padding-top:12px;width:173px;height:62px;border-radius:10px;box-sizing:border-box;box-shadow:0 3px 8px 0 rgba(0, 0, 0, 0.21);font-size:13px;line-height:17px;color:#444;text-align:center;background:#fff}
+.box_interview .tooltip_interview:after {position:absolute;left:50%;bottom:-9px;margin-left:-6px;width:12px;height:9px;background-position:-30px -20px;content:""}
+.box_interview .date_interview {position:absolute;top:117px;left:693px;font-size:16px;line-height:28px;letter-spacing:-0.5px;color:#e7ebff}
+.box_interview .date_interview:before {display:inline-block;margin:4px 11px 0 0;width:21px;height:21px;background-position:-65px -40px;vertical-align:top;content:""}
+
+/* 오늘 일정없음 5일내 일정 있음 */
+.wrap_video_interview .inner_interview .box_interview.type2 {border-radius:12px;border:1px solid #798ef1;background:#fff}
+.box_interview.type2 .info_interview_other {top:-51px}
+.box_interview.type2 {color:#222}
+.box_interview.type2 .txt_interview,
+.box_interview.type2 .tit_interview {color:#222}
+.box_interview.type2 .list_interview,
+.box_interview.type2 .date_interview {color:#444}
+.box_interview.type2 .date_interview:before {background-position:-65px -65px}
+.box_interview.type2:hover .list_interview {background:none}
+.box_interview.type2 .list_interview dd em {color:#444}
+.box_interview.type2 .link_enter {font-weight:normal;background:#5771ec}
+.box_interview.type2.disabled .link_enter {background:#d0d1d5}
+.box_interview.type2 .link_enter:after{display:none}
+
+/* 오늘 일정없음 5일내 일정 있음 */
+.wrap_video_interview .inner_interview .box_interview.type3 {padding:0;box-shadow:none;background:none}
+.box_interview.type3 .info_interview {display:block;position:absolute;left:0;top:-36px;width:965px;height:216px;background:url(//www.saraminimage.co.kr/sri/live/home/no_shedule.png) no-repeat 0 0}
+
+.wrap_video_interview .inner_interview .link_guide {overflow:hidden;position:absolute;right:20px;bottom:100px;padding:4px 0 0 60px;font-weight:bold;font-size:18px;line-height:24px;color:#1f3391;letter-spacing:-1px;text-align:left}
+.wrap_video_interview .inner_interview .link_guide .txt {display:block;margin-bottom:1px;font-weight:normal;font-size:14px;line-height:20px;color:#4a59a1}
+.wrap_video_interview .inner_interview .link_guide:before {position:absolute;left:0;top:0;width:51px;height:51px;background-position:0 -40px;content:""}
+.wrap_video_interview .inner_interview .link_guide:after {display:inline-block;margin:5px 0 0 7px;width:8px;height:13px;vertical-align:top;background-position:-55px -40px;content:""}
+
+.wrap_video_interview .cont_video_interview {overflow:hidden;margin:0 auto;width:1260px}
+.wrap_video_interview .cont_video_interview:after {display:table;table-layout:fixed;clear:both;content:""}
+
+/* aside */
+.aside_interview {float:left;padding:89px 40px 100px 0;width:316px;box-sizing:border-box}
+.aside_interview .tit_aside {overflow:hidden}
+.aside_interview h2 {float:left;font-weight:bold;font-size:18px;line-height:28px;color:#1d223a}
+.aside_interview h2 .txt_date {display:block;font-weight:normal}
+.aside_interview .link_confirm{float:right;margin-top:32px;font-size:14px;line-height:24px;color:#444}
+.aside_interview .slider_calendar {position:relative;margin-top:16px;padding:24px 30px 28px;width:100%;height:124px;border-radius:6px;box-sizing:border-box;background:#fff}
+.aside_interview .slider_calendar .inner_calendar {position:relative;overflow:hidden;width:100%;height:100%}
+.aside_interview .slider_calendar .img_interview {position:absolute;top:50%;margin-top:-12px;width:24px;height:24px;border-radius:50%}
+.aside_interview .slider_calendar .img_interview:hover {background:#f4f7fb}
+.aside_interview .slider_calendar .img_interview:after {display:inline-block;margin-top:5px;width:6px;height:10px;vertical-align:top;content:""}
+.aside_interview .slider_calendar .img_interview.btn_prev {left:4px}
+.aside_interview .slider_calendar .img_interview.btn_prev:after {background-position:-45px -20px}
+.aside_interview .slider_calendar .img_interview.btn_next {right:4px}
+.aside_interview .slider_calendar .img_interview.btn_next:after {background-position:-55px -20px}
+.aside_interview .slider_calendar .list_calendar {margin-left:-43px}
+.aside_interview .slider_calendar .list_calendar li {position:relative;float:left;margin:0 auto;width:43px;text-align:center}
+.aside_interview .slider_calendar .list_calendar li .txt_day {display:block;font-size:13px;color:#455ab7;text-align:center;letter-spacing:0}
+.aside_interview .slider_calendar .list_calendar li button {display:block;padding:0 0 2px;margin:6px auto 0;width:32px;height:32px;border-radius:50%;box-sizing:border-box;font-weight:bold;font-size:18px;line-height:20px;letter-spacing:-1px}
+.aside_interview .slider_calendar .list_calendar li button:hover {background:#ebf2ff}
+.aside_interview .slider_calendar .list_calendar li button.on {background:#5771ec;color:#fff}
+.aside_interview .slider_calendar .list_calendar li .ico_dot {position:absolute;bottom:-14px;left:50%;margin-left:-2px;width:6px;height:6px;border-radius:50%;background:#01c4ce}
+
+.aside_interview h3 {margin-top:24px;font-size:16px;line-height:24px;color:#1d223a}
+.aside_interview h3 .txt_num {font-weight:bold}
+.aside_interview .list_time {overflow:hidden;margin:16px 0 20px;width:296px;font-size:0;line-height:0}
+.aside_interview .list_time li:nth-of-type(-n+3),
+.aside_interview .list_time li.more {display:block}
+.aside_interview .list_time li {display:none;float:left;margin:0 4px 4px 0}
+.aside_interview .list_time .btn_time {padding:2px 0 5px;width:72px;height:24px;border-radius:4px;box-sizing:border-box;box-sizing:border-box;font-size:13px;line-height:17px;color:#8b8b8b;text-align:center;background:#fff}
+.aside_interview .list_time .btn_more {margin-left:6px;font-weight:bold;font-size:14px;line-height:24px;color:#444;letter-spacing:-1px}
+.aside_interview .list_time .btn_time.on,
+.aside_interview .list_time .btn_time.on:hover {border:1px solid #3655e9;color:#3655e9}
+.aside_interview .list_time.open li {display:inline-block;float:none}
+.aside_interview .list_time.open .btn_time {width:89px}
+.aside_interview .list_time.open li.more {display:none}
+
+.aside_interview .box_calendar {position:relative;margin-bottom:16px;padding:16px 24px 20px 67px;width:100%;min-height:82px;border-radius:6px;box-sizing:border-box;background:#e8ecf4}
+.aside_interview .box_calendar .time_calendar {position:absolute;left:16px;top:16px;font-weight:bold;font-size:14px;line-height:20px;color:#444}
+.aside_interview .box_calendar .tit_calendar {display:block;display:-webkit-box;overflow:hidden;margin-left:10px;max-height:44px;font-weight:normal;font-size:14px;line-height:22px;color:#666;-webkit-line-clamp: 2;-webkit-box-orient:vertical;word-wrap:break-word;}
+.aside_interview .box_calendar .wrap_btn {display:none;margin-top:16px}
+.aside_interview .box_calendar .wrap_btn:after {display:table;table-layout:fixed;clear:both;content:""}
+.cont_video_interview .btn_view {float:left;width:90px;height:28px;border-radius:6px;font-size:14px;line-height:24px;color:#444;letter-spacing:-0.5px}
+.cont_video_interview .btn_view:hover {background:#f3f3f3}
+.aside_interview .box_calendar .link_enter {float:right;width:80px;height:28px;border-radius:6px;font-weight:bold;font-size:14px;line-height:28px;color:#444;letter-spacing:-0.5px;text-align:center;color:#01c4ce}
+.aside_interview .box_calendar .link_enter:hover {background:#dcf7f8}
+.aside_interview .box_calendar span.link_enter {color:#888}
+.aside_interview .box_calendar span.link_enter:hover {background:none}
+.aside_interview .box_calendar.on {border:1px solid #5771ec;background:#fff}
+.aside_interview .box_calendar.on .time_calendar {color:#3655e9}
+.aside_interview .box_calendar.on .tit_calendar {font-weight:bold;color:#222}
+.aside_interview .box_calendar.on .wrap_btn {display:block}
+.aside_interview .no_schedule {padding-top:24px;font-size:16px;line-height:24px;color:#1d223a}
+.aside_interview .link_guide {display:block;margin-top:107px;width:100%;height:148px;background:url(//www.saraminimage.co.kr/sri/live/home/link_guide.png) no-repeat 0 0}
+
+/* cont */
+.cont_video_interview .cont_interview {float:left;padding:91px 0 86px 40px;width:904px;background:#fff}
+.cont_interview .tit_cont_interview {overflow:hidden}
+.cont_interview h2 {float:left;font-weight:bold;font-size:18px;line-height:24px;color:#1d223a}
+.cont_interview .num_result {float:left;margin-left:12px;font-size:16px;line-height:24px;color:#444}
+.cont_interview .inpSelTxt {border:0;-webkit-appearance: none;-moz-appearance: none;appearance: none}
+.cont_interview .tit_cont_interview .inpSelTxt {float:right;padding:0 24px 0 9px;height:24px;border-radius:4px;font-size:14px;color:#666;line-height:24px;letter-spacing:-0.5px;background:url(//www.saraminimage.co.kr/sri/live/home/arrow_sort.png) no-repeat 100% 0}
+.cont_interview .tit_cont_interview .inpSelTxt::-ms-expand {opacity:0}
+.cont_interview .tit_cont_interview .inpSelTxt {padding:0\0/;height:26px\0/}  /* ie9 */
+_:-ms-lang(x), .cont_interview .tit_cont_interview .inpSelTxt {padding:0;height:26px\0/}  /* ie10 */
+_:-ms-fullscreen, :root .cont_interview .tit_cont_interview .inpSelTxt {padding:0}  /* ie11 */
+.cont_interview .tit_cont_interview .inpSelTxt:hover {background-color:#f8fafc}
+.cont_interview .tit_cont_interview .inpSelTxt:focus {background-color:#e8ebee}
+
+.cont_interview .filter_interview {margin:56px 0 0 -16px}
+.cont_interview .filter_interview:after {display:block;table-layout:fixed;clear:both;content:""}
+.cont_interview .area_filter {float:left;position:relative;margin-left:16px}
+.cont_interview .filter_interview .tit_filter {float:left;margin-right:8px;font-weight:normal;font-size:13px;line-height:32px;color:#888}
+.cont_interview .filter_interview .cls_input2a,
+.cont_interview .filter_interview .inp_filter {position:relative;z-index:1;float:left;padding:0 32px 2px 16px;width:184px;height:32px;border-radius:4px;border:1px solid #dedede;box-sizing:border-box;font-size:13px;line-height:15px;color:#444;letter-spacing:-1px;background:none;cursor:pointer}
+.cont_interview .filter_interview .cls_input2a::-webkit-input-placeholder,
+.cont_interview .filter_interview .inp_filter::-webkit-input-placeholder,
+.cont_interview .filter_interview .cls_input2a::placeholder,
+.cont_interview .filter_interview .inp_filter::placeholder {color:#b2b2b2;-webkit-font-smoothing:antialiased}
+.cont_interview .area_filter.date .btn_filter {position:absolute;right:0;border:0;width:auto;height:auto;padding:0}
+.cont_interview .area_filter .btn_filter {position:relative;padding:0 32px 0 16px;width:132px;height:32px;border-radius:4px;border:1px solid #dedede;box-sizing:border-box;font-size:13px;line-height:26px;text-align:left;color:#444;letter-spacing:-1px}
+.cont_interview .area_filter .cls_input2a:after,
+.cont_interview .area_filter .btn_filter:after {position:absolute;right:6px;top:2px;width:24px;height:24px;background:url(//www.saraminimage.co.kr/sri/live/home/arrow_filter.png) no-repeat 100% 0;
+;content:""}
+.cont_interview .area_filter .btn_filter .txt_all {color:#b2b2b2}
+.cont_interview .area_filter .box_progress {display:none;position:absolute;right:0;top:32px;z-index:1;padding:12px 4px 12px;width:132px;height:auto;border:1px solid #ddd;border-top:0;border-radius:4px;border-top-right-radius:0;border-top-left-radius:0;box-sizing:border-box;background:#fff}
+.cont_interview .area_filter .box_progress .btn_list {display:block;padding:3px 7px 0 16px;width:100%;height:34px;line-height:24px;font-size:13px;text-align:left;letter-spacing:-1px}
+.cont_interview .area_filter .box_progress .btn_list:hover,
+.cont_interview .area_filter .box_progress li.select .btn_list {font-weight:bold;background:#f0f5ff}
+.cont_interview .area_filter.folder .box_progress {display:block}
+.cont_interview .area_filter.folder .btn_filter {padding-bottom:1px;border-bottom:0;border-bottom-right-radius:0;border-bottom-left-radius:0}
+.cont_interview .filter_interview .inp_filter {width:136px;padding:0 16px 2px;transition:.3s}
+.cont_interview .area_filter.input .inp_filter{width:186px}
+.cont_interview  .btn_search {float:right;padding:4px 0 6px 0;width:82px;height:32px;border-radius:4px;font-size:13px;line-height:24px;color:#fff;letter-spacing:-1px;background:#5771ec}
+
+.cont_interview .wrap_interview_list {margin-top:16px;padding-bottom:31px;border-radius:10px;border:1px solid #dfe7f2}
+.cont_interview .tit_interview_list {padding:19px 28px 21px 24px;height:59px;box-sizing:border-box}
+.cont_interview .tit_interview_list:after {display:block;table-layout:fixed;clear:both;content:""}
+.cont_interview .tit_interview_list .state {float:left;font-weight:bold;font-size:16px;line-height:24px;color:#444}
+.cont_interview .tit_interview_list .state.ing {color:#5771ec}
+.cont_interview .tit_interview_list .state.expected {color:#727681}
+.cont_interview .tit_interview_list .state.cancel {color:#bebfc7}
+.cont_interview .tit_interview_list .tit {float:left;margin-left:12px;overflow:hidden;max-width:478px;font-weight:bold;font-size:16px;line-height:24px;color:#222;text-overflow:ellipsis;white-space:nowrap}
+.cont_interview .tit_interview_list .btn_edit_list {overflow:hidden;float:left;margin-left:13px;width:20px;height:20px}
+.cont_interview .tit_interview_list .btn_edit_list:after {display:inline-block;width:15px;height:16px;background-position:-115px -70px;content:""}
+.cont_interview .tit_interview_list .btn_edit_list:disabled:after {opacity:.25}
+.cont_interview .tit_interview_list .btn_del_list {overflow:hidden;float:left;margin-left:11px;width:20px;height:20px}
+.cont_interview .tit_interview_list .btn_del_list:after {display:inline-block;width:15px;height:17px;background-position:-135px -70px;content:""}
+.cont_interview .tit_interview_list .btn_del_list:disabled:after {opacity:.25}
+.cont_interview .tit_interview_list .info_interview {float:right}
+.cont_interview .tit_interview_list .wrap_interview_view {display:inline-block;vertical-align:top}
+.cont_interview .tit_interview_list .wrap_interview_view .wrap_layer_interview {left:auto;right:360px;top:25px}
+.cont_interview .tit_interview_list .wrap_interview_view .layer_interview:before {left:310px}
+.cont_interview .tit_interview_list .info_interview .txt {font-size:14px;color:#666}
+
+.cont_interview .tit_interview_list .wrap_interview_view .btn_view {margin-top:-2px}
+.cont_interview .tit_interview_list .info_interview .badge {display:inline-block;padding-top:1px;margin:4px 0 0 4px;width:54px;height:16px;border-radius:8px;box-sizing:border-box;font-size:12px;line-height:12px;text-align:center;letter-spacing:0;vertical-align:top}
+.cont_interview .tit_interview_list .info_interview .badge.master {color:#fff;background:#8a9efa}
+.cont_interview .tit_interview_list .info_interview .badge.cooperation {padding-top:2px;color:#666;background:#dbdee8}
+.cont_interview .tbl_list {width:100%;border-spacing:0;border-collapse:collapse;table-layout:fixed}
+.cont_interview .tbl_list caption.blind {display:none}
+.cont_interview .tbl_list thead {border:1px solid #dfe7f2;border-left:0;border-right:0;box-sizing:border-box;background:#f8fafc}
+.cont_interview .tbl_list thead th,
+.cont_interview .tbl_list thead th select,
+.cont_interview .tbl_list thead button {padding:0;height:34px;font-size:13px;line-height:24px;color:#8d93aa;letter-spacing:-1px}
+.cont_interview .tbl_list thead th .inpSelTxt {margin-left:-5px;padding:0 10px 0 5px;background:url(//www.saraminimage.co.kr/sri/live/home/arrow_table.png) no-repeat 100% 14px}
+.cont_interview .tbl_list thead th .inpSelTxt {padding:0\0/;height:26px\0/}  /* ie9 */
+_:-ms-lang(x), .cont_interview .tbl_list thead th .inpSelTxt {padding:0;height:26px\0/}  /* ie10 */
+_:-ms-fullscreen, :root .cont_interview .tbl_list thead th .inpSelTxt {padding:0}  /* ie11 */
+.cont_interview .tbl_list thead button:after {display:inline-block;margin:6px 0 0 6px;width:7px;height:11px;background-position:-90px -65px;vertical-align:top;content:""}
+.cont_interview .tbl_list th.tit_state,
+.cont_interview .tbl_list td.cont_state {padding-left:24px}
+.cont_interview .tbl_list th.tit_calendar,
+.cont_interview .tbl_list td.cont_calendar{padding-left:26px}
+.cont_interview .tbl_list th.tit_candidate,
+.cont_interview .tbl_list td.cont_candidate {padding-left:49px}
+.cont_interview .tbl_list th.tit_answer {padding-left:62px}
+.cont_interview .tbl_list td.cont_answer {padding-left:53px}
+.cont_interview .tbl_list th.tit_info,
+.cont_interview .tbl_list td.cont_info {padding-left:82px}
+.cont_interview .tbl_list th.tit_edit,
+.cont_interview .tbl_list td.cont_edit {padding-left:76px}
+.cont_interview .tbl_list th.tit_interviewer,
+.cont_interview .tbl_list td.cont_interviewer {padding-left:82px}
+.cont_interview .tbl_list tr:first-of-type td{padding-top:30px}
+.cont_interview .tbl_list td {height:40px;padding-top:24px;vertical-align:top}
+.cont_interview .tbl_list td .box_state {margin-top:8px;padding:2px 0 5px;width:72px;height:24px;border-radius:4px;border:1px solid #5e668c;box-sizing:border-box;font-size:13px;line-height:17px;color:#5e668c;text-align:center}
+.cont_interview .tbl_list td .txt_calendar {margin-top:8px;font-size:14px;;line-height:24px;color:#444;letter-spacing:-0.5px}
+.cont_interview .tbl_list td .link_candidate {display:block;overflow:hidden}
+.cont_interview .tbl_list td .thumb_profile {float:left;overflow:hidden;width:40px;height:40px;border-radius:50%}
+.cont_interview .tbl_list td .thumb_profile img {display:block;max-width:40px}
+.cont_interview .tbl_list td .info_candidate {float:left;margin:8px 0 0 10px;padding:2px 8px 0;height:28px;border-radius:4px;box-sizing:border-box;font-size:13px;line-height:24px;color:#999;letter-spacing:-0.5px}
+.cont_interview .tbl_list td .link_candidate:hover .info_candidate {background:#f8fafc}
+.cont_interview .tbl_list td .name_candidate {display:inline-block;overflow:hidden;max-width:70px;font-weight:bold;font-size:14px;color:#222;text-overflow:ellipsis;white-space:nowrap;vertical-align:top}
+.cont_interview .tbl_list td .info_answer {display:block;margin-top:8px;padding:2px 8px 0;height:28px;border-radius:4px;font-size:14px;line-height:24px;color:#444;letter-spacing:-0.5px;text-align:center}
+.cont_interview .tbl_list td .info_answer:hover {background:#f8fafc}
+.cont_interview .tbl_list td .info_answer .attend {color:#4869ef}
+.cont_interview .tbl_list td .info_answer .attendance {color:#ff6969}
+.cont_interview .tbl_list td .info_answer.type2 {color:#888}
+.cont_interview .tbl_list td .state_info {display:block;margin-top:8px;padding:3px 0 5px 0;width:72px;height:24px;border-radius:4px;box-sizing:border-box;font-size:13px;line-height:17px;color:#fff;letter-spacing:-1px}
+.cont_interview .tbl_list td span.state_info {text-align:center;background:#d0d1d5}
+.cont_interview .tbl_list td .state_info.resend {background:#727681}
+.cont_interview .tbl_list td .state_info.resend:hover {background:#4a4b50}
+.cont_interview .tbl_list td .state_info.send {background:#5771ec}
+.cont_interview .tbl_list td .state_info.send:hover {background:#3751c9}
+.cont_interview .tbl_list td .edit_btn {margin-top:8px}
+.cont_interview .tbl_list td .edit_btn button {display:inline-block;overflow:hidden;width:20px;height:20px;}
+.cont_interview .tbl_list td .edit_btn .btn_edit_list {margin-right:12px}
+.cont_interview .tbl_list td .edit_btn .btn_edit_list:after {display:inline-block;width:15px;height:16px;background-position:-115px -70px;content:""}
+.cont_interview .tbl_list td .edit_btn .btn_edit_list:disabled:after {opacity:.25}
+.cont_interview .tbl_list td .edit_btn .btn_del_list:after {display:inline-block;width:15px;height:17px;background-position: -135px -70px;content:""}
+.cont_interview .tbl_list td .edit_btn .btn_del_list:disabled:after{opacity:.25}
+.cont_interview .tbl_list td .txt_interviewer {margin-top:8px;font-size:14px;line-height:24px;color:#666}
+.cont_interview .tbl_list td .txt_interviewer .name {display:inline-block;overflow:hidden;max-width:63px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;}
+.cont_interview .tbl_list td .txt_interviewer .department {display:inline-block;overflow:hidden;max-width:86px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;}
+
+.cont_interview .wrap_nodata {padding:100px 0;font-size:16px;line-height:24px;color:#1d223a;text-align:center}
+
+/* 영상면접 리스트 레이어 */
+.modal_interview_alert {margin:-111px 0 0 -280px;padding:48px 40px 40px;width:560px;border-radius:6px;box-sizing:border-box;box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.15);background:#fff;}
+.modal_interview_alert .modalCont .point {color:#ff3b3b}
+.modal_interview_alert .modalBtn {padding-top:36px;text-align:center}
+.modal_interview_alert .modalBtn button {display:inline-block;padding:0 35px;margin:0 5px;min-width:120px;box-sizing:border-box}
+
+/* pagination */
+.pagination {margin-top:96px;font-size:15px;letter-spacing:-1px;text-align:center}
+.pagination .btnPrev {display:inline-block;width:25px;height:30px;box-sizing:border-box;line-height:30px;vertical-align:middle;background:url(//www.saraminimage.co.kr/sri/pattern/btn_page_prev.png) 50% 50% no-repeat}
+.pagination .btnNext {display:inline-block;width:25px;height:30px;box-sizing:border-box;line-height:30px;vertical-align:middle;background:url(//www.saraminimage.co.kr/sri/pattern/btn_page_next.png) 50% 50% no-repeat}
+.pagination span.page,
+.pagination button.page,
+.pagination a.page {display:inline-block;margin-left:1px;min-width:25px;height:30px;box-sizing:border-box;color:#444;line-height:30px;vertical-align:middle}
+.pagination span.page {color:#2365f2;font-size:15px;font-weight:bold}
+
+
+/* 면접관 레이어 */
+.modal_interview {position:fixed;left:50%;top:50%;z-index:1002;margin-left:-250px;padding:40px;width:500px;border-radius:12px;box-sizing:border-box;background:#fff;letter-spacing:-1px}
+.modal_interview:before {position:absolute;left:100px;top:-8px;width:13px;height:9px;background-position:-80px -20px;content:""}
+.modal_interview .tit_layer {display:block;font-weight:bold;font-size:22px;line-height:24px;color:#222}
+
+/* 면접관 리스트 */
+.modal_interview .wrap_search {position:relative;margin-top:28px}
+.modal_interview .wrap_search:after {display:table;table-layout:fixed;clear:both;content:""}
+.modal_interview .wrap_search .lab_search {float:left;margin:16px 10px 0 0 ;font-size:14px;line-height:18px;color:#222}
+.modal_interview .wrap_search .inp_search {float:left;padding:0 12px;width:340px;height:50px;border-radius:6px;border:1px solid #ddd;box-sizing:border-box;font-size:14px;line-height:18px;color:#444}
+.modal_interview .wrap_search .inp_search::placeholder {color:#888;-webkit-font-smoothing:antialiased}
+.modal_interview .wrap_search .box_search {display:none;position:absolute;left:78px;top:50px;padding:0 6px 7px 6px;width:340px;border:1px solid #ddd;border-top:0;border-radius:6px;box-sizing:border-box;background:#fff}
+.modal_interview .wrap_search.on .inp_search {padding:0 12px 1px;border-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+.modal_interview .wrap_search.on .inp_search {padding:0 12px 1px;border-bottom:0;border-bottom-left-radius:0;border-bottom-right-radius:0}
+.modal_interview .wrap_search.on .box_search {display:block;border-top-left-radius:0;border-top-right-radius:0}
+.modal_interview .wrap_search .inner_box {overflow-y:auto;height:120px}
+.modal_interview .wrap_search .inner_box::-webkit-scrollbar {width:10px;background:#eaeaea}
+.modal_interview .wrap_search .inner_box::-webkit-scrollbar-thumb {background:#d2d2d2}
+.modal_interview.interview_list {margin-top:-146px}
+.modal_interview.interview_list .list_box {padding-right:6px}
+.modal_interview.interview_list .list_box li {padding:0 8px;height:30px;box-sizing:border-box;cursor:default}
+.modal_interview.interview_list .list_box li:hover {background:#f8fafc}
+.modal_interview.interview_list .list_box .info_box {display:block;font-size:14px;line-height:30px;color:#444}
+.modal_interview.interview_list .list_box .btn_add {float:right;width:auto;height:22px;margin-top:4px;padding:0 5px;border-radius:4px;font-size:13px;line-height:22px;color:#666;letter-spacing:-1px}
+.modal_interview.interview_list .list_box .btn_add:hover {background:#e8ebee}
+.modal_interview.interview_list .list_box .name {display:inline-block;overflow:hidden;max-width:63px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top}
+.modal_interview.interview_list .list_box .department {display:inline-block;overflow:hidden;max-width:93px;text-overflow:ellipsis;white-space:nowrap;vertical-align:top;letter-spacing:-0.5px}
+.modal_interview.interview_list .list_box .master{color:#5771ec;letter-spacing:-0.5px}
+.modal_interview.interview_list .list_box .uncertified{color:#ff6969;letter-spacing:-0.5px}
+
+.modal_interview.interview_list .list_box.select {margin:12px 0 0 79px;padding:6px 8px 6px 12px;width:340px;border-radius:6px;border:1px solid #ddd;box-sizing:border-box}
+.modal_interview.interview_list .list_box.select li {padding:0;height:28px;box-sizing:inherit}
+.modal_interview.interview_list .list_box.select .name {max-width:63px}
+.modal_interview.interview_list .list_box.select .department {max-width:79px}
+.modal_interview.interview_list .list_box.select .info_box {float:left;line-height:28px}
+.modal_interview.interview_list .list_box.select .wrap_btn_layer {float:right;margin-top:5px}
+.modal_interview.interview_list .list_box.select button {display:inline-block;padding:1px 4px 4px;height:22px;border-radius:4px;font-size:13px;line-height:17px;letter-spacing:-0.5px;vertical-align: top}
+.modal_interview.interview_list .list_box.select .btn_setting {margin-right:-3px;color:#5771ec}
+.modal_interview.interview_list .list_box.select .btn_setting:hover {background:#e2ecf6}
+.modal_interview.interview_list .list_box.select .btn_del {color:#666}
+.modal_interview.interview_list .list_box.select .btn_del:hover {background:#e8ebee}
+.modal_interview .btn_interview_layer {position:absolute;left:178px;top:36px;padding:0 11px;height:30px;border-radius:4px;font-size:14px;line-height:18px;color:#5771ec;letter-spacing:-1px}
+.modal_interview .btn_interview_layer:hover {background:#ebf2ff}
+.modal_interview .btn_interview_layer:before {display:inline-block;margin:4px 6px 0 0;width:10px;height:10px;background-position:-100px -65px;vertical-align:top;content:""}
+.modal_interview .btn_close {position:absolute;right:10px;top:10px;width:40px;height:40px}
+.modal_interview .btn_close:before {display:block;margin:0 auto;width:20px;height:20px;background-position:-165px 0;content:""}
+.modal_interview .list_master {margin:20px 0 0 85px;font-size:13px;line-height:18px}
+.modal_interview .list_master dt {float:left;margin-right:3px;color:#444}
+.modal_interview .list_master dd {color:#888}
+
+/* 면접관 신규 등록 */
+.modal_interview.interview_register {margin-top:-336px}
+.modal_interview .desc_necessary {padding-top:16px;font-size:14px;line-height:18px;color:#f76da0}
+.modal_interview .scroll_register_list {overflow-y:auto;margin-top:42px;width:460px;max-height:400px}
+.modal_interview .scroll_register_list .inner_scroll_register {width:420px}
+.modal_interview .scroll_register_list::-webkit-scrollbar {width:10px;background:#eaeaea}
+.modal_interview .scroll_register_list::-webkit-scrollbar-thumb {background:#d2d2d2}
+.modal_interview .wrap_register_list {position:relative;margin-top:27px;padding:44px 27px 0 0;border-top:2px dashed #c3c3c3}
+.modal_interview.single .wrap_register_list {padding-right:0}
+.modal_interview.single .wrap_register_list .btn_fold {display:none}
+.modal_interview.single .wrap_register_list .btn_del {right:0}
+.modal_interview .wrap_register_list:first-of-type {margin-top:0;padding-top:27px;border-top:0}
+.modal_interview .wrap_register_list:first-of-type .btn_del {top:0}
+.modal_interview.interview_register .wrap_register_list:first-of-type .tit_register_list {top:0}
+.modal_interview.interview_register .wrap_register_list:first-of-type .btn_fold {top:36px}
+.modal_interview.interview_register .wrap_register_list .tit_register_list {display:block;position:absolute;left:0;top:27px;font-size:14px;line-height:18px;color:#222}
+
+.modal_interview .wrap_register_list .list_register li {position:relative;margin-top:10px;padding-left:88px}
+.modal_interview .wrap_register_list .lab_register {position:absolute;left:0;top:16px;font-size:14px;line-height:18px;color:#222}
+.modal_interview .wrap_register_list .inp_register {width:100%;height:50px;padding:0 12px;border-radius:6px;border:1px solid #ddd;box-sizing:border-box;font-size:14px;line-height:18px;color:#444}
+.modal_interview .wrap_register_list .btn_fold {position:absolute;right:-15px;top:53px;width:42px;height:50px}
+.modal_interview .wrap_register_list .btn_fold:before {display:inline-block;margin-top:6px;width:12px;height:6px;background-position:-125px -10px;vertical-align:top;content:""}
+.modal_interview .wrap_register_list .btn_del {position:absolute;right:26px;top:24px;width:34px;height:22px;border-radius:4px;font-size:14px;line-height:18px;color:#888;letter-spacing:-1px}
+.modal_interview .wrap_register_list .btn_del:hover {background:#e8ebee}
+.modal_interview.interview_register .btn_interview_layer {position:static;margin:12px 0 0 85px}
+.modal_interview.interview_register .list_noti {margin:21px 0 0 95px;font-size:13px;line-height:20px;color:#888}
+.modal_interview.interview_register .list_noti li {margin-bottom:8px}
+.modal_interview.interview_register .wrap_btn_register {margin-top:24px;text-align:center}
+.modal_interview.interview_register .wrap_btn_register button {display:inline-block;padding:6px 0 8px;width:100px;height:32px;border-radius:5px;box-sizing:border-box;font-size:14px;line-height:18px;letter-spacing:-0.5px}
+.modal_interview.interview_register .wrap_btn_register .btn_prev {border:1px solid #ddd;color:#222;background:#fff}
+.modal_interview.interview_register .wrap_btn_register .btn_register {border:1px solid #ddd;font-weight:bold;color:#fff;background:#5771ec}
+
+.modal_interview.interview_register.single .tit_register_list {display:none}
+.modal_interview.interview_register.single .scroll_register_list {margin-top:0;height:auto}
+
+.modal_interview .wrap_register_list.fold .list_register li {display:none}
+.modal_interview .wrap_register_list.fold .list_register li:first-of-type {display:block}
+.modal_interview .wrap_register_list.fold .btn_fold:before {background-position:-125px 0}
+
+/* 종료 레이어 */
+.modal_interview_confirm {position:fixed;left:50%;top:50%;z-index:1200;padding:0;margin:-278px 0 0 -400px;width:800px;border-radius:12px;letter-spacing:-1px;background:none}
+.modal_interview_confirm .title_layer {overflow:hidden;height:56px;background:#181745;border-top-left-radius:12px;border-top-right-radius:12px}
+.modal_interview_confirm .title_layer .logo_live:before {display:block;margin:19px 0 0 32px;width:149px;height:17px;background:url(//www.saraminimage.co.kr/sri/live/home/logo_layer.png) no-repeat 0 0;content:""}
+.modal_interview_confirm .modalCont {padding:48px 72px;border-bottom-left-radius:12px;border-bottom-right-radius:12px;background:#fff}
+.modal_interview_confirm .modalCont .txt_layer {display:block;font-size:20px;line-height:27px}
+.modal_interview_confirm .modalCont .desc_layer {margin-top:16px;font-size:14px;line-height:20px;color:#444;word-break:break-all}
+.modal_interview_confirm .modalCont .desc_layer  em {display:inline-block;overflow:hidden;max-width:300px;vertical-align:top;text-overflow:ellipsis;white-space:nowrap}
+.modal_interview_confirm .modalCont .list_layer {width:100%;overflow:hidden;margin-top:25px;padding:25px 40px;box-sizing:border-box;font-size:14px;line-height:20px;background:#f4f5f7}
+.modal_interview_confirm .modalCont .list_layer dt {float:left;overflow:hidden;margin-top:16px;height:20px;padding-right:20px;width:128px;box-sizing:border-box;color:#666;text-overflow:ellipsis;white-space:nowrap}
+.modal_interview_confirm .modalCont .list_layer dd {overflow:hidden;margin-top:16px;height:20px;color:#222;text-overflow:ellipsis;white-space:nowrap}
+.modal_interview_confirm .noti_layer {position:relative;margin-top:24px;padding-left:16px;font-size:14px;line-height:21px;color:#888}
+.modal_interview_confirm .noti_layer:before {position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:#888;content:""}
+.modal_interview_confirm .desc_person {display:inline-block;margin-top:36px;width:100%;font-weight:bold;font-size:14px;line-height:20px;color:#5771ec;text-align:center}
+
+.modal_interview_confirm .btn_close {position:absolute;right:24px;top:14px;width:28px;height:28px;}
+.modal_interview_confirm .btn_close:after {display:block;margin:0 auto;width:12px;height:12px;background-position:-110px -20px;content:""}
+
+/* QA533 추가 */
+.modal_interview_confirm.modal_interview_browser {width:900px;margin:-278px 0 0 -450px}
+.modal_interview_confirm.modal_interview_browser .list_layer dd {margin-top:12px;height:auto;line-height:24px}
+/* //QA533 추가 */
+
+.top_video_interview.no_motion .circle1 {position:absolute;left:80px;top:0;width:250px;height:250px;border-radius:50%;background:lightgreen;}
+.top_video_interview.no_motion .circle2 {position:absolute;left:0;top:70px;width:200px;height:200px;border-radius:50%;background:lightsalmon;}
+.top_video_interview.no_motion .circle3 {position:absolute;left:0;top:0;width:300px;height:300px;border-radius:50%;background:lightyellow;}
+.top_video_interview.no_motion .circle4 {position:absolute;left:25%;top:20%;width:50px;height:50px;border-radius:50%;background:#fff;}
+.top_video_interview.no_motion .circle5 {position:absolute;right:35%;top:20%;width:50px;height:50px;border-radius:50%;background:#fff;}
+
+/* 면접이 없는 경우_온보딩 */
+.onborading {min-width:1340px}
+.onborading:before {display:none}
+.onborading_video_interview1 {position:relative;overflow:hidden;width:100%;height:1077px;background:url(//www.saraminimage.co.kr/sri/live/home/onborading_video_interview1.png) no-repeat 0 0;}
+.onborading_video_interview1:before { position:absolute;left:0;top:0;z-index:-1;width:100%;height:100%;background:url(//www.saraminimage.co.kr/sri/live/home/bg_repeat_onboarding.jpg) repeat-x 0 0;content:""}
+
+.onborading .inner {position:relative;z-index:1;margin:0 auto;width:1340px}
+.onborading .onborading_video_interview1 .inner:before {position:absolute;right:-50px;top:-118px;width:839px;height:508px;background:url(//www.saraminimage.co.kr/sri/live/home/bg_onborading1.png) no-repeat 0 0;content:""}
+.onborading_video_interview1 h2 {margin-top:300px;width:450px;height:121px;background:url(//www.saraminimage.co.kr/sri/live/home/tit_onborading1.png) no-repeat 0 0}
+.onborading_video_interview1 p {margin-top:28px;width:459px;height:22px;background:url(//www.saraminimage.co.kr/sri/live/home/desc_onborading1.png) no-repeat 0 0}
+.onborading_video_interview1 .link_onborading {display:block;margin-top:64px;width:280px;height:64px;background:url(//www.saraminimage.co.kr/sri/live/home/link_onborading.png) no-repeat 0 0}
+.onborading_video_interview1 .link_onborading_arrow {display:block;overflow:hidden;margin:270px auto 0;width:70px;height:44px;opacity:.5;-webkit-animation:arrow 1.2s infinite;animation:arrow 1.2s infinite}
+.onborading_video_interview1 .link_onborading_arrow:before {margin:0 auto;display:block;width:52px;height:30px;background:url(//www.saraminimage.co.kr/sri/live/home/img_arrow.png) no-repeat 0 0;content:""}
+@keyframes arrow{
+    0%{-webkit-transform:translate(0, 0);transform:translate(0, 0)}
+    40%{-webkit-transform:translate(0, 12px);transform:translate(0, 12px)}
+    100%{-webkit-transform:translate(0, 0);transform:translate(0, 0)}
+}
+
+.onborading_video_interview1 .wrap_motion {height:1077px}
+.onborading_video_interview1 .wrap_motion .circle4 {top:2%}
+.onborading_video_interview1 .wrap_motion .circle5 {right:2%;top:15%}
+.onborading_video_interview1 .wrap_motion .circle6 {right:20%;top:-5%}
+.onborading_video_interview2 {overflow:hidden;width:100%;height:1095px;background:#fff}
+.onborading_video_interview2 strong {display:block;position:relative;z-index:1;margin:250px 0 0 89px;width:596px;height:117px;background:url(//www.saraminimage.co.kr/sri/live/home/tit_onborading2.png) no-repeat 0 0}
+.onborading_video_interview2 p {position:relative;z-index:1;margin:46px 0 0 89px;width:347px;height:135px;background:url(//www.saraminimage.co.kr/sri/live/home/desc_onborading2.png) no-repeat 0 0}
+.onborading .onborading_video_interview2 .inner:before {position:absolute;left:411px;top:86px;width:943px;height:568px;background:url(//www.saraminimage.co.kr/sri/live/home/bg_onborading2.png) no-repeat 0 0;content:""}
+
+.onborading_video_interview3 {overflow:hidden;width:100%;height:1080px;background:#e5edfc}
+.onborading_video_interview3 strong {display:block;margin:245px auto 0;width:305px;height:56px;background:url(//www.saraminimage.co.kr/sri/live/home/tit_onborading3.png) no-repeat 0 0}
+.onborading_video_interview3 p {margin:67px auto 0;width:1340px;height:552px;background:url(//www.saraminimage.co.kr/sri/live/home/desc_onborading3.png) no-repeat 0 0}
+
+.onborading_video_interview4 {overflow:hidden;padding-bottom:120px;background:#fff}
+.onborading_video_interview4 .slide_onborading {position:relative;margin:293px auto 0;width:746px;height:365px}
+.onborading_video_interview4 .slide_onborading .bg_slide {position:absolute;left:0;top:0;width:100%;height:100%;opacity:0}
+.onborading_video_interview4 .slide_onborading .bg_slide1 {background:url(//www.saraminimage.co.kr/sri/live/home/bg_slide1.png) no-repeat 0 0}
+.onborading_video_interview4 .slide_onborading .bg_slide2 {background:url(//www.saraminimage.co.kr/sri/live/home/bg_slide2.png) no-repeat 0 0}
+.onborading_video_interview4 p {margin:48px auto 0;width:523px;height:54px;background:url(//www.saraminimage.co.kr/sri/live/home/desc_onborading4.png) no-repeat 0 0}
+.onborading_video_interview4 .link_go {display:block;margin:40px auto 0;width:351px;height:75px;background:url(//www.saraminimage.co.kr/sri/live/home/link_go.png) no-repeat 0 0}
+.onborading_video_interview4 .link_go:hover {background-position:0 -80px}
+.onborading_video_interview4 .btn_area {margin-top:41px;text-align:center}
+.onborading_video_interview4 .btn_area a {display:inline-block;margin:0 4px;width:12px;height:12px;border-radius:50%;background:#e6e6e6}
+.onborading_video_interview4 .btn_area a.on {background:#b6b6b6}
+.onborading_video_interview4 .btn_pre {position:absolute;top:140px;left:150px;width:72px;height:72px}
+.onborading_video_interview4 .btn_pre:before {display:block;margin:10px auto 0;width:28px;height:52px;background:url(//www.saraminimage.co.kr/sri/live/home/img_arrow.png) no-repeat 0 -30px;content:""}
+.onborading_video_interview4 .btn_pre:hover:before,
+.onborading_video_interview4 .btn_pre.on:before {background-position:0 -90px}
+.onborading_video_interview4 .btn_next {position:absolute;top:140px;right:150px;width:72px;height:72px;}
+.onborading_video_interview4 .btn_next:before {display:block;margin:10px auto 0;width:28px;height:52px;background:url(//www.saraminimage.co.kr/sri/live/home/img_arrow.png) no-repeat -30px -30px;content:""}
+.onborading_video_interview4 .btn_next:hover:before,
+.onborading_video_interview4 .btn_next.on:before {background-position:-30px -90px}
+
+/* 개인마이 */
+.my .box_interview .name_company {float:left;overflow:hidden;max-width:316px;margin-top:22px;font-weight:bold;font-size:16px;line-height:28px;color:#fff;text-overflow: ellipsis;white-space:nowrap}
+.my .box_interview .list_interview {color:#daddff}
+.my .box_interview .list_interview dd {margin-right:8px}
+.my .box_interview.type2 .name_company,
+.my .box_interview.type2 .list_interview{color:#444}
+
+/* aside */
+.my .aside_interview .box_calendar .name_company {display:block;overflow:hidden;margin:0 0 7px 10px;max-width:142px;font-size:14px;line-height:20px;color:#222;text-overflow:ellipsis;white-space:nowrap}
+.my .aside_interview .box_calendar .wrap_btn {margin-left:46px}
+.my .aside_interview .box_calendar .txt_expected {float:left;font-size:13px;line-height:24px;color:#666}
+.my .aside_interview .box_calendar .txt_expected:after {display:inline-block;margin:6px 3px 0 10px;width:2px;height:12px;background:#c0c0c0;vertical-align:top;content:""}
+.my .aside_interview .box_calendar .link_enter {width:70px;height:24px;font-size:13px;line-height:24px}
+.my .aside_interview .wrap_interview_view {position:absolute;right:16px;top:10px}
+.my .aside_interview .wrap_interview_view .btn_view {width:31px;height:31px;border-radius:50%}
+.my .aside_interview .wrap_interview_view .wrap_layer_interview {position:absolute;left:-120px;top:40px;z-index:10}
+.my .aside_interview .wrap_interview_view.on .layer_interview {display:block}
+.my .aside_interview .wrap_interview_view.on .btn_view,
+.my .aside_interview .wrap_interview_view .btn_view:hover {background:#e8ebee}
+.my .aside_interview .wrap_interview_view .btn_view:after {display:inline-block;margin-top:10px;width:15px;height:3px;background-position:-130px -20px;vertical-align:top;content:""}
+.my .aside_interview .wrap_interview_view .layer_interview {display:none;padding:17px 24px 24px;width:272px;border-radius:12px;background:#fff;box-shadow: 0 2px 10px 0 rgba(70, 70, 70, 0.16);box-sizing:border-box}
+.my .aside_interview .wrap_interview_view .layer_interview:before {position:absolute;left:50%;top:-8px;margin-left:-6px;width:13px;height:9px;background-position:-80px -20px;content:""}
+.my .aside_interview .wrap_interview_view .list_interview {margin-top:14px;padding:6px 0 0 0;width:auto;height:auto;border:0;border-top:1px solid #cbcbcb;text-align:left;background:none}
+.my .aside_interview .wrap_interview_view .list_interview li {margin-top:10px;font-size:14px;line-height:16px;color:#666}
+.my .aside_interview .wrap_interview_view .list_interview li .name {display:inline-block;overflow:hidden;max-width:76px;color:#222;vertical-align:top;text-overflow:ellipsis;white-space:nowrap}
+.my .aside_interview .wrap_interview_view .list_interview li .department {display:inline-block;overflow:hidden;max-width:102px;vertical-align:top;text-overflow:ellipsis;white-space:nowrap}
+.my .aside_interview .wrap_interview_view .btn_close {position:absolute;right:18px;top:13px;width:28px;height:28px}
+.my .aside_interview .wrap_interview_view .btn_close:before {display:block;margin:0 auto;width:12px;height:12px;background-position:-95px -20px;content:""}
+
+/* 인증코드 입력 */
+.wrap_certify {width:100%;margin-top:95px}
+.wrap_certify .cont_certify {padding:24px 24px 36px;border-radius:6px;border-bottom-left-radius:0;border-bottom-right-radius:0;box-sizing:border-box;background:#fff}
+.wrap_certify .tit_certify {display:block;font-size:16px;line-height:21px;color:#222}
+.wrap_certify .desc_certify {margin-top:12px;font-size:14px;line-height:20px;color:#444}
+.wrap_certify .inp_certify {display:block;margin-top:16px;padding:7px 17px 9px;width:100%;height:40px;border-radius:6px;border:1px solid #dee1e8;box-sizing:border-box;font-size:16px;line-height:21px;color:#444;background:#f8fafc;letter-spacing:0}
+.wrap_certify .inp_certify::placeholder {font-size:14px;line-height:19px;color:#888;-webkit-font-smoothing:antialiased}
+.wrap_certify .btn_certify {display:block;padding:14px 0 15px;width:100%;height:50px;border-radius:6px;border-top-left-radius:0;border-top-right-radius:0;box-sizing:border-box;font-weight:bold;font-size:16px;line-height:21px;color:#888;letter-spacing:-1px;background:#e8ecf4}
+.wrap_certify .btn_certify.on {color:#fff;background:#5771ec}
+
+/* cont */
+.my .cont_interview .wrap_interview_list {position:relative;padding:28px 24px 36px 110px;border-radius:12px;border-color:#dee1e8}
+.my .cont_interview .info_tit {overflow:hidden}
+.my .cont_interview .info_tit .state {position:absolute;left:24px;top:28px;width:70px;height:28px;border-radius:4px;border:1px solid #444;box-sizing:border-box;font-weight:bold;font-size:14px;line-height:24px;color:#444;text-align:center}
+.my .cont_interview .info_tit .state.ing {border-color:#5771ec;color:#5771ec}
+.my .cont_interview .info_tit .state.expected {border-color:#727681;color:#727681}
+.my .cont_interview .info_tit .state.cancel {border-color:#b5b5b5;color:#b5b5b5}
+
+.my .cont_interview .info_tit .name {display:inline-block;overflow:hidden;max-width:520px;font-size:16px;line-height:24px;color:#666;text-overflow:ellipsis;white-space:nowrap;vertical-align:top}
+.my .cont_interview .info_tit .tit {display:block;margin-top:5px;overflow:hidden;max-width:520px;font-size:20px;line-height:24px;color:#222;text-overflow:ellipsis;white-space:nowrap}
+.my .cont_interview .info_tit .data {float:right;margin-top:-24px;font-size:14px;line-height:24px;color:#666;letter-spacing:-0.5px}
+.my .cont_interview .info_history {display:block;position:relative;margin-top:20px;padding:12px 18px 10px;border-radius:6px;background:#f8fafc}
+.my .cont_interview .info_history .tit_info {font-size:14px;color:#666;letter-spacing:-0.5px}
+.my .cont_interview .info_history .tit_info:before {display:inline-block;margin:-2px 12px 0 0;width:28px;height:24px;background-position:-135px -40px;vertical-align:top;content:""}
+.my .cont_interview .info_history .state_info {position:absolute;right:24px;top:12px}
+.my .cont_interview .info_history .state_info .state {float:left;font-weight:bold;font-size:13px;line-height:24px;vertical-align:top;letter-spacing:-0.5px}
+.my .cont_interview .info_history .state_info button.state {color:#5771ec}
+.my .cont_interview .info_history .state_info .btn_detail {display:inline-block;font-size:13px;line-height:24px;letter-spacing:-1px;color:#444}
+.my .cont_interview .info_history .state_info .state + .bar:before {display:inline-block;margin:5px 10px 0;width:1px;height:13px;background:#c0c0c0;vertical-align:top;content:""}
+.my .cont_interview .info_history .state_info .btn_detail:after {display:inline-block;margin:8px 0 0 5px;width:12px;height:6px;background-position:-125px 0;vertical-align:top;content:""}
+.my .cont_interview .info_history.open .state_info .btn_detail:after {background-position:-125px -10px}
+.my .cont_interview .info_history .list_history {display:none;position:relative;margin:29px 0 18px}
+.my .cont_interview .info_history.open .list_history {display:block}
+.my .cont_interview .info_history .list_history:before {position:absolute;left:12px;top:-24px;width:1px;height:100%;background:#dee1e8;content:""}
+.my .cont_interview .info_history .list_history li {position:relative;margin-top:24px;border:1px solid #ededed;border-radius:3px;background:#fff}
+.my .cont_interview .info_history .list_history li:after {position:absolute;left:9px;top:-3px;width:5px;height:5px;border-radius:3px;background:#dee1e8;content:""}
+.my .cont_interview .info_history .list_history .head_history {padding:10px 36px 13px;height:40px;border-bottom:1px solid #dee1e8;box-sizing:border-box}
+.my .cont_interview .info_history .list_history .tit_history {display:inline-block;font-size:14px;line-height:18px;color:#444;vertical-align:top}
+.my .cont_interview .info_history .list_history .date_history {display:inline-block;margin-left:17px;font-size:13px;line-height:18px;color:#777;letter-spacing:0;vertical-align:top}
+.my .cont_interview .info_history .list_history .cont_history {overflow:hidden;padding:19px 36px 23px}
+.my .cont_interview .info_history .list_history .desc_history {float:left;margin-right:28px;font-size:13px;color:#555}
+.my .cont_interview .info_history .list_history .desc_history:before {display:inline-block;margin-right:4px;content:"・"}
+.my .cont_interview .info_history .list_history .desc_history .txt_history {color:#777}
+.my .cont_interview .info_history .list_history .desc_history .txt_history.num {letter-spacing:0}
+.my .cont_interview .info_history .list_history .desc_history button,
+.my .cont_interview .info_history .list_history .desc_history a {border:0;background:none;letter-spacing:-1px;color:#777}
+.my .cont_interview .info_history .list_history .txt_history:before {display:inline-block;margin:0 8px 0 6px;content:":"}
+.my .cont_interview .info_history .list_history li.now {border-color:#666}
+.my .cont_interview .info_history .list_history li.now:after {background:#666}
+
+/* 영상면접 Check 가이드 */
+.modal_check_guide {position:fixed;top:0;right:0;z-index:1200;padding:83px 0 60px;width:600px;max-width:1200px;height:100%;max-height:100%;box-sizing:border-box;background-color:#fff;letter-spacing:-1px}
+.modal_check_guide .modal_tit {position:absolute;left:0;top:0;width:100%}
+.modal_check_guide .modal_tit strong {display:block;padding:21px 24px;border-bottom:1px solid #ebebeb;font-size:22px;line-height:40px}
+.modal_check_guide .modal_cont {overflow-y:auto;padding-top:46px;height:100%;box-sizing:border-box}
+.modal_check_guide .modal_cont .area_video {position:relative;margin:-18px auto 30px;width:390px;height:215px;background:url(//www.saraminimage.co.kr/sri/live/home/bg_video.jpg) no-repeat 0 0}
+.modal_check_guide .modal_cont .area_video .btn_play {position:absolute;left:50%;top:50%;margin:-28px 0 0 -28px;width:56px;height:56px;border-radius:50%;box-shadow:0px 7px 20px rgba(0,0,0,0.2);background:#3049c1;transition:.3s}
+.modal_check_guide .modal_cont .area_video .btn_play:after {position:absolute;left:50%;top:50%;z-index:1;margin:-9px 0 0 -5px;width:13px;height:19px;background:url(//www.saraminimage.co.kr/sri/live/home/btn_play.png) no-repeat 0 0;background-size:13px 19px;content:""}
+.modal_check_guide .modal_cont .area_video .btn_play:hover {transform:scale(1.5)}
+.video_iframe {display:none;position:fixed;left:0;top:0;z-index:1201;width:100%;height:100%;background: rgba(22, 23, 41, 0.9);}
+.video_iframe .area_iframe {position:fixed;left:50%;top:50%;z-index:1202;margin:-282px 0 0 -512px;width:1024px;height:565px}
+.video_iframe .btn_iframe_close {position:absolute;left:50%;margin-left:-28px;top:70px;width:56px;height:56px;background:url(//www.saraminimage.co.kr/sri/live/home/btn_iframe_close.png) no-repeat 0 0}.modal_check_guide .modal_cont .tab_guide {overflow:hidden;margin:0 40px -4px;border-radius:6px;background:#eaeaea}
+.modal_check_guide .modal_cont .tab_guide li {float:left;padding:2px;width:50%;height:48px;border-radius:6px;box-sizing:border-box;background:#eaeaea}
+.modal_check_guide .modal_cont .tab_guide li.on {position:relative;z-index:1;background:#5771ec}
+.modal_check_guide .modal_cont .tab_guide .btn_tab {display:block;width:100%;height:100%;font-weight:bold;font-size:15px;line-height:44px;color:#939499;letter-spacing:-1px}
+.modal_check_guide .modal_cont .tab_guide li.on .btn_tab {color:#fff}
+
+.modal_check_guide .modal_cont .menu_guide {display:none}
+.modal_check_guide .modal_cont .menu_guide.on {display:block}
+.modal_check_guide .modal_cont .guide_list {margin-top:24px;padding:0 40px}
+.modal_check_guide .modal_cont .guide_list .tit_list {display:block;height:56px;border-bottom:1px solid #ededed;font-size:15px;line-height:56px}
+.modal_check_guide .modal_cont .guide_list .cont_list {position:relative;height:56px;border-bottom:1px solid #ededed;font-size:14px;color:#000;line-height:56px}
+.modal_check_guide .modal_cont .guide_list .cont_list .btn_list {position:absolute;right:0;top:0;width:100%;height:100%;background:rgba(255,255,255,0)}
+.modal_check_guide .modal_cont .guide_list .cont_list .ico_arrow {display:none;position:absolute;right:0;top:8px;width:40px;height:40px;border-radius:50%}
+.modal_check_guide .modal_cont .guide_list .cont_list .btn_list:hover .ico_arrow {display:block}
+.modal_check_guide .modal_cont .guide_list .cont_list .ico_arrow:before {display:inline-block;margin:14px auto 0;width:7px;height:12px;background-position:-150px -20px;content:""}
+.modal_check_guide .modal_cont .guide_list .cont_list .ico_arrow:hover {background:#e3e3e9}
+/* QA534 추가 */
+.modal_check_guide .modal_cont .guide_browser {padding:20px 24px;border-radius:9px;background:#f4f5f7}
+.modal_check_guide .modal_cont .guide_browser .tit_guide_browser {display:block;font-size:14px;line-height:24px;color:#000}
+.modal_check_guide .modal_cont .guide_browser .tit_guide_browser:before {display:inline-block;margin-right:8px;width:24px;height:24px;background-position:0 -90px;vertical-align:top;content:""}
+.modal_check_guide .modal_cont .guide_browser .desc_guide_browser {margin:16px 0 18px 0;font-size:13px;line-height:22px;letter-spacing:-1.5px;color:#898990}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser dt {padding:4px 0;font-weight:bold;font-size:13px;color:#000}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li {position:relative;margin-top:12px;padding-left:32px;font-size:13px;line-height:24px}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li:before {position:absolute;left:0;top:0;width:24px;height:24px;vertical-align:top;content:""}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li.chrome:before {background-position:-25px -90px}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li.edge:before {background-position:-50px -90px}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li.firefox:before {background-position:-75px -90px}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li.safari:before {background-position:-100px -90px}
+.modal_check_guide .modal_cont .guide_browser .list_guide_browser ul li.windows:before {background-position:-125px -90px}
+.modal_check_guide .modal_cont .guide_browser .noti_guide_browser {margin-top:28px;font-size:13px;line-height:22px;color:#898990}
+/* //QA534 추가 */
+.modal_check_guide .btn_close {position:absolute;right:14px;top:20px;width:40px;height:40px}
+.modal_check_guide .btn_close:after {display:inline-block;width:20px;height:20px;background-position:-165px 0;content:""}
+
+/* 상세뷰 */
+.modal_detail_view .modal_tit strong {padding:21px 40px 21px 74px}
+.modal_detail_view .btn_prev {position:absolute;left:30px;top:23px;width:40px;height:40px}
+.modal_detail_view .btn_prev:before {display:inline-block;width:10px;height:20px;background-position:-150px 0;vertical-align:top;content:""}
+.modal_detail_view .cont_detail {padding:0 165px 16px 40px}
+.modal_detail_view .bg_guide {position:relative;width:395px;height:211px;overflow:hidden}
+.modal_detail_view .bg_guide .list_guide {position:absolute;left:0;width:395px}
+.modal_detail_view .bg_guide .list_guide li {float:left;width:395px;height:211px}
+.modal_detail_view .list_detail {margin-top:-10px;font-size:14px;line-height:28px}
+.modal_detail_view .list_detail li {margin-top:40px}
+.modal_detail_view .guide_list {box-shadow: 0 -2px 4px 0 rgba(228, 228, 228, 0.5)}
+
+.modal_detail_view .detail_window_webcam .bg {background:lightblue}
+
+/* 협업자 관리 */
+.manage {background:#f2f6f9}
+.manage .wrap_video_interview {margin:168px auto 140px;width:1560px}
+.manage .wrap_video_interview:before {display:none}
+.manage .wrap_video_interview h1 {font-size:34px;line-height:45px;letter-spacing:-2.5px;color:#000}
+.wrap_cooperation_manage {margin-top:30px;padding:80px 347px;border-radius:6px;box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);background:#fff}
+.wrap_cooperation_manage .intro_cooperation {margin-bottom:40px;font-size:26px;line-height:24px;letter-spacing:-1.5px;color:#222}
+.wrap_cooperation_manage h2 {font-weight:bold;font-size:18px;line-height:24px;color:#222}
+.wrap_cooperation_manage .list_cooperation {overflow:hidden;margin-top:16px;border-top:1px solid #ebebeb}
+.wrap_cooperation_manage .list_cooperation li {max-height:70px;border-bottom:1px solid #ebebeb}
+.wrap_cooperation_manage .list_cooperation .tit_list {position:relative;float:left;padding:24px 0 25px 42px;width:236px;box-sizing:border-box;font-weight:normal;font-size:15px;line-height:20px;color:#666;background:#fafbfc}
+.wrap_cooperation_manage .list_cooperation .cont_list {overflow:hidden;height:70px;padding:10px 30px 10px;box-sizing:border-box;font-size:15px;line-height:52px;color:#222;text-overflow:ellipsis;white-space:nowrap}
+.wrap_cooperation_manage .list_cooperation .ico_necessary:after {position:absolute;left:30px;top:23px;margin-right:2px;font-weight:bold;font-size:15px;line-height:20px;vertical-align:top;color:#ff0000;content:"*"}
+.wrap_cooperation_manage .list_cooperation .inp_list {padding:15px 18px 15px;width:270px;height:50px;border-radius:5px;border:1px solid #ddd;font-size:15px;line-height:20px;color:#222;box-sizing:border-box}
+.wrap_cooperation_manage .list_cooperation .inp_list:required,
+.wrap_cooperation_manage .list_cooperation .inp_list::placeholder {color:#888;-webkit-font-smoothing:antialiased}
+.wrap_cooperation_manage .wrap_btn {margin-top:40px;text-align:center}
+.wrap_cooperation_manage .wrap_btn button {display:inline-block;margin:0 5px;width:249px}
+.wrap_cooperation_manage .list_cooperation span.inpChk {padding:14px 33px 0 0}
+.wrap_cooperation_manage .list_pwd1 {margin-top:20px;font-size:14px;line-height:22px;color:#888}
+.wrap_cooperation_manage .list_pwd1 strong {font-weight:normal;color:#222}
+.wrap_cooperation_manage .tit_pwd {display:block;margin-top:74px;font-size:14px;line-height:22px;color:#222}
+.wrap_cooperation_manage .list_pwd2 {margin:7px 0 34px 0;font-size:14px;line-height:24px;color:#888}
+
+/* datepicker */
+.datepicker_video {position:absolute;z-index:9999;border-radius:6px;background-color:#fff;box-shadow:0 0 5px 0 rgba(0, 0, 0, 0.15);-webkit-user-select:none;user-select:none}
+.datepicker_video:after {display:table;clear:both;content:"";table-layout:fixed}
+.datepicker_video .dpWrapBtn {position:relative}
+.datepicker_video .dpStatus {display:none;position:relative;height:24px;font-size:12px;line-height:24px;text-align:center}
+.datepicker_video .dpBtn {display:block;position:absolute;top:5px;padding:0;width:24px;height:24px;border:0;border-radius:0;color:transparent;font-size:0;line-height:0;background:transparent;cursor:pointer}
+.datepicker_video .dpBtn:disabled {cursor:default;opacity:0.2}
+.datepicker_video .dpBtn.prevYear {left:0}
+.datepicker_video .dpBtn.prevMonth {left:24px}
+.datepicker_video .dpBtn.nextMonth {right:24px}
+.datepicker_video .dpBtn.nextYear {right:0}
+.datepicker_video .dpBtn:before,
+.datepicker_video .dpBtn:after {display:inline-block;color:#222;font-family:serif;font-size:14px;letter-spacing:-3px;line-height:24px}
+.datepicker_video .dpBtn.prevMonth:after {content:"<"}
+.datepicker_video .dpBtn.nextMonth:after {content:">"}
+.datepicker_video .dpBtn.prevYear:after {content:"<<"}
+.datepicker_video .dpBtn.nextYear:after {content:">>"}
+
+.datepicker_video .dpCalendar {display:inline-block;margin-bottom:10px;box-sizing:border-box}
+.datepicker_video .dpHeader {height:30px;color:#222;font-size:18px;font-weight:bold;line-height:30px;text-align:center}
+.datepicker_video .dpTable table {width:100%;border-collapse:collapse;font-size:15px;table-layout:fixed}
+.datepicker_video .dpTable thead th,
+.datepicker_video .dpTable tbody td {padding:0;font-weight:normal;text-align:center}
+.datepicker_video .dpTable thead th {padding-bottom:10px;height:30px;color:#666}
+.datepicker_video .dpTable tbody td {height:32px;color:#222;cursor:pointer}
+.datepicker_video .dpTable thead th.sunday,
+.datepicker_video .dpTable tbody td.sunday {color:#ff3b50}
+.datepicker_video .dpTable thead th.saturday,
+.datepicker_video .dpTable tbody td.saturday {color:#2365f2}
+.datepicker_video .dpTable tbody td.today {border-radius:5px;background-color:#f2f6f9}
+.datepicker_video .dpTable tbody td.dpSelected {border-radius:5px;color:#fff;background-color:#8ab8ff}
+.datepicker_video .dpTable tbody td.dpSelected.dpFrom {border-radius:16px 0 0 16px}
+.datepicker_video .dpTable tbody td.dpSelected.dpTo {border-radius:0 16px 16px 0}
+.datepicker_video .dpTable tbody td.dpSelected.dpFrom.dpTo {border-radius:5px}
+.datepicker_video .dpTable tbody td.dpSelection {background-color:#f0f5ff}
+.datepicker_video .dpTable tbody td.dpSelectionHover {background-color:#f0f5ff}
+.datepicker_video .dpTable tbody td.dpSelected.dpSelectionHover {border-radius:5px}
+.datepicker_video .dpTable tbody td.dpHover {border-radius:5px;color:#fff;background-color:#8ab8ff}
+.datepicker_video .dpTable tbody td.dpSelected.dpHover,
+.datepicker_video .dpTable tbody td.dpFrom.dpTable.dpHover {border-radius:5px}
+.datepicker_video .dpTable tbody td.dpDisabled,
+.datepicker_video .dpTable tbody td.dpRestricted {cursor:default;opacity:0.3}
