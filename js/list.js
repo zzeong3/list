@@ -62,7 +62,7 @@ function create_dom(data){
     //console.log(item);
 
     $(item).each(function(){
-        var img = '../images/portfolio/'+this.img+'.png';
+        var img = 'images/portfolio/'+this.img+'.png';
         var category = this.category;
         var tit = this.tit;
         var link = this.link;
