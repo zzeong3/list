@@ -93,7 +93,7 @@ function create_dom(data){
                                                 $('<a target="_blank" title="새창으로 페이지 이동">').attr({ href : link })
                                                     .append(
                                                         $('<span class="txt_category">').text(category),
-                                                        $('<span class="txt_tit">').text(tit),
+                                                        $('<span class="txt_tit">').text(tit)
                                                     )
                                             ),
                                         $('<dt class="screen_out">').text('프로젝트 진행기간'),
@@ -103,11 +103,11 @@ function create_dom(data){
                                         $('<dt class="screen_out">').text('관련태그'),
                                         $('<dd class="tag">').text(tags),
                                         $('<dt class="screen_out">').text('프로젝트 설명'),
-                                        $('<dd class="desc">').text(desc),
+                                        $('<dd class="desc">').text(desc)
                                     )    
                             )
                     )
-            );//$wrap append ends
+            )//$wrap append ends
 
         setTimeout(function(){
             iso_layout('#list'); 
