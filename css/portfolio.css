@@ -158,6 +158,7 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
     .resume {padding:55px 20px}
     .head_resume strong .txt {margin-top:15px}
     .head_resume strong .job {margin-top:15px}
-    .head_resume .list_contact {float:left}
-    .head_resume .list_contact dt {margin:0 30px 10px 0;text-align:left}
+    .head_resume .list_contact {float:left;margin-left:1px}
+    .head_resume .list_contact dt {margin:0 30px 3px 0;text-align:left}
+    .head_resume .list_contact dd {margin-bottom:3px}
 }
