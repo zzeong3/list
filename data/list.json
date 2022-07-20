@@ -111,26 +111,6 @@
             "desc" : "페이지 레이아웃이 정해지지 않고, 위아래로 콘텐츠가 위치할 수 있는 경우의 수가 많아 라인, 여백 등으로 이슈가 있었지만 css선택자를 이용해 많은 경우의 수를 대응했던 작업."
         },
         {   
-            "img" : "portfolio5",
-            "category" : "반응형",
-            "tit": "카카오맵 프로모션",
-            "link": "https://map.kakao.com/info/kakao_map",
-            "period": "16.05.30 ~ 16.06.03",
-            "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "크로스브라우징 이슈로 제약이 많았던 애니메이션을 많이 사용해 볼 수 있었던 프로젝트. 하위 브라우저는 애니메이션이 없는 형태로 대응"
-        },
-        {   
-            "img" : "portfolio4",
-            "category" : "PC",
-            "tit": "Daum 영화 개편",
-            "link": "https://movie.daum.net/main/new#slide-1-0",
-            "period": "16.02.17 ~ 16.06.27",
-            "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "기존 반응형 페이지를 PC/M 분리 시키고, 순차 개편으로 이루어져 기존 페이지 수정과 개편 페이지 작업을 같이 진행해야 했던 프로젝트. 순차 개편으로 css 버전 관리 대해 다시 한번 생각해 볼 수 있었던 프로젝트."
-        },
-        {   
             "img" : "portfolio3",
             "category" : "반응형",
             "tit": "Daum 티스토리 스킨 개편",
