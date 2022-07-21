@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+body {height:100%}
+.wrap {position:relative;height:100%;padding-left:220px;min-width:1082px;box-sizing:border-box}
+
+/* header */
+header {position:fixed;left:0;top:0;z-index:10;width:100%;height:56px;padding:0 24px;background:#6d7392;box-sizing:border-box}
+header h2 {font-family:"NotoSansB", "Malgun Gothic","맑은 고딕",Dotum,sans-serif;font-size:20px;line-height:58px;color:#fff}
+#gnb {position:fixed;left:0;top:56px;z-index:1;width:220px;height:100%;padding:14px 12px 100px;border-right:1px solid #c5cadf;box-sizing:border-box;background:#fff}
+#gnb .list_step {width:100%;height:100%}
+#gnb .list_step li {padding:0 12px;font-size:13px;line-height:43px;border-radius:6px;color:#1b2141}
+#gnb .list_step li.on {background:#d4dcff;font-family:"NotoSansB", "Malgun Gothic","맑은 고딕",Dotum,sans-serif;color:#576aca}
+
+#container {padding-top:56px}
+.cont_register_pop {padding:24px 20px}
+.cont_register_pop .tit {display:block;padding-bottom:16px;border-bottom:1px solid #ebedf7;font-family:"NotoSansB", "Malgun Gothic","맑은 고딕",Dotum,sans-serif;font-size:16px;line-height:24px;color:#1b2141;text-align:left}
+.cont_register_pop .desc_step {font-size:13px;line-height:19px;color:#1b2141}
+
+/* 문항 검색 및 등록 */
+.wrap.type2 {padding-left:260px;min-width:1106px}
+.wrap.type2 .aside_register {position:fixed;left:0;top:56px;z-index:1;width:260px;height:100%;padding:16px 12px;border-right:1px solid #c5cadf;box-sizing:border-box;background:#fff}
+
+/* 평가 항목 정보 */
+.aside_register .tit_item {display:block;padding-bottom:12px;border-bottom:1px solid #ebedf7;font-family:"NotoSansB", "Malgun Gothic","맑은 고딕",Dotum,sans-serif;font-size:15px;line-height:22px;color:#1b2141}
+.aside_register > .list_item {padding-top:12px}
+.aside_register > .list_item li + li {margin-top:16px}
+.aside_register > .list_item li {position:relative;padding-left:61px}
+.aside_register > .list_item li .tit {position:absolute;left:0;top:0;padding-left:7px;font-weight:normal;font-size:15px;line-height:22px;color:#6d7392}
+.aside_register > .list_item li .tit::before {position:absolute;left:0;top:9px;width:3px;height:3px;border-radius:50%;background:#6d7392;content:""}
+.aside_register > .list_item li .cont {overflow:hidden;font-size:15px;line-height:22px;color:#1b2141;text-overflow:ellipsis;white-space:nowrap}
+
+.aside_register .box_register_list {overflow:hidden;height:372px;margin-top:16px;border-radius:6px;border:1px solid #c5cadf}
+.aside_register .box_register_list .tit_wrap {overflow:hidden;height:38px;padding:9px 13px 0 10px;background:#f5f6f8;font-size:13px;line-height:19px}
+.aside_register .box_register_list .tit_wrap .tit_list {float:left;font-weight:normal;color:#6d7392}
+.aside_register .box_register_list .tit_wrap .num {float:right;color:#576aca}
+.aside_register .box_register_list .inner_scroll {max-height:333px;padding:8px 12px}
+.aside_register .box_register_list .inner_scroll .list_item li + li {margin-top:17px}
+.aside_register .box_register_list .inner_scroll .list_item li {position:relative;font-size:13px;line-height:19px}
+.aside_register .box_register_list .inner_scroll .list_item .tit {display:inline-block;overflow:hidden;max-width:131px;color:#1b2141;text-overflow:ellipsis;white-space:nowrap;vertical-align:top}
+.aside_register .box_register_list .inner_scroll .list_item .num {display:inline-block;color:#6d7392;vertical-align:top}
+.aside_register .box_register_list .inner_scroll .list_item .btn_del {position:absolute;right:0;top:1px;width:18px;height:18px}
+.aside_register .box_register_list .inner_scroll .list_item .btn_del::before {width:18px;height:18px;background-position:-65px -35px}
+.aside_register .btn.bg_navy {width:100%;margin-top:8px}
+
+.cont_register {padding:12px}
+.cont_register .box_search {position:relative;padding:16px;background:#f9faff;border-radius:6px}
+.cont_register .box_search .tit_search {font-weight:normal;font-family:"NotoSansM", "Malgun Gothic","맑은 고딕",Dotum,sans-serif;font-size:13px;line-height:19px}
+.cont_register .box_search .list_search > li {display:inline-block;margin:16px 24px 0 0;font-size:0;line-height:0}
+.cont_register .box_search .list_search > li .tit {display:inline-block;position:relative;margin-right:16px;padding-left:7px;font-weight:normal;font-size:13px;line-height:19px;color:#6d7392}
+.cont_register .box_search .list_search > li .tit::before {position:absolute;left:0;top:8px;width:3px;height:3px;border-radius:50%;background:#6d7392;content:""}
+.cont_register .box_search .list_search > li .select_box.sm {display:inline-block;width:100px}
+.cont_register .box_search .list_search > li.wid_s .select_box.sm {width:84px}
+.cont_register .box_search .list_search > li.wid_l .select_box.sm {width:160px}
+.cont_register .box_search .list_search .check_inp {display:inline-block;margin:1px 0 0 -7px;vertical-align:top}
+.cont_register .box_search .list_search .lab_id {display:inline-block;margin:0 4px 0 -6px;font-size:13px;line-height:19px;color:#1b2141}
+.cont_register .box_search .list_search .wrap_inp {display:inline-block}
+.cont_register .box_search .list_search .wrap_inp input {width:244px}
+.cont_register .box_search .line_navy {position:absolute;right:16px;bottom:16px;min-width:48px}
+
+.cont_register .result_search {margin-top:20px}
+.cont_register .result_search .wrap_until::after {display:block;clear:both;content:""}
+.cont_register .result_search .choice_list {float:left;margin-top:8px}
+.cont_register .result_search .until_list {float:right}
+.cont_register .result_search .until_list .select_box.sm {display:inline-block;margin-left:6px}
+.cont_register .result_search .check_inp {display:inline-block}
+.cont_register .result_search .check_inp .lbl_check {font-size:13px;color:#1b2141}
+.cont_register .result_search .check_inp .lbl_check .txt {color:#6d7392}
+.cont_register .result_search .btn.bg_lightsky {display:inline-block;margin-left:4px}
+
+.cont_register .result_search .box_result {overflow:hidden;width:100%;min-height:470px;margin-top:8px;border:1px solid #c5cadf;border-radius:6px}
+.cont_register .result_search .box_result .inner_scroll {max-height:470px}
+.cont_register .result_search .box_result .wrap_list {float:left;width:47%;height:470px;border-right:1px solid #c5cadf;box-sizing:border-box}
+.cont_register .result_search .box_result .wrap_list .list_item > li {margin-bottom:20px}
+.cont_register .result_search .box_result .list_item .top_list {overflow:hidden;height:48px;padding:10px 12px 0 16px;background:#f5f6f8;box-sizing:border-box}
+.cont_register .result_search .box_result .list_item .top_list .check_inp {float:left}
+.cont_register .result_search .box_result .list_item .top_list .check_inp .lbl_check {overflow:hidden;max-width:160px;margin-top:5px;font-size:15px;color:#1b2141;text-overflow:ellipsis;white-space:nowrap}
+.cont_register .result_search .list_item .top_list .wrap_btn {float:right}
+.cont_register .result_search .list_item .top_list .wrap_btn .line_gray {padding:0 11px}
+.cont_register .result_search .list_item .top_list .wrap_btn .line_gray.img_admin_after {min-width:79px}
+.cont_register .result_search .list_item .top_list .wrap_btn .line_gray.img_admin_after::after {width:5px;height:6px;margin:11px 0 0 3px;background-position:-95px -15px}
+.cont_register .result_search .list_item .top_list .wrap_btn .line_navy {min-width:62px}
+.cont_register .result_search .list_item .top_list .wrap_btn .line_navy.img_admin_before::before {width:10px;height:10px;margin:9px 3px 0 0;background-position:-85px -30px}
+
+.cont_register .result_search .list_item .preview_tbl {padding:12px 12px 0}
+.cont_register .result_search .list_item .preview_tbl .tbl_preview {border-top:1px solid #ebedf7;border-bottom:1px solid #ebedf7}
+.cont_register .result_search .list_item .preview_tbl .col:nth-child(1) {width:66px}
+.cont_register .result_search .list_item .preview_tbl .col:nth-child(2) {width:auto}
+.cont_register .result_search .list_item .preview_tbl tr + tr {border-top:1px solid #ebedf7}
+.cont_register .result_search .list_item .preview_tbl th {padding:8px;background:#f5f6f8;font-weight:normal;font-size:13px;color:#1b2141;vertical-align:top}
+.cont_register .result_search .list_item .preview_tbl td {padding:8px;font-size:13px;color:#494e63;line-height:19px}
+
+.cont_register .result_search .box_result .wrap_detail {float:left;width:53%;border-left:4px solid #f5f6f8;box-sizing:border-box}
+.cont_register .result_search .box_result .wrap_detail .inner_scroll {padding:17px 18px}
+.cont_register .result_search .box_result .wrap_detail .tit_detail {display:block;margin-top:32px;margin-bottom:12px;font-family:"NotoSansB", "Malgun Gothic","맑은 고딕",Dotum,sans-serif;font-size:13px;line-height:19px;color:#1b2141}
+.cont_register .result_search .box_result .wrap_detail .tit_detail:first-of-type {margin-top:0}
+.cont_register .result_search .box_result .wrap_detail.tit_detail:first-of-type {margin-top:0}
+.cont_register .result_search .box_result .wrap_detail .list_detail {padding-top:12px;border-top:1px solid#ebedf7}
+.cont_register .result_search .box_result .wrap_detail .list_detail li {position:relative;display:table}
+.cont_register .result_search .box_result .wrap_detail .list_detail li + li {margin-top:15px}
+.cont_register .result_search .box_result .wrap_detail .list_detail > li .tit {position:relative;float:left;width:127px;padding-left:7px;font-weight:normal;font-size:13px;line-height:19px;color:#6d7392;box-sizing:border-box}
+.cont_register .result_search .box_result .wrap_detail .list_detail > li .tit::before {position:absolute;left:0;top:8px;width:3px;height:3px;background:#6d7392;border-radius:50%;content:""}
+.cont_register .result_search .box_result .wrap_detail .list_detail > li .cont {overflow:hidden;font-size:13px;line-height:19px;color:#1b2141}
+
+.cont_register .result_search .box_result .desc_result {padding-top:226px;font-size:13px;line-height:19px;color:#b3b9d7;text-align:center}
+
+/* readymade */
+.aside_register.readymade .box_register_list {height:531px;margin-top:0}
+.aside_register.readymade .box_register_list .tit_wrap ul {overflow:hidden}
+.aside_register.readymade .box_register_list .tit_wrap ul li {float:left;width:33.3%;text-align:center}
+.aside_register.readymade .box_register_list .tit_wrap ul li .tit_list {display:block;width:100%}
+.aside_register.readymade .box_register_list .tit_wrap ul li:first-of-type {text-align:left}
+.aside_register.readymade .box_register_list .tit_wrap ul li:last-of-type {text-align:right}
+.aside_register.readymade .box_register_list .inner_scroll {max-height:493px;padding:8px 0}
+.aside_register.readymade .box_register_list .inner_scroll .list_item li {padding:0 46px}
+.aside_register.readymade .box_register_list .inner_scroll .list_item li .num {position:absolute;left:0;top:0;width:46px;text-align:center}
+.aside_register.readymade .box_register_list .inner_scroll .list_item li .tit {display:block;text-align:center}
+.aside_register.readymade .box_register_list .inner_scroll .list_item li .tit.before {color:#b3b9d7}
+.aside_register.readymade .box_register_list .inner_scroll .list_item li .btn_del {right:16px}
+
+/* 팝업 */
+.dimmed {position:fixed;left:0;top:0;right:0;bottom:0;z-index:100;background:rgba(0,0,0,.5)}
+.pop_wrap {position:fixed;left:50%;top:50%;z-index:105;padding:54px;border-radius:8px;border:1px solid rgba(0, 0, 0, 0.1);background:#fff;text-align:center;min-width:414px;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);box-sizing:border-box;box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1)}
+.pop_wrap .tit_pop {display:block;font-size:20px;line-height:29px;color:#1b2141}
+.pop_wrap .pop_footer {margin-top:40px}
+.pop_wrap .pop_footer .btn_lg {min-width:148px}

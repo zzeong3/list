@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>분석화면 | NAST</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/ibt.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <div class="tit_ibt">
+                    <div class="inner_tit">
+                        <h1>제 3회 NSAT 영어대회</h1>
+                        <strong class="info_examinee"><span class="name">홍길동</span> 112233</strong>
+                    </div>
+                </div>
+                <nav id="gnb">
+                    <ol class="list_gnb">
+                        <li class="prev"><span class="num">01</span> 시험 준비</li><!-- 이전 스텝 prev 클래스, 현재 스텝 now 클래스  -->
+                        <li class="prev"><span class="num">02</span> 문제 풀이</li>
+                        <li class="now"><span class="num">03</span> 제출 완료</li>
+                    </ol>
+                </nav>
+                <button type="button" class="btn_close">시험 종료</button>
+            </header>
+            <div id="container">
+                <div id="content" class="cont_report">
+                    <h2 class="blind">제출완료</h2>
+                    <h3>시험 결과와 리포트 내용을 확인해주세요.</h3>
+                    <div class="top_report">
+                        <dl class="list_examinee img_ibt_before">
+                            <dt>이름 / 응시번호</dt>
+                            <dd>홍길동 <span class="num">1234554</span></dd>
+                        </dl>
+                        <dl class="list_time">
+                            <dt class="img_ibt_before">소요 시간</dt>
+                            <dd>1시간 32분 33초</dd>
+                        </dl>
+                    </div>
+                    <div class="report_total">
+                        <strong class="tit_report">종합 레벨</strong>
+                        <div class="total_level">K - 6</div>
+                    </div>
+
+                    <div class="report_level">
+                        <strong class="tit_report">영역별 레벨</strong>
+                        <ul class="list_level">
+                            <li>
+                                <strong class="tit_level">어휘</strong>
+                                <div class="cont_level">K - 6</div>
+                            </li>
+                            <li>
+                                <strong class="tit_level">듣기</strong>
+                                <div class="cont_level">K - 6</div>
+                            </li>
+                            <li>
+                                <strong class="tit_level">읽기</strong>
+                                <div class="cont_level">K - 6</div>
+                            </li>
+                            <li>
+                                <strong class="tit_level">문법</strong>
+                                <div class="cont_level">K - 6</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="report_graph">
+                        <strong class="tit_subject">국어 영역</strong>
+                        <strong class="tit_report">원 점수</strong>
+                        <div class="circle_graph">
+                            <div class="info_score">
+                                <div class="inner_score">
+                                    <div class="score">75<span class="txt">점</span></div>
+                                    <div class="total"><span class="blind">총 점수</span> /100점</div>
+                                </div>
+                            </div>
+                            <svg width="130" height="130" viewBox="0 0 34 34">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                      <stop offset="0%" stop-color="#576aca" />
+                                      <stop offset="100%" stop-color="#7257ca" />
+                                    </linearGradient>
+                                  </defs>
+                              <circle cx="17" cy="17" r="15.5" fill="transparent" stroke="#eff2f7" stroke-width="2.5"></circle>
+                              <circle cx="17" cy="17" r="15.5" fill="transparent" stroke="url(#gradient)" stroke-width="2.5" stroke-dasharray="75 25" stroke-dashoffset="26" stroke-linecap="round"></circle><!-- [D] stroke-dasharray="75 25"로 그래프 핸들링 -->
+                            </svg>
+                        </div>
+                        <div class="info_grade">
+                            <dl>
+                                <dt>백분위</dt>
+                                <dd>81%</dd>
+                            </dl>                        
+                        </div>
+                    </div>
+
+                    <div class="report_graph">
+                        <strong class="tit_subject">수학 영역</strong>
+                        <strong class="tit_report">원 점수</strong>
+                        <div class="circle_graph">
+                            <div class="info_score">
+                                <div class="inner_score">
+                                    <div class="score">75<span class="txt">점</span></div>
+                                    <div class="total"><span class="blind">총 점수</span> /100점</div>
+                                </div>
+                            </div>
+                            <svg width="130" height="130" viewBox="0 0 34 34">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                      <stop offset="0%" stop-color="#576aca" />
+                                      <stop offset="100%" stop-color="#7257ca" />
+                                    </linearGradient>
+                                  </defs>
+                              <circle cx="17" cy="17" r="15.5" fill="transparent" stroke="#eff2f7" stroke-width="2.5"></circle>
+                              <circle cx="17" cy="17" r="15.5" fill="transparent" stroke="url(#gradient)" stroke-width="2.5" stroke-dasharray="75 25" stroke-dashoffset="26" stroke-linecap="round"></circle><!-- [D] stroke-dasharray="75 25"로 그래프 핸들링 -->
+                            </svg>
+                        </div>
+                        <div class="info_grade">
+                            <dl>
+                                <dt>등급</dt>
+                                <dd>3등급</dd>
+                            </dl>
+                            <dl>
+                                <dt>백분위</dt>
+                                <dd>9%</dd>
+                            </dl>
+                            <dl>
+                                <dt>합격 / 불합격</dt>
+                                <dd>불합격</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="report_graph">
+                        <strong class="tit_subject">수학 영역</strong>
+                        <div class="info_grade">
+                            <dl>
+                                <dt>등급</dt>
+                                <dd>3등급</dd>
+                            </dl>
+                            <dl>
+                                <dt>백분위</dt>
+                                <dd>9%</dd>
+                            </dl>
+                            <dl>
+                                <dt>합격 / 불합격</dt>
+                                <dd>불합격</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="report_graph">
+                        <strong class="tit_report">원 점수</strong>
+                        <div class="circle_graph">
+                            <div class="info_score">
+                                <div class="inner_score">
+                                    <div class="score">75<span class="txt">점</span></div>
+                                    <div class="total"><span class="blind">총 점수</span> /100점</div>
+                                </div>
+                            </div>
+                            <svg width="130" height="130" viewBox="0 0 34 34">
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                      <stop offset="0%" stop-color="#576aca" />
+                                      <stop offset="100%" stop-color="#7257ca" />
+                                    </linearGradient>
+                                  </defs>
+                              <circle cx="17" cy="17" r="15.5" fill="transparent" stroke="#eff2f7" stroke-width="2.5"></circle>
+                              <circle cx="17" cy="17" r="15.5" fill="transparent" stroke="url(#gradient)" stroke-width="2.5" stroke-dasharray="75 25" stroke-dashoffset="26" stroke-linecap="round"></circle><!-- [D] stroke-dasharray="75 25"로 그래프 핸들링 -->
+                            </svg>
+                          </div>
+                    </div>
+
+                    <div class="report_grade">
+                        <strong class="tit_report">등급 (백분위)</strong>
+                        <em class="info_grade"><span class="emph">3등급</span> (33%)</em>
+                        <div class="wrap_grade">
+                            <div class="inner_grade" style="width:33%"></div>
+                        </div>
+                    </div>
+
+                    <div class="report_result">
+                        <strong class="tit_report">합격 / 불합격</strong>
+                        <em class="info_result">합격</em>
+                    </div>
+
+                    <div class="report_analysis">
+                        <strong class="tit_report">분석 리포트</strong>
+                        <div class="cont_analysis">
+                            <p class="desc_analysis">2021.11.11(월)에 발행됩니다.</p>
+                        </div>
+                    </div>
+
+                    <div class="report_analysis">
+                        <strong class="tit_report">분석 리포트</strong>
+                        <div class="cont_analysis">
+                            <p class="desc_analysis"><em class="name">홍길동</em>님의 시험 분석 결과를  확인해보세요!</p>
+                            <a href="#" target="_blank" class="link_report img_ibt_before">리포트 확인</a>
+                        </div>
+                    </div>
+
+                    <div class="report_status">
+                        <strong class="tit_report">나의 정오 현황</strong>
+                        <ul class="list_status">
+                            <li>
+                                <strong class="tit_status">국어 영역</strong>
+                                <div class="cont_status">
+                                    <p class="desc_status">전체 50문항 중 <em class="correct">정답 37개</em>, <em class="wrong">오답 13개</em></p>
+                                    <a href="#" target="_blank" class="link_report img_ibt_before">시험 문항 다시보기</a>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit_status">수학 영역</strong>
+                                <div class="cont_status">
+                                    <p class="desc_status">전체 50문항 중 <em class="correct">정답 37개</em>, <em class="wrong">오답 13개</em></p>
+                                    <a href="#" target="_blank" class="link_report img_ibt_before">시험 문항 다시보기</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_navy">나가기</button>
+                    </div>
+                </div><!-- //content-->
+            </div><!-- //container-->
+ 
+        </div><!-- //wrap-->
+
+    </body>
+</html>

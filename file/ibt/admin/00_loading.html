@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body style="overflow:hidden"><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <div id="container">
+                <div id="content">
+                    <div class="cont_admin register_list">
+                        <div class="cont_loading" style="display: block;">
+                            <div class="wrap_loading">
+                               <div class="blind">로딩중</div>
+                               <svg width="56" height="56" viewBox="0 0 34 34">
+                                   <defs>
+                                       <linearGradient id="gradient" x1="0%" y1="40%" x2="70%" y2="100%">
+                                         <stop offset="0%" stop-color="#ebedf7"></stop>
+                                         <stop offset="100%" stop-color="#576aca"></stop>
+                                       </linearGradient>
+                                     </defs>
+                                    <circle cx="17" cy="17" r="14" fill="transparent" stroke="#e8eaf5" stroke-width="4.5"></circle>
+                                    <circle cx="17" cy="17" r="14" fill="transparent" stroke="url(#gradient)" stroke-width="3.5" stroke-dasharray="60 40" stroke-dashoffset="16" stroke-linecap="round"></circle>
+                               </svg>
+                            </div>
+                            <p class="desc_loading">로딩문구 사용시</p>
+                        </div>
+                    </div>                   
+                </div><!-- //content-->
+            </div><!-- //container-->
+        </div><!-- //wrap-->
+    </body>
+</html>

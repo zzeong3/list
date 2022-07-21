@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <h1><a href="#"><span class="blind">NSAT</span></a></h1>
+                <nav id="gnb">
+                    <ul class="list_depth1">
+                        <li>시험관리
+                            <ul class="list_depth2">
+                                <li class="on"><!-- [D] on 클래스 추가시 활성화 -->
+                                    <a href="#">등록된 시험 목록</a>
+                                </li>
+                                <li>
+                                    <a href="#">시험 설정 도구</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>시험주관사 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">기본 정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">응시자 목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="tit_top">
+                        <h2>등록된 시험 목록</h2>
+                        <div class="state_top">
+                            <strong class="txt_name img_admin_before">홍길동</strong>
+                            <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈 -->
+                                <button type="button" class="btn_select img_admin_after img_admin_before">홍길동</button>
+                                <div class="box_select">
+                                    <div class="inner_box">
+                                        <ul class="list_select">
+                                            <li><a href="#">관리자 정보 변경</a></li>
+                                            <li><button type="button">로그아웃</button></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="link_change">비밀번호 변경</a>
+                        </div>    
+                    </div>
+                    <div class="cont_admin register_list">
+                        <div class="top_admin">
+                            <div class="register_btn">
+                                <button type="button" class="btn btn_md bg_navy">등록</button>
+                            </div>
+                        </div>
+                        <div class="cont_box">
+                            <div class="wrap_list">
+                                <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                    <button type="button" class="btn_select img_admin_after">시험 상태 전체</button>
+                                    <div class="box_select">
+                                        <div class="inner_box">
+                                            <ul class="list_select">
+                                                <li><button type="button">일이삼</button></li>
+                                                <li><button type="button">일이삼사</button></li>
+                                                <li><button type="button">일이삼사오</button></li>
+                                                <li><button type="button">일이삼사오육</button></li>
+                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="until_list">
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">시험명</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrap_inp sm">
+                                        <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력란">
+                                    </div>
+                                    <button type="button" class="btn btn_sm bg_lightsky img_admin_before">검색</button>
+                                </div>
+                                <div class="admin_tbl register_list">
+                                    <ul class="list_tbl">
+                                        <li>exam_ID</li>
+                                        <li>시험명</li>
+                                        <li>시험장 공개시간</li>
+                                        <li>시험 상태</li>
+                                        <li>등록일</li>
+                                        <li>응시 URL</li>
+                                        <li>응시자 현황</li>
+                                        <li>응시 관리</li>
+                                        <li>수정/조회</li>
+                                        <li>삭제</li>
+                                        <li>시험</li>
+                                    </ul>
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <table class="tbl_admin">
+                                                <caption class="blind">응시자 리스트</caption>
+                                                <colgroup>
+                                                    <col class="col"> 
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                </colgroup>
+                                                <thead class="blind">
+                                                    <tr>
+                                                        <th>exam_ID</th>
+                                                        <th>시험명</th>
+                                                        <th>시험장 공개시간</th>
+                                                        <th>시험 상태</th>
+                                                        <th>등록일</th>
+                                                        <th>응시 URL</th>
+                                                        <th>응시자 현황</th>
+                                                        <th>응시 관리</th>
+                                                        <th>수정/조회</th>
+                                                        <th>삭제</th>
+                                                        <th>시험</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div class="cell">220405AAL</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2022. 03. 28. 월 오전 08:22~<br>2022. 07. 08. 금 오전 11:22</div></td>
+                                                        <td><div class="cell"><span class="ing_status">진행 중</span></div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray disabled">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>    
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after disabled">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky disabled">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del disabled">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky disabled">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell"><span class="before_status">진행 전</span></div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell">0 / 0명</div></td>    
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">조회</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><a href="#" class="btn btn_sm line_gray img_admin_after">응시자 등록</a></div></td>    
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>  
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>  
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>  
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>  
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>  
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">220101XYZ</div></th>
+                                                        <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                        <td><div class="cell">2021.00.00. 00:00~<br>2021.00.00. 00:00</div></td>
+                                                        <td><div class="cell">종료</div></td>
+                                                        <td><div class="cell">2021.00.00</div></td>
+                                                        <td><button type="button" class="btn btn_sm line_gray">복사</button></td>
+                                                        <td><div class="cell"><span class="num">777</span><br>/ 100,000명</div></td>  
+                                                        <td><a href="#" class="btn btn_sm line_gray img_admin_after">상세</a></td>
+                                                        <td><a href="#" class="btn btn_sm bg_lightsky">수정</a></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">복사</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p class="no_data">등록된 내용이 없습니다.</p>
+                                        </div>
+                                    </div>                            
+                                </div>
+                                <div class="paging">
+                                    <button type="button" class="btn_front img_admin_after disabled"><!-- [D] disabled 추가시 비활성화 --><span class="blind">처음</span></button>
+                                    <button type="button" class="btn_prev img_admin_after disabled"><!-- [D] disabled 추가시 비활성화 --><span class="blind">이전</span></button>
+                                    <em><span class="blind">현재페이지</span>1</em>
+                                    <button type="button" class="btn_num">2</button>
+                                    <button type="button" class="btn_num">3</button>
+                                    <span class="txt_num">...</span>
+                                    <button type="button" class="btn_num">4</button>
+                                    <button type="button" class="btn_num">5</button>
+                                    <button type="button" class="btn_next img_admin_after"><span class="blind">다음</span></button>
+                                    <button type="button" class="btn_back img_admin_after"><span class="blind">마지막</span></button>
+                                </div>
+                                <div class="paging">
+                                    <button type="button" class="btn_front img_admin_after disabled"><!-- [D] disabled 추가시 비활성화 --><span class="blind">처음</span></button>
+                                    <button type="button" class="btn_prev img_admin_after disabled"><!-- [D] disabled 추가시 비활성화 --><span class="blind">이전</span></button>
+                                    <em><span class="blind">현재페이지</span>1</em>
+                                    <button type="button" class="btn_num">2</button>
+                                    <button type="button" class="btn_num">3</button>
+                                    <button type="button" class="btn_num">4</button>
+                                    <button type="button" class="btn_num">5</button>
+                                    <span class="txt_num">...</span>
+                                    <button type="button" class="btn_num">100</button>
+                                    <button type="button" class="btn_next img_admin_after"><span class="blind">다음</span></button>
+                                    <button type="button" class="btn_back img_admin_after"><span class="blind">마지막</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div><!-- //content-->
+            </div><!-- //container-->
+            
+            <div class="dimmed" style="display:none;"></div>
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 1</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg bg_navy">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 2<br>기본 팝업 버튼 2 기본 팝업 버튼 2</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg line_gray">취소</button>
+                        <button type="button" class="btn btn_lg bg_navy">종료</button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview {font-size:12px}
+            .caseview,.caseview_mo{overflow-y:auto;position:fixed;bottom:100px;left:20px;padding:5px;background:#000;z-index:700;max-height:230px}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        
+        <div class="caseview">
+            <div class="caseview">
+                <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(0).css('display','block');return false;">[팝업] 기본 팝업 버튼1</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(1).css('display','block');return false;">[팝업] 기본 팝업 버튼2</a>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            $('.pop_guide .btn_close').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+            });
+
+            $('.pop_guide .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+            });
+
+            $('.pop_wrap .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+                $('.pop_wrap').css('display','none');
+                $('.dimmed').css('display','none');
+            });
+
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

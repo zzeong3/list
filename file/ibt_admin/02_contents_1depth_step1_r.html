@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <h1><a href="#"><span class="blind">NSAT</span></a></h1>
+                <nav id="gnb">
+                    <ul class="list_depth1">
+                        <li>시험관리
+                            <ul class="list_depth2">
+                                <li><!-- [D] on 클래스 추가시 활성화 -->
+                                    <a href="#">등록된 시험 목록</a>
+                                </li>
+                                <li>
+                                    <a href="#">시험 설정 도구</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>콘텐츠 관리
+                            <ul class="list_depth2">
+                                <li  class="on">
+                                    <a href="#">시험지 설정</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>테넌트 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">기본 정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">권한 정리</a>
+                                </li>
+                                <li>
+                                    <a href="#">응시자 목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="tit_top">
+                        <h2>시험지 설정<span class="txt">시험지 등록</span></h2>
+                        <div class="state_top">
+                            <strong class="txt_name img_admin_before">홍길동</strong>
+                            <a href="#" class="link_change">비밀번호 변경</a>
+                        </div>    
+                    </div>
+                    <div class="cont_admin register_step">
+                        <div class="cont_box">
+                            <ol class="step_register">
+                                <li class="now">I. 시험 진행 정보 설정</li>
+                                <li>II. 문항 & 출제 기준 세팅</li>
+                            </ol> 
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>1. 시험지 레벨 설정</h3>
+                                    <em class="invalid">시험지 기본정보 설정을 완료해주세요.</em>
+                                </div>
+                                <ul class="list_info">
+                                    <li>
+                                        <strong class="tit">시험지명</strong>
+                                        <div class="cont">
+                                            <div class="wrap_inp">
+                                                <input type="text" title="시험지명 입력란" placeholder="시험지명을 입력해주세요." class="invalid">
+                                            </div>
+                                            <em class="invalid">시험지명을 입력해주세요.</em>
+                                        </div>   
+                                    </li>
+                                    <li>
+                                        <strong class="tit">설명</strong>
+                                        <div class="cont">
+                                            <div class="wrap_inp">
+                                                <input type="text" title="설명 입력란" placeholder="설명을 입력해주세요.">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wrap_step detail">
+                                <div class="tit_info">
+                                    <h3>2. 시험지 상세정보</h3>
+                                </div>
+                                <ul class="list_info">
+                                    <li>
+                                        <strong class="tit">문항 출제 방법</strong>
+                                        <div class="cont">
+                                            <ul class="list_check horizontal">
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="way1" name="way" >
+                                                        <label for="way1" class="lbl_check img_admin_before">Adaptive Test</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="way2" name="way" checked="">
+                                                        <label for="way2" class="lbl_check img_admin_before">Ready Made </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong class="tit">출제 문항 수</strong>
+                                        <div class="cont">
+                                            <div class="wrap_inp">
+                                                <input type="text" title="숫자 입력란" placeholder="숫자" class="invalid">
+                                            </div>
+                                            문제 출제 예정
+                                            <em class="invalid">유효성 검사</em>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="wrap_btn">
+                                <button type="button" class="btn btn_lg line_gray">임시 저장</button>
+                                <button type="button" class="btn btn_lg bg_navy img_admin_after">다음 단계</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div><!-- //content-->
+            </div><!-- //container-->
+
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+        </script>
+    </body>
+</html>

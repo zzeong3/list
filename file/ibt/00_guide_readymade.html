@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>응시화면 가이드 | NAST</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/ibt.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <div class="tit_ibt">
+                    <div class="inner_tit">
+                        <h1>제 3회 NSAT 영어대회</h1>
+                        <strong class="info_examinee"><span class="name">홍길동</span> 112233</strong>
+                    </div>
+                </div>
+                <nav id="gnb">
+                    <ol class="list_gnb">
+                        <li class="now"><span class="num">01</span> 시험 준비</li><!-- 이전 스텝 prev 클래스, 현재 스텝 now 클래스  -->
+                        <li><span class="num">02</span> 문제 풀이</li>
+                        <li><span class="num">03</span> 제출 완료</li>
+                    </ol>
+                </nav>
+                <!-- 남은 시간 -->
+                <div class="time_remainin" style="display:block;"><!-- [D] 확인용 style -->
+                    <dl class="list_time"><!-- [D]excess 클래스 추가시 시간 초과 -->
+                        <dt class="img_ibt_before">남은시간</dt>
+                        <dd>11:22:33</dd>
+                    </dl>
+                </div>
+                <button type="button" class="btn_close">시험 종료</button>
+            </header>
+            <div id="container">
+                <div id="content" class="cont_screenguide">
+                    <h2 class="blind">응시화면 가이드</h2>
+                    <div class="wrap_screenguide readymade"><!-- [D] step1~4 클래스 -->
+                        <div class="dimmed"></div>  
+                        <ol class="list_step">
+                            <li>
+                                <div class="box_guide">
+                                    <strong class="tit_guide">문제를 보면 정답을 선택 또는 입력해 주세요.</strong>
+                                    <div class="paging_guide">
+                                        <em class="dot"><span class="blind">현재페이지</span><span class="blind">1</span></em>
+                                        <span class="dot"><span class="blind">2</span></span>
+                                        <span class="dot"><span class="blind">3</span></span>
+                                        <span class="dot"><span class="blind">4</span></span>
+                                    </div>
+                                    <div class="wrap_btn_guide">
+                                        <button type="button" class="btn_next img_ibt_after"><span class="blind">다음</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box_guide">
+                                    <strong class="tit_guide">문제가 잘 안보인다면 확대(+) & 축소(-)해보세요.</strong>
+                                    <div class="paging_guide">
+                                        <span class="dot"><span class="blind">1</span></span>
+                                        <em class="dot"><span class="blind">현재페이지</span><span class="blind">2</span></em>
+                                        <span class="dot"><span class="blind">3</span></span>
+                                        <span class="dot"><span class="blind">4</span></span>
+                                    </div>
+                                    <div class="wrap_btn_guide">
+                                        <button type="button" class="btn_prev img_ibt_after disabled"><span class="blind">이전</span></button>
+                                        <button type="button" class="btn_next img_ibt_after"><span class="blind">다음</span></button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box_guide">
+                                    <strong class="tit_guide">이전 문제 & 다음 문제 이동은 이곳을 선택해주세요.</strong>
+                                    <div class="paging_guide">
+                                        <span class="dot"><span class="blind">1</span></span>
+                                        <span class="dot"><span class="blind">2</span></span>
+                                        <em class="dot"><span class="blind">현재페이지</span><span class="blind">3</span></em>
+                                        <span class="dot"><span class="blind">4</span></span>
+                                    </div>
+                                    <div class="wrap_btn_guide">
+                                        <button type="button" class="btn_prev img_ibt_after disabled"><span class="blind">이전</span></button>
+                                        <button type="button" class="btn_next img_ibt_after"><span class="blind">다음</span></button>
+                                    </div>
+                                </div>
+                                <div class="paging">
+                                    <div class="inner_paging">
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn btn_md line_navy prev">이전 문제</button>
+                                            <button type="button" class="btn btn_md line_navy next">다음 문제</button>
+                                        </div>
+                                        <div class="num_paging">
+                                            <strong class="num"><span class="blind">현재페이지</span>4</strong>
+                                            <span class="num"><span class="blind">총페이지</span>/ 50</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box_guide">
+                                    <strong class="tit_guide">문항 번호를 누르면 해당 문항으로 이동합니다.</strong>
+                                    <strong class="tit_guide">답안 제출 전 미입력 문항은 없는지 확인해주세요.</strong>
+                                    <div class="paging_guide">
+                                        <span class="dot"><span class="blind">1</span></span>
+                                        <span class="dot"><span class="blind">2</span></span>
+                                        <span class="dot"><span class="blind">3</span></span>
+                                        <em class="dot"><span class="blind">현재페이지</span><span class="blind">4</span></em>
+                                    </div>
+                                    <div class="wrap_btn_guide">
+                                        <button type="button" class="btn_prev img_ibt_after disabled"><span class="blind">이전</span></button>
+                                        <button type="button" class="btn_ready">시험준비 완료</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ol>
+                        <div class="wrap_problem">
+                            <div class="info_zoom">
+                                <button type="button" class="btn_zoomin img_ibt_after"><span class="blind">확대</span></button>
+                                <button type="button" class="btn_zoomout img_ibt_after"><span class="blind">축소</span></button>
+                            </div>
+                            <dl class="time_recommend">
+                                <dt class="img_ibt_before">풀이 권장시간</dt><dd>0:20</dd>
+                            </dl>
+                            <div class="info_problem">
+                                <strong class="tit_problem">
+                                    <span class="num">문제 4</span>시험 응시 방법으로 옳지 않은 것은?
+                                </strong>
+                                <div class="box_example">
+                                    <div class="inner_example">
+                                        <ul class="list_example">
+                                            <li>
+                                                <span class="check_inp_example">
+                                                    <input type="radio" id="ex1" name="ex">
+                                                    <label for="ex1" class="lbl_check_example">책상 위에 시험에 필요한 도구만 남겨놓는다.</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="check_inp_example">
+                                                    <input type="radio" id="ex2" name="ex">
+                                                    <label for="ex2" class="lbl_check_example">듣기 문제가 있는 경우 스피커 테스트를 반드시 진행한다.</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="check_inp_example">
+                                                    <input type="radio" id="ex3" name="ex">
+                                                    <label for="ex3" class="lbl_check_example">문제를 정확히 읽고 정답을 체크한다.</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="check_inp_example">
+                                                    <input type="radio" id="ex4" name="ex">
+                                                    <label for="ex4" class="lbl_check_example">제출하기 전 정답을 모두 입력했는지 점검한다.</label>
+                                                </span>
+                                            </li>
+                                            <li>
+                                                <span class="check_inp">
+                                                    <input type="checkbox" id="skip_ex" name="skip">
+                                                    <label for="skip_ex" class="lbl_check">잘 모르겠어요.</label>
+                                                </span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paging">
+                            <div class="wrap_btn">
+                                <button type="button" class="btn btn_md line_navy img_ibt_before">이전 문제</button>
+                                <button type="button" class="btn btn_md line_navy img_ibt_after">다음 문제</button>
+                            </div>
+                            <div class="num_paging">
+                                <strong class="num"><span class="blind">현재페이지</span>4</strong>
+                                <span class="num"><span class="blind">총페이지</span>/ 50</span>
+                            </div>
+                        </div>
+                        <div class="status_problem"><!-- [D] on클래스 추가시 시험 응답 현황 펼치기 -->
+                            <button type="button" class="btn_status img_ibt_after"><span class="blind">시험 응답 현황 보기</span></button>
+                            <div class="top_status">
+                                <strong class="tit_status">답안 입력 상태 / 문항 이동</strong>
+                                <div class="wrap_progress">
+                                    <div class="inner_progress" style="width:25%">
+                                        <span class="blind">70% 진행중</span>
+                                    </div>
+                                </div>
+                                <dl class="list_status">
+                                    <dt>남은 문제</dt><dd>20개</dd>
+                                    <dt>미입력</dt><dd>1문제</dd>
+                                </dl>
+                            </div>
+                            <div class="info_status">
+                                <div class="wrap_status">
+                                    <div class="slide_status">
+                                        <ol class="list_status" style="left:0;width:1984px">
+                                            <!-- ex) left:-62px;width:(62*문항수)px -->
+                                            <li>
+                                                <strong class="tit">1</strong>
+                                                <em class="input img_ibt_after"><span class="blind">입력</span></em>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">2</strong>
+                                                <em class="input img_ibt_after"><span class="blind">입력</span></em>
+                                                <em class="confused img_ibt_after"><span class="blind">잘모르겠어요</span></em>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">3</strong>
+                                                <em class="input img_ibt_after"><span class="blind">입력</span></em>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">4</strong>
+                                                <em class="confused img_ibt_after"><span class="blind">잘모르겠어요</span></em>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">5</strong>
+                                                <em class="current"><span class="blind">현재 문제</span></em>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">6</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">7</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">8</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">9</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">10</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">11</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">12</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">13</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">14</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">15</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">16</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">17</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">18</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">19</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">20</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">21</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">22</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">23</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">24</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">25</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">26</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">27</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">28</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">29</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">30</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">31</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                            <li>
+                                                <strong class="tit">32</strong>
+                                                <a href="#" class="link"><span class="blind">문제로 이동</span></a>
+                                            </li>
+                                        </ol>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_prev img_ibt_after disabled"><span class="blind">이전</span></button>
+                                            <button type="button" class="btn_next img_ibt_after"><span class="blind">다음</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti_status">
+                                    <em class="txt_noti">※ 문제 번호를 클릭하여 바로 이동할 수 있습니다.</em>
+                                    <p class="desc_noti img_ibt_before">잘 모르겠어요</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- //content-->
+            </div><!-- //container-->
+
+              <!-- 사용법 팝업 -->
+            <div class="pop_wrap" style="display:block">
+                <div class="pop_header">
+                    <strong class="tit_pop emph">시험 응시화면 사용법</strong>
+                </div>
+                <div class="pop_content">
+                    <p class="desc_guide">원활한 문제풀이를 위해 꼭 확인해주세요!</p>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn guide">
+                        <button type="button" class="btn btn_md bg_navy img_ibt_after">다음</button>
+                    </div>
+                </div>
+            </div>
+ 
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview,.caseview_mo{overflow-y:auto;position:fixed;top:250px;right:20px;padding:5px;background:#000;z-index:700;max-height:230px}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <div class="caseview">
+                <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+                <a href="#" onclick="$('.wrap_screenguide').removeClass('step1 step2 step3 step4');$('.pop_wrap').css('display','block');return false;">[팝업] 사용법</a>
+                <a href="#" onclick="$('.pop_wrap').css('display','none');$('.wrap_screenguide').removeClass('step2 step3 step4');$('.wrap_screenguide').addClass('step1');return false">[화면] step1</a>
+                <a href="#" onclick="$('.pop_wrap').css('display','none');$('.wrap_screenguide').removeClass('step1 step3 step4');$('.wrap_screenguide').addClass('step2');return false">[화면] step2</a>
+                <a href="#" onclick="$('.pop_wrap').css('display','none');$('.wrap_screenguide').removeClass('step1 step2 step4');$('.wrap_screenguide').addClass('step3');return false">[화면] step3</a>
+                <a href="#" onclick="$('.pop_wrap').css('display','none');$('.wrap_screenguide').removeClass('step1 step2 step3');$('.wrap_screenguide').addClass('step4');return false">[화면] step4</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+
+            $('.pop_wrap .btn').on('click',function(){
+                $('.pop_wrap').css('display','none');
+            });
+
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

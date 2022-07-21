@@ -11,7 +11,7 @@ input,select,textarea,button{vertical-align:middle}
 input::-ms-clear{display:none}
 button{border:0 none;background-color:transparent;cursor:pointer}
 body{background:#100e17}
-body,th,td,input,select,textarea,button{font-size:12px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', Helvetica, 'Apple SD Gothic Neo', AppleGothic, Dotum, '돋움', Arial, sans-serif;color:#333}
+body,th,td,input,select,textarea,button{font-size:12px;line-height:1.5;font-family:'Malgun Gothic', '맑은 고딕', Helvetica, 'Apple SD Gothic Neo', AppleGothic, Dotum, '돋움', Arial, sans-serif;color:#333;}
 a{color:#fff;text-decoration:none}
 a:active{background-color:transparent}
 address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
@@ -63,7 +63,7 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 .list .item:hover .thumb {box-shadow:0px 0px 0px 6px #048ec8}
 .list .item .list_item {padding:15px 2px 0}
 .list .item .list_item .name {font-weight:bold;font-size:18px;line-height:24px}
-.list .item .list_item .name .txt_category {position:absolute;right:20px;top:25px;padding:3px 10px 2px;width:55px;height:20px;border-radius:20px;box-sizing:border-box;background:#048ec8;font-weight:bold;font-size:11px;line-height:12px;color:#fff;text-align:center}
+.list .item .list_item .name .txt_category {position:absolute;right:20px;top:25px;padding:4px 10px 2px;width:55px;height:20px;border-radius:20px;box-sizing:border-box;background:#048ec8;font-weight:bold;font-size:11px;line-height:12px;color:#fff;text-align:center}
 .list .item .list_item .name .txt_tit {display:block;margin-top:3px;letter-spacing:-0.5px}
 .list .item .list_item .period {margin-top:5px;font-size:12px;letter-spacing:1px}
 .list .item .list_item .num_persent {font-size:12px}
@@ -73,7 +73,7 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 
 /* resume */
 .resume .head_portfolio {padding:14px 30px 14px;margin-left:-400px;left:50%;width:800px;height:50px;box-sizing:border-box;background:rgba(255,255,255,.8);letter-spacing:0}
-.resume {overflow:hidden;width:100%;max-width:800px;margin:0 auto;padding:55px 30px;box-sizing:border-box;background:#fff;color:#444;letter-spacing:-1px}
+.resume {overflow:hidden;width:100%;max-width:800px;margin:0 auto;padding:65px 30px 20px;box-sizing:border-box;background:#fff;color:#444;letter-spacing:-1px}
 .head_resume {overflow:hidden}
 .head_resume .profile_resume {overflow:hidden;float:left}
 .head_resume .thumb_photo {float:left;width:120px;height:120px;margin-right:25px;border-radius:50%}
@@ -91,10 +91,10 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 .cont_resume .list_resume {padding:30px 10px 40px 0;border-top:1px solid #c7c7c7}
 .cont_resume .list_resume li {overflow:hidden;margin-bottom:16px}
 .cont_resume .list_resume .tit {float:left;width:130px;margin-right:20px;font-size:18px;line-height:21px;color:#048ec8;text-align:right}
-.cont_resume .list_resume .desc {display:block;overflow:hidden}
+.cont_resume .list_resume .desc {display:block;overflow:hidden;padding-left:10px;word-break:keep-all;word-wrap:break-word}
 .cont_resume .list_resume .date {display:block;margin-top:4px;font-size:13px;line-height:13px;color:#adadad;letter-spacing:0}
 
-.cont_resume .list_item {padding:5px 0 0 151px}
+.cont_resume .list_item {padding:5px 50px 0 151px}
 .cont_resume .list_item:first-child {padding-top:0}
 .cont_resume .list_resume .thumb {display:none}
 .cont_resume .list_item .name {position:relative}
@@ -107,7 +107,6 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 .cont_resume .list_item .txt_persent {float:left;margin-right:2px}
 .cont_resume .list_item .num_persent {overflow:hidden}
 .cont_resume .list_item .tag {padding-left:10px;color:#048ec8;letter-spacing:0}
-.cont_resume .list_item .desc {padding-left:10px}
 
 
 
@@ -140,6 +139,7 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 @media screen and (max-width:749px) {
     .list .item {width:50%;}
     .resume .head_portfolio {padding:14px 20px 14px;margin-left:0;left:0;width:100%;}
+    .cont_resume .list_item {padding:5px 0 0 151px}
 }
 
 @media screen and (max-width:539px) {

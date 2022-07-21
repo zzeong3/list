@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/register_pop.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap type2">
+            <header>
+                <h1 class="blind">NSAT</h1>
+                <h2>문항 검색 및 등록</h2>              
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="aside_register readymade">
+                        <div class="box_register_list">
+                            <div class="tit_wrap">
+                                <ul>
+                                    <li><strong class="tit_list">번호</strong></li>
+                                    <li><strong class="tit_list">문항 ID</strong></li>
+                                    <li><strong class="tit_list">제외</strong></li>
+                                </ul>                 
+                            </div>
+                            <div class="area_scroll">
+                                <div class="inner_scroll">
+                                    <ul class="list_item">
+                                        <li>
+                                            <span class="num">1</span>
+                                            <span class="tit">일이삼사오육칠팔구십일일이삼사오육칠팔구십일</span> 
+                                            <button type="button" class="btn_del img_admin_before"><span class="blind">삭제</span></button>
+                                        </li>
+                                        <li>
+                                            <span class="num">10</span>
+                                            <span class="tit">일이삼사오</span> 
+                                            <button type="button" class="btn_del img_admin_before"><span class="blind">삭제</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn_md bg_navy">등록 완료</button>
+                    </div>
+                    <div class="cont_register">
+                        <div class="box_search">
+                            <strong class="tit_search">검색 기준 설정</strong>
+                            <ul class="list_search">
+                                <li>
+                                    <strong class="tit">학교</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="tit">교육 과정</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="wid_s">
+                                    <strong class="tit">과목</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="wid_s">
+                                    <strong class="tit">학기</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="wid_s">
+                                    <strong class="tit">교과서</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="tit">성취 기준</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="tit">행동 영역</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="wid_s">
+                                    <strong class="tit">난이도 코스</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="wid_l">
+                                    <strong class="tit">출제 의도</strong>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="tit">해설 여부</strong>
+                                    <div class="check_inp">
+                                        <input type="checkbox" id="commentary1" name="commentary">
+                                        <label for="commentary1" class="lbl_check img_admin_before"><span class="blind">해설 여부</span></label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <strong class="tit">직접 찾기</strong>
+                                    <label for="id" class="lab_id">문항 ID</label>
+                                    <div class="wrap_inp sm">
+                                        <input id="id" type="text" placeholder="문항 ID를 입력해주세요. (부분검색)" title="문항 ID를 입력 입력란">
+                                    </div>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn_sm line_navy">검색</button>
+                        </div>
+                        <div class="result_search">
+                            <div class="wrap_until">
+                                <div class="choice_list">          
+                                    <div class="check_inp">
+                                        <input type="checkbox" id="all" name="all" class="disabled">
+                                        <label for="all" class="lbl_check img_admin_before">전체 22개 <span class="txt">(선택 1개)</span></label>
+                                    </div>
+                                    <button type="button" class="btn btn_xsm bg_lightsky">일괄추가</button>
+                                </div>
+                                <div class="until_list">
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">전체</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">오름차순</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box_result">
+                                <div class="wrap_list">
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <ul class="list_item">
+                                                <li>
+                                                    <div class="top_list">
+                                                        <div class="check_inp">
+                                                            <input type="checkbox" id="list1" name="list" checked>
+                                                            <label for="list1" class="lbl_check img_admin_before">RR_122_문항아이디</label>
+                                                        </div>
+                                                        <div class="wrap_btn">
+                                                            <button type="button" class="btn btn_sm line_gray img_admin_after">상세정보</button>
+                                                            <button type="button" class="btn btn_sm line_navy img_admin_before">추가</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="preview_tbl">
+                                                        <table class="tbl_preview">
+                                                            <caption class="blind">미리보기</caption>
+                                                            <colgroup>
+                                                                <col class="col"> 
+                                                                <col class="col">
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>발문</th>
+                                                                    <td>발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>보기</th>
+                                                                    <td>
+                                                                        <ul>
+                                                                            <li>(A)보기가 옵니다.</li>
+                                                                            <li>(B)보기가 옵니다.</li>
+                                                                            <li>(A)보기가 옵니다.</li>
+                                                                            <li>(B)보기가 옵니다.</li>
+                                                                        </ul>     
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>선택지</th>
+                                                                    <td>
+                                                                        <ul>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                        </ul>     
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="top_list">
+                                                        <div class="check_inp">
+                                                            <input type="checkbox" id="list2" name="list" checked>
+                                                            <label for="list2" class="lbl_check img_admin_before">일이삼사오육칠팔구십일이삼사오육칠팔구십</label>
+                                                        </div>
+                                                        <div class="wrap_btn">
+                                                            <button type="button" class="btn btn_sm line_gray img_admin_after">상세정보</button>
+                                                            <button type="button" class="btn btn_sm line_gray">제외</button>
+                                                        </div>
+                                                    </div>
+                                                    <div class="preview_tbl">
+                                                        <table class="tbl_preview">
+                                                            <caption class="blind">미리보기</caption>
+                                                            <colgroup>
+                                                                <col class="col"> 
+                                                                <col class="col">
+                                                            </colgroup>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>발문</th>
+                                                                    <td>발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문발문</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>보기</th>
+                                                                    <td>
+                                                                        <ul>
+                                                                            <li>(A)보기가 옵니다.</li>
+                                                                            <li>(B)보기가 옵니다.</li>
+                                                                            <li>(A)보기가 옵니다.</li>
+                                                                            <li>(B)보기가 옵니다.</li>
+                                                                        </ul>     
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>선택지</th>
+                                                                    <td>
+                                                                        <ul>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                            <li>선택지가 옵니다.</li>
+                                                                        </ul>     
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </li>   
+                                            </ul>      
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wrap_detail">
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <strong class="tit_detail">1. 기본 정보</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">문항 ID</strong>
+                                                    <div class="cont">문항 ID</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">난이도 코드</strong>
+                                                    <div class="cont">난이도 코드</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">문항 유형 코드</strong>
+                                                    <div class="cont">문항 유형 코드</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">출제 의도</strong>
+                                                    <div class="cont">묻고 답하기</div>
+                                                </li>
+                                            </ul>
+                                            <strong class="tit_detail">2. 메타 - 분류</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">단원</strong>
+                                                    <div class="cont">대한민국 &gt; 2015개정 교육과정 &gt; 초등학교 &gt; 영어 &gt; 
+                                                        학년 &gt;1학기 &gt; 영어 &gt; 천재(홍길동) &gt; What grade are you in? &gt; 학년 묻고 답하기</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">성취 기준</strong>
+                                                    <div class="cont">읽기 &gt; 읽기</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">행동 영역</strong>
+                                                    <div class="cont">[영어] 세부 사항 파악 능력</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>     
+                            <div class="box_result">
+                                <p class="desc_result">문항 검색을 해주세요.</p>
+                            </div>                   
+                        </div>
+                    </div>                 
+                </div><!-- //content-->
+            </div><!-- //container-->
+
+            <div class="dimmed" style="display:none;"></div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 1</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg bg_navy">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 2<br>기본 팝업 버튼 2 기본 팝업 버튼 2</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg line_gray">취소</button>
+                        <button type="button" class="btn btn_lg bg_navy">종료</button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview {font-size:12px}
+            .caseview,.caseview_mo{overflow-y:auto;position:fixed;bottom:100px;left:20px;padding:5px;background:#000;z-index:700;max-height:230px}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+
+        <div class="caseview">
+            <div class="caseview">
+                <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(0).css('display','block');return false;">[팝업] 기본 팝업 버튼1</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(1).css('display','block');return false;">[팝업] 기본 팝업 버튼2</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+            
+            $('.pop_wrap .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+                $('.pop_wrap').css('display','none');
+                $('.dimmed').css('display','none');
+            });
+
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

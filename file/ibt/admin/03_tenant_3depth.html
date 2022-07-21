@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <h1><a href="#"><span class="blind">NSAT</span></a></h1>
+                <nav id="gnb">
+                    <ul class="list_depth1">
+                        <li>시험관리
+                            <ul class="list_depth2">
+                                <li><!-- [D] on 클래스 추가시 활성화 -->
+                                    <a href="#">등록된 시험 목록</a>
+                                </li>
+                                <li>
+                                    <a href="#">시험 설정 도구</a>
+                                </li>
+                            </ul>
+                        </li> 
+                        <li>테넌트 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">기본 정보</a>
+                                </li>
+                                <li class="on">
+                                    <a href="#">응시자 목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="tit_top">
+                        <h2>응시자 목록</h2>
+                        <div class="state_top">
+                            <strong class="txt_name img_admin_before">홍길동</strong>
+                            <a href="#" class="link_change">비밀번호 변경</a>
+                        </div>    
+                    </div>
+                    <div class="cont_admin tenant_list">
+                        <div class="top_admin">
+                            <div class="register_btn">
+                                <button type="button" class="btn btn_md bg_navy">응시자 등록</button>
+                                <a href="#" class="btn btn_md line_navy">응시자 일괄 등록</a>
+                            </div>
+                            <div class="setting_btn">
+                                <button type="button" class="btn btn_sm img_admin_before">그룹 관리</button>
+                                <button type="button" class="btn btn_sm img_admin_before">수집정보 설정</button>
+                            </div>
+                        </div>
+                        <div class="cont_box">
+                            <div class="wrap_group">
+                                <strong class="tit_all on"><a href="#">전체 응시자(23명)</a></strong><!-- on 클래스 추가시 활성화 -->
+                                <div class="area_scroll">
+                                    <div class="inner_scroll">
+                                        <ul class="list_examinee">
+                                            <li><!-- on 클래스 추가시 활성화 --><a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오(2명)</a></li>
+                                            <li><a href="#">성취도 진단평가(2명)</a></li>
+                                            <li class="on"><a href="#">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오(2명)</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="wrap_list">
+                                <dl class="list_total">
+                                    <dt class="blind">총 응시자 수</dt>
+                                    <dd>총 23명</dd>
+                                </dl>
+                                <div class="until_list">
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">이름순</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrap_inp sm">
+                                        <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력란">
+                                    </div>
+                                    <button type="button" class="btn btn_sm bg_lightsky img_admin_before">검색</button>
+                                </div>
+                                
+                                <div class="admin_tbl examinee_list moreinfo1">
+                                    <!-- 추가정보 1개까지 : moreinfo1, 
+                                        추가정보 2개까지 moreinfo2,
+                                        추가정보 3개까지 moreinfo3 클래스 추가 -->
+                                    <ul class="list_tbl">
+                                        <li>그룹명</li>
+                                        <li>이름</li>
+                                        <li>추가정보1</li>
+                                        <li>상세정보</li>
+                                        <li>삭제</li>
+                                    </ul>
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <table class="tbl_admin">
+                                                <caption class="blind">응시자 리스트</caption>
+                                                <colgroup>
+                                                    <col class="col"> 
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                </colgroup>
+                                                <thead class="blind">
+                                                    <tr>
+                                                        <th>그룹명</th>
+                                                        <th>이름</th>
+                                                        <th>추가정보1</th>  
+                                                        <th>상세정보</th>
+                                                        <th>삭제</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky disabled">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del disabled">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>                                
+                                </div>
+
+                                <div class="admin_tbl examinee_list moreinfo2">
+                                    <!-- 추가정보 1개까지 : moreinfo1, 
+                                        추가정보 2개까지 moreinfo2,
+                                        추가정보 3개까지 moreinfo3 클래스 추가 -->
+                                    <ul class="list_tbl">
+                                        <li>그룹명</li>
+                                        <li>이름</li>
+                                        <li>추가정보1</li>
+                                        <li>추가정보2</li>
+                                        <li>상세정보</li>
+                                        <li>삭제</li>
+                                    </ul>
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <table class="tbl_admin">
+                                                <caption class="blind">응시자 리스트</caption>
+                                                <colgroup>
+                                                    <col class="col"> 
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                </colgroup>
+                                                <thead class="blind">
+                                                    <tr>
+                                                        <th>그룹명</th>
+                                                        <th>이름</th>
+                                                        <th>추가정보1</th>
+                                                        <th>추가정보2</th>
+                                                        <th>상세정보</th>
+                                                        <th>삭제</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky disabled">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del disabled">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td> 
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>                                
+                                </div>
+
+                                <div class="admin_tbl examinee_list moreinfo3">
+                                    <!-- 추가정보 1개까지 : moreinfo1, 
+                                        추가정보 2개까지 moreinfo2,
+                                        추가정보 3개까지 moreinfo3 클래스 추가 -->
+                                    <ul class="list_tbl">
+                                        <li>그룹명</li>
+                                        <li>이름</li>
+                                        <li>추가정보1</li>
+                                        <li>추가정보2</li>
+                                        <li>추가정보3</li>
+                                        <li>상세정보</li>
+                                        <li>삭제</li>
+                                    </ul>
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <table class="tbl_admin">
+                                                <caption class="blind">응시자 리스트</caption>
+                                                <colgroup>
+                                                    <col class="col"> 
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                </colgroup>
+                                                <thead class="blind">
+                                                    <tr>
+                                                        <th>그룹명</th>
+                                                        <th>이름</th>
+                                                        <th>추가정보1</th>
+                                                        <th>추가정보2</th>
+                                                        <th>추가정보3</th>
+                                                        <th>상세정보</th>
+                                                        <th>삭제</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky disabled">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del disabled">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)성취도 진단 평가(2021-2)</div></th>
+                                                        <td><div class="cell">김이나김이나김이나김이나</div></td>
+                                                        <td><div class="cell">아이엠중학교아이엠중학교아이엠중학교</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><div class="cell">국제중대비반국제중대비반국제중대비반</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">상세</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">삭제</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>                                
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    
+                </div><!-- //content-->
+            </div><!-- //container-->
+
+            <div class="dimmed" style="display:none;"></div>
+            <!-- 응시자 등록 팝업 -->
+            <div class="pop_guide" style="display:none">
+                <div class="pop_header">
+                    <strong class="tit_pop">응시자 등록</strong>
+                </div>
+                <div class="pop_content">
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 기본정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">그룹</strong>
+                               <div class="cont">
+                                    <div class="select_box invalid"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">항목 유형 선택</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                    <li>
+                                                        <div class="direct">
+                                                            기타:직접 등록
+                                                            <div class="wrap_inp sm">
+                                                                <input type="text" placeholder="입력해주세요." title="직접 등록 입력란">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <em class="invalid">유효성 검사</em>
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">이름</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="이름을 입력해주세요." title="이름 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">이름을 입력해주세요.</em>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">비밀번호</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="비밀번호를 입력해주세요." title="비밀번호 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">비밀번호를 입력해주세요.</em>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">2. 추가 정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">휴대 전화번호</strong>
+                               <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="number" placeholder="휴대 전화번호를 입력해주세요." title="휴대 전화번호 입력란">
+                                    </div>
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">학년</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="학년을 입력해주세요." title="학년 입력란" >
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">추가정보명</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="추가정보를 입력해주세요." title="추가정보 입력란">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_gray">취소</button>
+                        <button type="button" class="btn btn_md bg_navy">확인</button>
+                    </div>
+                </div>               
+            </div>
+
+            <!-- 응시자 상세 정보 - 조회 / 수정 팝업 -->
+            <div class="pop_guide" style="display:none">
+                <div class="pop_header">
+                    <strong class="tit_pop">응시자 상세 정보</strong>
+                    <dl class="list_register">
+                        <dt>최초 등록 :</dt>
+                        <dd>관라지 등록 (2021.11.11)</dd>
+                    </dl>
+                </div>
+                <div class="pop_content">
+                    <div class="wrap_btn edit">
+                        <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                        <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                    </div>
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 기본정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">그룹</strong>
+                               <div class="cont">
+                                    그룹명그룹명그룹명
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">이름</strong>
+                                <div class="cont">
+                                    홍길동
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">비밀번호</strong>
+                                <div class="cont pwd">
+                                    <button type="button" class="btn_pwd">비밀번호 변경</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">2. 추가 정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">휴대 전화번호</strong>
+                               <div class="cont">
+                                    010-3333-2222
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">학년</strong>
+                                <div class="cont">
+                                    초등학교 1학년
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">추가 정보명</strong>
+                                <div class="cont">
+                                    추가 정보명추가 정보명추가 정보명
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 기본정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">그룹</strong>
+                               <div class="cont">
+                                    <div class="select_box invalid"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">항목 유형 선택</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                    <li>
+                                                        <div class="direct">
+                                                            기타:직접 등록
+                                                            <div class="wrap_inp sm">
+                                                                <input type="text" placeholder="입력해주세요." title="직접 등록 입력란">
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <em class="invalid">유효성 검사</em>
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">이름</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="이름을 입력해주세요." title="이름 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">이름을 입력해주세요.</em>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">비밀번호</strong>
+                                <div class="cont pwd">
+                                    <button type="button" class="btn_pwd">비밀번호 변경</button>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">비밀번호</strong>
+                                <div class="cont pwd">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="비밀번호를 입력해주세요." title="비밀번호 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">비밀번호를 입력해주세요.</em>
+                                    <button type="button" class="btn btn_md bg_lightsky">취소</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">2. 추가 정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">휴대 전화번호</strong>
+                               <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="휴대 전화번호를 입력하세요" title="휴대 전화번호 입력란">
+                                    </div>
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">학년</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="학년을 입력해주세요." title="학년 입력란">
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">추가 정보명</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="추가 정보를 입력해주세요." title="추가 정보 입력란">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">3. 응시 내역</strong>
+                        <div class="admin_tbl examinee_col4">
+                            <ul class="list_tbl">
+                                <li>시험명</li>
+                                <li>응시상태</li>
+                                <li>응시기간</li>
+                                <li>상세보기</li>
+                            </ul>
+                            <div class="area_scroll">
+                                <div class="inner_scroll">
+                                    <table class="tbl_admin">
+                                        <caption class="blind">응시내역 리스트</caption>
+                                        <colgroup>
+                                            <col class="col"> 
+                                            <col class="col">
+                                            <col class="col">
+                                            <col class="col">
+                                        </colgroup>
+                                        <thead class="blind">
+                                            <tr>
+                                                <th>시험명</th>
+                                                <th>응시상태</th>
+                                                <th>응시기간</th>
+                                                <th>상세보기</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell"><span class="ing_status">응시 중</span></div></td>
+                                                <td><div class="cell">20201.11.11~ 진행 중</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">상세보기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell"><span class="before_status">응시 전</span></div></td>
+                                                <td><div class="cell"><span class="before_period">20201.11.11~ 20201.11.11</span></div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">상세보기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">응시 완료</div></td>
+                                                <td><div class="cell">-</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">상세보기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">응시 완료</div></td>
+                                                <td><div class="cell">-</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">상세보기</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">응시 완료</div></td>
+                                                <td><div class="cell">-</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">상세보기</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_gray">취소</button>
+                        <button type="button" class="btn btn_md bg_navy">확인</button>
+                    </div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_close img_admin_before"><span class="blind">레이어 닫기</span></button>
+                </div>
+            </div>
+
+            <!-- 응시자 그룹 관리 - 등록 / 조회 / 수정 팝업 -->
+            <div class="pop_guide" style="display:none">
+                <div class="pop_header">
+                    <strong class="tit_pop">응시자 그룹 관리</strong>
+                </div>
+                <div class="pop_content">
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">그룹추가</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">그룹명</strong>
+                               <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="그룹명을 입력해주세요. (최대 25자)" title="그룹명 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">그룹명을 입력해주세요.</em>
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">그룹 설명 (선택)</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="그룹 설명을 입력해주세요. (최대 100자)" title="그룹 설명 입력란">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="wrap_btn_add"><button type="button" class="btn btn_sm bg_lightsky">추가</button></div>
+                    </div>
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">추가정보 목록</strong>
+                        <div class="admin_tbl examinee_col3">
+                            <ul class="list_tbl">
+                                <li>그룹명</li>
+                                <li>그룹 설명</li>
+                                <li>수정 / 삭제</li>
+                            </ul>
+                            <div class="area_scroll">
+                                <div class="inner_scroll">
+                                    <table class="tbl_admin">
+                                        <caption class="blind">추가정보 목록 리스트</caption>
+                                        <colgroup>
+                                            <col class="col"> 
+                                            <col class="col">
+                                            <col class="col">
+                                        </colgroup>
+                                        <thead class="blind">
+                                            <tr>
+                                                <th>그룹명</th>
+                                                <th>그룹 설명</th>
+                                                <th>수정 / 삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육</div></th>
+                                                <td><div class="cell">일이삼사오</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">일이삼사오</div></td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="wrap_inp sm">
+                                                        <input type="text" title="그룹명 입력란" class="invalid" placeholder="그룹명을 입력해주세요.">
+                                                    </div>
+                                                    <em class="invalid">유효성 검사 유효성 검사</em>
+                                                </th>
+                                                <td>
+                                                    <div class="wrap_inp sm">
+                                                        <input type="text" title="그룹 설명 입력란">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">저장</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">취소</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="wrap_inp sm">
+                                                        <input type="text" title="그룹명 입력란">
+                                                    </div>
+                                                </th>
+                                                <td>
+                                                    <div class="wrap_inp sm">
+                                                        <input type="text" title="그룹 설명 입력란">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">저장</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">취소</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_gray">취소</button>
+                        <button type="button" class="btn btn_md bg_navy">확인</button>
+                    </div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_close img_admin_before"><span class="blind">레이어 닫기</span></button>
+                </div>
+            </div>
+
+            <!-- 응시자 추가 정보 설정 - 등록 / 조회 / 수정 팝업 -->
+            <div class="pop_guide" style="display:none">
+                <div class="pop_header">
+                    <strong class="tit_pop">응시자 추가 정보 설정</strong>
+                </div>
+                <div class="pop_content">
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 응시자 수집 정보 등록</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">항목</strong>
+                               <div class="cont item">
+                                    <div class="select_box invalid"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">기타 : 직접 등록</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                    <li><button type="button">기타 : 직접 등록</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="항목 설명을 입력해주세요. (최대 10자)" title="항목 설명 입력란">
+                                    </div>
+                                    <em class="invalid">수집항목 유형을 선택해주세요.</em>
+                               </div>
+                           </li> 
+                           <li>
+                                <strong class="tit">설명 (선택)</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="그룹설명을 입력해주세요. (최대 100자)" title="그룹설명 입력란">
+                                    </div>
+                               </div>
+                            </li>
+                        </ul>
+                        <div class="wrap_btn_add"><button type="button" class="btn btn_sm bg_lightsky">추가</button></div>
+                    </div>
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">2. 추가정보 목록</strong>
+                        <div class="admin_tbl examinee_col3">
+                            <ul class="list_tbl">
+                                <li>구분</li>
+                                <li>추가 정보 항목</li>
+                                <li>수정 / 삭제</li>
+                            </ul>
+                            <div class="area_scroll">
+                                <div class="inner_scroll">
+                                    <table class="tbl_admin">
+                                        <caption class="blind">추가정보 목록 리스트</caption>
+                                        <colgroup>
+                                            <col class="col"> 
+                                            <col class="col">
+                                            <col class="col">
+                                        </colgroup>
+                                        <thead class="blind">
+                                            <tr>
+                                                <th>구분</th>
+                                                <th>추가 정보 항목</th>
+                                                <th>수정 / 삭제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td>
+                                                    <div class="select_box sm invalid"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">휴대전화번호</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                    <li><button type="button">기타 : 직접 등록</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <em class="invalid">유효성 검사 유효성 검사</em>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">저장</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">취소</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">기타 : 직접 등록</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                    <li><button type="button">기타 : 직접 등록</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="wrap_inp sm">
+                                                        <input type="text" placeholder="항목명을 입력해주세요.(최대 10글자)" title="그룹설명 입력란">
+                                                    </div>
+                                                    <em class="invalid">유효성 검사 유효성 검사</em>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">저장</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">취소</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td>
+                                                    <div class="cell">일이삼사오</div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td>
+                                                    <div class="cell">일이삼사오</div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td>
+                                                    <div class="cell">일이삼사오</div>
+                                                </td>
+                                                <td>
+                                                    <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                                                    <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_gray">취소</button>
+                        <button type="button" class="btn btn_md bg_navy">확인</button>
+                    </div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_close img_admin_before"><span class="blind">레이어 닫기</span></button>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 1</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg bg_navy">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 2<br>기본 팝업 버튼 2 기본 팝업 버튼 2</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg line_gray">취소</button>
+                        <button type="button" class="btn btn_lg bg_navy">종료</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview {font-size:12px}
+            .caseview,.caseview_mo{overflow-y:auto;position:fixed;bottom:100px;left:20px;padding:5px;background:#000;z-index:700;max-height:230px}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <div class="caseview">
+                <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.pop_guide').css('display','none');$('.pop_guide').eq(0).css('display','block');return false;">[팝업] 응시자 등록</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.pop_guide').css('display','none');$('.pop_guide').eq(1).css('display','block');return false;">[팝업] 응시자 상세 정보 - 조회 / 수정</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.pop_guide').css('display','none');$('.pop_guide').eq(2).css('display','block');return false;">[팝업] 응시자 그룹 관리 - 등록 / 조회 / 수정</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.pop_guide').css('display','none');$('.pop_guide').eq(3).css('display','block');return false;">[팝업] 응시자 추가 정보 설정 - 등록 / 조회 / 수정</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(0).css('display','block');return false;">[팝업] 기본 팝업 버튼1</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(1).css('display','block');return false;">[팝업] 기본 팝업 버튼2</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            $('.pop_guide .btn_close').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+            });
+
+            $('.pop_guide .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+            });
+
+            $('.pop_wrap .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+                $('.pop_wrap').css('display','none');
+                $('.dimmed').css('display','none');
+            });
+
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

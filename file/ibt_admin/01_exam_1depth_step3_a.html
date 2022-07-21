@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <h1><a href="#"><span class="blind">NSAT</span></a></h1>
+                <nav id="gnb">
+                    <ul class="list_depth1">
+                        <li>시험관리
+                            <ul class="list_depth2">
+                                <li class="on"><!-- [D] on 클래스 추가시 활성화 -->
+                                    <a href="#">등록된 시험 목록</a>
+                                </li>
+                                <li>
+                                    <a href="#">시험 설정 도구</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>콘텐츠 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">시험지 설정</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>테넌트 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">기본 정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">권한 정리</a>
+                                </li>
+                                <li>
+                                    <a href="#">응시자 목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="tit_top">
+                        <h2>등록된 시험 목록<span class="txt">시험 등록</span></h2>
+                        <div class="state_top">
+                            <strong class="txt_name img_admin_before">홍길동</strong>
+                            <a href="#" class="link_change">비밀번호 변경</a>
+                        </div>    
+                    </div>
+                    <div class="cont_admin register_step">
+                        <ol class="step_register">
+                            <li class="prev">I. 시험 진행 정보 설정</li>
+                            <li class="prev">II. 시험지/출제 상세 설정</li>
+                            <li class="now">III. 수험자 레벨 측정 기준 설정</li>
+                            <li>IV. 응시 환경 및 수집 정보 설정</li>
+                        </ol>
+                        <div class="cont_box">
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>1. 제공 레벨/점수 항목</h3>
+                                </div>
+                                <ul class="list_info">
+                                    <li>
+                                        <strong class="tit">종합/전체 레벨</strong>
+                                        <div class="cont">
+                                            <ul class="list_check horizontal">
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="totallevel1" name="totallevel" checked="">
+                                                        <label for="totallevel1" class="lbl_check img_admin_before">제공</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="totallevel2" name="totallevel">
+                                                        <label for="totallevel2" class="lbl_check img_admin_before">제공 안함</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong class="tit">영역/시험지별 레벨</strong>
+                                        <div class="cont">
+                                            <ul class="list_check horizontal">
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="arealevel1" name="arealevel" checked="">
+                                                        <label for="arealevel1" class="lbl_check img_admin_before">제공</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="arealevel2" name="arealevel">
+                                                        <label for="arealevel2" class="lbl_check img_admin_before">제공 안함</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>                            
+                            </div>
+
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>2. 합격/불합격 기준 제공</h3>
+                                    <ul class="list_check horizontal">
+                                        <li>
+                                            <div class="check_inp">
+                                                <input type="radio" id="result1" name="result" checked="">
+                                                <label for="result1" class="lbl_check img_admin_before">제공</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check_inp">
+                                                <input type="radio" id="result2" name="result">
+                                                <label for="result2" class="lbl_check img_admin_before">제공 안함</label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <em class="invalid">합격/불합격 기준 설정을 완료해주세요.</em>
+                                </div>
+                                <div class="box_admin result">
+                                    <ul class="list_info">
+                                        <li>
+                                            <strong class="tit">제공 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="result2_1" name="result2" checked="">
+                                                            <label for="result2_1" class="lbl_check img_admin_before">종합 점수 기준</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="result2_2" name="result2">
+                                                            <label for="result2_2" class="lbl_check img_admin_before">영역/시험지별 점수 기준</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">커트라인 설정</strong>
+                                            <div class="select_box"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                <button type="button" class="btn_select img_admin_after">원점수</button>
+                                                <div class="box_select">
+                                                    <div class="inner_box">
+                                                        <ul class="list_select">
+                                                            <li><button type="button">일이삼</button></li>
+                                                            <li><button type="button">일이삼사</button></li>
+                                                            <li><button type="button">일이삼사오</button></li>
+                                                            <li><button type="button">일이삼사오육</button></li>
+                                                            <li><button type="button">일이삼사오육칠</button></li>
+                                                            <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="wrap_inp">
+                                                <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                            </div>
+                                            <div class="select_box"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                <button type="button" class="btn_select img_admin_after">이상</button>
+                                                <div class="box_select">
+                                                    <div class="inner_box">
+                                                        <ul class="list_select">
+                                                            <li><button type="button">일이삼</button></li>
+                                                            <li><button type="button">일이삼사</button></li>
+                                                            <li><button type="button">일이삼사오</button></li>
+                                                            <li><button type="button">일이삼사오육</button></li>
+                                                            <li><button type="button">일이삼사오육칠</button></li>
+                                                            <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            이면 합격
+                                            <em class="invalid">점수를 입력해주세요.</em>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">커트라인 설정</strong>
+                                            <div class="select_box"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                <button type="button" class="btn_select img_admin_after">원점수</button>
+                                                <div class="box_select">
+                                                    <div class="inner_box">
+                                                        <ul class="list_select">
+                                                            <li><button type="button">일이삼</button></li>
+                                                            <li><button type="button">일이삼사</button></li>
+                                                            <li><button type="button">일이삼사오</button></li>
+                                                            <li><button type="button">일이삼사오육</button></li>
+                                                            <li><button type="button">일이삼사오육칠</button></li>
+                                                            <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="one">
+                                            <div class="cont">
+                                                <div class="inner_box_admin">
+                                                    <div class="admin_tbl result_list">
+                                                        <ul class="list_tbl">
+                                                            <li>시험 순서</li>
+                                                            <li>순서명</li>
+                                                            <li>시험지</li>
+                                                            <li>점수</li>
+                                                            <li>커트라인 기준</li>
+                                                        </ul>
+                                                        <div class="area_scroll">
+                                                            <div class="inner_scroll">
+                                                                <table class="tbl_admin">
+                                                                    <caption class="blind">커트라인 설정</caption>
+                                                                    <colgroup>
+                                                                        <col class="col"> 
+                                                                        <col class="col">
+                                                                        <col class="col">
+                                                                        <col class="col">
+                                                                        <col class="col">
+                                                                    </colgroup>
+                                                                    <thead class="blind">
+                                                                        <tr>
+                                                                            <th>시험 순서</th>
+                                                                            <th>순서명</th>
+                                                                            <th>시험지</th>
+                                                                            <th>점수</th>
+                                                                            <th>커트라인 기준</th>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div class="cell">1</div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="cell">국어 영역</div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="wrap_inp sm">
+                                                                                    <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                                                </div>
+                                                                                <em class="invalid">유효성 검사 유효성 검사</em>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="select_box sm invalid"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                                    <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                                    <div class="box_select">
+                                                                                        <div class="inner_box">
+                                                                                            <ul class="list_select">
+                                                                                                <li><button type="button">일이삼</button></li>
+                                                                                                <li><button type="button">일이삼사</button></li>
+                                                                                                <li><button type="button">일이삼사오</button></li>
+                                                                                                <li><button type="button">일이삼사오육</button></li>
+                                                                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                이면 합격
+                                                                                <em class="invalid"> 유효성 검사 유효성 검사</em>
+                                                                            </td> 
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <div class="cell">1</div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="cell">국어 영역</div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="cell">일이삼사오육칠팔구십</div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="wrap_inp sm">
+                                                                                    <input type="text" placeholder="숫자입력" title="숫자 입력란">
+                                                                                </div>
+                                                                            </td>
+                                                                            <td>
+                                                                                <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                                    <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                                    <div class="box_select">
+                                                                                        <div class="inner_box">
+                                                                                            <ul class="list_select">
+                                                                                                <li><button type="button">일이삼</button></li>
+                                                                                                <li><button type="button">일이삼사</button></li>
+                                                                                                <li><button type="button">일이삼사오</button></li>
+                                                                                                <li><button type="button">일이삼사오육</button></li>
+                                                                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                                            </ul>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                이면 합격
+                                                                            </td> 
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>3. 최종 레벨 선정 기준</h3>
+                                </div>
+                                <div class="box_admin finallevel">
+                                    <strong class="tit_finallevel">기본 : 문항별 정답 카운팅 기준</strong>
+                                    <ul class="list_info"> 
+                                        <li>
+                                            <strong class="tit">기준 점수</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel1_1" name="finallevel1" checked="">
+                                                            <label for="finallevel1_1" class="lbl_check img_admin_before">문항수</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel1_2" name="finallevel1">
+                                                            <label for="finallevel1_2" class="lbl_check img_admin_before">오답</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">정오 카운트 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel2_1" name="finallevel2" checked="">
+                                                            <label for="finallevel2_1" class="lbl_check img_admin_before">연속</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel2_2" name="finallevel2">
+                                                            <label for="finallevel2_2" class="lbl_check img_admin_before">누적</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">카운트 기준</strong>
+                                            <div class="select_box"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                <button type="button" class="btn_select img_admin_after">1회</button>
+                                                <div class="box_select">
+                                                    <div class="inner_box">
+                                                        <ul class="list_select">
+                                                            <li><button type="button">일이삼</button></li>
+                                                            <li><button type="button">일이삼사</button></li>
+                                                            <li><button type="button">일이삼사오</button></li>
+                                                            <li><button type="button">일이삼사오육</button></li>
+                                                            <li><button type="button">일이삼사오육칠</button></li>
+                                                            <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">정오 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel3_1" name="finallevel3" checked="">
+                                                            <label for="finallevel3_1" class="lbl_check img_admin_before">정답</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel3_2" name="finallevel3">
+                                                            <label for="finallevel3_2" class="lbl_check img_admin_before">오답</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">레벨 선정 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel4_1" name="finallevel4" checked="">
+                                                            <label for="finallevel4_1" class="lbl_check img_admin_before">상승</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel4_2" name="finallevel4">
+                                                            <label for="finallevel4_2" class="lbl_check img_admin_before">유지</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel4_3" name="finallevel4">
+                                                            <label for="finallevel4_3" class="lbl_check img_admin_before">하락</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box_admin finallevel">
+                                    <ul class="list_info">
+                                        <li>
+                                            <strong class="tit">상위 레벨 <br>문항 풀이 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel5_1" name="finallevel5" checked="">
+                                                            <label for="finallevel5_1" class="lbl_check img_admin_before">사용</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="finallevel5_2" name="finallevel5">
+                                                            <label for="finallevel5_2" class="lbl_check img_admin_before">사용 안함</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="one">
+                                            <div class="cont">
+                                                <div class="inner_box_admin">
+                                                    <em class="invalid">레벨 측정불가 기준 설정을 완료해주세요.</em>
+                                                    <ul class="list_info">
+                                                        <li>
+                                                            <strong class="tit">상위 레벨 문항<br>풀이 수</strong>
+                                                            <div class="cont">
+                                                                <div class="wrap_inp sm">
+                                                                    <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                                </div>
+                                                                <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                    <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                    <div class="box_select">
+                                                                        <div class="inner_box">
+                                                                            <ul class="list_select">
+                                                                                <li><button type="button">일이삼</button></li>
+                                                                                <li><button type="button">일이삼사</button></li>
+                                                                                <li><button type="button">일이삼사오</button></li>
+                                                                                <li><button type="button">일이삼사오육</button></li>
+                                                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <em class="invalid">문항 수를 입력해주세요.</em>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <strong class="tit">정오 기준</strong>
+                                                            <div class="cont">
+                                                                <ul class="list_check">
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="finallevel6_1" name="finallevel6" checked="">
+                                                                            <label for="finallevel6_1" class="lbl_check img_admin_before">정답</label>
+                                                                        </div>
+                                                                        <div class="wrap_inp sm">
+                                                                            <input type="text" placeholder="문항 수" title="문항 수 입력란" class="invalid">
+                                                                        </div>
+                                                                        <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                            <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                            <div class="box_select">
+                                                                                <div class="inner_box">
+                                                                                    <ul class="list_select">
+                                                                                        <li><button type="button">일이삼</button></li>
+                                                                                        <li><button type="button">일이삼사</button></li>
+                                                                                        <li><button type="button">일이삼사오</button></li>
+                                                                                        <li><button type="button">일이삼사오육</button></li>
+                                                                                        <li><button type="button">일이삼사오육칠</button></li>
+                                                                                        <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <em class="invalid">문항 수를 입력해주세요.</em>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="finallevel6_2" name="finallevel6">
+                                                                            <label for="finallevel6_2" class="lbl_check img_admin_before">오답</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <strong class="tit">레벨 난이도 기준</strong>
+                                                            <div class="cont">
+                                                                <ul class="list_check horizontal">
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="finallevel7_1" name="finallevel7" checked="">
+                                                                            <label for="finallevel7_1" class="lbl_check img_admin_before">상승</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="finallevel7_2" name="finallevel7">
+                                                                            <label for="finallevel7_2" class="lbl_check img_admin_before">유지</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="finallevel7_3" name="finallevel7">
+                                                                            <label for="finallevel7_3" class="lbl_check img_admin_before">하락</label>
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>4. 레벨 측정불가 기준</h3>
+                                </div>
+                                <div class="box_admin impossible">
+                                    <em class="invalid">레벨 측정불가 기준 설정을 완료해주세요.</em>
+                                    <strong class="tit_impossible">기본 : 최소 풀이 문항수</strong>
+                                    <ul class="list_info">
+                                        <li>
+                                            <strong class="tit">시험 전체 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="impossible1_1" name="impossible1" checked="">
+                                                            <label for="impossible1_1" class="lbl_check img_admin_before">사용</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="impossible1_2" name="impossiblel1">
+                                                            <label for="impossible1_2" class="lbl_check img_admin_before">사용 안함</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="one">
+                                            <div class="cont">
+                                                <div class="inner_box_admin">
+                                                    <ul class="list_info">
+                                                        <li>
+                                                            <strong class="tit">최소 풀이 문항수</strong>
+                                                            <div class="cont">
+                                                                <div class="wrap_inp sm">
+                                                                    <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                                </div>
+                                                                <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                    <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                    <div class="box_select">
+                                                                        <div class="inner_box">
+                                                                            <ul class="list_select">
+                                                                                <li><button type="button">일이삼</button></li>
+                                                                                <li><button type="button">일이삼사</button></li>
+                                                                                <li><button type="button">일이삼사오</button></li>
+                                                                                <li><button type="button">일이삼사오육</button></li>
+                                                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <em class="invalid">문항 수를 입력해주세요.</em>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <strong class="tit">시험지 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="impossiblel2_1" name="impossible2" checked="">
+                                                            <label for="impossiblel2_1" class="lbl_check img_admin_before">사용</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="impossible2_2" name="impossiblel2">
+                                                            <label for="impossible2_2" class="lbl_check img_admin_before">사용 안함</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="one">
+                                            <div class="cont">
+                                                <div class="inner_box_admin">
+                                                    <ul class="list_info">
+                                                        <li>
+                                                            <strong class="tit">최소 풀이 문항수</strong>
+                                                            <div class="cont">
+                                                                <div class="wrap_inp sm">
+                                                                    <input type="text" placeholder="숫자입력" title="숫자 입력란">
+                                                                </div>
+                                                                <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                    <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                    <div class="box_select">
+                                                                        <div class="inner_box">
+                                                                            <ul class="list_select">
+                                                                                <li><button type="button">일이삼</button></li>
+                                                                                <li><button type="button">일이삼사</button></li>
+                                                                                <li><button type="button">일이삼사오</button></li>
+                                                                                <li><button type="button">일이삼사오육</button></li>
+                                                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="box_admin impossible">
+                                    <ul class="list_info">
+                                        <li>
+                                            <strong class="tit">최소 정답률 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check horizontal">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="impossiblel3_1" name="impossiblel3" checked="">
+                                                            <label for="impossiblel3_1" class="lbl_check img_admin_before">사용</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="impossiblel3_2" name="impossiblel3">
+                                                            <label for="impossiblel3_2" class="lbl_check img_admin_before">사용 안함</label>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="one">
+                                            <div class="cont">
+                                                <div class="inner_box_admin">
+                                                    <ul class="list_info">
+                                                        <li>
+                                                            <strong class="tit">측정 불가 기준</strong>
+                                                            <div class="cont">
+                                                                정답률
+                                                                <div class="wrap_inp sm">
+                                                                    <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                                </div>
+                                                                <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                                                    <button type="button" class="btn_select img_admin_after">이상</button>
+                                                                    <div class="box_select">
+                                                                        <div class="inner_box">
+                                                                            <ul class="list_select">
+                                                                                <li><button type="button">일이삼</button></li>
+                                                                                <li><button type="button">일이삼사</button></li>
+                                                                                <li><button type="button">일이삼사오</button></li>
+                                                                                <li><button type="button">일이삼사오육</button></li>
+                                                                                <li><button type="button">일이삼사오육칠</button></li>
+                                                                                <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <em class="invalid">문항 수를 입력해주세요.</em>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="wrap_btn">
+                                <button type="button" class="btn btn_lg line_gray">임시 저장</button>
+                                <button type="button" class="btn btn_lg bg_navy img_admin_before">이전 단계</button>
+                                <button type="button" class="btn btn_lg bg_navy img_admin_after">다음 단계</button>
+                            </div>
+
+                        </div><!-- //cont_box-->
+                    </div><!-- //cont_admin-->
+                    
+                </div><!-- //content-->
+            </div><!-- //container-->
+            
+            <div class="dimmed" style="display:none;"></div>
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 1</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg bg_navy">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 2<br>기본 팝업 버튼 2 기본 팝업 버튼 2</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg line_gray">취소</button>
+                        <button type="button" class="btn btn_lg bg_navy">종료</button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- //wrap-->
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+        </script>
+    </body>
+</html>

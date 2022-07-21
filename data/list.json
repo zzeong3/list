@@ -3,12 +3,52 @@
         {   
             "img" : "zzeong1",
             "category" : "반응형",
-            "tit": "개인포트폴리오",
+            "tit": "개인 포트폴리오",
             "link": "https://zzeong3.github.io/veronica/index.html",
             "period": "20.01.11 ~ 20.04.17",
             "persent": "100%",
             "tags" : "#html #scss #gulp #jquery #design",
             "desc" : "프로젝트 전체를 작업해 볼 수는 스터디가 있어 작업하게 된 개인포트폴리오. 실무에서는 접해보지 못했던 디자인 부터 쿠키, form 유효성 검사, 지도 api를 적용해 볼 수 있었다. scss, gulp, jquery를 정리하고 새로 배울 수 있었던 프로젝트."
+        },
+        {   
+            "img" : "portfolio20",
+            "category" : "M",
+            "tit": "nhn 한게임 리브랜딩 프로모션",
+            "link": "file/hangame_rebranding/m/event.html",
+            "period": "22.03.24 ~ 22.03.29",
+            "persent": "100%",
+            "tags" : "#html #css #jquery",
+            "desc" : "swiper slide 라이브러리 활용으로 페이지 구현"
+        },
+        {   
+            "img" : "portfolio19",
+            "category" : "PC",
+            "tit": "nhn 에듀 학업 성취도 진단평가 응시화면",
+            "link": "file/ibt/03_replay.html",
+            "period": "21.11.1 ~ 21.11.15",
+            "persent": "100%",
+            "tags" : "#html #css",
+            "desc" : "어떤 형태의 문제 데이터가 들어오든 잘 적용 될 수 있게 유연한 UI 구현"
+        },
+        {   
+            "img" : "portfolio18",
+            "category" : "반응형",
+            "tit": "nhn forward",
+            "link": "https://forward.nhn.com/2021/home/",
+            "period": "21.09.01 ~ 21.10.21",
+            "persent": "100%",
+            "tags" : "#html #css #jquery",
+            "desc" : "메뉴 수는 적지만 반응형 페이지로 확인 할 부분이 많았음. 메인 모션 작업 기획,디자인과 협의 후 적용"
+        },
+        {   
+            "img" : "portfolio17",
+            "category" : "PC",
+            "tit": "nhn 에듀 AI 학력경시대회",
+            "link": "https://competition.iamservice.net/competition/",
+            "period": "21.03.17 ~ 21.06.21",
+            "persent": "100%",
+            "tags" : "#html #css #jquery",
+            "desc" : "4월, 5월 7월 순차적으로 오픈 한 긴 프로젝트. 기본 레이아웃으로 큰 이슈는 없는 페이지나, 긴 프로젝트이었던 만큼 타팀과의 협업이 중시되었던 프로젝트"
         },
         {   
             "img" : "portfolio16",
@@ -49,16 +89,6 @@
             "persent": "100%",
             "tags" : "#html #css #jquery",
             "desc" : "배경 모서리의 둥근 부분을 어떻게 처리할지 고민을 했던 프로젝트. css3 도형 변형으로 이미지 사용을 최소화 하고자 함."
-        },
-        {   
-            "img" : "portfolio12",
-            "category" : "M",
-            "tit": "사람인 기업리뷰",
-            "link": "http://m.saramin.co.kr/company-review",
-            "period": "19.05.10 ~ 19.05.15",
-            "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "설문조사가 스텝 별로 진행되는 이벤트 페이지로 각 스텝에 사용되는 공통 요소들을 잡고 진행"
         },
         {   
             "img" : "portfolio10",

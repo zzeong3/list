@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <h1><a href="#"><span class="blind">NSAT</span></a></h1>
+                <nav id="gnb">
+                    <ul class="list_depth1">
+                        <li>시험관리
+                            <ul class="list_depth2">
+                                <li class="on"><!-- [D] on 클래스 추가시 활성화 -->
+                                    <a href="#">등록된 시험 목록</a>
+                                </li>
+                                <li>
+                                    <a href="#">시험 설정 도구</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>테넌트 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">기본 정보</a>
+                                </li>
+                                <li>
+                                    <a href="#">응시자 목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="tit_top">
+                        <h2>등록된 시험 목록<span class="txt">시험 등록</span></h2>
+                        <div class="state_top">
+                            <strong class="txt_name img_admin_before">홍길동</strong>
+                            <a href="#" class="link_change">비밀번호 변경</a>
+                        </div>    
+                    </div>
+                    <div class="cont_admin register_step"><!-- [D]readonly 클래스 추가시 readonly -->
+                        <ol class="step_register">
+                            <li class="prev">I. 시험 기본 정보</li>
+                            <li class="now">II. 시행 시간 설정</li>
+                            <li>III. 분석 결과 제공 설정</li>
+                            <li>IV. 응시 환경 및  수집 정보 설정</li>
+                        </ol>
+                        <div class="cont_box">
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>1. 시험장(경로) 공개 기간</h3>   
+                                </div>
+                                <ul class="list_info period">
+                                    <li>
+                                        <strong class="tit">시작일</strong>
+                                        <div class="cont">
+                                            <div class="wrap_inp">
+                                                <input type="datetime-local" value="2022-02-01T08:30" placeholder="시작일을 입력해주세요." title="시작일 입력란" class="img_admin_after invalid">
+                                            </div>
+                                            <em class="invalid">유효성 검사</em>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong class="tit">종료일</strong>
+                                        <div class="cont">
+                                            <div class="wrap_inp">
+                                                <input type="datetime-local" value="2022-02-01T08:30" placeholder="종료일을 입력해주세요." title="종료일 입력란" class="img_admin_after">
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>2. 시험 시작 방법</h3>   
+                                </div>
+                                <div class="box_admin enter">
+                                    <ul class="list_check horizontal">
+                                        <li>
+                                            <div class="check_inp">
+                                                <input type="radio" id="process1" name="process" checked="">
+                                                <label for="process1" class="lbl_check img_admin_before">자율 진행 : 입장 제한 시간 없음</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="check_inp">
+                                                <input type="radio" id="process2" name="process">
+                                                <label for="process2" class="lbl_check img_admin_before">동일한 입장 시간 적용</label>
+                                            </div>
+                                            <div class="wrap_inp">
+                                                <input type="datetime-local" value="2022-02-01T08:30" placeholder="입장 시간 입력해주세요." title="입장 시간 입력란" class="img_admin_after invalid">
+                                            </div>
+                                            부터 입장 가능 
+                                            <em class="invalid">유효성 검사</em>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>3. 풀이 시간 옵션 설정</h3>   
+                                </div>
+                                <p class="desc_noti">각 시험/문항별로 사용할 시간 정보 유형을 선택합니다.</p>
+                                <ul class="list_check horizontal">
+                                    <li>
+                                        <div class="check_inp">
+                                            <input type="radio" id="option1_1" name="option1" checked="">
+                                            <label for="option1_1" class="lbl_check img_admin_before">사용</label>
+                                        </div>
+                                        <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 disable 클래스 추가시 비활성화 -->
+                                            <button type="button" class="btn_select img_admin_after">제한 시간</button>
+                                            <div class="box_select">
+                                                <div class="inner_box">
+                                                    <ul class="list_select">
+                                                        <li><button type="button">일이삼</button></li>
+                                                        <li><button type="button">일이삼사</button></li>
+                                                        <li><button type="button">일이삼사오</button></li>
+                                                        <li><button type="button">일이삼사오육</button></li>
+                                                        <li><button type="button">일이삼사오육칠</button></li>
+                                                        <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="check_inp">
+                                            <input type="radio" id="option1_2" name="option1">
+                                            <label for="option1_2" class="lbl_check img_admin_before">사용 안함</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="box_admin option">
+                                    <em class="invalid">풀이시간 옵션 설정을 완료해주세요.</em>
+                                    <ul class="list_info">
+                                        <li>
+                                            <strong class="tit">제한 시간 사용 기준</strong>
+                                            <div class="cont">
+                                                <ul class="list_check">
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="option2_1" name="option2" checked="">
+                                                            <label for="option2_1" class="lbl_check img_admin_before">시험 전체</label>
+                                                        </div>
+                                                        <div class="wrap_inp sm">
+                                                            <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                            분
+                                                        </div>
+                                                        <em class="invalid">제한 시간을 입력해주세요.</em>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="option2_2" name="option2">
+                                                            <label for="option2_2" class="lbl_check img_admin_before">시험지별</label>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="check_inp">
+                                                            <input type="radio" id="option2_3" name="option2">
+                                                            <label for="option2_3" class="lbl_check img_admin_before">문항 단위 <span class="txt">(1문제마다 제한 시간 적용)</span></label>
+                                                        </div>
+                                                        <div class="wrap_inp sm">
+                                                            <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                            분
+                                                        </div>
+                                                        <em class="invalid">제한 시간을 입력해주세요.</em>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="one">
+                                            <div class="cont">
+                                                <div class="inner_box_admin">
+                                                    <ul class="list_info">
+                                                        <li>
+                                                            <strong class="tit">제한 시간 기준</strong>
+                                                            <div class="cont">
+                                                                <ul class="list_check horizontal">
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="setting2_4" name="setting2" checked="">
+                                                                            <label for="setting2_4" class="lbl_check img_admin_before">응시시간</label>
+                                                                        </div>
+                                                                    </li>
+                                                                    <li>
+                                                                        <div class="check_inp">
+                                                                            <input type="radio" id="setting2_5" name="setting2">
+                                                                            <label for="setting2_5" class="lbl_check img_admin_before">응시 시작-끝 시각</label>
+                                                                        </div> 
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </li>
+                                                        <li class="one">
+                                                            <div class="admin_tbl option_list">
+                                                                <ul class="list_tbl">
+                                                                    <li>시험 순서</li>
+                                                                    <li>순서명</li>
+                                                                    <li>시험지</li>
+                                                                    <li>응시시간</li>
+                                                                </ul>
+                                                                <div class="area_scroll">
+                                                                    <div class="inner_scroll">
+                                                                        <table class="tbl_admin">
+                                                                            <caption class="blind">제한 시간 기준</caption>
+                                                                            <colgroup>
+                                                                                <col class="col"> 
+                                                                                <col class="col">
+                                                                                <col class="col">
+                                                                                <col class="col">
+                                                                            </colgroup>
+                                                                            <thead class="blind">
+                                                                                <tr>
+                                                                                    <th>시험 순서</th>
+                                                                                    <th>순서명</th>
+                                                                                    <th>시험지</th>
+                                                                                    <th>응시시간</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="cell">1</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">국어 영역</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="wrap_inp sm">
+                                                                                            <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                                                        </div>
+                                                                                        분
+                                                                                        <em class="invalid">유효성 검사</em>
+                                                                                    </td>
+                                                                                </tr> 
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="cell">1</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">국어 영역</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="wrap_inp sm">
+                                                                                            <input type="text" placeholder="숫자입력" title="숫자 입력란">
+                                                                                        </div>
+                                                                                        분
+                                                                                    </td>
+                                                                                </tr> 
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>                            
+                                                            </div>
+                                                            <div class="admin_tbl option_list type2">
+                                                                <ul class="list_tbl">
+                                                                    <li>시험 순서</li>
+                                                                    <li>순서명</li>
+                                                                    <li>시험지</li>
+                                                                    <li>응시시간</li>
+                                                                </ul>
+                                                                <div class="area_scroll">
+                                                                    <div class="inner_scroll">
+                                                                        <table class="tbl_admin">
+                                                                            <caption class="blind">제한 시간 기준</caption>
+                                                                            <colgroup>
+                                                                                <col class="col"> 
+                                                                                <col class="col">
+                                                                                <col class="col">
+                                                                                <col class="col">
+                                                                            </colgroup>
+                                                                            <thead class="blind">
+                                                                                <tr>
+                                                                                    <th>시험 순서</th>
+                                                                                    <th>순서명</th>
+                                                                                    <th>시험지</th>
+                                                                                    <th>응시시간</th>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="cell">1</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">국어 영역</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="wrap_inp sm">
+                                                                                            <input type="datetime-local" value="2022-02-01T08:30" title="날짜 입력란" class="img_admin_after invalid">
+                                                                                        </div>
+                                                                                        부터
+                                                                                        <div class="wrap_inp sm">
+                                                                                            <input type="datetime-local" value="2022-02-01T08:30" title="날짜 입력란" class="img_admin_after invalid">
+                                                                                        </div>
+                                                                                        까지
+                                                                                        <em class="invalid">유효성 검사</em>
+                                                                                    </td>
+                                                                                </tr> 
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <div class="cell">1</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">국어 영역</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <div class="wrap_inp sm">
+                                                                                            <input type="datetime-local" value="2022-02-01T08:30" title="날짜 입력란" class="img_admin_after">
+                                                                                        </div>
+                                                                                        부터
+                                                                                        <div class="wrap_inp sm">
+                                                                                            <input type="datetime-local" value="2022-02-01T08:30" title="날짜 입력란" class="img_admin_after">
+                                                                                        </div>
+                                                                                        까지
+                                                                                    </td>
+                                                                                </tr> 
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>                            
+                                                            </div>
+                                                            <p class="desc_option">설정한 시험 응시 기간(2021.11.22 13:33:33~2021.11.22 13:33:33) 이내의 기간으로 입력해주세요.</p>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="wrap_step">
+                                <div class="tit_info">
+                                    <h3>4. 시험 응시 중 상세 옵션</h3>   
+                                </div>
+                                <ul class="list_info">
+                                    <li>
+                                        <strong class="tit">일시 정지</strong>
+                                        <div class="cont">
+                                            <ul class="list_check horizontal">
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="stop1" name="stop" checked="">
+                                                        <label for="stop1" class="lbl_check img_admin_before">가능</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="stop2" name="stop">
+                                                        <label for="stop2" class="lbl_check img_admin_before">불가</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <strong class="tit">최소 풀이 시간</strong>
+                                        <div class="cont">
+                                            <ul class="list_check horizontal">
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="time1" name="time" checked="">
+                                                        <label for="time1" class="lbl_check img_admin_before">사용</label>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="check_inp">
+                                                        <input type="radio" id="time2" name="time">
+                                                        <label for="time2" class="lbl_check img_admin_before">사용 안함</label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            <div class="box_admin detailoption">
+                                                <ul class="list_info">
+                                                    <li>
+                                                        <strong class="tit">1. 시간 기준</strong>
+                                                        <div class="cont">
+                                                            <ul class="list_check horizontal">
+                                                                <li>
+                                                                    <div class="check_inp">
+                                                                        <input type="radio" id="standard1" name="standard" checked="">
+                                                                        <label for="standard1" class="lbl_check img_admin_before">시험 전체</label>
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="check_inp">
+                                                                        <input type="radio" id="standard2" name="standard">
+                                                                        <label for="standard2" class="lbl_check img_admin_before">시험지별</label>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <strong class="tit">2. 시험 시작 후</strong>
+                                                        <div class="cont">
+                                                            <div class="wrap_inp sm">
+                                                                <input type="text" placeholder="숫자입력" title="숫자 입력란" class="invalid">
+                                                            </div>                
+                                                            분 이후부터 답안 제출 및 시험 종료 가능
+                                                            <em class="invalid">풀이시간 옵션 설정을 완료해주세요.</em>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="wrap_btn">
+                                <button type="button" class="btn btn_lg line_gray">임시 저장</button>
+                                <button type="button" class="btn btn_lg bg_navy img_admin_before">이전 단계</button>
+                                <button type="button" class="btn btn_lg bg_navy img_admin_after">다음 단계</button>
+                            </div>
+
+                        </div><!-- //cont_box-->
+                    </div><!-- //cont_admin-->
+                    
+                </div><!-- //content-->
+            </div><!-- //container-->
+            
+            <div class="dimmed" style="display:none;"></div>
+
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 1</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg bg_navy">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 2<br>기본 팝업 버튼 2 기본 팝업 버튼 2</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg line_gray">취소</button>
+                        <button type="button" class="btn btn_lg bg_navy">종료</button>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview {font-size:12px}
+            .caseview,.caseview_mo{overflow-y:auto;position:fixed;bottom:100px;left:20px;padding:5px;background:#000;z-index:700;max-height:230px}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <div class="caseview">
+                <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+                <a href="#" onclick="$('.cont_admin').toggleClass('readonly');return false;">[화면] readonly</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(0).css('display','block');return false;">[팝업] 기본 팝업 버튼1</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(1).css('display','block');return false;">[팝업] 기본 팝업 버튼2</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            $('.pop_wrap .btn_close').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_wrap').css('display','none');
+                $('.dimmed').css('display','none');
+            });
+
+            $('.pop_wrap .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_wrap').css('display','none');
+                $('.dimmed').css('display','none');
+            });
+
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

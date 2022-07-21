@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>신들의 부적 이벤트</title>
+        <link rel="stylesheet" type="text/css" href="css/event.css">
+    </head>
+    <body><!-- [D]레이어 오픈시 overflow:hidden, touch-action:none 추가 -->
+    <div id="wrap" class="rebranding_event">
+        <div id="header" class="header">
+            <h1><a href="#" target="_blank" class="link"><span class="blind">HANGAME</span></a></h1>
+            <nav class="menu_event"><!-- [D] 사전예약 오픈 전 before 클래스 추가, scroll시 fixed 클래스 추가ㄲ -->
+                <div class="wrap_menu">
+                    <ul class="list_menu swiper-wrapper">
+                        <li class="swiper-slide on"><a href="#" class="menu menu1"><span class="blind">신들의 부적</span></a></li>
+                        <li class="swiper-slide"><a href="#" class="menu menu2"><span class="blind">종목은 고르셨나요?</span></a></li>
+                        <li class="swiper-slide"><a href="#" class="menu menu3"><span class="blind">한게임 공식 행운주간</span></a></li>
+                        <li class="swiper-slide"><a href="#" class="menu menu4"><span class="blind">거대한 판 사전예약</span></a></li>
+                    </ul> 
+                </div>
+            </nav>
+            <button type="button" class="btn_close"><span class="blind">이벤트 닫기</span></button>
+        </div>
+        <!-- //header -->
+
+        <div id="container" class="cont_event">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide menu1_event">
+                    <div class="intro_event"> 
+                        <h2 class="blind">첫 번째 이벤트 신들의 부적</h2>
+                        <dl class="blind">
+                            <dt>이벤트 기간</dt>
+                            <dd>2022년 5월 2일 ~ 6월 30일까지</dd>
+                        </dl>
+                        <p class="blind">한게임의 멤버가 되어, 당신의 행운을 시험하세요. 추첨을 통해 이병헌, 정우선, 조승우의 기운이 담긴 굿즈를 드립니다. </p> 
+                    </div>
+                    <div class="wrap_menu1_event">
+                        <div class="info_event1">
+                            <h3 class="blind">참여 방법</h3>
+                            <p class="blind">한게임 아이디로 로그인 후 응모하기 버튼만 클릭하면 이벤트 참여 완료! 신의 부적 이벤트 응모는 1인 1회만 참여 가능합니다.</p>
+                            <!--  [D] 응모하기 버튼 -->
+                            <button type="button" class="btn_apply"><span class="blind">응모하기</span></button>
+                            <!--  [D] 응모완료 버튼 -->
+                            <button type="button" class="btn_apply disabled" disabled style="display:none"><span class="blind">응모완료</span></button>
+                            <!--  [D] 비로그인 -->
+                            <div class="intro_apply" style="display:block">
+                                <strong class="blind">아직 한게임 아이디가 없다면?</strong>
+                                <a href="https://accounts.hangame.com/register/index" class="link_join"><span class="blind">회원가입 바로 가기</span></a>
+                                <strong class="blind">한게임 로그인을 하지 않았다면?</strong>
+                                <a href="https://accounts.hangame.com/sign-in"  class="link_login"><span class="blind">로그인 바로가기</span></a>
+                                <p class="blind">
+                                    한게임 휴면 회원일 경우, 로그인 후 본인인증을 완료하시면 휴면 회원에서 해제됩니다.
+                                    간편 아이디 (페이코, 구글, 네이버, 페이스북)도 이벤트에 참여할 수 있습니다.
+                                    apple 아이디는 모바일 게임에서 본인인증 후 모바일 프로모션 페이지에서 응모 가능합니다.
+                                </p>
+                            </div>
+                            <!--  [D] 로그인 - 미응모 -->
+                            <div class="intro_apply on" style="display:none">
+                            <p class="blind">신들의 부적 이벤트에 참여할 수 있는 응모 자격을 갖추셨습니다. '응모하기' 버튼을 클릭하면 이벤트 참여가 완료됩니다.</p>
+                            </div>
+                            <!--  [D] 로그인 - 응모하기 완료 -->
+                            <div class="intro_apply complete" style="display:none">
+                                <p class="desc">신들의 부적 이벤트에 응모 완료하였습니다. 담청 결과는 이벤트 종료 후 <a href="#" class="link_home">한게임 홈페이지</a> 또는 <a href="#" class="link_noti">모바일 게임 내 공지사항</a>에서 확인하세요!</p>
+                            </div>
+                        </div>
+                        <div class="info_event2">
+                            <h3 class="blind">당첨 선물</h3>
+                            <p class="blind">이벤트 종료 후 응모자 중 랜덤으로 추첨하여 순금 카드 또는 친필 사인 핸드폰 케이스를 드립니다.</p>
+                            <ol class="blind">
+                                <li>추첨 4명 1돈 순금 카드</li>
+                                <li>추첨 90명 사인 핸드폰 케이스</li>
+                            </ol>
+                        </div>
+                        <div class="info_event3">
+                            <h3 class="blind">주의사항</h3>
+                            <ul>
+                                <li>응모하기는 1인 1회 참여 가능합니다.</li>
+                                <li>본 이벤트는 본인인증을 완료한 한게임 계정은 모두 참여 가능합니다.</li>
+                                <li>이벤트 당첨자는 개인정보 수집에 참여해 주실 경우 경품 지급이 가능하며, 개인정보 수집에 미 동의 시 경품 지급이 불가능합니다.</li>
+                                <li>부당한 방법을 통한 이벤트 참여 시 제재를 받으실 수 있습니다.</li>
+                                <li>본 이벤트는 당사의 사정에 따라 고지 없이 조기 종료될 수 있습니다.</li>
+                                <li>5만원을 초과하는 실물 경품은 수령 시 제세공과금 및 기타 세금을 납부하셔야 하며, 소득 신고를 위하여 관련 서류를 제출하셔야 합니다.</li>
+                                <li>배송지, 연락처 정보가 정확하지 않을 경우 당첨이 취소될 수 있습니다.</li>
+                                <li>원활한 경품 배송을 위해 <a href="#" class="link">PC 한게임(www.hangame.com)</a> 접속 후 내정보 페이지에서 연락처, 주소 등 정확한 정보를 입력해 주세요.내정보 바로가기</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a href="#none" class="copyright"><span class="blind">ⓒ NHN Corp. All Rights Reserved.</span></a>
+                    </div>
+                    <!-- //footer -->
+                </div>
+                <!-- //menu1_event -->
+                <div class="swiper-slide menu2_event">
+                    <div class="intro_event"> 
+                        <h2 class="blind">두 번째 이벤트 종목은 고르셨나요?</h2>
+                        <dl class="blind">
+                            <dt>이벤트 기간</dt>
+                            <dd>2022년 5월 2일 ~ 6월 26일까지</dd>
+                        </dl>
+                    </div>
+                    <div class="wrap_menu2_event">
+                        <p class="blind">한게임에선 매일 70만명 이상의 플레이어가 승부를 겨루고 있습니다. 바둑, 장기부터 맞고, 섯다, 포커까지 다양한 종목으로 한게임을 즐겨보세요.</p>
+                        <div class="info_event1">
+                            <div class="txt_event">
+                                <h3 class="blind">참여 방법 &amp; 보상선물</h3>
+                                <p class="blind">매 주 2개 이상 게임의 참여 기준을 달성한 시점부터 PC게임은 내쿠폰함으로, 모바일게임은 우편함 또는 보관함에 실시간으로 보상이 지급됩니다.</p>
+                                <dl class="blind">
+                                    <dt>이벤트 기간</dt>
+                                    <dd>2022년 5월 2일 ~ 6월 26일 23시 59분까지</dd>
+                                </dl>
+                            </div>
+                            <div class="box_state"> 
+                                <strong class="tit">1주차 진행 중</strong>
+                                <span class="date">2022년 00월 00일 ~ 00월 00일 00시 00분</span>
+                                <button type="button" class="btn_view"><span class="blind">참여 게임 및 보상 지급 내역 보기</span></button>
+                            </div>
+                            <ul class="tab_game">
+                                <li class="on"><button type="button" class="tab1"><span class="blind">모바일 게임</span></button></li>
+                                <li><button type="button" class="tab2"><span class="blind">PC 게임</span></button></li>               
+                           </ul>
+                           <div class="cont_game on">
+                               <strong class="blind">모바일 게임</strong>
+                               <ul class="list_game mobile">
+                                    <li class="game_mobile1">
+                                        <strong class="blind">한게임포커 클래식 1,000만 골드</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <div class="wrap_download">
+                                                <a href="#" target="_blank" class="link_google"><span class="blind">구글 플레이 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_one"><span class="blind">원 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_apple"><span class="blind">애플 스토에서 다운받기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 10판 플레이 완료</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">참여 조건</strong>
+                                                    <div class="cont">
+                                                        4인 이상 플레이, 쿼터 이상 베팅 포함해야 판수 인정,<br>
+                                                        자유 경기장 제외
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">1,000만 골드</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">보관함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_mobile2">
+                                        <em class="badge_complete"><span class="blind">참여 완료</span></em>
+                                        <strong class="blind">한게임 포커 1억칩</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <div class="wrap_download">
+                                                <a href="#" target="_blank" class="link_google"><span class="blind">구글 플레이 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_one"><span class="blind">원 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_apple"><span class="blind">애플 스토에서 다운받기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 1판 플레이 완료</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">참여 조건</strong>
+                                                    <div class="cont">
+                                                        1:1 경기장을 제외한 게임머니를 이용하는 경기장
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">1억칩</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit"> 지급 위치 : </strong>
+                                                    <div class="cont">보관함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_mobile3">
+                                        <strong class="blind">한게임 섯다&amp;맞고 1억쩐</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <div class="wrap_download">
+                                                <a href="#" target="_blank" class="link_google"><span class="blind">구글 플레이 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_one"><span class="blind">원 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_apple"><span class="blind">애플 스토에서 다운받기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 1판 플레이 완료</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">참여 조건</strong>
+                                                    <div class="cont">게임머니를 이용하는 경기장</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">1억쩐</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">보관함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_mobile4">
+                                        <strong class="blind">한게임 신맞고 1,200만냥</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <div class="wrap_download">
+                                                <a href="#" target="_blank" class="link_google"><span class="blind">구글 플레이 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_one"><span class="blind">원 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_apple"><span class="blind">애플 스토에서 다운받기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 1판 플레이 완료</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">참여 조건</strong>
+                                                    <div class="cont">
+                                                        게임머니를 이용하는 경기장, 신맞고/맞고 모드 경기장<br>
+                                                        (친선대전/혼자치기/자유채널/친구봇대전/토너먼트 제외)
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">1,200만냥</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">보관함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_mobile5">
+                                        <strong class="blind">한게임 신윷놀이 2M 윷 행운 상자 (1개)</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <div class="wrap_download">
+                                                <a href="#" target="_blank" class="link_google"><span class="blind">구글 플레이 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_one"><span class="blind">원 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_apple"><span class="blind">애플 스토에서 다운받기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 1판 플레이 완료</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">윷 행운 상자 (1개)</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">우편함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_mobile6">
+                                        <strong class="blind">한게임 바둑 다이아 3개</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <div class="wrap_download">
+                                                <a href="#" target="_blank" class="link_google"><span class="blind">구글 플레이 스토어에서 다운받기</span></a>
+                                                <a href="#" target="_blank" class="link_apple"><span class="blind">애플 스토에서 다운받기</span></a>
+                                            </div>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">대국 1판 플레이 완료 </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">대국 조건</strong>
+                                                    <div class="cont">
+                                                        19줄대국, 9줄대국, 힌트대국, 인공지능 대국 중<br>
+                                                        1판 이상 진행 (승강/친선 무관)
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">다이아 3개</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">선물함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                </ul>
+                           </div>
+                           <div class="cont_game">
+                                <strong class="blind">PC 게임</strong>
+                                <ul class="list_game pc">
+                                    <li class="game_pc1">
+                                        <em class="badge_complete"><span class="blind">참여 완료</span></em>
+                                        <strong class="blind">한게임 포커 1,000만 골드</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <a href="#" class="link_go"><span class="blind">게임 바로 가기</span></a>
+                                        </div>
+                                        <div class="info_detail" style="display: none;">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 10판 플레이 완료</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">참여 조건</strong>
+                                                    <div class="cont">
+                                                        4인 이상 플레이 (PC 파티훌라의 경우, 2인 이상 플레이),<br>
+                                                        쿼터 이상 베팅 포함해야 판수 인정, 맞포커 제외, 친구/자유<br>
+                                                        경기장 제외
+                                                    </div> 
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">1,000만 골드</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">내쿠폰함</div>
+                                                </li>     
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_pc2">
+                                        <strong class="blind">한게임 고스톱  1,200만냥</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <a href="#" class="link_go"><span class="blind">게임 바로 가기</span></a>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">게임 1판 플레이 완료 </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">참여 조건</strong>
+                                                    <div class="cont">게임머니를 이용하는 경기장 (싱글모드/토너먼트 제외)</div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">1,200만냥</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">내쿠폰함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_pc3">
+                                        <strong class="blind">한게임 바둑머니 50만M</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <a href="#" class="link_go"><span class="blind">게임 바로 가기</span></a>
+                                        </div>
+                                        <div class="info_detail" style="display:none">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">대국 1판 플레이 완료 </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">대국 조건</strong>
+                                                    <div class="cont">
+                                                        19줄대국, 9줄대국, 힌트대국, 인공지능 대국 중<br>
+                                                        1판 이상 진행 (승강/친선 무관)
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">바둑머니 50만M</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit"> 지급 위치 : </strong>
+                                                    <div class="cont">내쿠폰함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                    <li class="game_pc4">
+                                        <strong class="blind">한게임 장기머니 50만M</strong>
+                                        <div class="wrap_btn">
+                                            <button type="button" class="btn_detail"><span class="blind">참여 기준 보기</span></button>
+                                            <a href="#" class="link_go"><span class="blind">게임 바로 가기</span></a>
+                                        </div>
+                                        <div class="info_detail" style="display: none;">
+                                            <strong class="blind">참여 기준 보기</strong>
+                                            <ul class="list_detail">
+                                                <li>
+                                                    <strong class="tit">참여 기준</strong>
+                                                    <div class="cont">대국 1판 플레이 완료 </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">대국 조건</strong>
+                                                    <div class="cont">
+                                                        미션대국, 내기대국,<br>
+                                                        인공지능 대국 중 1판 이상 진행 (승강/친선 무관)
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <strong class="tit">보상 상품</strong>
+                                                    <div class="cont">장기머니 50만M</div>
+                                                </li>
+                                                <li class="location">
+                                                    <strong class="tit">지급 위치 : </strong>
+                                                    <div class="cont">내쿠폰함</div>
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="btn_detail_close"><span class="blind">참여 기준 보기 닫기</span></button>
+                                        </div>
+                                    </li>
+                                </ul> 
+                           </div>
+                        </div>
+                        <div class="info_event2">
+                            <h3 class="blind">주의사항</h3>
+                            <ul class="blind">
+                                <li>2개 이상 게임의 참여 기준을 만족해야 보상 상품 지급 대상에 포함됩니다.</li>
+                                <li>접속 기록은 매 주 월요일 0시에 초기화됩니다.</li>
+                                <li>게임별 참여 기준 달성 후 지급되는 보상 상품의 경우 PC게임은 내쿠폰함 &amp; 모바일 게임은 인게임 보관함(또는 우편함, 선물함)으로 보상 상품이 지급되며, 지급된 보상 상품을 수령하지 않으실 경우 7일 후 자동으로 삭제됩니다.</li>
+                                <li>신윷놀이2는 참여 기준 달성시 PC/모바일 공통으로 적용되며, 보상 상품은 중복 지급 불가합니다.</li>
+                                <li>지급된 보상 상품은 환불 및 선물하기가 불가합니다.</li>
+                                <li>본 이벤트는 당사의 사정에 따라 고지 없이 조기 종료될 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a href="#none" class="copyright"><span class="blind">ⓒ NHN Corp. All Rights Reserved.</span></a>
+                    </div>
+                    <!-- //footer -->
+                </div>
+                <!-- //menu2_event -->
+                <div class="swiper-slide menu3_event">
+                    <div class="intro_event"> 
+                        <h2 class="blind">세 번째 이벤트 한게임 공식 행운주간</h2>
+                        <p class="blind">지금, 한게임 대표 종목을 플레이 하세요. 기간 중 플레이만 하면 행운이 계속 쌓입니다. 어떤 경품에 응모할지는 직접 선택해보세요!</p> 
+                    </div>
+                    <div class="wrap_menu3_event">
+                        <div class="info_event1" style="display:none">
+                            <h3 class="blind">새로운 기회</h3>
+                            <strong class="blind">한게임 포커와 한게임 포커 CLASSIC. 대한민국 가장 큰판에 도전하라! 포커리그 오픈 PC 한게임포커 &amp; 모바일 한게임포커 클래식</strong>
+                            <dl class="blind">
+                                <dt>기간</dt>
+                                <dd>6월 27일 ~ 8월 14일</dd>
+                            </dl>
+                            <p class="blind">포커리그 첫 참가 시 배치된 최초 리그등급에 따라 최대 1억 골드와 2,500가넷 보상 전원 지급! 그랜드마스터 단 1회라고 달성시 전원 100억 골드 지급!</p>
+                            <ol class="blind">
+                                <li>브론즈 500만 골드 + 50가넷</li>
+                                <li>실버 2000만 골드 + 200 가넷</li>
+                                <li>골드 5000만 골드 + 500 가넷</li>
+                                <li>다이아 1억 골드 + 2500가넷</li>
+                            </ol>
+                            <a href="#" class="link_poker"><span class="blind">포커리그 이벤트 바로가기</span></a>
+                            <div class="wrap_btn">
+                                <ul class="list_download">
+                                    <li><a href="#" class="link"><span class="blind">구글 플레이 스토어에서 다운받기</span></a></li>
+                                    <li><a href="#" class="link"><span class="blind">원 스토어에서 다운받기</span></a></li>
+                                    <li><a href="#" class="link"><span class="blind">애플 스토에서 다운받기</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info_event1 soon" style="display:block">
+                            <h3 class="blind">새로운 기회</h3>
+                            <strong class="blind">한게임 포커와 한게임 포커 CLASSIC. 대한민국 가장 큰 판에 도전하라! PC 한게임포커 &amp; 모바일 한게임포커 클래식</strong>
+                            <p class="blind">대한민국 가장 큰판 COMING SOON</p>
+                            <div class="wrap_btn">
+                                <ul class="list_download">
+                                    <li><a href="#" class="link"><span class="blind">구글 플레이 스토어에서 다운받기</span></a></li>
+                                    <li><a href="#" class="link"><span class="blind">원 스토어에서 다운받기</span></a></li>
+                                    <li><a href="#" class="link"><span class="blind">애플 스토에서 다운받기</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info_event2">
+                            <h3 class="blind">두번째 기회</h3>
+                            <strong class="blind">POKER와 섯다&맞고. 대한민국 모바일 공식 1등, 한게임 모바일 포커와 모바일 섯다&맞고</strong>
+                            <dl class="blind">
+                                <dt>이벤트 기간</dt>
+                                <dd>5월 4일 ~ 6월 30일</dd>
+                            </dl>
+                            <p class="blind">매일, 게임을 플레이 할 때 마다 높은 확률로 응모권이 지급됩니다.</p>
+                            <ol class="blind">
+                                <li>골든바 100g. 1명</li>
+                                <li>프라엘 메디헤어. 3명</li>
+                                <li>갤럭시 워치4. 100명</li>
+                                <li>PAYCO 10만원. 30명</li>
+                                <li>기프티콘. 100명</li>
+                            </ol>
+                            <h3 class="blind">앱 다운로드</h3>
+                            <strong class="blind">한게임 포커</strong>
+                            <ul class="list_download">
+                                <li><a href="#" class="link"><span class="blind">구글 플레이 스토어에서 다운받기</span></a></li>
+                                <li><a href="#" class="link"><span class="blind">원 스토어에서 다운받기</span></a></li>
+                                <li><a href="#" class="link"><span class="blind">애플 스토에서 다운받기</span></a></li>
+                            </ul>
+                            <strong class="blind">한게임 섯다&맞고</strong>
+                            <ul class="list_download">
+                                <li><a href="#" class="link"><span class="blind">구글 플레이 스토어에서 다운받기</span></a></li>
+                                <li><a href="#" class="link"><span class="blind">원 스토어에서 다운받기</span></a></li>
+                                <li><a href="#" class="link"><span class="blind">애플 스토에서 다운받기</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a href="#none" class="copyright"><span class="blind">ⓒ NHN Corp. All Rights Reserved.</span></a>
+                    </div>
+                    <!-- //footer -->
+                </div>
+                <!-- //menu3_event -->
+                <div class="swiper-slide menu4_event">
+                    <div class="intro_event"> 
+                        <h2 class="blind">여기, 지금, 한게임이 준비한 새로운판에서 한게임 더블에이 포커 사전등록</h2>
+                        <dl class="blind">
+                            <dt>이벤트 기간</dt>
+                            <dd>2022년 6월 1일 ~ 7월 말까지</dd>
+                        </dl>
+                    </div>
+                    <div class="wrap_menu4_event">
+                        <div class="info_event1">
+                            <h3 class="blind">한게임에서 준비하는 홀뎀 프로젝트를 최초로 공개합니다!</h3>
+                            <p class="blind">홀덤 게임의 이름은 ‘한게임 더블에이 포커’입니다. 한게임 더블에이 포커는 국내에서 맛볼 수 있는 정통 텍사스 홀덤으로 TDA 룰 규격에 맞춘 홀덤 토너먼트도 즐기실 수 있습니다.</p>
+                            <ul class="list_screen">
+                                <li><img src="img/img_screen.png" alt=""></li>
+                                <li><img src="img/img_screen.png" alt=""></li>
+                                <li><img src="img/img_screen.png" alt=""></li>
+                            </ul>
+                            <strong class="blind">한게임 더블에이 포커의 특징</strong>
+                            <ul class="blind">
+                                <li>Anytime Anywhere! 카드와 테이블만 있다면 언제 어디서나 가능한 테마 포커</li>
+                                <li>매일 매일 개최되는 대규모 실시간 온라인 토너먼트 대회</li>
+                                <li>초보부터 프로까지 즐기 수 있는 일반 모드</li>
+                                <li>플레이를 통해 얻을 수 있는 다양한 보상</li>
+                            </ul> 
+                        </div>
+                        <div class="info_event2">
+                            <h3><span class="blind">한게임 더블에이 포커 사전 등록하고 정식 오픈 때 특별한 선물 받으세요!</span></h3>
+                            <strong class="blind">POKER와 섯다&맞고. 대한민국 모바일 공식 1등, 한게임 모바일 포커와 모바일 섯다&맞고</strong>
+                            <div class="register_phone">
+                                <form action="">
+                                    <fieldset>
+                                        <legend class="blind">사전등록 휴대폰 번호 입력</legend>
+                                        <span class="chk_inp">
+                                            <input type="radio" id="aos" name="phone" checked>
+                                            <label for="aos" class="lbl aos"><span class="blind">안드로이드(AOS)</span></label>
+                                        </span> 
+                                        <span class="chk_inp">
+                                            <input type="radio" id="ios" name="phone">
+                                            <label for="ios" class="lbl ios"><span class="blind">애플(iOS)</span></label>
+                                        </span>
+                                        <div class="phone_input">
+                                            <input type="text" title="휴대폰 첫번째 자리 입력" value="010 -">
+                                            <input type="number" title="나머지 휴대폰 자리 입력" placeholder="- 없이 숫자만 입력해주세요.">
+                                            <button type="submit" class="btn_register"><span class="blind">사전등록 하기</span></button>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                            <div class="terms_agree">
+                                <span class="chk_inp">
+                                    <input type="checkbox" id="agree" checked>
+                                    <label for="agree" class="lbl agree"><span class="blind">아래 내용을 확인하였으며, 모두 동의합니다.</span></label>
+                                </span>
+                                <ul class="list_etc">
+                                    <li>
+                                        <span class="chk_inp">
+                                            <input type="checkbox" id="etc1" checked>
+                                            <label for="etc1" class="lbl etc1"><span class="blind">만 18세 이상입니다.</span></label>
+                                        </span> 
+                                    </li>
+                                    <li>
+                                        <span class="chk_inp">
+                                            <input type="checkbox" id="etc2">
+                                            <label for="etc2" class="lbl etc2"><span class="blind">개인정보 수집 이용 동의</span></label>
+                                            <a href="#" class="link_view"><span class="blind">자세히 보기</span></a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="chk_inp">
+                                            <input type="checkbox" id="etc3">
+                                            <label for="etc3" class="lbl etc3"><span class="blind">제 3자 정보 제공 동의</span></label>
+                                            <a href="#" class="link_view"><span class="blind">자세히 보기</span></a>
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="chk_inp">
+                                            <input type="checkbox" id="etc4">
+                                            <label for="etc4" class="lbl etc4"><span class="blind">이벤트 등 프로모션 알림 수신동의</span></label>
+                                            <a href="#" class="link_view"><span class="blind">자세히 보기</span></a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="info_event3">
+                            <h3 class="blind">사전 등록 혜택 안내</h3>
+                            <p class="blind">티켓과 이병헌 세트는 사전 예약한 분들 모두에게 전체 지급되며 닉네임은 추첨을 통해 단1명에게만 부여됩니다.</p>
+                            <ul class="blind">
+                                <li>토너먼트 티켓 - 토너먼트 등록 티켓으로, 바이인 머니 지불 없이 등록 및 참여가 가능합니다.</li>
+                                <li>이병헌 캐릭터 - 사전 예약한 분들에게만 지급되는 캐릭터로 울트라 레어 캐릭터 입니다. (30일 사용)</li>
+                                <li>모히또 스터프 - 테이블 위에 놓는 스터프 아이템! 어떤 기능이 탑재 되어 있을지 정식 오픈 때 확인해보세요!</li>
+                                <li>넥네임 - 단, 1명에게만 부여되는 유니크 한 닉네임! '이병헌'! 그 주인공이 되어보세요. </li>
+                            </ul>
+                        </div>
+                        <div class="info_event4">
+                            <h3 class="blind">이벤트 참여 유의사항</h3>
+                            <ul class="blind">
+                                <li>이벤트 진행 일정 및 혜택은 내부 사정에 따라 변경될 수 있습니다.</li>
+                                <li>사전등록 혜택 지급 일정은 추후 별도 공지를 통해 안내해 드리겠습니다.</li>
+                                <li>사전등록은 휴대전화 번호 1개당 1회에 한해 참여하실 수 있습니다.</li>
+                                <li>휴대번호 앞자리가 010이 아닌 경우 LMS 수신 불가로 인해 사전등록에 참여하실 수 없습니다.</li>
+                                <li>정식 오픈 소식은 사전등록에 참여하신 휴대전화 번호 LMS를 통해 안내드립니다.</li>
+                                <li>등록하신 휴대전화 번호는 한게임 더블에이 포커의 정식 오픈 소식 및 이벤트 안내로 사용됩니다.</li>
+                                <li>광고 문자 수신 거부 시 혹은 휴대전화의 문자 스팸 기능 또는 통신사 스팸 문자 차단이 설정이 되어있을 경우 LMS 안내를 받으실 수 없을 수도 있습니다.</li>
+                                <li>잘못된 휴대전화 번호를 입력하여 문자를 받지 못할 경우 도움을 드릴 수 없으니, 정확한 휴대전화 번호를 입력해 주시기 바랍니다.</li>
+                                <li>타인의 휴대전화 번호를 도용할 경우 이벤트 참가 혹은 혜택 지급이 제한될 수 있습니다.</li>
+                                <li>애플 (iOS)의 경우 출시일이 안드로이드와 상이할 수 있습니다.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <a href="#none" class="copyright"><span class="blind">ⓒ NHN Corp. All Rights Reserved.</span></a>
+                    </div>
+                    <!-- //footer -->
+                </div>
+                <!-- //menu4_event -->
+            </div>
+            
+            <div class="ico_swiper on"></div>
+            <div class="floating_menu" style="display:none;">
+                <button type="button" class="btn_video"><span class="blind">Full 영상 보기 </span></button>
+                <button type="button" class="btn_top"><span class="blind">TOP으로 이동</span></button>
+            </div> 
+        </div>
+         <!-- //container -->
+        
+    </div>
+    <!-- // wrap -->
+
+    <!-- [D] Dimmed -->
+    <div class="dimmed" style="display:none"></div>
+
+    <!-- [D] full 영상보기 팝업 -->
+    <div class="ly_video" style="display:none">
+        <div class="ly_pop video">
+            <strong class="blind">Full 영상보기</strong>
+            <div class="ly_cont">
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/eXE2esBDGio" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+        <a href="#" class="btn btn_video_close"><span class="blind">닫기</span></a>
+    </div>
+
+    <!-- [D] 신청 완료 팝업 -->
+    <div class="ly_pop apply_complete" style="display:none">
+        <div class="inner_pop">
+            <div class="ly_cont">
+                <div class="inner">
+                    <strong class="blind">신들의 부적 신청이 완료되었습니다.</strong>
+                    <p class="blind">하지만, 당신은 이미 부적이 필요 없는 실력자 이실지도 모르겠네요. 한게임 시작하시겠습니까?</p>
+                    <ul class="list_mo">
+                        <li>
+                            <a href="#" target="_blank" class="link">
+                                <span class="blind">한게임 포커</span>
+                            </a>       
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="link">
+                                <span class="blind">한게임 포커 클래식</span>
+                            </a>    
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="link">
+                                <span class="blind">한게임 섯다&맞고</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="link">
+                                <span class="blind">한게임 신맞고</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="link">
+                                <span class="blind">한게임 바둑</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank" class="link">
+                                <span class="blind">한게임 신윳놀이2M</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="blind">앱 아이콘을 클릭하면 스토어로 이동됩니다.</p>
+                    <button type="button" class="btn_ok"><span class="blind">확인</span></button>
+                    <p class="blind">아직 한게임을 시작하지 않았다면 지금 바로 시작하세요! 특별한 혜택이 기다리고 있습니다.</p>
+                    <a href="#" target="_blank" class="link_event"><span class="blind">두번째 이벤트 보러가기</span></a>
+                </div>
+            </div>
+            <a href="#" class="btn btn_close"><span class="blind">닫기</span></a>
+        </div>
+    </div>
+
+    <!-- [D] 참여 게임 및 보상시금 내역 보기 팝업 -->
+    <div class="ly_pop rewrad_view" style="display:none">
+        <div class="inner_pop">
+            <div class="ly_cont">
+                <div class="inner">
+                    <div class="tit_rewrad_view">
+                        <strong class="blind">참여 게임 및 보상지금 내역 보기</strong>
+                        <p class="blind">주차별 게임 참여 여부와 보상지급 내역을 확인할 수 있습니다. 보상 지급이 정상적으로 완료되지 않았을 경우 [보상받기] 버튼을 통해 다시 획득하세요!</p>
+                    </div>
+                    <div class="wrap_weeks">
+                        <button type="button" class="btn_week1"><span class="blind">1주차</span></button>
+                        <button type="button" class="btn_week2 on"><span class="blind">2주차</span></button>
+                        <button type="button" class="btn_week3"><span class="blind">3주차</span></button>
+                        <button type="button" class="btn_week4"><span class="blind">4주차</span></button>
+                        <button type="button" class="btn_week5"><span class="blind">5주차</span></button>
+                        <button type="button" class="btn_week6"><span class="blind">6주차</span></button>
+                        <button type="button" class="btn_week7"><span class="blind">7주차</span></button>
+                        <button type="button" class="btn_week8"><span class="blind">8주차</span></button>
+                        <button type="button" class="btn_week9"><span class="blind">9주차</span></button> 
+                    </div>
+                    <ul class="tab_game">
+                        <li class="on"><button type="button" class="tab1"><span class="blind">PC 게임</span></button></li>
+                        <li><button type="button" class="tab2"><span class="blind">모바일 게임</span></button></li>
+                    </ul>
+                    <div class="cont_game on">
+                        <div class="tbl_area">
+                            <table>
+                                <caption><span class="blind">모바일 게임 참여 게임 및 보상지금 내역</span></caption>
+                                <colgroup>
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">게임</th>
+                                        <th scope="col">참여 여부</th>
+                                        <th scope="col">보상 지급 현황</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>한게임포커</td>
+                                        <td>완료</td>
+                                        <td><button type="button" class="btn_taken_reward"><span class="blind">보상받기</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임포커 클래식</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 섯다&맞고</td>
+                                        <td>완료</td>
+                                        <td>완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 신맞고</td>
+                                        <td>완료</td>
+                                        <td>완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 신윷놀이2M</td>
+                                        <td>완료</td>
+                                        <td>완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 바둑</td>
+                                        <td>완료</td>
+                                        <td>완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="cont_game">
+                        <div class="tbl_area">
+                            <table>
+                                <caption><span class="blind">PC 게임 참여 게임 및 보상지금 내역</span></caption>
+                                <colgroup>
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                    <col style="width:96px">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">게임</th>
+                                        <th scope="col">참여 여부</th>
+                                        <th scope="col">보상 지급 현황</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>한게임포커</td>
+                                        <td>완료</td>
+                                        <td><button type="button" class="btn_taken_reward"><span class="blind">보상받기</span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 고스톱</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 바둑</td>
+                                        <td>완료</td>
+                                        <td>완료</td>
+                                    </tr>
+                                    <tr>
+                                        <td>한게임 장기</td>
+                                        <td>완료</td>
+                                        <td>완료</td>
+                                    </tr>
+                                </tbody>
+                            </table>                
+                        </div>
+                    </div>              
+                    <strong class="blind">주의사항</strong>
+                    <ul class="noti_rewrad_view">
+                        <li>보상 상품은 지금일 기준 7일 이내로 수령하지 않을실 경우 삭제됩니다.</li>
+                        <li>보상 재 지급을위한 [보상받기] 버튼은 게임에서 조건을 달성한 ID로 로그인해야 노출됩니다.</li>
+                    </ul> 
+                    <button type="button" class="btn_ok"><span class="blind">확인</span></button>
+                </div>
+            </div>
+            <a href="#" class="btn btn_close"><span class="blind">닫기</span></a>
+        </div>
+    </div>
+
+    <!-- [D] 사전등록 완료 팝업 -->
+    <div class="ly_pop ly_pop_register" style="display:none;">
+        <div class="register_complete">
+            <strong class="blind">사전등록 완료!</strong>
+            <p class="blind">사전 등록이 완료되었습니다.</p>
+        </div>
+        <button type="button" class="btn_ok"><span class="blind">확인</span></button>
+        <a href="#" class="btn btn_close"><span class="blind">닫기</span></a>
+    </div>
+
+    <!-- [D] 마케팅 수신 동의 팝업 -->
+    <div class="ly_pop ly_pop_register" style="display:none;">
+        <div class="register_agree">
+            <strong class="blind">이벤트 등 프로모션 알림 수신 동의</strong>
+            <p class="blind">한게임 더블에이 포커에서 제공하는 이벤트와 관련괸 프로모션 알림 수신에 동의합니다.</p>
+        </div>
+        <button type="button" class="btn_ok"><span class="blind">확인</span></button>
+        <a href="#" class="btn btn_close"><span class="blind">닫기</span></a>
+    </div>
+
+    <!-- [D] 미입력 경고 팝업 -->
+    <div class="ly_pop ly_pop_register" style="display:none;">
+        <div class="register_confirm">
+            <strong class="blind">확인해주세요!</strong>
+            <p class="blind">휴대폰 번호를 다시 한번 확인해주세요! 체크 박스 빠진 부분이 있는지 확인해주세요.</p>
+        </div>
+        <button type="button" class="btn_ok"><span class="blind">확인</span></button>
+        <a href="#" class="btn btn_close"><span class="blind">닫기</span></a>
+    </div>
+
+    <!-- [D] UI확인용. 개발시 삭제해주세요. -->
+    <style>
+        .case_view{overflow-y:auto;position:fixed;top:100px;left:10px;width:180px;padding:10px;z-index:100;line-height:20px;border:3px solid rgba(255,255,255,0.15);background-color:#000;opacity:0.6;filter:alpha(opacity=60);max-height:80px}
+        .case_view a{display:block;text-align:left;color:#fff}
+        .case_view a:active,.case_view a:hover{color:orange;}
+    </style>
+    <div class="case_view">
+        <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+        <a href="#" onclick="$('.intro_apply').css('display','block');$('.intro_apply.on').css('display','none');$('.intro_apply.complete').css('display','none');$('.btn_apply').css('display','block');$('.btn_apply.disabled').css('display','none');return false">[화면] 응모하기 - 비로그인</a>
+        <a href="#" onclick="$('.intro_apply').css('display','none');$('.intro_apply.on').css('display','block');$('.intro_apply.complete').css('display','none');$('.btn_apply').css('display','block');$('.btn_apply.disabled').css('display','none');return false">[화면] 응모하기 - 로그인 - 미응모</a>
+        <a href="#" onclick="$('.intro_apply').css('display','none');$('.intro_apply.on').css('display','none');$('.intro_apply.complete').css('display','block');$('.btn_apply').css('display','none');$('.btn_apply.disabled').css('display','block');return false">[화면] 응모하기 - 로그인 - 응모완료</a>
+        <a href="#" onclick="$('body').css({'overflow':'hidden', 'touch-action':'none'});$('.dimmed').css('display','block');$('.ly_video').css('display','block');return false">[팝업] 풀영상보기</a>
+        <a href="#" onclick="$('body').css({'overflow':'hidden', 'touch-action':'none'});$('.dimmed').css('display','block');$('.ly_pop.apply_complete').css('display','block');return false">[팝업] 신청완료</a>
+        <a href="#" onclick="$('body').css({'overflow':'hidden', 'touch-action':'none'});$('.dimmed').css('display','block');$('.ly_pop.rewrad_view').css('display','block');return false">[팝업] 내역 보기</a>
+        <a href="#" onclick="$('.dimmed').css('display','block');$('.ly_pop.ly_pop_register').css('display','none');$('.ly_pop.ly_pop_register').eq(0).css('display','block');return false">[팝업] 사전등록 완료</a>
+        <a href="#" onclick="$('.dimmed').css('display','block');$('.ly_pop.ly_pop_register').css('display','none');$('.ly_pop.ly_pop_register').eq(1).css('display','block');return false">[팝업] 마케팅 수신 동의</a>
+        <a href="#" onclick="$('.dimmed').css('display','block');$('.ly_pop.ly_pop_register').css('display','none');$('.ly_pop.ly_pop_register').eq(2).css('display','block');return false">[팝업] 미입력 경고</a>
+        <a href="#" onclick="$('.info_event1').css('display','block');$('.info_event1.soon').css('display','none');return false">[화면] 새로운 기회</a>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+       //screen slide
+        var wrapMenu = new Swiper(".wrap_menu", {
+            centeredSlides: true,
+            centeredSlidesBounds: true, 
+            slidesPerView: "auto",
+            freeMode: false,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            watchOverflow: true,
+            slidesOffsetAfter: 30,
+            slidesOffsetBefore: 30,
+        });
+
+        var contEvent = new Swiper(".cont_event", {
+            autoHeight: true,
+            thumbs: {
+                swiper: wrapMenu
+            },
+            on: {
+                slideChange: function () {
+                    setTimeout(function() { 
+                        $('.ico_swiper').removeClass('on');
+                    }, 500);
+                    $('.ico_swiper').addClass('on');
+                }
+            }
+        });
+        contEvent.on("slideChangeTransitionStart", function () {
+            wrapMenu.slideTo(contEvent.activeIndex);
+        });
+        wrapMenu.on("transitionStart", function () {
+            contEvent.slideTo(wrapMenu.activeIndex);
+        });
+
+        //top button
+        $('.btn_top').on('click', function(e) {
+            e.preventDefault(); 
+            $('html, body').animate({scrollTop:0}, '300');
+        });
+
+        //ico_swiper, floating_menu fadeIn Out
+        $(window).scroll(function() {
+            var scroll = $(window).scrollTop();
+            if (scroll >=5) {
+                $('.ico_swiper').fadeOut('slow');
+                $('.floating_menu').fadeIn('slow');
+            } else {
+                $('.ico_swiper').fadeIn('slow');
+                $('.floating_menu').fadeOut('slow');
+            }
+        });
+    
+        setTimeout(function() { 
+            $('.ico_swiper').removeClass('on');
+        }, 500);
+
+        //menu2 tab
+        $('.wrap_menu2_event .tab_game li').on('click',function(){
+            var i = $(this).index();
+            $('.wrap_menu2_event .tab_game li').removeClass('on');
+            $('.wrap_menu2_event .tab_game li').eq(i).addClass('on');
+            
+            $('.wrap_menu2_event .cont_game').removeClass('on');
+            $('.wrap_menu2_event .cont_game').eq(i).addClass('on');
+        });
+
+        //menu2 tab 높이
+        $('.wrap_menu2_event .tab_game li').click(function () {
+            if( $('.info_event1 .cont_game:last-of-type').hasClass("on")){
+                $('.swiper-wrapper').css('height','2271px');
+            } else {
+                $('.swiper-wrapper').css('height','auto');
+            };
+        });
+
+        //menu2 참여기준 보기
+        $('.wrap_btn .btn_detail').on('click',function(){
+		    $(this).parents('.wrap_btn').siblings('.info_detail').css('display', 'block');
+         });
+
+         $('.btn_detail_close').on('click',function(){
+		    $(this).parents('.info_detail').css('display', 'none');
+         });
+
+         //menu2 내역보기 layer weeks tab
+         $('.wrap_weeks button').on('click',function(){
+            $('.wrap_weeks button').removeClass('on');
+            $(this).addClass('on');
+        });
+
+        //menu2 내역보기 layer tab
+        $('.rewrad_view .tab_game li').on('click',function(){
+            var i = $(this).index();
+            $('.rewrad_view .tab_game li').removeClass('on');
+            $('.rewrad_view .tab_game li').eq(i).addClass('on');
+            
+            $('.rewrad_view .cont_game').removeClass('on');
+            $('.rewrad_view .cont_game').eq(i).addClass('on');
+        });
+
+        // layer close buuton
+        $('.btn_video_close').on('click',function(){
+            $('.ly_video').css('display','none');
+            $('.dimmed').css('display','none');
+            $('body').removeAttr( 'style');
+        });
+
+        $('.ly_pop .btn_close').on('click',function(){
+            $('.ly_pop').css('display','none');
+            $('.dimmed').css('display','none');
+            $('body').removeAttr( 'style');
+        });
+
+        //caseview
+        $('.case_view .btn_toggle_caseview').click(function() {
+            $(this).siblings('.case_view a').toggle();
+        });
+
+
+      </script>
+    <!-- // [D] UI확인용. 개발시 삭제해주세요. -->
+    </body>
+    </html>

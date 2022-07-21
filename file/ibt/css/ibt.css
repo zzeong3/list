@@ -1,0 +1,1182 @@
+@charset "utf-8";
+
+@font-face {
+    font-family:'NotoSansR';
+    font-weight:normal;
+	src:
+        url(font/NotoSansKR-Regular.woff2) format('woff2'),
+        url(font/NotoSansKR-Regular.woff) format('woff'),
+        url(font/NotoSansKR-Regular.otf) format('opentype');
+
+}
+
+@font-face {
+    font-family:'NotoSansM';
+    font-weight:normal;
+	src:
+        url(font/NotoSansKR-Medium.woff2) format('woff2'),
+        url(font/NotoSansKR-Medium.woff) format('woff'),
+        url(font/NotoSansKR-Medium.otf) format('opentype');
+}
+
+@font-face {
+    font-family:'NotoSansB';
+    font-weight:normal;
+	src:
+        url(font/NotoSansKR-Bold.woff2) format('woff2'),
+        url(font/NotoSansKR-Bold.woff) format('woff'),
+        url(font/NotoSansKR-Bold.otf) format('opentype');
+}
+
+/* common */
+body {background:#f3f5f9}
+.wrap {width:100%}
+.img_ibt {display:inline-block;overflow:hidden;background:url(../images/img_ibt.png) no-repeat 0 0;background-size:250px auto;vertical-align:top}
+.img_ibt_before::before,
+.img_ibt_after::after {display:inline-block;overflow:hidden;background:url(../images/img_ibt.png) no-repeat 0 0;background-size:250px auto;vertical-align:top;content:""}
+
+.check_inp .lbl_check {display:inline-block;position:relative;padding-left:26px;font-size:15px;line-height:22px;cursor:pointer}
+.check_inp input[type="radio"], 
+.check_inp input[type="checkbox"]{clip:rect(1px, 1px, 1px, 1px);position:absolute;width:1px;height:1px}
+.check_inp input + .lbl_check::before {position:absolute;left:0;top:2px;width:18px;height:18px;background-position:0 0}
+.check_inp input:checked + .lbl_check::before, 
+.check_inp input.incomplete:checked + .lbl_check::before {background-position:-20px 0}
+.check_inp input.incomplete + .lbl_check::before {background-position:-40px 0}
+
+.wrap_btn {display:flex;justify-content:center}
+.btn {display:inline-block;width:100%;padding:0 15px;box-sizing:border-box;border-radius:8px;box-sizing:border-box;font-family:"NotoSansB", "Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;word-break:keep-all;word-wrap:break-word;text-align:center}
+.btn + .btn {margin-left:10px}
+.btn.btn_md {height:54px;line-height:53px}
+.btn.btn_sm {height:40px;line-height:39px}
+.btn.btn_md:disabled,
+.btn.btn_md.disabled {background:#e0e3f1;color:#fff;border:0}
+.btn.bg_navy {background:#576aca;color:#fff}
+.btn.line_navy {background:#fff;border:1px solid #576aca;color:#576aca}
+
+.wrap_inp {display:block;position:relative}
+.wrap_inp .inp_item {display:block;width:100%;height:48px;padding:14px 16px 14px;font-size:15px;color:#1b2141;border-radius:6px;border:1px solid #ccd0e0;box-sizing:border-box;caret-color:#576aca;outline:0}
+.wrap_inp .inp_item:focus {border-color:#576aca}
+.wrap_inp .inp_item.incomplete {border-color:#fe5977}
+.wrap_inp .inp_item::placeholder {color:#ccd0e0}
+.wrap_inp .inp_item[type="number"]::-webkit-outer-spin-button,
+.wrap_inp .inp_item[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none;margin:0}
+
+/* header */
+header {position:fixed;width:100%;z-index:100;height:80px;background:linear-gradient(to right,rgba(87,106,202,1) 10%,rgba(92,114,223,1) 100%);text-align:center;box-sizing:border-box;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03)}
+header .tit_ibt {display:table;width:100%;height:100%;text-align:center;}
+header .tit_ibt .inner_tit {display:table-cell;vertical-align:middle}
+header h1 {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;word-break:keep-all;word-wrap:break-word;font-size:18px;line-height:27px;color:#fff}
+header .info_examinee {font-weight:normal;font-size:14px;line-height:20px;color:#d4dcff}
+header .info_examinee .name {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+header #gnb {position:absolute;left:30px;top:20px;min-width:344px;height:40px}
+header .list_gnb {overflow:hidden;display:inline-block;min-width:100%;height:100%;border:1px solid #99a6ee;border-radius:24px;font-size:0;line-height:0;box-sizing:border-box}
+header .list_gnb li {position:relative;display:inline-block;min-width:114px;height:100%;padding:0 5px 0 17px;font-size:14px;line-height:39px;text-align:center;color:#d4dcff;box-sizing:border-box;vertical-align:top}
+header .list_gnb li:last-of-type {padding-right:12px}
+header .list_gnb li:after {position:absolute;right:-12px;top:-5px;z-index:1;width:0;height:0;border-left:14px solid #99a6ee;border-top:24px solid transparent;border-bottom:24px solid transparent;content:""}
+header .list_gnb li::before {position:absolute;right:-11px;top:-5px;z-index:2;width:0;height:0;border-left:14px solid #576aca;border-top:24px solid transparent;border-bottom:24px solid transparent;content:""}
+header .list_gnb li.now {background:#e9ecfc;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#5d72de}
+header .list_gnb li.now::after {border-left-color:#e9ecfc}
+header .list_gnb li.now::before {display:none}
+header .list_gnb li.prev {background:#e9ecfc;color:#5d72de}
+header .list_gnb li.prev::after {border-left-color:#99a6ee}
+header .list_gnb li.prev::before {border-left-color:#e9ecfc}
+header .list_gnb li:last-of-type::after,
+header .list_gnb li:last-of-type::before {display:none}
+header .btn_close {position:absolute;right:30px;top:20px;z-index:1;min-width:100px;height:40px;padding:0 25px;border-radius:8px;background:#6f86f9;line-height:40px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:14px;color:#d4dcff;box-sizing:border-box}
+
+
+#content {overflow:hidden;padding:80px 0 70px}
+
+/* 시험 규정 동의 */
+#content.cont_ready {width:632px;margin:0 auto}
+.tab_ready {overflow:hidden;width:632px;margin:24px auto 0}
+.tab_ready li {float:left;width:50%;}
+.tab_ready li a {display:block;height:75px;padding:24px 0;border-bottom:1px solid #ccd0e0;font-size:18px;line-height:27px;color:#9ea8db;text-align:center;box-sizing:border-box;cursor:default}
+.tab_ready li.on a {border-color:#576aca;color:#576aca;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.list_ready {width:632px;margin:24px auto 0;padding:32px;border-radius:8px;background:#fff;box-sizing:border-box;box-shadow: 0 10px 30px 0 rgba(90, 109, 203, 0.05)}
+.list_ready li {margin-top:24px}
+.list_ready li:first-of-type {margin-top:0}
+.list_ready .check_inp {display:block}
+.list_ready .lbl_check {font-size:15px;color:#1b2141}
+.list_ready .all .lbl_check {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.list_ready .lbl_check .txt_essential {margin-right:3px;color:#6d7392}
+.list_ready .box_ready {margin-top:6px;padding:4px;border:1px solid #e0e3f1;border-radius:6px}
+.list_ready .box_ready .inner_ready {overflow-y:auto;height:78px;padding:8px 8px 6px 8px;font-size:14px;line-height:21px;color:#8991b8}
+.list_ready .box_ready .inner_ready::-webkit-scrollbar {width:6px;height:6px}
+.list_ready .box_ready .inner_ready::-webkit-scrollbar-thumb {border-radius:5.5px;background:#CCD0E0}
+.list_ready .box_ready .inner_ready::-webkit-scrollbar-track {background-color:#fff}
+.list_ready .incomplete + .lbl_check .txt_essential {color:#fe5977}
+em.incomplete {display:block;margin-top:6px;font-size:13px;line-height:19px;color:#fe5977}
+.cont_ready .paging {width:632px}
+.paging {position:relative;width:960px;margin:16px auto 0}
+.paging .wrap_btn {display:block;overflow:hidden;width:100%}
+.paging .wrap_btn .btn_md {width:auto;min-width:164px;font-size:15px}
+.paging .wrap_btn .btn.img_ibt_before {float:left}
+.paging .wrap_btn .btn.img_ibt_after {float:right}
+.paging .wrap_btn .btn.img_ibt_before::before {width:15px;height:14px;margin:19px 8px 0 0}
+.paging .wrap_btn .btn.img_ibt_after::after {width:15px;height:14px;margin:19px 0 0 8px}
+.paging .wrap_btn .btn.line_navy.img_ibt_before::before {background-position:-60px 0}
+.paging .wrap_btn .btn.line_navy.img_ibt_after::after {background-position:-80px 0}
+.paging .wrap_btn .btn.bg_navy.img_ibt_before::before {background-position:-100px 0}
+.paging .wrap_btn .btn.bg_navy.img_ibt_after::after {background-position:-120px 0}
+.paging .wrap_btn .btn.img_ibt_before:disabled::before,
+.paging .wrap_btn .btn.img_ibt_before.disabled::before{ background-position:-100px 0}
+.paging .wrap_btn .btn.img_ibt_after:disabled::after,
+.paging .wrap_btn .btn.img_ibt_after.disabled::after {background-position:-120px 0}
+
+
+/* 수험자 가이드 */
+.list_ready .tit_ready {display:block;margin-top:24px;font-weight:normal;font-size:15px;line-height:22px;color:#1b2141}
+.list_ready .tit_ready:first-of-type {margin-top:0}
+.list_ready .tit_ready .emph {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+.list_ready .wrap_check {margin-top:8px;text-align:right;font-size:0;line-height:0}
+.list_ready .wrap_check .check_inp {display:inline-block;margin:0 0 0 6px;vertical-align:top}
+.list_ready .wrap_check .check_inp .lbl_check {position:relative;width:98px;height:34px;padding:0 6px;font-size:14px;line-height:35px;text-align:center;color:#494e63;border-radius:6px;background:#ebedf7;box-sizing:border-box} 
+.list_ready .wrap_check .check_inp input + .lbl_check::before,
+.list_ready .wrap_check .check_inp input.incomplete + .lbl_check::before {position:static;display:none;width:10px;height:8px;margin:13px 5px 0 0;background-position:-70px -30px}
+.list_ready .wrap_check .check_inp input:checked + .lbl_check::before {display:inline-block}
+.list_ready .wrap_check .check_inp input:checked + .lbl_check,
+.list_ready .wrap_check .check_inp input.incomplete:checked + .lbl_check {background:#d4dcff;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+.list_ready .wrap_check .check_inp input.incomplete + .lbl_check {background:#fff;color:#fe5977}
+.list_ready .wrap_check .check_inp input.incomplete + .lbl_check::after {position:absolute;left:0;right:0;top:0;bottom:0;height:32px;border:1px solid #fe5977;border-radius:6px;content:""}
+.list_ready .wrap_check .check_inp input.incomplete:checked + .lbl_check::after {display:none}
+.list_ready .wrap_check .check_inp input:disabled + .lbl_check,
+.list_ready .wrap_check .check_inp input.disabled + .lbl_check {background:#fff;color:#ccd0e0}
+.list_ready .wrap_check .check_inp input:disabled + .lbl_check::after,
+.list_ready .wrap_check .check_inp input.disabled + .lbl_check::after {position:absolute;left:0;right:0;top:0;bottom:0;border:1px solid #ebedf7;border-radius:6px;content:""}
+.list_ready .wrap_check .btn_speaker {overflow:visible;display:inline-block;position:relative;margin-right:2px;vertical-align:top}
+.list_ready .wrap_check .btn_speaker::before {width:34px;height:34px;background-position:0 -20px}
+.list_ready .wrap_check .btn_speaker .txt {position:absolute;right:0;bottom:-20px;z-index:1;min-width:84px;padding:0 10px;height:24px;border-radius:12px;background-image: linear-gradient(108deg, rgba(87,202,156,1) 0%,rgba(87,165,202,1) 80%);;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:11px;box-sizing:border-box;line-height:24px;color:#fff}
+.list_ready .wrap_check .btn_speaker .txt::after {position: absolute;top:0;right:13px;width: 0;height: 0;margin-top:-4px;border:5px solid transparent;border-bottom-color:#4fa5b4;border-top:0;content:""} 
+.list_ready .wrap_check .btn_speaker.on::before {background-position:-35px -20px}
+.list_ready .wrap_check .btn_speaker.on .txt {min-width:55px}
+.list_ready .wrap_check .btn_speaker .play_stroke {position:absolute;left:-3px;top:-3px;width:40px;height:40px;background:url(../images/btn_play_stroke.png) no-repeat 0 0;background-size:100% auto;-webkit-animation:play 4s linear infinite;animation:play 4s linear infinite;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}
+@keyframes play{
+    100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}
+.list_ready .link_help {display:block;width:100%;height:30px;margin-top:6px;padding:5px 11px 6px;border-radius:8px;background:#fff7f9;font-size:13px;line-height:19px;color:#fe5977;box-sizing:border-box}
+.list_ready .link_help strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.list_ready .link_help::after {width:6px;height:10px;margin:4px 0 0 4px;background-position:-70px -40px}
+
+/* 응시자 본인 확인 */
+#content.cont_examinee {padding-top:160px;text-align:center}
+.cont_examinee h3 {font-size:24px;line-height:36px;color:#22262c}
+.cont_examinee .desc_examinee {margin-top:4px;font-size:16px;line-height:26px;color:#8991b8} 
+.cont_examinee .wrap_examinee {width:632px;margin:38px auto 0;padding:58px 82px 58px;border-radius:8px;background:#fff;box-shadow: 0 10px 30px 0 rgba(90, 109, 203, 0.05)}
+.wrap_examinee .wrap_inp {margin-top:10px}
+.wrap_examinee .wrap_inp:first-of-type {margin-top:0}
+.wrap_examinee .btn_del {display:none}
+.wrap_examinee .incomplete {text-align:left}
+.wrap_examinee .wrap_btn {margin-top:24px}
+.area_service {margin-top:64px;font-size:13px;line-height:19px;color:#6d7392}
+.area_service .list_service {margin-top:3px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.area_service .list_service dt, 
+.area_service .list_service dd {display:inline-block}
+.area_service .list_service dt {margin-right:3px}
+
+/* 시험진행안내 */
+#content.cont_guide {padding-top:168px;text-align:center}
+.cont_guide .info_test {width:632px;margin:0 auto}
+.cont_guide .wrap_guide {width:100%;padding:64px 58px 64px;border-radius:8px;background:#fff;box-shadow:0 10px 30px 0 rgba(90, 109, 203, 0.05);box-sizing:border-box}
+.cont_guide .info_test.pcconnect .wrap_guide {padding-top:72px}
+.wrap_guide .tit_guide {display:block;font-weight:normal;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:22px;line-height:33px;color:#1b2141}
+.cont_guide .tit_guide::before {display:block;width:206px;height:104px;margin:0 auto 24px;background-size:206px auto;background-repeat:no-repeat;background-position:0 0;content:""}
+.cont_guide .info_test.proceeding .tit_guide::before {background-image:url(../images/img_proceeding.png)}
+.cont_guide .info_test.impossible .tit_guide::before {background-image:url(../images/img_impossible.png)}
+.cont_guide .info_test.pcconnect .tit_guide::before {background-image:url(../images/img_pcconnect.png)}
+.cont_guide .info_test.tutorial .tit_guide::before {margin:0 auto 42px;background-image:url(../images/img_impossible.png)}
+.cont_guide .info_test.tutorial {text-align:right}
+.cont_guide .info_test.tutorial .btn_sm {margin:-24px 0 8px 0;min-width:110px;width:auto;font-family:"NotoSansM","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:13px}
+.cont_guide .info_test.tutorial .wrap_guide  {text-align:center}
+.cont_guide .info_test.tutorial .tit_guide {font-family:"NotoSansR","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.cont_guide .info_test.tutorial .wrap_guide .tit_guide .emph {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.wrap_guide .list_guide {margin-top:16px}
+.wrap_guide .list_guide dt {display:inline-block;height:28px;padding:4px 13px 5px;border-radius:14px;background:#ffeff2;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:14px;line-height:20px;color:#fe5977;text-align:center;box-sizing:border-box}
+.wrap_guide .list_guide dd {display:inline-block;margin:2px 0 0 4px;font-size:16px;line-height:24px;color:#fe5977;vertical-align:top}
+.wrap_guide .list_connect {margin:32px 0 -30px 0;padding-top:30px;border-top:1px solid #ebedf7;font-size:15px;line-height:22px}
+.wrap_guide .list_connect dt {display:inline-block;color:#abafc0}
+.wrap_guide .list_connect dd {display:inline-block;margin-left:2px;color:#494e63}
+.wrap_guide .list_connect dd strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+.wrap_guide .list_connect dd .txt {display:inline-block;font-size:12px;vertical-align:top}
+.wrap_guide .desc_pcconnect {margin-top:8px;font-size:15px;line-height:22px;color:#494e63}
+.wrap_guide .desc_pcconnect .txt {display:block;margin-top:6px;font-size:13px;line-height:19px;color:#8991b8}
+.wrap_guide .desc_pcconnect .txt .ico {display:inline-block;margin:2px 3px 0 0;vertical-align:top}
+.cont_guide .wrap_btn {margin-top:16px}
+
+/* 문제 풀이 */
+header .time_remainin {position:absolute;right:147px;top:20px;z-index:1}
+header .list_time {float:left;overflow:hidden;margin-top:11px;font-size:15px;line-height:21px;color:#fff}
+header .list_time dt {float:left}
+header .list_time dt::before {width:16px;height:19px;margin-right:6px;background-position:-115px -15px}
+header .list_time dd {float:left;margin-left:3px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+header .list_time.excess dd {color:#fea7b7}
+header .list_time.excess dd .ico_excess::before {display:inline-block;margin-right:2px;vertical-align:top;content:"+"}
+header .time_remainin .btn_solve {float:left;margin-left:8px}
+header .time_remainin .btn_solve::after {width:40px;height:40px}
+header .time_remainin .btn_solve.start::after {background-position:-130px -35px}
+header .time_remainin .btn_solve.stop::after {background-position:-85px -35px}
+
+#content.cont_problem {width:1032px;margin:0 auto;padding:112px 0 200px}
+.top_problem {overflow:hidden;width:960px;margin:0 auto 12px}
+.top_problem .info_listening {float:left;overflow:hidden;min-width:468px;height:40px;padding:8px 12px;border-radius:8px;background:#fff}
+.top_problem .info_listening .btn_play {float:left;margin-right:8px}
+.top_problem .info_listening .btn_play::after {width:24px;height:24px;background-position:-60px -85px}
+.top_problem .info_listening .info_time {float:left;margin-top:3px;font-size:13px;line-height:19px}
+.top_problem .info_listening .info_time strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.top_problem .info_listening .wrap_progress {float:left;position:relative;overflow:hidden;width:232px;height:6px;margin:10px 0 0 10px;border-radius:3px;background:#e0e3f1}
+.top_problem .info_listening .wrap_progress .inner_progress {position:absolute;left:0;top:0;height:100%;border-radius:3px;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03);background-image:linear-gradient(93deg, #d4dcff, #576aca)}
+.top_problem .info_listening .list_number {overflow:hidden;float:right;margin:3px 0 0 10px;font-size:13px;line-height:19px;color:#6d7392}
+.top_problem .info_listening .list_number dt {float:left}
+.top_problem .info_listening .list_number dd {float:left;margin-left:2px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.top_problem .info_listening .btn_play.off::after {background-position:-85px -85px}
+.top_problem .info_listening .desc_listening {float:left;margin-top:3px;font-size:13px;line-height:19px;color:#fe5977}
+.top_problem .list_question {float:right;overflow:hidden;margin-top:4px;font-size:0;line-height:0}
+.top_problem .list_question li {float:left}
+.top_problem .list_question li .completion {display:block;position:relative;margin:8px 0 0 20px;width:20px;height:20px}
+.top_problem .list_question li .completion::after {width:20px;height:20px;background-position:-110px -85px}
+.top_problem .list_question li .incomplete {display:block;position:relative;margin:8px 0 0 20px;border-radius:50px;border:1px solid #ccd0e0;background:#f2f4f8;width:20px;height:20px;box-sizing:border-box}
+.top_problem .list_question li.now {position:relative;margin-left:20px;padding:0 21px;height:36px;border-radius:20px;background:#d4dcff;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:37px;color:#576aca}
+.top_problem .list_question li .completion::before,
+.top_problem .list_question li.now::before,
+.top_problem .list_question li .incomplete::before {position:absolute;left:-21px;top:50%;z-index:-1;width:22px;height:1px;content:""}
+.top_problem .list_question li .completion::before,
+.top_problem .list_question li.now::before {background:#99a6ee}
+.top_problem .list_question li .incomplete::before {background:#ccd0e0}
+.top_problem .list_question li:first-of-type .completion::before,
+.top_problem .list_question li:first-of-type.now::before {display:none}
+
+
+/* 문제 풀이 - 문제 */
+.wrap_problem {position:relative;width:960px;margin:0 auto 16px;padding:32px 32px 40px;border-radius:8px;background:#fff}
+.wrap_problem .info_zoom {position:absolute;right:-30px;top:32px}
+.wrap_problem .info_zoom .img_ibt_after {display:block;width:30px;height:30px;margin-bottom:4px}
+.wrap_problem .info_zoom .img_ibt_after::after {width:30px;height:30px}
+.wrap_problem .info_zoom .btn_zoomin::after {background-position:-140px 0}
+.wrap_problem .info_zoom .btn_zoomout::after {background-position:-175px 0}
+.wrap_problem .time_recommend {overflow:hidden;font-size:13px;line-height:18px;text-align:right}
+.wrap_problem .time_recommend dt {display:inline-block;color:#8993ad}
+.wrap_problem .time_recommend dt::before {width:14px;height:14px;margin:1px 4px 0 0;background-position:-210px 0}
+.wrap_problem .time_recommend dd {display:inline-block;margin-left:2px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#6d799a}
+.wrap_problem .time_limit {overflow:hidden;width:100%;height:30px;margin-bottom:12px;padding:0 12px;border-radius:6px;background:#fff9ea;font-size:13px;line-height:31px;color:#6d7392}
+.wrap_problem .time_limit dt {display:inline-block}
+.wrap_problem .time_limit dt::before {width:14px;height:14px;margin:8px 2px 0 0;background-position:-215px -85px}
+.wrap_problem .time_limit dd {display:inline-block;margin-left:2px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.wrap_problem .info_problem {margin-top:7px}
+.info_problem .tit_problem {display:block;position:relative;z-index:1;margin-top:32px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:20px;line-height:34px}
+.info_problem .tit_problem::after {display:block;clear:both;content:""}
+.info_problem .tit_problem:first-of-type {margin-top:0}
+.info_problem .tit_problem .num {float:left;height:34px;margin-right:12px;padding:0 16px;font-size:15px;line-height:34px;color:#fff;box-shadow: 0 -12px 33px 0 rgba(0, 0, 0, 0.03);border-radius:17px;background-image: linear-gradient(115deg, #576aca, #7257ca);vertical-align:top;box-sizing:border-box}
+.info_problem .tit_problem .num.set {border:1px solid #8991b8;background-image:none;line-height:32px;color:#6d7392}
+.info_problem .tit_problem .txt {display:block;overflow:hidden;white-space:pre-wrap}
+.info_problem .tit_problem .txt img {display:block;margin-bottom:7px}
+.info_problem .tit_problem .txt u {position:relative;text-decoration:none;border-bottom:1px solid #1b2141;}
+.info_problem .box_problem {width:100%;margin:12px 0 20px;padding:6px;border:1px solid #ccd0e0;border-radius:6px}
+.info_problem .box_problem .inner_problem {position:relative;min-height:58px;padding:8px 18px 8px;font-family:"NotoSansM","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:16px;line-height:26px;color:#1b2141;white-space:pre-wrap}
+.info_problem .box_problem .inner_problem b,
+.info_problem .box_problem .inner_problem strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.info_problem .box_problem .inner_problem u {position:relative;text-decoration:none;border-bottom:1px solid #1b2141}
+.info_problem .box_problem .inner_problem::-webkit-scrollbar {width:8px;height:8px}
+.info_problem .box_problem .inner_problem::-webkit-scrollbar-thumb {border-radius:5.5px;background:#ccd0e0}
+.info_problem .box_problem .inner_problem::-webkit-scrollbar-track {background-color:#fff}
+.info_problem .box_problem .inner_problem [class^="bg"] {padding:14px 16px 16px;border-radius:6px}
+.info_problem .box_problem .inner_problem .bg_type1 {background:#EBF6F4}
+.info_problem .box_problem .inner_problem .bg_type2 {background:#EBEDF7}
+.info_problem .box_problem .inner_problem .bg_type3 {background:#F7ECEE}
+.info_problem .box_problem .inner_problem img {display:block;max-width:600px;width:auto;height:auto;margin:0 auto}
+.info_problem table {border-radius:6px;border:1px solid #ccd0e0;color:#1b2141;border-style: hidden;box-shadow: 0 0 0 1px #ccd0e0}
+.info_problem table th {padding:7px 12px;border:1px solid #ccd0e0;background:#ebedf7;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-seri;font-weight:normal;vertical-align:middle}
+.info_problem  table td b {display:block;text-align:center;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;}
+.info_problem  table td {padding:10px 12px;border:1px solid #ccd0e0;font-family:"NotoSansR","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+
+.info_problem .box_example {margin-top:12px}
+.info_problem .box_example .tit_problem {margin-top:32px}
+.info_problem .box_example .inner_example b,
+.info_problem .box_example .inner_example strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.info_problem .list_example li {margin-bottom:8px}
+.info_problem .list_example li .check_inp_example {display:block}
+.check_inp_example input[type="radio"], 
+.check_inp_example input[type="checkbox"] {clip:rect(1px, 1px, 1px, 1px);position:absolute;width:1px;height:1px}
+.info_problem .list_example li .lbl_check_example {display:block;position:relative;width:100%;min-height:60px;padding:17px 20px 15px 64px;border:1px solid #fff;border-radius:6px;font-size:16px;line-height:26px;color:#1b2141;box-sizing:border-box;cursor:pointer;white-space:pre-wrap}
+.info_problem .list_example li .lbl_check_example u {position:relative;text-decoration:none;border-bottom:1px solid #1b2141}
+.info_problem .list_example li .lbl_check_example::before {position:absolute;left:20px;top:13px;width:32px;height:32px;border:1px solid #abafc0;border-radius:50%;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:16px;line-height:31px;color:#1b2141;text-align:center;box-sizing:border-box;content:""}
+.info_problem .list_example li:nth-of-type(1) .lbl_check_example::before {content:"1"}
+.info_problem .list_example li:nth-of-type(2) .lbl_check_example::before {content:"2"}
+.info_problem .list_example li:nth-of-type(3) .lbl_check_example::before {content:"3"}
+.info_problem .list_example li:nth-of-type(4) .lbl_check_example::before {content:"4"}
+.info_problem .list_example li:nth-of-type(5) .lbl_check_example::before {content:"5"}
+.info_problem .list_example li .check_inp_example input:checked + .lbl_check_example {border:1px solid #576aca;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+.info_problem .list_example li .check_inp_example input:checked + .lbl_check_example u {border-color:#576aca}
+.info_problem .list_example li .check_inp_example input:checked + .lbl_check_example::before {border-color:#576aca;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03);background-image: linear-gradient(135deg, #576aca, #7257ca);color:#fff}
+.info_problem .list_example li .check_inp {display:block;margin:20px 0 0 22px}
+.info_problem .list_example li .check_inp .lbl_check {padding-left:42px;font-size:16px;line-height:32px;color:#6d7392}
+.info_problem .list_example li .check_inp input + .lbl_check::before {top:2px;width:28px;height:28px;background-image:url(../images/ico_uncheck.svg);background-repeat:no-repeat;background-position:0 0;background-size:100% auto;vertical-align:top;content:""}
+.info_problem .list_example li .check_inp input:checked + .lbl_check::before {background-image:url(../images/ico_check.svg)}
+
+.info_problem .box_example.img .list_example li .lbl_check_example {width:100%;padding:16px 20px 16px 64px;border:1px solid #fff;border-radius:6px;font-size:16px;line-height:26px;color:#1b2141;box-sizing:border-box;cursor:pointer}
+.info_problem .box_example.img .list_example li .lbl_check_example::before {left:20px;top:13px;width:32px;height:32px;border:1px solid #abafc0;border-radius:50%;font-size:16px;line-height:31px}
+.info_problem .box_example.img .list_example li:nth-of-type(1) .lbl_check_example::before {content:"1"}
+.info_problem .box_example.img .list_example li:nth-of-type(2) .lbl_check_example::before {content:"2"}
+.info_problem .box_example.img .list_example li:nth-of-type(3) .lbl_check_example::before {content:"3"}
+.info_problem .box_example.img .list_example li:nth-of-type(4) .lbl_check_example::before {content:"4"}
+.info_problem .box_example.img .list_example li:nth-of-type(5) .lbl_check_example::before {content:"5"}
+
+/* 좌우 2단 */
+.horizontal.info_problem::after {display:block;clear:both;content:""}
+.horizontal.info_problem .box_problem {float:left;width:442px;margin:12px 12px 0 0;padding:6px;border:1px solid #ccd0e0;border-radius:6px}
+.horizontal.info_problem .box_problem .inner_problem {overflow-y:auto;height:400px;padding-top:16px}
+.horizontal.info_problem .box_problem + .box_example {float:left;width:442px}
+.horizontal.info_problem .box_example {position:relative;padding:6px;border:1px solid #e0e3f1;border-radius:6px;box-sizing:border-box}
+.horizontal.info_problem .box_example .inner_example {overflow-y:auto;height:400px;padding:16px 18px 22px;box-sizing:border-box}
+.horizontal.info_problem .box_example .inner_example::-webkit-scrollbar {width:8px;height:8px}
+.horizontal.info_problem .box_example .inner_example::-webkit-scrollbar-thumb {border-radius:5.5px;background:#ccd0e0}
+.horizontal.info_problem .box_example .inner_example::-webkit-scrollbar-track {background-color:#fff}
+.horizontal.info_problem .box_example .tit_problem {margin-top:0}
+.horizontal.info_problem .box_example .tit_problem +.list_example {margin-top:12px}
+.horizontal.info_problem .box_example .tit_problem .num {display:inline-block;float:none}
+.horizontal.info_problem .box_example .tit_problem .txt {overflow:auto;margin-top:5px}
+.horizontal.info_problem .box_problem .inner_problem img {max-width:390px;margin:0 auto}
+
+/* 단일 이미지 */
+.info_problem .list_example li .lbl_check_example img {width:auto;height:auto;max-width:810px;max-height:150px}
+.info_problem .box_example.ex_horizontal2 .list_example li .lbl_check_example img {max-width:356px}
+.info_problem .box_example.ex_horizontal3 .list_example li .lbl_check_example img {max-width:204px}
+
+.info_problem .box_problem_img.wide {width:896px;margin:12px auto 0;border:0;border-radius:0;text-align:center}
+.info_problem .box_problem_img.wide img {display:inline-block;max-width:896px;max-height:504px;width:auto;height:auto}
+.info_problem .box_problem_img.wide + .box_problem_img {margin-top:12px}
+
+/* 이미지 2단 */
+.horizontal.info_problem .list_example li .lbl_check_example img {max-width:298px;max-height:120px}
+.horizontal.info_problem .ex_horizontal2 .list_example li .lbl_check_example img {max-width:108px}
+.horizontal.info_problem .ex_horizontal3 .list_example li .lbl_check_example img {max-width:42px}
+
+.horizontal.info_problem .box_problem_img.wide {float:none;width:896px;height:auto;margin:12px auto 0;border:0;border-radius:0}
+.horizontal.info_problem .box_problem_img.wide img {max-width:896px;max-height:504px}
+
+/* 주관식 */
+.info_problem .info_subjective {margin-top:32px}
+.info_problem .info_subjective .tit_subjective {display:block;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:20px;color:#576aca}
+.info_problem .info_subjective .tit_subjective::before {display:inline-block;width:24px;height:24px;margin:-4px 4px 0 0;background:url(../images/ico_write.svg) no-repeat 0 0;background-size:100% auto;vertical-align:top;content:""}
+.info_problem .info_subjective .list_subjective {margin-top:15px}
+.info_problem .list_subjective .wrap_inp {display:inline-block}
+.info_problem .list_subjective .wrap_inp.line .inp_item {min-width:327px;max-width:100%;height:36px;padding:6px 0 6px 0;border-top:0;border-left:0;border-right:0;border-radius:0;font-size:16px;line-height:24px;outline:0}
+.info_problem .list_subjective .wrap_inp.line .inp_item:focus {border-color:#576aca}
+.info_problem .list_subjective .wrap_inp .unit {position:absolute;right:0;bottom:6px;font-size:16px;line-height:24px;color:#6d7392}
+.info_problem .list_subjective.multiple .wrap_inp.line .inp_item {min-width:100%;text-align:center}
+.info_problem .list_subjective.multiple .wrap_inp {display:block}
+.info_problem .list_subjective {overflow:hidden}
+.info_problem .list_subjective li {float:left;padding:0 17px;box-sizing:border-box}
+.info_problem .list_subjective li:first-of-type {padding-left:0}
+.info_problem .list_subjective li:last-of-type {padding-right:0}
+
+.info_problem .list_subjective li:first-child:last-child {width:100%}
+.info_problem .list_subjective li:first-child:last-child .wrap_inp .unit + .inp_item {padding-right:10%}
+
+.info_problem .list_subjective li:nth-child(1):nth-last-child(2),
+.info_problem .list_subjective li:nth-child(1):nth-last-child(2) ~ li {width:50%}
+.info_problem .list_subjective li:nth-child(1):nth-last-child(2) .wrap_inp .unit + .inp_item,
+.info_problem .list_subjective li:nth-child(1):nth-last-child(2) ~ li .wrap_inp .unit + .inp_item {padding-right:9%}
+
+.info_problem .list_subjective li:nth-child(1):nth-last-child(3),
+.info_problem .list_subjective li:nth-child(1):nth-last-child(3) ~ li {width:33.3%}
+.info_problem .list_subjective li:nth-child(1):nth-last-child(3) .wrap_inp .unit + .inp_item,
+.info_problem .list_subjective li:nth-child(1):nth-last-child(3) ~ li .wrap_inp .unit + .inp_item {padding-right:13%}
+
+.info_problem .list_subjective li:nth-child(1):nth-last-child(4),
+.info_problem .list_subjective li:nth-child(1):nth-last-child(4) ~ li {width: 25%}
+.info_problem .list_subjective li:nth-child(1):nth-last-child(4) .wrap_inp .unit + .inp_item,
+.info_problem .list_subjective li:nth-child(1):nth-last-child(4) ~ li .wrap_inp .unit + .inp_item {padding-right:15%}
+
+.info_problem .list_subjective li:nth-child(1):nth-last-child(5),
+.info_problem .list_subjective li:nth-child(1):nth-last-child(5) ~ li {width: 20%}
+.info_problem .list_subjective li:nth-child(1):nth-last-child(5) .wrap_inp .unit + .inp_item,
+.info_problem .list_subjective li:nth-child(1):nth-last-child(5) ~ li .wrap_inp .unit + .inp_item {padding-right:20%}
+
+.info_problem .info_subjective .check_inp {display:block;margin-top:18px}
+.info_problem .info_subjective .check_inp .lbl_check {font-size:16px}
+.info_problem .info_subjective .check_inp input + .lbl_check::before {top:2px;width:18px;height:18px;background-image:url(../images/ico_uncheck.svg);background-repeat:no-repeat;background-position:0 0;background-size:100% auto;vertical-align:top;content:""}
+.info_problem .info_subjective .check_inp input:checked + .lbl_check::before {background-image:url(../images/ico_check.svg)}
+
+/* 주관식 2단 */
+.horizontal.info_problem .box_problem + .info_subjective .check_inp,
+.horizontal.info_problem .box_example_img + .info_subjective .check_inp {position:static}
+.horizontal.info_problem .info_subjective {margin-top:0}
+.horizontal.info_problem .list_subjective .wrap_inp.line .inp_item {width:392px}
+.horizontal.info_problem .list_subjective li {padding:0 8px}
+.horizontal.info_problem .list_subjective li:first-of-type {padding-left:0}
+.horizontal.info_problem .list_subjective li:last-of-type {padding-right:0}
+.horizontal.info_problem .box_example .tit_problem +.info_subjective {margin-top:20px}
+
+/* 문항 2단 3단 */
+.info_problem .box_example.ex_horizontal2 .list_example,
+.info_problem .box_example.ex_horizontal3 .list_example  {font-size:0;line-height:0;}
+.info_problem .box_example.ex_horizontal2 .list_example li,
+.info_problem .box_example.ex_horizontal3 .list_example li {display:inline-block;margin-right:5px;vertical-align:top}
+.info_problem .box_example.ex_horizontal2 .list_example li:nth-of-type(2n),
+.info_problem .box_example.ex_horizontal3 .list_example li:nth-of-type(3n) {margin-right:0}
+.info_problem .box_example.ex_horizontal2 .list_example li {width:49.3%}
+.info_problem .box_example.ex_horizontal3 .list_example li {width:32.4%}
+.info_problem .box_example.ex_horizontal2 .list_example li:last-of-type,
+.info_problem .box_example.ex_horizontal3 .list_example li:last-of-type {display:block;width:auto}
+
+/* 좌우 2단 이미지 지문 */
+.horizontal.info_problem .box_example_img {overflow:hidden;margin:12px 0 21px;border-radius:8px;text-align:center;box-sizing:border-box}
+.horizontal.info_problem .box_example .box_problem img {display:block;max-width:358px}
+
+/* 좌우 2단 텍스트 지문 */
+.horizontal.info_problem .box_example .box_problem {float:none;width:394px;margin:12px 0 20px}
+.horizontal.info_problem .box_example .box_problem .inner_problem {padding:10px;height:auto;min-height:58px}
+
+/* 폰트사이즈 */
+/* .fs50 16 x 0.5 = 8  */
+.fs50.info_problem .tit_problem {font-size:10px;line-height:20px}
+.fs50.info_problem .tit_problem .num {margin-right:6px;padding:0 8px;height:20px;font-size:7px;line-height:21px}
+.fs50.info_problem .tit_problem .num.set {line-height:20px}
+.fs50.info_problem .box_problem .inner_problem {font-size:8px;line-height:13px}
+.fs50.info_problem .list_example li .lbl_check_example {padding:16px 20px 16px 32px;font-size:8px;line-height:13px}
+.fs50.info_problem .list_example li .lbl_check_example::before {top:14px;left:10px;width:16px;height:16px;font-size:8px;line-height:16px}
+.fs50.info_problem .list_example li .check_inp {margin-left:12px}
+.fs50.info_problem .list_example li .check_inp .lbl_check {padding-left:22px;font-size:8px;line-height:24px}
+.fs50.info_problem .list_example li .check_inp input + .lbl_check::before {top:4px;width:14px;height:14px}
+.fs50.info_problem .info_subjective .tit_subjective {font-size:8px;line-height:10px}
+.fs50.info_problem .info_subjective .tit_subjective::before {width:12px;height:12px;margin:-2px 2px 0 0}
+.fs50.info_problem .list_subjective .wrap_inp.line .inp_item {height:18px;padding:3px 0 3px 0;font-size:8px;line-height:12px}
+.fs50.info_problem .list_subjective .wrap_inp .unit {bottom:3px;font-size:8px;line-height:12px}
+.fs50.info_problem .info_subjective .check_inp .lbl_check {font-size:8px;padding-left:13px}
+.fs50.info_problem .info_subjective .check_inp input + .lbl_check::before {top:6px;width:9px;height:9px}
+
+.replay.cont_problem .fs50.info_problem .tit_problem .mark {width:34px;height:33px;background-size:34px auto}
+.replay.cont_problem .fs50.info_problem .tit_problem .mark.correct {left:-2px;bottom:-9px}
+.replay.cont_problem .fs50.info_problem .tit_problem .mark.wrong {left:-1px;bottom:-2px}
+.replay.cont_problem .fs50.info_problem .list_example li .lbl_check_example .mark {height:12px;margin-left:4px;padding:0 5px;border-radius:6px;font-size:6px;line-height:12px}
+.replay.cont_problem .fs50.info_problem .correct_subjective {font-size:8px}
+.replay.cont_problem .fs50.info_problem .correct_subjective dt {min-width:27px;height:15px;margin-right:4px;padding:0 6px;border-radius:3px;line-height:15px}
+.replay.cont_problem .fs50.info_problem .correct_subjective dd {line-height:15px}
+
+
+/* .fs75 16 x 0.75 = 12 */
+.fs75.info_problem .tit_problem {font-size:15px;line-height:27px}
+.fs75.info_problem .tit_problem .num {margin-right:9px;padding:0 12px;height:30px;font-size:11px;line-height:31px}
+.fs75.info_problem .tit_problem .num.set {line-height:31px}
+.fs75.info_problem .box_problem .inner_problem {font-size:12px;line-height:20px}
+.fs75.info_problem .list_example li .lbl_check_example {padding:24px 30px 24px 48px;font-size:12px;line-height:20px}
+.fs75.info_problem .list_example li .lbl_check_example::before {top:21px;left:15px;width:24px;height:24px;font-size:12px;line-height:24px}
+.fs75.info_problem .list_example li .check_inp {margin-left:18px}
+.fs75.info_problem .list_example li .check_inp .lbl_check {padding-left:33px;font-size:12px;line-height:36px}
+.fs75.info_problem .list_example li .check_inp input + .lbl_check::before {top:7px;width:21px;height:21px}
+.fs75.info_problem .info_subjective .tit_subjective {font-size:11px;line-height:15px}
+.fs75.info_problem .info_subjective .tit_subjective::before {width:18px;height:18px;margin:-3px 3px 0 0}
+.fs75.info_problem .list_subjective .wrap_inp.line .inp_item {height:27px;padding:5px 0 5px 0;font-size:12px;line-height:18px}
+.fs75.info_problem .list_subjective .wrap_inp .unit {bottom:5px;font-size:12px;line-height:18px}
+.fs75.info_problem .info_subjective .check_inp .lbl_check {font-size:12px;padding-left:20px}
+.fs75.info_problem .info_subjective .check_inp input + .lbl_check::before {top:4px;width:14px;height:14px}
+
+.replay.cont_problem .fs75.info_problem .tit_problem .mark {width:51px;height:50px;background-size:51px auto}
+.replay.cont_problem .fs75.info_problem .tit_problem .mark.correct {left:-3px;bottom:-13px}
+.replay.cont_problem .fs75.info_problem .tit_problem .mark.wrong {left:-2px;bottom:-4px}
+.replay.cont_problem .fs75.info_problem .list_example li .lbl_check_example .mark {height:18px;margin-left:6px;padding:0 7px;border-radius:9px;font-size:9px;line-height:19px}
+.replay.cont_problem .fs75.info_problem .correct_subjective {font-size:12px}
+.replay.cont_problem .fs75.info_problem .correct_subjective dt {min-width:40px;height:22px;margin-right:6px;padding:0 9px;border-radius:4px;line-height:23px}
+.replay.cont_problem .fs75.info_problem .correct_subjective dd {line-height:22px}
+
+
+/* fs125 16 x 1.25 = 20 */
+.fs125.info_problem .tit_problem {font-size:25px;line-height:42px}
+.fs125.info_problem .tit_problem .num {height:43px;margin-right:15px;padding:0 20px;border-radius:21px;font-size:19px;line-height:42px}
+.fs125.info_problem .tit_problem .num.set {line-height:41px}
+.fs125.info_problem .box_problem {margin:15px 0 25px}
+.fs125.horizontal.info_problem .box_problem {margin:15px 12px 0 0}
+.fs125.info_problem .box_problem .inner_problem {font-size:20px;line-height:33px}
+.fs125.info_problem .box_example {margin-top:15px}
+.fs125.info_problem .list_example li .lbl_check_example {padding:20px 25px 20px 80px;border-radius:8px;font-size:20px;line-height:33px}
+.fs125.info_problem .list_example li .lbl_check_example::before {top:15px;left:16px;width:40px;height:40px;font-size:20px;line-height:40px}
+.fs125.info_problem .list_example li .check_inp {margin:25px 0 0 20px}
+.fs125.info_problem .list_example li .check_inp .lbl_check {padding-left:53px;font-size:20px;line-height:40px}
+.fs125.info_problem .list_example li .check_inp input + .lbl_check::before {top:3px;width:35px;height:35px}
+.fs125.horizontal.info_problem .box_problem + .info_subjective {margin-top:15px}
+.fs125.info_problem .info_subjective .tit_subjective {font-size:18px;line-height:25px}
+.fs125.info_problem .info_subjective .tit_subjective::before {width:30px;height:30px;margin:-5px 5px 0 0}
+.fs125.info_problem .info_subjective .list_subjective {margin-top:19px}
+.fs125.info_problem .list_subjective .wrap_inp.line .inp_item {height:45px;padding:8px 0 8px 0;font-size:20px;line-height:30px}
+.fs125.info_problem .list_subjective .wrap_inp .unit {bottom:8px;font-size:20px;line-height:30px}
+.fs125.info_problem .info_subjective .check_inp {margin-top:23px}
+.fs125.info_problem .info_subjective .check_inp .lbl_check {font-size:20px;line-height:27px;padding-left:33px}
+.fs125.info_problem .info_subjective .check_inp input + .lbl_check::before {top:1px;width:23px;height:23px}
+
+.replay.cont_problem .fs125.info_problem .tit_problem .mark {width:85px;height:83px;background-size:85px auto}
+.replay.cont_problem .fs125.info_problem .tit_problem .mark.correct {left:-5px;bottom:-22px}
+.replay.cont_problem .fs125.info_problem .tit_problem .mark.wrong {left:-4px;bottom:-6px}
+.replay.cont_problem .fs125.info_problem .list_example li .lbl_check_example .mark {height:30px;margin-left:10px;padding:0 12px;border-radius:15px;font-size:15px;line-height:31px}
+.replay.cont_problem .fs125.info_problem .correct_subjective {margin-top:20px;font-size:20px}
+.replay.cont_problem .fs125.info_problem .correct_subjective dt {min-width:67px;height:37px;margin-right:10px;padding:0 15px;border-radius:7px;line-height:38px}
+.replay.cont_problem .fs125.info_problem .correct_subjective dd {line-height:37px}
+
+
+/* fs150 16x1.5 = 24 */
+.fs150.info_problem .tit_problem {font-size:30px;line-height:50px}
+.fs150.info_problem .tit_problem .num {height:52px;margin-right:18px;padding:0 24px;border-radius:25px;font-size:23px;line-height:52px}
+.fs150.info_problem .tit_problem .num.set {line-height:51px}
+.fs150.info_problem .box_problem {margin:18px 0 30px}
+.fs150.horizontal.info_problem .box_problem {margin:18px 12px 0 0}
+.fs150.info_problem .box_problem .inner_problem {font-size:24px;line-height:40px}
+.fs150.info_problem .box_example {margin-top:18px}
+.fs150.info_problem .list_example li .lbl_check_example {padding:24px 30px 24px 96px;border-radius:10px;font-size:24px;line-height:40px}
+.fs150.info_problem .list_example li .lbl_check_example::before {top:21px;left:19px;width:48px;height:48px;font-size:24px;line-height:48px}
+.fs150.info_problem .list_example li .check_inp {margin:30px 0 0 24px}
+.fs150.info_problem .list_example li .check_inp .lbl_check {padding-left:63px;font-size:24px;line-height:48px}
+.fs150.info_problem .list_example li .check_inp input + .lbl_check::before {top:3px;width:42px;height:42px}
+.fs150.horizontal.info_problem .box_problem + .info_subjective {margin-top:18px}
+.fs150.info_problem .info_subjective .tit_subjective {font-size:24px;line-height:30px}
+.fs150.info_problem .info_subjective .tit_subjective::before {width:36px;height:36px;margin:-6px 6px 0 0}
+.fs150.info_problem .info_subjective .list_subjective {margin-top:23px}
+.fs150.info_problem .list_subjective .wrap_inp.line .inp_item {height:54px;padding:9px 0 9px 0;font-size:24px;line-height:36px}
+.fs150.info_problem .list_subjective .wrap_inp .unit {bottom:9px;font-size:24px;line-height:36px}
+.fs150.info_problem .info_subjective .check_inp {margin-top:28px}
+.fs150.info_problem .info_subjective .check_inp .lbl_check {font-size:24px;line-height:33px;padding-left:40px}
+.fs150.info_problem .info_subjective .check_inp input + .lbl_check::before {top:2px;width:28px;height:28px}
+
+.replay.cont_problem .fs150.info_problem .tit_problem .mark {width:102px;height:100px;background-size:102px auto}
+.replay.cont_problem .fs150.info_problem .tit_problem .mark.correct {left:-6px;bottom:-27px}
+.replay.cont_problem .fs150.info_problem .tit_problem .mark.wrong {left:-4px;bottom:-7px}
+.replay.cont_problem .fs150.info_problem .list_example li .lbl_check_example .mark {height:36px;margin-left:12px;padding:0 15px;border-radius:18px;font-size:18px;line-height:36px}
+.replay.cont_problem .fs150.info_problem .correct_subjective {margin-top:24px;font-size:24px}
+.replay.cont_problem .fs150.info_problem .correct_subjective dt {min-width:81px;height:45px;margin-right:12px;padding:0 18px;border-radius:9px;line-height:46px}
+.replay.cont_problem .fs150.info_problem .correct_subjective dd {line-height:45px}
+
+
+/* fs175 16x1.75 = 28 */
+.fs175.info_problem .tit_problem {font-size:35px;line-height:60px}
+.fs175.info_problem .tit_problem .num {height:60px;margin-right:21px;padding:0 28px;border-radius:28px;font-size:26px;line-height:60px}
+.fs175.info_problem .tit_problem .num.set {line-height:60px}
+.fs175.info_problem .box_problem {margin:21px 0 35px}
+.fs175.horizontal.info_problem .box_problem {margin:21px 12px 0 0}
+.fs175.info_problem .box_problem .inner_problem {font-size:28px;line-height:45px}
+.fs175.info_problem .box_example {margin-top:21px}
+.fs175.info_problem .list_example li .lbl_check_example {padding:28px 35px 28px 112px;border-radius:10px;font-size:28px;line-height:45px}
+.fs175.info_problem .list_example li .lbl_check_example::before {top:23px;left:35px;width:56px;height:56px;font-size:28px;line-height:56px}
+.fs175.info_problem .list_example li .check_inp {margin:35px 0 0 38px}
+.fs175.info_problem .list_example li .check_inp .lbl_check {padding-left:73px;font-size:28px;line-height:56px}
+.fs175.info_problem .list_example li .check_inp input + .lbl_check::before {top:3px;width:49px;height:49px}
+.fs175.horizontal.info_problem .box_problem + .info_subjective {margin-top:21px}
+.fs175.info_problem .info_subjective .tit_subjective {font-size:24px;line-height:35px}
+.fs175.info_problem .info_subjective .tit_subjective::before {width:42px;height:42px;margin:-7px 7px 0 0}
+.fs175.info_problem .info_subjective .list_subjective {margin-top:26px}
+.fs175.info_problem .list_subjective .wrap_inp.line .inp_item {height:63px;padding:11px 0 11px 0;font-size:28px;line-height:42px}
+.fs175.info_problem .list_subjective .wrap_inp .unit {bottom:11px;font-size:28px;line-height:42px}
+.fs175.info_problem .info_subjective .check_inp {margin-top:31px}
+.fs175.info_problem .info_subjective .check_inp .lbl_check {font-size:26px;line-height:38px;padding-left:45px}
+.fs175.info_problem .info_subjective .check_inp input + .lbl_check::before {top:3px;width:31px;height:31px}
+
+.replay.cont_problem .fs175.info_problem .tit_problem .mark {width:119px;height:117px;background-size:119px auto}
+.replay.cont_problem .fs175.info_problem .tit_problem .mark.correct {left:-7px;bottom:-31px}
+.replay.cont_problem .fs175.info_problem .tit_problem .mark.wrong {left:-5px;bottom:-8px}
+.replay.cont_problem .fs175.info_problem .list_example li .lbl_check_example .mark {height:42px;margin-left:14px;padding:0 17px;border-radius:21px;font-size:21px;line-height:42px}
+.replay.cont_problem .fs175.info_problem .correct_subjective {margin-top:28px;font-size:28px}
+.replay.cont_problem .fs175.info_problem .correct_subjective dt {min-width:94px;height:52px;margin-right:14px;padding:0 21px;border-radius:10px;line-height:54px}
+.replay.cont_problem .fs175.info_problem .correct_subjective dd {line-height:52px}
+
+
+/* fs200 16x2 = 32 */
+.fs200.info_problem .tit_problem {font-size:40px;line-height:68px}
+.fs200.info_problem .tit_problem .num {height:68px;margin-right:24px;padding:0 32px;border-radius:34px;font-size:30px;line-height:70px}
+.fs200.info_problem .tit_problem .num.set {line-height:69px}
+.fs200.info_problem .box_problem {margin:24px 0 40px}
+.fs200.horizontal.info_problem .box_problem {margin:24px 12px 0 0}
+.fs200.info_problem .box_problem .inner_problem {font-size:32px;line-height:52px}
+.fs200.info_problem .box_example {margin-top:24px}
+.fs200.info_problem .list_example li .lbl_check_example {padding:32px 40px 32px 128px;border-radius:12px;font-size:32px;line-height:52px}
+.fs200.info_problem .list_example li .lbl_check_example::before {top:26px;left:40px;width:64px;height:64px;font-size:32px;line-height:64px}
+.fs200.info_problem .list_example li .check_inp {margin:40px 0 0 44px}
+.fs200.info_problem .list_example li .check_inp .lbl_check {padding-left:84px;font-size:32px;line-height:64px}
+.fs200.info_problem .list_example li .check_inp input + .lbl_check::before {top:4px;width:56px;height:56px}
+.fs200.horizontal.info_problem .box_problem + .info_subjective {margin-top:24px}
+.fs200.info_problem .info_subjective .tit_subjective {font-size:28px;line-height:40px}
+.fs200.info_problem .info_subjective .tit_subjective::before {width:48px;height:48px;margin:-8px 8px 0 0}
+.fs200.info_problem .list_subjective .wrap_inp.line .inp_item {height:72px;padding:12px 0 12px 0;font-size:32px;line-height:48px}
+.fs200.info_problem .list_subjective .wrap_inp .unit {bottom:12px;font-size:32px;line-height:48px}
+.fs200.info_problem .info_subjective .check_inp {margin-top:36px}
+.fs200.info_problem .info_subjective .check_inp .lbl_check {font-size:30px;line-height:44px;padding-left:52px}
+.fs200.info_problem .info_subjective .check_inp input + .lbl_check::before {top:3px;width:36px;height:36px}
+
+.replay.cont_problem .fs200.info_problem .tit_problem .mark {width:136px;height:134px;background-size:136px auto}
+.replay.cont_problem .fs200.info_problem .tit_problem .mark.correct {left:-8px;bottom:-36px}
+.replay.cont_problem .fs200.info_problem .tit_problem .mark.wrong {left:-6px;bottom:-10px}
+.replay.cont_problem .fs200.info_problem .list_example li .lbl_check_example .mark {height:48px;margin-left:16px;padding:0 20px;border-radius:24px;font-size:24px;line-height:48px}
+.replay.cont_problem .fs200.info_problem .correct_subjective {margin-top:32px;font-size:32px}
+.replay.cont_problem .fs200.info_problem .correct_subjective dt {min-width:108px;height:60px;margin-right:16px;padding:0 24px;border-radius:12px;line-height:62px}
+.replay.cont_problem .fs200.info_problem .correct_subjective dd {line-height:60px}
+
+
+/* fs225 16x2.25 = 36 */
+.fs225.info_problem .tit_problem {font-size:45px;line-height:76px}
+.fs225.info_problem .tit_problem .num {height:76px;margin-right:27px;padding:0 36px;border-radius:38px;font-size:34px;line-height:79px}
+.fs225.info_problem .tit_problem .num.set {line-height:78px}
+.fs225.info_problem .box_problem {margin:27px 0 45px}
+.fs225.horizontal.info_problem .box_problem {margin:27px 12px 0 0}
+.fs225.info_problem .box_problem .inner_problem {font-size:36px;line-height:58px}
+.fs225.info_problem .box_example {margin-top:27px}
+.fs225.info_problem .list_example li .lbl_check_example {padding:36px 45px 36px 144px;border-radius:13px;font-size:36px;line-height:58px}
+.fs225.info_problem .list_example li .lbl_check_example::before {top:29px;left:45px;width:72px;height:72px;font-size:36px;line-height:72px}
+.fs225.info_problem .list_example li .check_inp {margin:45px 0 0 49px}
+.fs225.info_problem .list_example li .check_inp .lbl_check {padding-left:94px;font-size:36px;line-height:72px}
+.fs225.info_problem .list_example li .check_inp input + .lbl_check::before {top:4px;width:63px;height:63px}
+.fs225.horizontal.info_problem .box_problem + .info_subjective {margin-top:27px}
+.fs225.info_problem .info_subjective .tit_subjective {font-size:31px;line-height:45px}
+.fs225.info_problem .info_subjective .tit_subjective::before {width:54px;height:54px;margin:-9px 9px 0 0}
+.fs225.info_problem .list_subjective .wrap_inp.line .inp_item {height:81px;padding:13px 0 13px 0;font-size:36px;line-height:54px}
+.fs225.info_problem .list_subjective .wrap_inp .unit {bottom:13.5px;font-size:36px;line-height:54px}
+.fs225.info_problem .info_subjective .check_inp {margin-top:40px}
+.fs225.info_problem .info_subjective .check_inp .lbl_check {font-size:34px;line-height:49px;padding-left:58px}
+.fs225.info_problem .info_subjective .check_inp input + .lbl_check::before {top:3px;width:40px;height:40px}
+
+.replay.cont_problem .fs225.info_problem .tit_problem .mark {width:153px;height:150px;background-size:153px auto}
+.replay.cont_problem .fs225.info_problem .tit_problem .mark.correct {left:-9px;bottom:-40px}
+.replay.cont_problem .fs225.info_problem .tit_problem .mark.wrong {left:-7px;bottom:-11px}
+.replay.cont_problem .fs225.info_problem .list_example li .lbl_check_example .mark {height:54px;margin-left:18px;padding:0 22px;border-radius:27px;font-size:27px;line-height:54px}
+.replay.cont_problem .fs225.info_problem .correct_subjective {margin-top:36px;font-size:36px}
+.replay.cont_problem .fs225.info_problem .correct_subjective dt {min-width:121px;height:67px;margin-right:18px;padding:0 27px;border-radius:13px;line-height:69px}
+
+
+/* fs250 16x2.5 = 40 */
+.fs250.info_problem .tit_problem {font-size:50px;line-height:85px}
+.fs250.info_problem .tit_problem .num {height:85px;margin-right:30px;padding:0 40px;border-radius:42px;font-size:37px;line-height:87px}
+.fs250.info_problem .tit_problem .num.set {line-height:86px}
+.fs250.info_problem .box_problem {margin:30px 0 50px}
+.fs250.horizontal.info_problem .box_problem {margin:30px 12px 0 0}
+.fs250.info_problem .box_problem .inner_problem {font-size:36px;line-height:65px}
+.fs250.info_problem .box_example {margin-top:30px}
+.fs250.info_problem .list_example li .lbl_check_example {padding:40px 50px 40px 160px;border-radius:15px;font-size:40px;line-height:65px}
+.fs250.info_problem .list_example li .lbl_check_example::before {top:32px;left:50px;width:80px;height:80px;font-size:40px;line-height:80px}
+.fs250.info_problem .list_example li .check_inp {margin:50px 0 0 55px}
+.fs250.info_problem .list_example li .check_inp .lbl_check {padding-left:105px;font-size:40px;line-height:80px}
+.fs250.info_problem .list_example li .check_inp input + .lbl_check::before {top:5px;width:70px;height:70px}
+.fs250.horizontal.info_problem .box_problem + .info_subjective {margin-top:30px}
+.fs250.info_problem .info_subjective .tit_subjective {font-size:35px;line-height:50px}
+.fs250.info_problem .info_subjective .tit_subjective::before {width:60px;height:60px;margin:-10px 10px 0 0}
+.fs250.info_problem .list_subjective .wrap_inp.line .inp_item {height:90px;padding:15px 0 15px 0;font-size:40px;line-height:60px}
+.fs250.info_problem .list_subjective .wrap_inp .unit {bottom:15px;font-size:40px;line-height:60px}
+.fs250.info_problem .info_subjective .check_inp {margin-top:45px}
+.fs250.info_problem .info_subjective .check_inp .lbl_check {font-size:37px;line-height:55px;padding-left:65px}
+.fs250.info_problem .info_subjective .check_inp input + .lbl_check::before {top:4px;width:45px;height:45px}
+
+.replay.cont_problem .fs250.info_problem .tit_problem .mark {width:170px;height:167px;background-size:170px auto}
+.replay.cont_problem .fs250.info_problem .tit_problem .mark.correct {left:-10px;bottom:-45px}
+.replay.cont_problem .fs250.info_problem .tit_problem .mark.wrong {left:-7px;bottom:-12px}
+.replay.cont_problem .fs250.info_problem .list_example li .lbl_check_example .mark {height:60px;margin-left:20px;padding:0 25px;border-radius:30px;font-size:30px;line-height:60px}
+.replay.cont_problem .fs250.info_problem .correct_subjective {margin-top:40px;font-size:40px}
+.replay.cont_problem .fs250.info_problem .correct_subjective dt {min-width:135px;height:75px;margin-right:20px;padding:0 30px;border-radius:15px;line-height:77px}
+.replay.cont_problem .fs250.info_problem .correct_subjective dd {line-height:75px}
+
+
+/* fs275 16x2.75 = 44 */
+.fs275.info_problem .tit_problem {font-size:55px;line-height:93px}
+.fs275.info_problem .tit_problem .num {height:93px;margin-right:33px;padding:0 44px;border-radius:47px;font-size:41px;line-height:96px}
+.fs275.info_problem .tit_problem .num.set {line-height:95px}
+.fs275.info_problem .box_problem {margin:33px 0 55px}
+.fs275.horizontal.info_problem .box_problem {margin:33px 12px 0 0}
+.fs275.info_problem .box_problem .inner_problem {font-size:44px;line-height:71px}
+.fs275.info_problem .box_example {margin-top:33px}
+.fs275.info_problem .list_example li .lbl_check_example {padding:44px 55px 44px 176px;border-radius:16px;font-size:44px;line-height:71px}
+.fs275.info_problem .list_example li .check_inp {margin:55px 0 0 60px}
+.fs275.info_problem .list_example li .check_inp .lbl_check {padding-left:115px;font-size:44px;line-height:88px}
+.fs275.info_problem .list_example li .check_inp input + .lbl_check::before {top:5px;width:77px;height:77px}
+.fs275.horizontal.info_problem .box_problem + .info_subjective {margin-top:33px}
+.fs275.info_problem .info_subjective .tit_subjective {font-size:38px;line-height:55px}
+.fs275.info_problem .info_subjective .tit_subjective::before {width:66px;height:66px;margin:-11px 11px 0 0}
+.fs275.info_problem .list_subjective .wrap_inp.line .inp_item {height:99px;padding:16px 0 16px 0;font-size:44px;line-height:66px}
+.fs275.info_problem .list_subjective .wrap_inp .unit {bottom:16px;font-size:44px;line-height:66px}
+.fs275.info_problem .info_subjective .check_inp {margin-top:49px}
+.fs275.info_problem .info_subjective .check_inp .lbl_check {font-size:41px;line-height:60px;padding-left:71px}
+.fs275.info_problem .info_subjective .check_inp input + .lbl_check::before {top:4px;width:49px;height:49px}
+
+.replay.cont_problem .fs275.info_problem .tit_problem .mark {width:187px;height:184px;background-size:187px auto}
+.replay.cont_problem .fs275.info_problem .tit_problem .mark.correct {left:-11px;bottom:-50px}
+.replay.cont_problem .fs275.info_problem .tit_problem .mark.wrong {left:-8px;bottom:-13px}
+.replay.cont_problem .fs275.info_problem .list_example li .lbl_check_example .mark {height:66px;margin-left:22px;padding:0 27px;border-radius:33px;font-size:33px;line-height:66px}
+.replay.cont_problem .fs275.info_problem .correct_subjective {margin-top:44px;font-size:44px}
+.replay.cont_problem .fs275.info_problem .correct_subjective dt {min-width:148px;height:82px;margin-right:22px;padding:0 33px;border-radius:16px;line-height:85px}
+.replay.cont_problem .fs275.info_problem .correct_subjective dd {line-height:82px}
+
+
+/* fs300 16x300 = 48 */
+.fs300.info_problem .tit_problem {font-size:60px;line-height:102px}
+.fs300.info_problem .tit_problem .num {height:102px;margin-right:36px;padding:0 48px;border-radius:51px;font-size:45px;line-height:105px}
+.fs300.info_problem .tit_problem .num.set {line-height:104px}
+.fs300.info_problem .box_problem {margin:36px 0 60px}
+.fs300.horizontal.info_problem .box_problem {margin:36px 12px 0 0}
+.fs300.info_problem .box_problem .inner_problem {font-size:48px;line-height:78px}
+.fs300.info_problem .box_example {margin-top:36px}
+.fs300.info_problem .list_example li .lbl_check_example {padding:48px 60px 48px 193px;border-radius:16px;font-size:48px;line-height:78px}
+.fs300.info_problem .list_example li .lbl_check_example::before {top:39px;left:60px;width:96px;height:96px;font-size:48px;line-height:96px}
+.fs300.info_problem .list_example li .check_inp {margin:60px 0 0 66px}
+.fs300.info_problem .list_example li .check_inp .lbl_check {padding-left:126px;font-size:48px;line-height:96px}
+.fs300.info_problem .list_example li .check_inp input + .lbl_check::before {top:6px;width:84px;height:84px}
+.fs300.horizontal.info_problem .box_problem + .info_subjective {margin-top:36px}
+.fs300.info_problem .info_subjective .tit_subjective {font-size:42px;line-height:60px}
+.fs300.info_problem .info_subjective .tit_subjective::before {width:72px;height:72px;margin:-12px 12px 0 0}
+.fs300.info_problem .list_subjective .wrap_inp.line .inp_item {height:108px;padding:18px 0 18px 0;font-size:48px;line-height:72px}
+.fs300.info_problem .list_subjective .wrap_inp .unit {bottom:18px;font-size:48px;line-height:72px}
+.fs300.info_problem .info_subjective .check_inp {margin-top:54px}
+.fs300.info_problem .info_subjective .check_inp .lbl_check {font-size:45px;line-height:66px;padding-left:78px}
+.fs300.info_problem .info_subjective .check_inp input + .lbl_check::before {top:5px;width:54px;height:54px}
+
+.replay.cont_problem .fs300.info_problem .tit_problem .mark {width:204px;height:201px;background-size:204px auto}
+.replay.cont_problem .fs300.info_problem .tit_problem .mark.correct {left:-12px;bottom:-54px}
+.replay.cont_problem .fs300.info_problem .tit_problem .mark.wrong {left:-9px;bottom:-15px}
+.replay.cont_problem .fs300.info_problem .list_example li .lbl_check_example .mark {height:72px;margin-left:24px;padding:0 30px;border-radius:36px;font-size:36px;line-height:72px}
+.replay.cont_problem .fs300.info_problem .correct_subjective {margin-top:48px;font-size:48px}
+.replay.cont_problem .fs300.info_problem .correct_subjective dt {min-width:162px;height:90px;margin-right:24px;padding:0 36px;border-radius:18px;line-height:93px}
+.replay.cont_problem .fs300.info_problem .correct_subjective dd {line-height:90px}
+
+/* 페이징 */
+.paging .num_paging {position:absolute;left:200px;right:200px;top:17px;font-size:13px;line-height:19px;color:#6d799a;text-align:center}
+.paging .num_paging strong.num {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.paging .wrap_btn .btn_end {float:right}
+
+/* 문제 풀이 - 시험 응답 현황 */
+.status_problem {position:fixed;left:0;bottom:0;z-index:5;width:100%;padding:0 16px;border-top:1px solid #ccd0e0;border-top-left-radius:8px;border-top-right-radius:8px;background:#fff;box-sizing:border-box;box-shadow:0 -10px 34px 0 rgba(87, 106, 202, 0.1)}
+.status_problem .btn_status {position:absolute;left:50%;top:-10px;z-index:1;width:48px;height:20px;border:1px solid #ccd0e0;border-radius:8px;background:#fff;transform:translate(-50%, 0);-webkit-transform:translate(-50%, 0)}
+.status_problem .btn_status::before {position:absolute;left:-2px;top:9px;z-index:-1;width:50px;height:12px;background:#fff;content:""}
+.status_problem .btn_status::after {width:13px;height:8px;margin-top:6px;background-position:-210px -20px}
+.status_problem .top_status {overflow:hidden;position:relative;height:45px;padding:10px 183px 13px 173px;box-sizing:border-box}
+.status_problem .top_status .tit_status {position:absolute;left:0;top:12px;font-size:15px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;line-height:21px;letter-spacing:-.4px}
+.status_problem .top_status .list_status {overflow:hidden;position:absolute;right:0;top:13px;font-size:13px;line-height:19px}
+.status_problem .top_status .list_status dt {float:left;color:#8993ad}
+.status_problem .top_status .list_status dt::before {float:left;width:1px;height:10px;margin:4px 8px 0;background:#ccd0e0;content:""}
+.status_problem .top_status .list_status dt:first-of-type::before {display:none}
+.status_problem .top_status .list_status dd {float:left;margin-left:2px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#6d799a}
+.status_problem .top_status .wrap_progress {position:relative;width:100%;height:10px;margin-top:8px;border-radius:4px;background:#e0e3f1}
+.status_problem .top_status .wrap_progress .inner_progress {position:absolute;left:0;top:0;height:100%;border-radius:4px;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03);background-image:linear-gradient(93deg, #d4dcff, #576aca)}
+.status_problem .info_status {display:none;padding-bottom:16px}
+.wrap_status {position:relative}
+.wrap_status .slide_status {overflow:hidden;background:url(../images/bg_status.png) repeat-x 0 0}
+.slide_status .list_status {position:relative;height:78px;transition-property:transform;box-sizing:content-box}
+.slide_status .list_status li {position:relative;float:left;width:62px;height:100%;font-size:0;line-height:0;text-align:center}
+.slide_status .list_status li .tit {position:relative;z-index:2;display:block;width:62px;height:32px;font-size:15px;line-height:32px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#fff}
+.slide_status .list_status li::before {position:absolute;left:0;top:12px;width:1px;height:8px;background:#8991b8;content:""}
+.slide_status .list_status li:first-of-type::before {display:none}
+.slide_status .list_status li .noinput {position:absolute;left:0;top:0;z-index:1;width:63px;height:32px;background:#e2687e;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03)}
+.slide_status .list_status li .current {position:absolute;left:0;top:0;z-index:1;width:63px;height:32px;background:#576aca;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03)}
+.slide_status .list_status li .img_ibt_after::after {width:22px;height:22px;margin:12px 1px 0}
+.slide_status .list_status li .input::after {background-position:-175px -35px}
+.slide_status .list_status li .confused::after {background-position:-175px -60px}
+.slide_status .list_status li .link {position:absolute;left:0;top:0;z-index:3;width:100%;height:32px}
+.slide_status .wrap_btn {display:block;position:absolute;right:0;bottom:-26px}
+.slide_status .wrap_btn .img_ibt_after {float:left;margin-left:6px}
+.slide_status .wrap_btn .img_ibt_after::after {width:20px;height:20px}
+.slide_status .wrap_btn .btn_prev::after {background-position:-200px -60px}
+.slide_status .wrap_btn .btn_prev:disabled::after,
+.slide_status .wrap_btn .btn_prev.disabled::after {background-position:-200px -35px}
+.slide_status .wrap_btn .btn_next::after {background-position:-225px -60px}
+.slide_status .wrap_btn .btn_next:disabled::after,
+.slide_status .wrap_btn .btn_next.disabled::after{background-position:-225px -35px}
+.status_problem .info_status .noti_status {overflow:hidden;margin-top:7px;font-size:13px;line-height:19px;color:#8991b8}
+.status_problem .info_status .noti_status .txt_noti {float:left}
+.status_problem .info_status .noti_status .txt_noti::after {float:right;width:1px;height:10px;margin:4px 8px 0;background:#ccd0e0;content:""}
+.status_problem .info_status .noti_status .desc_noti {float:left}
+.status_problem .info_status .noti_status .desc_noti::before {width:12px;height:12px;margin:3px 4px 0;background-position:-225px 0}
+.status_problem.on .btn_status::after {background-position:-200px -85px}
+.status_problem.on .info_status {display:block}
+
+/* 응시화면 가이드 */
+#content.cont_screenguide {width:1032px;margin:0 auto;padding:144px 0 130px}
+.wrap_screenguide.step1 .wrap_problem {z-index:105}
+.wrap_screenguide.step1 .wrap_problem::before {position:absolute;left:0;right:-30px;top:0;bottom:0;z-index:105;background:rgba(0,0,0,0);content:""}
+.wrap_screenguide .list_step {position:absolute;left:0;right:0;top:144px;min-width:1032px;z-index:200}
+.wrap_screenguide .list_step li {display:none}
+.wrap_screenguide .list_step li .box_guide {position:absolute;width:386px;min-height:216px;padding:20px;border-radius:8px;background:#494e63;box-sizing:border-box;box-shadow: 0 0 20px 0 rgba(27, 33, 65, 0.12)}
+.wrap_screenguide .list_step li .box_guide::after {position:absolute;width:0;height:0;border:10px solid transparent;content:""}
+.wrap_screenguide .list_step li .box_guide .tit_guide {display:block;font-size:20px;line-height:29px;color:#fff}
+.wrap_screenguide .list_step li .box_guide .paging_guide {position:absolute;left:17px;bottom:20px;font-size:0;line-height:0;}
+.wrap_screenguide .list_step li .box_guide .paging_guide .dot {display:inline-block;width:6px;height:6px;margin:0 3px;border-radius:50%;background:#8991b8;vertical-align:middle}
+.wrap_screenguide .list_step li .box_guide .paging_guide em.dot {width:8px;height:8px;background:#ebedf7}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide {position:absolute;right:20px;bottom:20px;font-size:0}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide button {display:inline-block;width:36px;height:36px;margin-left:6px;font-size:0;vertical-align:top}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide button::after {width:36px;height:36px}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide .btn_prev::after {background-position:0 -155px}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide .btn_next::after {background-position:-40px -155px}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide .btn_prev:disabled:after, 
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide .btn_prev.disabled:after {background-position:0 -115px}
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide .btn_next:disabled:after, 
+.wrap_screenguide .list_step li .box_guide .wrap_btn_guide .btn_next.disabled:after {background-position:-40px -115px}
+
+/* 가이드 step1 */
+.wrap_screenguide.step1 .list_step li:nth-child(1) {display:block;position:relative;width:960px;height:467px;margin:0 auto}
+.wrap_screenguide.step1 .info_zoom button::before {position:absolute;width:30px;height:30px;border-top-right-radius:4px;border-bottom-right-radius:4px; background:rgba(0,0,0,.5);content:""}
+.wrap_screenguide.step1 .list_step li:nth-child(1)::after {position:absolute;left:0;bottom:0;width:132px;height:384px;background:url(../images/guide_step1.png) no-repeat 0 0;background-size:100% auto;content:""}
+.wrap_screenguide.step1 .list_step li:nth-child(1) .box_guide {top:100px;left:131px}
+.wrap_screenguide.step1 .list_step li:nth-child(1) .box_guide:after {left:0;top:65px;border-right-color:#494e63;border-left:0;margin-top:-10px;margin-left:-10px}
+
+/* 가이드 step2 */
+.wrap_screenguide.step2 .list_step li:nth-child(2) {display:block;position:relative;width:960px;height:467px;margin:0 auto}
+.wrap_screenguide.step2 .list_step li:nth-child(2)::after {position:absolute;right:-89px;top:-5px;width:144px;height:148px;background:url(../images/guide_step2.png) no-repeat 0 0;background-size:100% auto;content:""}
+.wrap_screenguide.step2 .list_step li:nth-child(2) .box_guide {top:8px;right:69px}
+.wrap_screenguide.step2 .list_step li:nth-child(2) .box_guide:after {right:0;top:65px;border-left-color:#494e63;border-right:0;margin-top:-10px;margin-right:-10px}
+
+/* 가이드 step3 */
+.wrap_screenguide.step3 .list_step li:nth-child(3) {display:block;position:relative;height:467px;margin:0 auto}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .box_guide {bottom:10px;left:50%;margin-left:95px}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .box_guide:after {right:65px;bottom:0;border-top-color:#494e63;border-bottom:0;margin-left:-10px;margin-bottom:-10px}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging {position:absolute;left:0;right:0;bottom:-90px;width:100%;height:84px;border-top:2px solid #576aca;border-bottom:2px solid #576aca;background:#fff;box-shadow:0 0 20px 0 rgba(27, 33, 65, 0.12)}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging::after {position:absolute;left:0;right:0;top:0;bottom:0;z-index:1;background:rgba(0,0,0,0);content:""}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging {width:960px;margin:0 auto}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn {margin-top:10px}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn .btn_md {height:60px;font-size:20px;line-height:60px}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn .next {float:right}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn .prev::before,
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn .next::after {display:inline-block;width:28px;height:28px;background-repeat:no-repeat;background-size:0 0;background-size:100% auto;vertical-align:top;content:""}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn .prev::before {margin:15px 2px 0 0;background-image:url(../images/guide_btn_prev.svg)}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .inner_paging .wrap_btn .next::after {margin:15px 0 0 2px;background-image:url(../images/guide_btn_next.svg)}
+.wrap_screenguide.step3 .list_step li:nth-child(3) .paging .num_paging {top:28px;font-size:20px;line-height:25px}
+
+/* 가이드 step4 */
+.wrap_screenguide.step4 .list_step li:nth-child(4) {display:block;position:relative;height:467px}
+.wrap_screenguide.readymade.step4 .list_step li:nth-child(4)::after,
+.wrap_screenguide.readymade.step4 .list_step li:nth-child(4)::before {position:fixed;bottom:34px;width:139px;height:139px;background-repeat:no-repeat;background-position:0 0;background-size:100% auto;content:""}
+.wrap_screenguide.readymade.step4 .list_step li:nth-child(4)::before {left:100px;background-image:url(../images/guide_step4_readymade_1.png)}
+.wrap_screenguide.readymade.step4 .list_step li:nth-child(4)::after {left:227px;background-image:url(../images/guide_step4_readymade_2.png)}
+.wrap_screenguide.readymade.step4 .list_step li:nth-child(4) .tit_guide {position:relative;padding-left:8px;margin-bottom:8px}
+.wrap_screenguide.readymade.step4 .list_step li:nth-child(4) .tit_guide::before {position:absolute;left:0;top:11px;width:2px;height:2px;border-radius:50%;background:#fff;content:""}
+.wrap_screenguide.step4 .list_step li:nth-child(4) .box_guide {position:fixed;left:84px;bottom:200px;min-height:250px}
+.wrap_screenguide.step4 .list_step li:nth-child(4) .box_guide:after {left:65px;bottom:0;border-top-color:#494e63;border-bottom:0;margin-left:-10px;margin-bottom:-10px}
+.wrap_screenguide.step4 .list_step li:nth-child(4) .box_guide .btn_ready {width:auto;min-width:121px;height:36px;border-radius:20px;background:#f9faff;font-weight:normal;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:37px;color:#576aca}
+.wrap_screenguide.step4 .status_problem {z-index:105}
+.wrap_screenguide.step4 .status_problem::after {position:absolute;left:0;right:0;top:-10px;bottom:0;z-index:5;background:rgba(0,0,0,0);content:""}
+.wrap_screenguide.step4 .status_problem .info_status {display:block}
+
+/* adaptive가이드 */
+.wrap_screenguide.adaptive .list_step {top:200px}
+.wrap_screenguide.adaptive.step3 .list_step li:nth-child(3) .desc_guide {margin-top:6px;font-size:13px;line-height:19px;color:#ccd0e0}
+.wrap_screenguide.adaptive.step3 .list_step li:nth-child(3) .box_guide,
+.wrap_screenguide.adaptive.step4 .list_step li:nth-child(4) .box_guide {min-height:226px}
+.wrap_screenguide.adaptive.step4 .list_step li:nth-child(4) .box_guide {bottom:109px}
+.wrap_screenguide.adaptive.step4 .list_step li:nth-child(4) .bg_step4 {position:fixed;left:-14px;bottom:-13px;width:1015px;height:112px;padding:42px 0 0 46px;background:url(../images/guide_step4_adaptive.png) no-repeat 0 0;background-size:100% auto;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:20px;line-height:29px} 
+.wrap_screenguide.adaptive.step4 .status_problem .info_status {display:none}
+
+/* 분석화면 */
+#content.cont_report {width:632px;margin:0 auto;padding:128px 0 100px}
+.cont_report h3 {font-size:24px;line-height:36px;text-align:center}
+.cont_report .top_report {overflow:hidden;margin-top:48px}
+.cont_report .top_report .list_examinee {position:relative;float:left;padding-left:46px}
+.cont_report .top_report .list_examinee::before {position:absolute;left:0;top:2px;width:40px;height:40px;background-position:-80px -115px}
+.cont_report .top_report .list_examinee dt {font-size:13px;line-height:19px;color:#8991b8}
+.cont_report .top_report .list_examinee dd {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:18px;line-height:27px;color:#576aca}
+.cont_report .top_report .list_examinee dd .num {color:#1b2141}
+.cont_report .top_report .list_time {float:right;overflow:hidden;margin-top:22px;font-size:15px;line-height:22px}
+.cont_report .top_report .list_time dt {float:left;color:#8991b8}
+.cont_report .top_report .list_time dt::before {width:16px;height:16px;margin:2px 6px 0 0;background-position:-135px -85px}
+.cont_report .top_report .list_time dd {float:left;margin-left:3px;color:#1b2141}
+
+.cont_report [class^="report_"] {overflow:hidden;margin-top:16px;padding:16px 24px;border-radius:8px;background:#fff}
+.cont_report .tit_report {position:relative;padding-left:9px;font-weight:normal;font-size:15px;line-height:22px;color:#6D7392}
+.cont_report .tit_report::before {position:absolute;left:0;top:7px;width:4px;height:4px;border-radius:50%;background:#6D7392;content:""}
+
+.cont_report  .report_total {margin-top:12px}
+.report_total .tit_report {float:left;margin-top:3px}
+.report_total .total_level {float:right;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:20px;line-height:29px;color:#576aca}
+
+.report_level .list_level {margin-left:9px;border-top:1px solid #e0e3f1;margin-top:11px;padding-top:10px;color:#1b2141}
+.report_level .list_level li {overflow:hidden;font-size:15px;line-height:36px}
+.report_level .list_level li .tit_level {float:left}
+.report_level .list_level li .cont_level {float:right;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+
+.report_graph .circle_graph {position:relative;width:130px;height:130px;margin:-19px auto 0;text-align:center}  
+.report_graph .circle_graph svg {display:inline-block}
+
+.report_graph .info_score {position:absolute;display:table;top:0;left:50%;top:50%;width:92px;height:92px;border-radius:50%;background:#eff2f7;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);text-align:center}
+.report_graph .info_score .inner_score {display:table-cell;height:100%;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;vertical-align:middle}
+.report_graph .info_score .inner_score .score {font-size:20px;color:#576aca}
+.report_graph .info_score .inner_score .txt {font-size:15px;color:#1b2125}
+.report_graph .info_score .inner_score .total {font-size:15px;color:#3d4145}
+
+.report_graph .tit_report {display:block}
+.report_graph .tit_subject + .tit_report {margin-top:16px}
+.report_graph .tit_subject {display:block;height:44px;margin:-16px -24px 0;padding:0 24px;border-top-left-radius:8px;border-top-right-radius:8px;background:#576aca;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:44px;color:#fff}
+.report_graph .info_grade {overflow:hidden;padding-bottom:4px}
+.report_graph .circle_graph + .info_grade {margin-top:22px;border-top:1px solid #e0e3f1}
+.report_graph .info_grade dl {overflow:hidden;margin-top:16px;font-size:15px;line-height:22px}
+.report_graph .info_grade dl dt {float:left;position:relative;padding-left:9px;color:#6d7392}
+.report_graph .info_grade dl dt::before {position:absolute;left:0;top:50%;width:4px;height:4px;margin-top:-3px;background:#8991b8;border-radius:50%;content:""}
+.report_graph .info_grade dl dd {float:right;margin-left:3px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#1b2141}
+
+.report_grade .info_grade {float:right;font-size:15px;color:#1b2141}
+.report_grade .info_grade .emph {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.report_grade .wrap_grade {position:relative;width:100%;height:8px;margin-top:15px;border-radius:5px;background:#eaeaea}
+.report_grade .wrap_grade .inner_grade {position:absolute;left:0;top:0;height:100%;border-radius:5px;background-image: linear-gradient(93deg, #576aca, #7257ca)}
+
+.report_result .tit_report {line-height:30px}
+.report_result .info_result {float:right;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:30px;color:#1b2141}
+
+.report_analysis .tit_report {line-height:30px}
+.report_analysis .cont_analysis {float:right;overflow:hidden}
+.report_analysis .cont_analysis .desc_analysis {float:left;font-size:15px;line-height:30px;color:#1b2141}
+.report_analysis .cont_analysis .desc_analysis .name {color:#576aca}
+.cont_report .link_report {display:block;height:30px;padding:0 14px 0 10px;margin-left:12px;border-radius:6px;background:#ebedf7;font-size:13px;line-height:31px;color:#494e63}
+.cont_report .link_report::before {width:14px;height:14px;margin:8px 5px 0 0;background-position:-155px -85px}
+.report_analysis .cont_analysis .link_report {float:left}
+
+.report_status .list_status {margin-left:9px;border-top:1px solid #e0e3f1;margin-top:11px;padding-top:16px}
+.report_status .list_status li {overflow:hidden;line-height:30px;margin-top:12px}
+.report_status .list_status li:first-of-type {margin-top:0}
+.report_status .list_status .tit_status {font-weight:normal;font-family:"NotoSansM","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;color:#1b2141}
+.report_status .list_status li .cont_status {float:right} 
+.report_status .list_status li .desc_status {float:left;font-size:15px;color:#1b2141}
+.report_status .list_status li .desc_status .correct {color:#576aca}
+.report_status .list_status li .desc_status .wrong {color:#fe5977}
+.report_status .list_status li .link_report {float:left}
+
+.cont_report .wrap_btn {display:block;overflow:hidden;margin-top:16px}
+.cont_report .wrap_btn .line_navy {float:right;width:auto;min-width:164px}
+
+/* 시험 문항 다시보기 */
+.replay.cont_problem .top_problem.type2 h3 {width:auto;float:left;margin:4px 0 0 0} 
+.replay.cont_problem h3 {width:960px;margin:0 auto 16px;font-size:24px;line-height:36px;color:#1b2141}
+.replay.cont_problem .top_problem .info_listening {min-width:360px}
+.cont_problem .link_comment {float:right;min-width:120px;height:40px;border-radius:6px;background:#d4dcff;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:41px;text-align:center;color:#576aca}
+
+.replay.cont_problem .info_problem .tit_problem .num {position:relative}
+.replay.cont_problem .info_problem .tit_problem .mark {position:absolute;width:68px;height:67px;background-repeat:no-repeat;background-position:0 0;background-size:68px auto}
+.replay.cont_problem .info_problem .tit_problem .mark.correct {left:4px;bottom:-18px;background-image:url(../images/ico_correct.png)}
+.replay.cont_problem .info_problem .tit_problem .mark.wrong {left:-13px;bottom:-7px;background-image:url(../images/ico_wrong.png)}
+
+/* 객관식 정답 */
+.replay.cont_problem .info_problem .list_example {position:relative}
+.replay.cont_problem .info_problem .list_example::after {position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0);content:""}
+.replay.cont_problem .info_problem .list_example li .correct + .lbl_check_example::before {border-color:#576aca;background-image: linear-gradient(135deg, #576aca, #7257ca);color:#fff}
+.replay.cont_problem .info_problem .list_example li .correct + .lbl_check_example {border:1px solid #576aca;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+.replay.cont_problem .info_problem .list_example li .correct + .lbl_check_example u {border-color:#fff}
+.replay.cont_problem .info_problem .list_example li .wrong + .lbl_check_example::before {border-color:#fe5977;color:#fe5977;background-image:none}
+.replay.cont_problem .info_problem .list_example li .wrong + .lbl_check_example {border:1px solid #fea7b7;font-family:"NotoSansR","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#fe5977}
+.replay.cont_problem .info_problem .list_example li:nth-of-type(1) .correct + .lbl_check_example::before ,
+.replay.cont_problem .info_problem .list_example li:nth-of-type(1) .wrong + .lbl_check_example::before {content:"1"}
+.replay.cont_problem .info_problem .list_example li:nth-of-type(2) .correct + .lbl_check_example::before,
+.replay.cont_problem .info_problem .list_example li:nth-of-type(2) .wrong + .lbl_check_example::before {content:"2"}
+.replay.cont_problem .info_problem .list_example li:nth-of-type(3) .correct + .lbl_check_example::before,
+.replay.cont_problem .info_problem .list_example li:nth-of-type(3) .wrong + .lbl_check_example::before {content:"3"}
+.replay.cont_problem .info_problem .list_example li:nth-of-type(4) .correct + .lbl_check_example::before,
+.replay.cont_problem .info_problem .list_example li:nth-of-type(4) .wrong + .lbl_check_example::before {content:"4"}
+.replay.cont_problem .info_problem .list_example li:nth-of-type(5) .correct + .lbl_check_example::before,
+.replay.cont_problem .info_problem .list_example li:nth-of-type(5) .wrong + .lbl_check_example::before {content:"5"}
+
+.replay.cont_problem .info_problem .list_example li .lbl_check_example .mark {display:inline-block;height:24px;margin:0 0 2px 8px;padding:0 10px;border-radius:12px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:12px;line-height:25px;vertical-align:bottom}
+.replay.cont_problem .info_problem .list_example li .lbl_check_example img + .mark {position:absolute;right:20px;bottom:15px;height:24px;margin:0;padding:0 10px;border-radius:12px;font-size:12px;line-height:25px}
+.replay.cont_problem .info_problem .list_example li .correct + .lbl_check_example .mark {background:rgba(212,220,255,.9);color:#576aca;box-shadow:0 0 10px 0 rgb(87 106 202 / 10%)}
+.replay.cont_problem .info_problem .list_example li .wrong + .lbl_check_example .mark {background:#ffd2da;color:#fe5977}
+
+/* 주관식 정답 */
+.replay.cont_problem .info_problem .info_subjective {position:relative}
+.replay.cont_problem .info_problem .info_subjective::after {position:absolute;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0);content:""}
+.replay.cont_problem .info_problem .list_subjective .wrap_inp.line .inp_item.correct {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+.replay.cont_problem .info_problem .list_subjective .wrap_inp.line .inp_item.wrong {color:#fe5977}
+.replay.cont_problem .info_problem .correct_subjective {overflow:hidden;margin-top:18px;font-size:16px}
+.replay.cont_problem .info_problem .correct_subjective dt {float:left;min-width:54px;height:30px;margin-right:8px;padding:0 12px;border-radius:6px;background:#ebedf7;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;line-height:31px;color:#576aca;text-align:center}
+.replay.cont_problem .info_problem .correct_subjective dd {float:left;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;line-height:30px;color:#576aca}
+
+/* 주관식 2단 정답 */
+.replay.cont_problem .horizontal.info_problem .info_subjective .list_subjective {margin-top:0}
+
+/* 나의 정오현황 */
+.replay.cont_problem .status_problem .top_status {padding:12px 0 8px 0}
+.replay.cont_problem .status_problem .top_status .tit_status {line-height:28px}
+.replay.cont_problem .status_problem .top_status .link_result {float:right;min-width:140px;height:28px;padding:0 12px 0 16px;border-radius:4px;background:#ebedf7;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:13px;line-height:29px;color:#576aca;box-sizing:border-box}
+.replay.cont_problem .status_problem .top_status .link_result::after {width:6px;height:11px;margin:9px 0 0 4px;background-position:-235px -20px}
+.replay.cont_problem .status_problem .info_status .noti_status .txt_noti::after {display:none}
+.slide_status .list_status li .wrong::after {background-position:-175px -85px}
+
+/* 제출완료 */
+.cont_guide .finish .wrap_guide {padding:72px 58px}
+.cont_guide .finish .desc_finish {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:22px;color:#1b2141}
+.cont_guide .finish .desc_finish::before {display:block;width:50px;height:50px;margin:0 auto 20px;background-position:0 -60px;content:""}
+.cont_guide .finish .desc_noti {margin-top:8px;font-size:20px;line-height:32px;color:#1b2141}
+.cont_guide .finish .desc_noti .emph {color:#fe5977}
+.cont_guide .finish .area_service {margin:60px 0 -64px 0;padding:22px 0;border-top:1px solid #ebedf7}
+
+/* 팝업 */
+.dimmed {position:fixed;left:0;top:0;right:0;bottom:0;z-index:100;background:rgba(0,0,0,.5)}
+.pop_wrap {position:fixed;left:50%;top:50%;z-index:105;padding:54px;border-radius:8px;border:1px solid rgba(0, 0, 0, 0.1);background:#fff;text-align:center;min-width:414px;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);box-sizing:border-box;box-shadow: 0 6px 18px 0 rgba(0, 0, 0, 0.1)}
+
+/* 로딩 팝업 */
+.pop_loading {position:fixed;left:50%;top:50%;z-index:105;width:96px;height:96px;border-radius:8px;background:#fff;transform:translate(-50%, -50%);-webkit-transform:translate(-50%, -50%);}
+.pop_loading .wrap_loading {width:56px;height:56px;margin:22px auto 0;-webkit-animation:loading .5s linear infinite;animation:loading .5 linear infinite;-webkit-transform-origin:50% 50%;transform-origin:50% 50%}
+
+@keyframes loading{
+    100%{-webkit-transform:rotate(-360deg);transform:rotate(-360deg)}
+}
+
+/* 시험종료 팝업 */
+.pop_wrap .tit_pop.emph {font-weight:normal;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:22px;line-height:33px}
+.pop_wrap .desc_end {margin-top:8px;font-size:16px;line-height:22px;color:#494e63}
+.pop_wrap .pop_footer {margin-top:40px}
+
+/* 필수 동의 항목 팝업 */
+.pop_wrap .tit_pop {display:block;font-size:20px;line-height:27px;color:#1b2141}
+.pop_wrap .pop_footer .btn_md {width:auto;min-width:148px}
+
+/* 문제풀이 팝업 */
+.popon {overflow:hidden}
+.popon header {z-index:105;background:#27315b}
+.popon header .list_gnb {border-color:#6D7392}
+.popon header .list_gnb li::before {border-left-color:#27315b}
+.popon header .list_gnb li.prev::before {border-left-color:#e9ecfc}
+
+
+/* 시험시작2 팝업 */
+.pop_wrap .pop_content .noti_pop {width:394px;margin:24px auto 0;font-size:16px;line-height:22px;color:#fe5977}
+.pop_wrap .pop_content .noti_pop strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.pop_wrap .pop_content .noti_pop p {margin-top:4px}
+
+/* 강제종료 팝업 */
+.pop_wrap .pop_content .desc_save {width:394px;margin-top:8px;font-size:16px;line-height:22px;color:#6d7392}
+
+/* 답압내역제출 팝업 */
+.pop_wrap .pop_content .list_time {width:394px;margin-top:32px;text-align:center}
+.pop_wrap .pop_content .list_time dt {display:inline-block;padding:0 12px;height:28px;border-radius:14px;background:#ebedf7;font-size:14px;line-height:29px;color:#576aca;vertical-align:top}
+.pop_wrap .pop_content .list_time dd {display:inline-block;margin:3px 0 0 7px;font-size:16px;line-height:22px;color:#576aca;vertical-align:top}
+
+/* 20분뒤 팝업 */
+.pop_wrap .pop_header .time {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#576aca}
+
+/* 일시정지 팝업 */
+.pop_wrap .pop_content .desc_pop {width:524px;margin-top:32px;font-size:20px;line-height:29px;;color:#1b2141}
+
+/* 제출확인2 팝업 */
+.pop_wrap .pop_content .desc_confirm {width:524px;margin-top:8px;font-size:16px;line-height:22px;color:#494e63}
+.pop_wrap .pop_content .wrap_status {width:520px;margin:32px auto 0}
+.pop_wrap .pop_content .wrap_status::after {display:none}
+.pop_wrap .pop_content .wrap_status .slide_status {background:none}
+.pop_wrap .pop_content .slide_status .inner_slide {width:1000%;height:180px}
+.pop_wrap .pop_content .slide_status .list_status {display:block;float:left;width:520px;height:100%}
+.pop_wrap .pop_content .slide_status .list_status li {width:52px;height:84px;margin-bottom:12px;background:url(../images/bg_status_pop.png) repeat-x 0 0}
+.pop_wrap .pop_content .slide_status .list_status li::before {top:14px}
+.pop_wrap .pop_content .slide_status .list_status li:nth-of-type(10n+1)::before {display:none}
+.pop_wrap .pop_content .slide_status .list_status li .tit {width:52px;height:36px;font-size:16px;line-height:36px}
+.pop_wrap .pop_content .slide_status .list_status li .noinput {width:53px;height:36px}
+.pop_wrap .pop_content .slide_status .list_status li .current {width:53px;height:36px}
+.pop_wrap .pop_content .slide_status .list_status li .link {height:36px}
+.pop_wrap .pop_content .slide_status .list_status li .img_ibt_after::after {margin-top:14px}
+.pop_wrap .pop_content .slide_status .wrap_btn {position:static;overflow:hidden;margin-top:14px;text-align:center}
+.pop_wrap .pop_content .slide_status .wrap_btn button {display:inline-block;float:none;margin:0 2px}
+
+/* 시험종료 팝업 */
+.pop_wrap .pop_content .ing_pop {margin-top:13px;font-size:13px;line-height:22px;color:#6d7392;text-align:center}
+.loading {position:relative;width:48px;height:48px;margin:36px auto 0}
+.loading .dot {position:absolute;left:0;right:0;top:0;bottom:0;width:12px;height:6px;margin:auto;border-radius:10px;background-color:#576aca;opacity:0.6;animation:dot 1s linear infinite}
+.loading .dot:nth-child(1) {transform:rotate(0) translateX(18px)}
+.loading .dot:nth-child(2) {transform:rotate(45deg) translateX(18px);animation-delay:0.1s}
+.loading .dot:nth-child(3) {transform:rotate(90deg) translateX(18px);animation-delay:0.2s}
+.loading .dot:nth-child(4) {transform:rotate(135deg) translateX(18px);animation-delay:0.3s;}
+.loading .dot:nth-child(5) {transform:rotate(180deg) translateX(18px);animation-delay:0.4s}
+.loading .dot:nth-child(6) {transform:rotate(225deg) translateX(18px);animation-delay:0.5s}
+.loading .dot:nth-child(7) {transform:rotate(270deg) translateX(18px);animation-delay:0.6s}
+.loading .dot:nth-child(8) {transform:rotate(315deg) translateX(18px);animation-delay: 0.8s}
+
+@keyframes dot {
+	0% {
+		opacity: 0.6;
+	}
+
+    25% {
+		opacity: 1;
+	}
+
+    50% {
+		opacity: 0.6;
+	}
+	
+	100% {
+		opacity: 0.6;
+	}
+}
+
+/* 사용법 팝업 */
+.pop_wrap .pop_content .desc_guide {min-width:524px;margin-top:8px;font-size:20px;line-height:29px;color:#1b2141}
+.pop_wrap .pop_content .desc_guide::after {display:block;width:290px;height:178px;margin:0 auto;background:url(../images/guide_popup.png) no-repeat 0 0;background-size:100% auto;content:""}
+.pop_wrap .pop_footer .guide {margin-top:-10px}
+.pop_wrap .pop_footer .guide .bg_navy {min-width:164px;background-image:linear-gradient(108deg, #576aca, #7257ca)}
+.pop_wrap .pop_footer .guide .bg_navy.img_ibt_after::after {width:6px;height:11px;margin:21px 0 0 6px;background-position:-225px -20px}
+
+/* 스피커 테스트 팝업 */
+.pop_guide {overflow:hidden;position:fixed;right:0;top:0;z-index:105;width:468px;height:100%;background:#fff;border-top-left-radius:8px;border-bottom-left-radius:8px}
+.pop_guide.commentary {width:auto;min-width:468px;max-width:700px}
+.pop_guide .pop_header {position:absolute;left:0;right:0;top:0;z-index:1;height:72px;padding:22px 20px 23px 20px;box-shadow:0 -12px 33px 0 rgba(0, 0, 0, 0.03);background-image:linear-gradient(101deg, #576aca, #5c72df);box-sizing:border-box}
+.pop_guide .pop_header .tit_pop {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:18px;line-height:27px;color:#fff}
+.pop_guide .pop_content {overflow-y:auto;height:100%;padding:96px 20px 86px 20px}
+.pop_guide .pop_content .desc_pop {position:relative;display:inline-block;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:18px;line-height:27px;color:#576aca}
+.pop_guide .pop_content .desc_pop::after {position:absolute;left:0;right:0;bottom:0;z-index:-1;height:8px;background:#d4dcff;content:""}
+.pop_guide .pop_content .list_guide {margin-top:20px}
+.pop_guide .pop_content .list_guide li {margin-bottom:16px;padding:14px 16px 16px 30px;background:#f3f5f9;border-radius:6px}
+.pop_guide .pop_content .list_guide li .tit_guide {position:relative;font-weight:normal;font-family:"NotoSansM","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:22px;color:#1b2141}
+.pop_guide .pop_content .list_guide li .tit_guide::before {position:absolute;left:-19px;top:2px;width:14px;height:14px;background-position:-85px -15px}
+.pop_guide .pop_content .list_guide li .desc_guide {margin-top:4px;font-size:14px;line-height:20px;color:#6d7392}
+.pop_guide .pop_content .noti_guide {position:absolute;left:0;right:0;bottom:0;padding:16px 20px 16px 36px;border-top:1px solid #ebedf7;background:#fff;font-size:12px;line-height:18px;color:#8991b8}
+.pop_guide .pop_content .noti_guide::before {position:absolute;left:20px;top:18px;width:12px;height:12px;background-position:-70px -15px}
+.pop_guide .pop_content .noti_guide .emph {font-family:"NotoSansM","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;color:#99a6ee}
+.pop_guide .btn_close {position:absolute;right:22px;top:22px;z-index:1;width:24px;height:24px}
+.pop_guide .btn_close::before {display:block;width:14px;height:14px;margin:0 auto;background-position:-100px -15px}
+
+/* 스피커 문제 해결 팝업 */
+.pop_guide .desc_solution {font-size:13px;line-height:19px;color:#6d7392}
+.pop_guide .list_solution > li {position:relative;margin-top:16px;padding-left:8px;font-size:15px;line-height:22px;color:#576aca}
+.pop_guide .list_solution > li::before {position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;background:#576aca;content:""}
+.pop_guide .step_solution {margin-top:16px}
+.pop_guide .step_solution > li {overflow:hidden;display:table;width:100%;margin-top:12px;border-radius:6px;background:#f3f5f9;box-sizing:border-box}
+.pop_guide .step_solution > li .thumb_img {display:table-cell;width:242px}
+.pop_guide .step_solution > li .thumb_img img {width:100%;height:auto}
+.pop_guide .step_solution > li .cont_solution {display:table-cell;height:100%;vertical-align:middle}
+.pop_guide .step_solution > li .num {display:block;width:16px;height:16px;margin-bottom:4px;border-radius:50%;background:#576aca;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:11px;line-height:16px;color:#fff;text-align:center}
+.pop_guide .step_solution > li .desc {font-size:13px;line-height:19px;color:#1b2141}
+.pop_guide .step_solution > li .desc strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;}
+
+/* 문항해설 팝업 */
+.pop_guide .list_commentary {padding:14px 16px 16px;border-radius:6px;background:#f3f5f9}
+.pop_guide .list_commentary li {display:table;margin-top:8px}
+.pop_guide .list_commentary li:first-of-type {margin-top:0}
+.pop_guide .list_commentary li .tit {display:table-cell;position:relative;width:66px;padding:0 12px 0 8px;font-size:15px;line-height:22px;color:#6d7392}
+.pop_guide .list_commentary li .tit::before {position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;background:#8991b8;content:""}
+.pop_guide .list_commentary li .cont {display:table-cell;font-size:15px;line-height:22px;color:#1b2141}
+.pop_guide .tit_commentary {display:block;margin-top:20px;font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif;font-size:15px;line-height:22px;color:#1b2141}
+.pop_guide .desc_commentary {margin-top:8px;font-size:15px;line-height:24px;color:#1b2141;white-space:pre-wrap}
+.pop_guide .desc_commentary img {display:block;height:auto;width:auto;max-width:660px}
+.pop_guide .desc_commentary u {text-decoration:none;border-bottom: 1px solid #1b2141}
+.pop_guide .desc_commentary b, 
+.pop_guide .desc_commentary strong {font-family:"NotoSansB","Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text",helvetica,"Apple SD Gothic Neo",Dotum,sans-serif}
+.pop_guide .desc_commentary.no_data {padding:190px 0 190px;color:#ccd0e0;text-align:center}
+
+@media (max-width:1024px){
+    header #gnb {min-width:204px;height:40px}
+    header .list_gnb li {min-width:68px;font-size:10px;line-height:13px}
+    header .list_gnb li .num {display:block;margin:6px 0 1px 0;font-size:13px}
+}
+
+@media (max-width:720px){
+    .rw header {position:relative;height:64px}
+    .rw header #gnb {position:absolute;left:0;top:80px;width:100%;height:40px;text-align:center}
+    .rw header .list_gnb {min-width:328px;border-color:#d4dcff}
+    .rw header .list_gnb li {min-width:108px;font-size:13px;line-height:40px;color:#9ea8db;background:#fff}
+    .rw header .list_gnb li.now {background:#e9ecfc;color:#5d72de}
+    .rw header .list_gnb li .num {display:inline}
+    .rw header .list_gnb li::before {border-left-color:#fff}
+    .rw header .list_gnb li::after {border-left-color:#d4dcff}
+    .rw header .list_gnb li.now::before {display:block;border-left-color:#e9ecfc}
+    .rw header .list_gnb li.now::after {border-left-color:#d4dcff}
+    .rw header .list_gnb li.prev {background:#e9ecfc;color:#5d72de}
+    .rw header .list_gnb li.prev::before {border-left-color:#e9ecfc}
+    .rw header .list_gnb li.prev::after {border-left-color:#d4dcff}
+    
+
+    .rw header .btn_close {top:12px;right:16px;min-width:auto;width:40px;height:40px;padding:0;text-indent:-9999px}
+    .rw header .btn_close::after {position:absolute;left:50%;top:50%;width:24px;height:24px;background:url(../images/btn_close_mw.png) no-repeat 0 0;background-size:24px auto;transform:translate(-50%, -50%);-webkit-transform: translate(-50%, -50%);content:""}
+    .rw #content {padding-left:16px;padding-right:16px}
+    .rw #content.cont_examinee {padding-top:88px}
+    .rw .cont_examinee .wrap_examinee {width:100%;padding:26px 20px 26px}
+    .rw .wrap_examinee .wrap_inp .inp_item {padding-right:52px}
+    .rw .wrap_examinee .btn_del {display:block;position:absolute;right:16px;top:12px;width:24px;height:24px;background:url(../images/btn_del_mw.png) no-repeat 0 0;background-size:24px auto}
+
+    .rw #content.cont_guide {padding-top:72px}
+    .rw .cont_guide .info_test {width:100%}
+    .rw .cont_guide .wrap_guide {height:auto}
+    .rw .cont_guide .info_test.pcconnect .wrap_guide {padding-bottom:78px}
+    .rw .wrap_guide .list_guide dd {display:block;margin:8px 0 0 0}
+
+    .rw .area_service {margin-top:64px}
+}

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* reset */ 
+body{color:#333;font-size:15px;font-family:"NotoSansR", "Malgun Gothic","맑은 고딕","SF Pro KR","SF Pro Text","Apple SD Gothic Neo",Dotum,sans-serif;word-wrap:break-word;letter-spacing:-.2px}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+h1,h2,h3,h4,h5,h6{font-weight:normal}
+fieldset{border:0;vertical-align:top}
+ul,ol{list-style:none}
+img{border:none;vertical-align:top}
+button{color:inherit;font-size:inherit;font-family:inherit;background-color:transparent;border:0;;cursor:pointer;-webkit-appearance:none;outline:none}
+button::-moz-focus-inner{padding:0;border:0}
+textarea{font-size:inherit;font-family:inherit;border:0;resize:none}
+address,caption,em{font-style:normal}
+a{color:inherit}
+a,a:focus,a:active,a:hover{text-decoration:none}
+table{width:100%;border-spacing:0;border-collapse:collapse;table-layout:fixed}
+hr{display:none}
+input{font-size:inherit;font-family:inherit;border:0;background:none}
+input[type=submit], input[type=button], input[type=reset] {cursor:pointer}
+.blind, legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;text-indent:-9999px;text-align:left;white-space:nowrap}
+input::-webkit-input-placeholder{color:#999}
+input:-moz-placeholder{color:#999} 
+input::-moz-placeholder{color:#999} 
+input:-ms-input-placeholder{color:#999}
+svg{vertical-align:top}
+
+#skip{height:0}
+#skip a{display:block;position:absolute;left:0;top:-100px;width:100%;height:25px;text-align:center}
+#skip a:focus,
+#skip a:active{position:absolute;top:0;z-index:100;padding:10px 0;background:#ff5675;font-weight:bold;color:#fff;font-size:20px;text-decoration:none}   

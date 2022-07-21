@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap login"><!-- [D] 로그인 페이지에  login 클래스 추가 -->
+            <div id="container">
+                <div id="content">
+                    <div class="cont_login">
+                        <h1>
+                            <span class="logo_edu"><span class="blind">NHN edu</span></span>
+                            <span class="logo_ibt"><span class="blind">IBT 어드민 로그인</span></span>
+                        </h1>
+                        <h2>추가 정보 입력</h2>
+                        <p class="desc_login">Ibt 서비스 이용을 위해 약관에 대한 동의와  비밀번호 재설정이 필요합니다.</p>
+                        <div class="wrap_inp">
+                            <input type="text" title="이메일 아이디 입력란" value="abcd1234@nhn.com">
+                        </div>
+                        <em class="invalid">유효성 검사</em>
+                        <div class="wrap_inp">
+                            <input type="text" title="비밀번호 입력란" value="비밀번호1234" class="invalid"> 
+                        </div>
+                        <em class="invalid">유효성 검사</em>
+                        <div class="check_inp">
+                            <input type="checkbox" id="allCheck" name="check">
+                            <label for="allCheck" class="lbl_check img_admin_before">약관 전체 동의하기</label>
+                            <em class="invalid">유효성 검사</em>
+                        </div>
+                        <ul class="list_terms">
+                            <li>
+                                <div class="check_inp">
+                                    <input type="checkbox" id="check1" name="check" checked>
+                                    <label for="check1" class="lbl_check img_admin_before">파트너센터 이용약관 동의 (필수)</label>
+                                    <em class="invalid">유효성 검사</em>
+                                </div>
+                                <a href="#" class="link_view">보기</a>
+                            </li>
+                            <li>
+                                <div class="check_inp">
+                                    <input type="checkbox" id="check2" name="check" checked>
+                                    <label for="check2" class="lbl_check img_admin_before">개인정보 수집 및 이용 동의 (필수)</label>
+                                </div>
+                                <a href="#" class="link_view">보기</a>
+                            </li>
+                            <li>
+                                <div class="check_inp">
+                                    <input type="checkbox" id="check3" name="check" checked>
+                                    <label for="check3" class="lbl_check img_admin_before">만 14세 이상 동의(필수)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check_inp">
+                                    <input type="checkbox" id="check4" name="check">
+                                    <label for="check4" class="lbl_check img_admin_before">약관 동의 항목 노출(선택)</label>
+                                </div>
+                            </li>
+                        </ul>
+                        <button type="button" class="btn btn_md bg_navy">입력 완료</button>
+                    </div>      
+                </div><!-- //content-->
+            </div><!-- //container-->
+
+ 
+        </div><!-- //wrap-->
+    </body>
+</html>

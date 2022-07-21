@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IBT admin | NAST</title>
+        <link rel="stylesheet" href="./css/common.css">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body><!-- [D] 팝업 오픈시 overflow:hidden 추가 -->
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header>
+                <h1><a href="#"><span class="blind">NSAT</span></a></h1>
+                <nav id="gnb">
+                    <ul class="list_depth1">
+                        <li>시험관리
+                            <ul class="list_depth2">
+                                <li><!-- [D] on 클래스 추가시 활성화 -->
+                                    <a href="#">등록된 시험 목록</a>
+                                </li>
+                                <li>
+                                    <a href="#">시험 설정 도구</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>콘텐츠 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">시험지 설정</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>테넌트 관리
+                            <ul class="list_depth2">
+                                <li>
+                                    <a href="#">기본 정보</a>
+                                </li>
+                                <li class="on">
+                                    <a href="#">권한 정리</a>
+                                </li>
+                                <li>
+                                    <a href="#">응시자 목록</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div id="container">
+                <div id="content">
+                    <div class="tit_top">
+                        <h2>권한 정리</h2>
+                        <div class="state_top">
+                            <strong class="txt_name img_admin_before">홍길동</strong>
+                            <a href="#" class="link_change">비밀번호 변경</a>
+                        </div>    
+                    </div>
+                    <div class="cont_admin tenant_list">
+                        <div class="top_admin">
+                            <div class="register_btn">
+                                <button type="button" class="btn btn_md bg_navy">부관리자 등록</button>
+                            </div>
+                        </div>
+                        <div class="cont_box">
+                            <div class="wrap_list">
+                                <dl class="list_total">
+                                    <dt class="blind">총 응시자 수</dt>
+                                    <dd>총 23명</dd>
+                                </dl>
+                                <div class="until_list">
+                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                        <button type="button" class="btn_select img_admin_after">이름순</button>
+                                        <div class="box_select">
+                                            <div class="inner_box">
+                                                <ul class="list_select">
+                                                    <li><button type="button">일이삼</button></li>
+                                                    <li><button type="button">일이삼사</button></li>
+                                                    <li><button type="button">일이삼사오</button></li>
+                                                    <li><button type="button">일이삼사오육</button></li>
+                                                    <li><button type="button">일이삼사오육칠</button></li>
+                                                    <li><button type="button">일이삼사오육칠팔구십일이삼사오육칠팔구십</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wrap_inp sm">
+                                        <input type="text" placeholder="검색어를 입력해주세요." title="검색어 입력란">
+                                    </div>
+                                    <button type="button" class="btn btn_sm bg_lightsky img_admin_before">검색</button>
+                                </div> 
+                                <div class="admin_tbl permission_cleanup">
+                                    <ul class="list_tbl">
+                                        <li>이름</li>
+                                        <li>이메일(아이디)</li>
+                                        <li>휴대전화번호</li>
+                                        <li>시험 운영</li>
+                                        <li>시험 등록</li>
+                                        <li>시험지 관리</li>
+                                        <li>수정</li>
+                                        <li>탈퇴</li>
+                                    </ul>
+                                    <div class="area_scroll">
+                                        <div class="inner_scroll">
+                                            <table class="tbl_admin">
+                                                <caption class="blind">권한 정리 리스트</caption>
+                                                <colgroup>
+                                                    <col class="col"> 
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                    <col class="col">
+                                                </colgroup>
+                                                <thead class="blind">
+                                                    <tr>
+                                                        <th>이름</th>
+                                                        <th>이메일(아이디)</th>
+                                                        <th>휴대전화번호</th>
+                                                        <th>시험 운영</th>
+                                                        <th>시험 등록</th>
+                                                        <th>시험지 관리</th>
+                                                        <th>수정</th>
+                                                        <th>탈퇴</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th><div class="cell">홍길동</div></th>
+                                                        <td><div class="cell">abcd1234@nhnedu.com</div></td>
+                                                        <td><div class="cell">010-3333-2222</div></td>
+                                                        <td><div class="cell">권한 부여</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">수정</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">탈퇴</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">홍길동홍길동홍길동홍길동홍길동홍길동홍길동</div></th>
+                                                        <td><div class="cell">abcd1234abcd1234abcd1234@nhnedu.com</div></td>
+                                                        <td><div class="cell">010-3333-2222</div></td>
+                                                        <td><div class="cell">권한 부여</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">수정</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">탈퇴</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">홍길동</div></th>
+                                                        <td><div class="cell">abcd1234@nhnedu.com</div></td>
+                                                        <td><div class="cell">010-3333-2222</div></td>
+                                                        <td><div class="cell">권한 부여</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">수정</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">탈퇴</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th><div class="cell">홍길동</div></th>
+                                                        <td><div class="cell">abcd1234@nhnedu.com</div></td>
+                                                        <td><div class="cell">010-3333-2222</div></td>
+                                                        <td><div class="cell">권한 부여</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><div class="cell">권한 없음</div></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky">수정</button></td>
+                                                        <td><button type="button" class="btn btn_sm bg_lightsky del">탈퇴</button></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div><!-- //content-->
+            </div><!-- //container-->
+            
+            <div class="dimmed" style="display:none;"></div>
+            <!-- 부관리자 등록 팝업 -->
+            <div class="pop_guide" style="display:none">
+                <div class="pop_header">
+                    <strong class="tit_pop">부관리자 등록</strong>
+                </div>
+                <div class="pop_content">
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 기본정보</strong>
+                        <em class="noti">입력한 휴대전화번호로 로그인정보가 전송됩니다. 이미 가입된 휴대전화번호의 경우 기존에 사용하던 비밀번호를 그대로 사용합니다.</em>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">ID</strong>
+                               <div class="cont">123456DF</div>
+                           </li> 
+                           <li>
+                                <strong class="tit">이름</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="이름을 입력해주세요." title="이름 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">이름을 입력해주세요.</em>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">휴대 전화번호</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="휴대 전화번호를 입력해주세요." title="휴대 전화번호 입력란">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">2. 권한 관리</strong>
+                        <em class="noti">안내문구안내문구</em>
+                        <div class="admin_tbl assistant_col3">
+                            <ul class="list_tbl">
+                                <li>권한명</li>
+                                <li>설명</li>
+                                <li>권한 선택</li>
+                            </ul>
+                            <div class="area_scroll">
+                                <div class="inner_scroll">
+                                    <table class="tbl_admin">
+                                        <caption class="blind">부관리자 권한 관리 리스트</caption>
+                                        <colgroup>
+                                            <col class="col"> 
+                                            <col class="col">
+                                            <col class="col">
+                                        </colgroup>
+                                        <thead class="blind">
+                                            <tr>
+                                                <th>권한명</th>
+                                                <th>설명</th>
+                                                <th>권한 선택</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                    <li><button type="button">일이삼사오육칠팔구십</button></li><li><button type="button">일이삼사오육칠팔구십</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                    <li><button type="button">일이삼사오육칠팔구십</button></li><li><button type="button">일이삼사오육칠팔구십</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                    <li><button type="button">일이삼사오육칠팔구십</button></li><li><button type="button">일이삼사오육칠팔구십</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                    <li><button type="button">일이삼사오육칠팔구십</button></li><li><button type="button">일이삼사오육칠팔구십</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_gray">취소</button>
+                        <button type="button" class="btn btn_md bg_navy">확인</button>
+                    </div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_close img_admin_before"><span class="blind">레이어 닫기</span></button>
+                </div>
+            </div>
+
+            <!-- 부관리자 상세 정보 - 조회 / 수정  팝업 -->
+            <div class="pop_guide" style="display:none">
+                <div class="pop_header">
+                    <strong class="tit_pop">부관리자 상세 정보</strong>
+                </div>
+                <div class="pop_content">
+                    <div class="wrap_btn edit">
+                        <button type="button" class="btn btn_sm bg_lightsky">수정</button>
+                        <button type="button" class="btn btn_sm bg_lightsky del">삭제</button>
+                    </div>
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 기본정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">ID</strong>
+                               <div class="cont">123456DF</div>
+                           </li> 
+                           <li>
+                                <strong class="tit">이름</strong>
+                                <div class="cont">
+                                    홍길동
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">휴대 전화번호</strong>
+                                <div class="cont">
+                                    010-3333-2222
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">1. 기본정보</strong>
+                        <ul class="list_info">
+                           <li>
+                               <strong class="tit">ID</strong>
+                               <div class="cont">123456DF</div>
+                           </li> 
+                           <li>
+                                <strong class="tit">이름</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="text" placeholder="이름을 입력하세요" title="이름 입력란" class="invalid">
+                                    </div>
+                                    <em class="invalid">이름을 입력해주세요.</em>
+                                </div>
+                            </li>
+                            <li>
+                                <strong class="tit">휴대 전화번호</strong>
+                                <div class="cont">
+                                    <div class="wrap_inp">
+                                        <input type="number" placeholder="휴대 전화번호를 입력하세요" title="휴대 전화번호 입력란">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="cont_pop_tenant">
+                        <strong class="tit_cont">2. 권한 관리</strong>
+                        <div class="admin_tbl assistant_col3">
+                            <ul class="list_tbl">
+                                <li>권한명</li>
+                                <li>설명</li>
+                                <li>권한 선택</li>
+                            </ul>
+                            <div class="area_scroll">
+                                <div class="inner_scroll">
+                                    <table class="tbl_admin">
+                                        <caption class="blind">부관리자 권한 관리 리스트</caption>
+                                        <colgroup>
+                                            <col class="col"> 
+                                            <col class="col">
+                                            <col class="col">
+                                        </colgroup>
+                                        <thead class="blind">
+                                            <tr>
+                                                <th>권한명</th>
+                                                <th>설명</th>
+                                                <th>권한 선택</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="cell">권한없음</div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm invalid"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th><div class="cell">일이삼사오</div></th>
+                                                <td><div class="cell">일이삼사오육칠팔구십</div></td>
+                                                <td>
+                                                    <div class="select_box sm"><!-- [D] on클래스 추가시 박스 오픈, invalid 클래스 추가시 미입력 -->
+                                                        <button type="button" class="btn_select img_admin_after">권한 선택</button>
+                                                        <div class="box_select">
+                                                            <div class="inner_box">
+                                                                <ul class="list_select">
+                                                                    <li><button type="button">일이삼</button></li>
+                                                                    <li><button type="button">일이삼사</button></li>
+                                                                    <li><button type="button">일이삼사오</button></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_md line_gray">취소</button>
+                        <button type="button" class="btn btn_md bg_navy">확인</button>
+                    </div>
+                </div>
+                <div class="pop_footer">
+                    <button type="button" class="btn_close img_admin_before"><span class="blind">레이어 닫기</span></button>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 1</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg bg_navy">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 기본 팝업 -->
+            <div class="pop_wrap" style="display:none;">
+                <div class="pop_header">
+                    <strong class="tit_pop">
+                        기본 팝업 버튼 2<br>기본 팝업 버튼 2 기본 팝업 버튼 2</strong>
+                </div>
+                <div class="pop_footer">
+                    <div class="wrap_btn">
+                        <button type="button" class="btn btn_lg line_gray">취소</button>
+                        <button type="button" class="btn btn_lg bg_navy">종료</button>
+                    </div>
+                </div>
+            </div>
+ 
+        </div><!-- //wrap-->
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview {font-size:12px}
+            .caseview,.caseview_mo{overflow-y:auto;position:fixed;bottom:100px;left:20px;padding:5px;background:#000;z-index:700;max-height:230px}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <div class="caseview">
+                <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.pop_guide').css('display','none');$('.pop_guide').eq(0).css('display','block');return false;">[팝업] 부관리자 등록</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.pop_guide').css('display','none');$('.pop_guide').eq(1).css('display','block');return false;">[팝업] 부관리자 상세 정보 - 조회 / 수정</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(0).css('display','block');return false;">[팝업] 기본 팝업 버튼1</a>
+                <a href="#" onclick="$('body').css('overflow','hidden');$('.dimmed').css('display','block');$('.pop_wrap').css('display','none');$('.pop_wrap').eq(1).css('display','block');return false;">[팝업] 기본 팝업 버튼2</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            $('.btn_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            $('.pop_guide .btn_close').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+            });
+
+            $('.pop_guide .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+            });
+
+            $('.pop_wrap .btn').on('click',function(){
+                $('body').removeAttr( 'style');
+                $('.pop_guide').css('display','none');
+                $('.pop_wrap').css('display','none');
+                $('.dimmed').css('display','none');
+            });
+
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>
