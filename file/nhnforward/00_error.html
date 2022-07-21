@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>에러 | NHN FORWORD</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/ui.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header class="line_type"><!-- [D] 스크롤시 fixed 클래스 추가 / 모바일 메뉴 오픈시 open 클래스 추가 -->
+                <h1><a href="#" class="logo_nhnforward"><span class="blind">NHN FORWORD</span></a></h1>
+                <nav id="gnb"><!-- [D] 행사 진행 후 등록 버튼 생성시 eventopen 클래스 추가 -->
+                    <ul class="list_gnb">
+                        <li><a href="#">소개</a></li><!-- [D] on 클래스 추가시 활성화 -->
+                        <li><a href="#">세션</a></li>
+                        <li><a href="#">프런트엔드 상담소</a></li>
+                        <li><a href="#">핸즈온 랩</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </nav>
+                <div class="top_status">
+                    <div class="inner_status">
+                        <span class="ico_member ico_payco" style="display:none"><span class="blind">payco</span></span>
+                        <em class="member_name" style="display:none"><a href="#" class="txt_name">abcdefgabcdefgabcdefgabcdefg</a>님</em>
+                        <a href="#" class="link_register">등록</a>
+                        <a href="#" class="link_login">로그인</a><!-- [D] on클래스 추가시 로그인 -->
+                    </div>
+                    <div class="area_select"><!-- [D] on 클래스 추가시 셀렉트 박스 활성화 -->
+                        <a href="##" class="link_select">KOR</a>
+                        <ul class="list_select">
+                            <li class="on"><a href="#">KOR</a></li><!-- [D] 선택시 on 클래스 추가(모바일) -->
+                            <li><a href="#">JPN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn_gnbopen"><span class="blind">열기</span></button>
+                <button type="button" class="btn_gnbclose"><span class="blind">닫기</span></button>
+            </header>
+            <div id="container">
+                <div id="content" class="cont_sub error">
+                    <section>
+                        <div class="wrap_error">
+                            <!-- 404error --->
+                            <div class="info_error error404">
+                                <h2 class="blind">404 Error</h2>
+                                <strong class="tit_error">요청하신 페이지를 찾을 수 없습니다.</strong>
+                                <p class="desc_error">
+                                    존재하지 않는 주소이거나, <br class="mo_br">요청하신 페이지의 주소가<br>
+                                    변경 또는 삭제되어 찾을 수 없습니다.
+                                </p>
+                                <div class="wrap_btn">
+                                    <a href="#" class="btn btn_md line_black">이전 페이지</a>
+                                    <a href="#" class="btn btn_md bg_bluegradi">홈</a>
+                                </div>
+                            </div>
+
+                            <!-- 505error --->
+                            <div class="info_error error500" style="display:none">
+                                <h2 class="blind">500 Error</h2>
+                                <strong class="tit_error">서비스에 접속할 수 없습니다.</strong>
+                                <p class="desc_error">
+                                    기술적인 문제로 일시적으로 접속되지 않았습니다.<br>
+                                    이용에 불편을 드린 점 양해 부탁드립니다.<br>
+                                    이전 페이지로 이동 후, 다시 이용해 주시기 바랍니다.
+                                </p>
+                                <div class="wrap_btn">
+                                    <a href="#" class="btn btn_md line_black">이전 페이지</a>
+                                    <a href="#" class="btn btn_md bg_bluegradi">홈</a>
+                                </div>
+                            </div>
+
+                            <!-- error --->
+                            <div class="info_error error" style="display:none">
+                                <h2 class="blind">Error</h2>
+                                <strong class="tit_error">페이지에 오류가 발생했습니다.</strong>
+                                <p class="desc_error">
+                                    기술적인 문제가 발생했습니다.<br>
+                                    잠시 후 다시 이용 부탁드립니다.
+                                </p>
+                                <div class="wrap_btn">
+                                    <a href="#" class="btn btn_md line_black">이전 페이지</a>
+                                    <a href="#" class="btn btn_md bg_bluegradi">홈</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <button type="button" class="btn_top"><span class="blind">top 이동</span></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview,.caseview_mo{position:fixed;top:250px;right:20px;padding:5px;background:#000;z-index:700}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+            <a href="#"  onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','block');$('.member_name').css('display','block');$('.link_login').addClass('on');$('.link_login').text('로그아웃');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 로그인/행사 진행</a>
+            <a href="#" onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','none');$('.member_name').css('display','none');$('.link_register').css('display','block');$('.link_login').removeClass('on');$('.link_login').text('로그인');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 행사 진행 후 등록</a>
+            <a href="#" onclick="$('.info_error').css('display','none ');$('.error404').css('display','block ');return false;">[화면] 404에러</a>
+            <a href="#" onclick="$('.info_error').css('display','none ');$('.error500').css('display','block ');return false;">[화면] 500에러</a>
+            <a href="#" onclick="$('.info_error').css('display','none ');$('.error').css('display','block ');return false;">[화면] 에러</a>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+        <script>
+            //header fixed
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $("header").addClass("fixed");
+                } else {
+                    $("header").removeClass("fixed");
+                }
+            });
+
+            //top button
+            var btnTop = $('.btn_top');
+            $(window).on('scroll', function() {  
+                var footerHei = $('footer').outerHeight();
+                var sT = $(window).scrollTop();
+                var val = $(document).height() - $(window).height() - footerHei;
+
+                if (sT >= val)
+                    btnTop.addClass('on')
+                else
+                    btnTop.removeClass('on')
+
+                if ($(window).scrollTop() > 300) {
+                    btnTop.addClass('show');
+                } else {
+                    btnTop.removeClass('show');
+                }
+            });
+
+            btnTop.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
+
+            $('.box_register').on('click',function(){
+                $(this).parent().toggleClass('open');
+                $(this).addClass('select');
+            });
+
+            $('.link.direct').on('click',function(){
+                $('.cont_select').addClass('direct');
+            });
+
+            //mobile menu button
+            $('.btn_gnbopen').click(function() {
+                $('header').addClass('open');
+                $('body').css({'overflow':'hidden','touch-action':'none'});
+            });
+
+            $('.btn_gnbclose').click(function() {
+                $('header').removeClass('open');
+                $('body').removeAttr( 'style' );
+            });      
+        
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

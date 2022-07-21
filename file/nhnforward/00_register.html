@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>등록하기 | NHN FORWORD</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/ui.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header><!-- [D] 스크롤시 fixed 클래스 추가 / 모바일 메뉴 오픈시 open 클래스 추가 -->
+                <h1><a href="#" class="logo_nhnforward"><span class="blind">NHN FORWORD</span></a></h1>
+                <nav id="gnb"><!-- [D] 행사 진행 후 등록 버튼 생성시 eventopen 클래스 추가 -->
+                    <ul class="list_gnb">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">세션</a></li>
+                        <li><a href="#">프런트엔드 상담소</a></li>
+                        <li><a href="#">핸즈온 랩</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </nav>
+                <div class="top_status">
+                    <div class="inner_status">
+                        <span class="ico_member ico_payco" style="display:none"><span class="blind">payco</span></span>
+                        <em class="member_name" style="display:none"><a href="#" class="txt_name">abcdefgabcdefgabcdefgabcdefg</a>님</em>
+                        <a href="#" class="link_register">등록</a>
+                        <a href="#" class="link_login">로그인</a><!-- [D] on클래스 추가시 로그인 -->
+                    </div>
+                    <div class="area_select"><!-- [D] on 클래스 추가시 셀렉트 박스 활성화 -->
+                        <a href="##" class="link_select">KOR</a>
+                        <ul class="list_select">
+                            <li class="on"><a href="#">KOR</a></li><!-- [D] 선택시 on 클래스 추가(모바일) -->
+                            <li><a href="#">JPN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn_gnbopen"><span class="blind">열기</span></button>
+                <button type="button" class="btn_gnbclose"><span class="blind">닫기</span></button>
+            </header>
+            <div id="container">
+                <div id="content" class="cont_sub">
+                    <section>
+                        <div class="wrap_top_sub">
+                            <div class="top_sub">
+                                <div class="inner_sub">
+                                    <h2>등록하기</h2>
+                                    <div class="area_obj">
+                                        <div class="obj obj_yellow"></div>
+                                        <div class="obj obj_red"></div>
+                                        <div class="obj obj_blue"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_register">
+                            <form action="#">
+                                <fieldset>
+                                    <legend class="blind">등록하기 입력 폼</legend>
+                                    <em class="txt_required"><span class="ico_required">*</span>필수 항목</em>
+                                    <strong class="tit_register">인증수단</strong>
+                                    <div class="box_register method">PAYCO</div>
+                                    <label for="name" class="tit_register">이름<em class="required"><span class="blind">필수항목</span></em></label>
+                                    <input type="text" id="name" class="box_register" placeholder="이름을 입력해주세요">
+                                    <em class="incomplete" style="display:block">이름을 입력해 주세요.</em>
+                                    <label for="phone" class="tit_register">휴대폰 번호<em class="required"><span class="blind">필수항목</span></em></label>
+                                    <input type="number" id="phone" class="box_register" placeholder="휴대폰 번호를 입력해주세요">
+                                    <em class="incomplete" style="display:block">숫자만 입력해 주세요.</em>
+                                    <label for="email" class="tit_register">이메일<em class="required"><span class="blind">필수항목</span></em></label>
+                                    <input type="text" id="email" class="box_register" placeholder="이메일을 입력해주세요">
+                                    <em class="incomplete" style="display:block">올바른 이메일 형식이 아닙니다.</em>
+                                    <label for="belong" class="tit_register">소속<em class="required"><span class="blind">필수항목</span></em></label>
+                                    <input type="text" id="belong" class="box_register" placeholder="소속을 입력해주세요">
+                                    <em class="incomplete" style="display:block">소속을 입력해주세요.</em>
+                                    <strong class="tit_register">직업<em class="required"><span class="blind">필수항목</span></em></strong>
+                                    <div class="cont_select"><!-- [D] 직접입력 선택시 direct 클래스 추가-->
+                                        <div class="job_select">
+                                            <!-- [D] open 클래스 추가시 셀렉트 박스 펼침 -->
+                                            <a href="##" class="box_register">선택해 주세요.</a>
+                                            <!-- [D] 클릭시 select 클래스 추가 -->
+                                            <div class="wrap_select">
+                                                <ul class="list_select">
+                                                    <li><a href="##" class="link">개발</a></li>
+                                                    <li><a href="##" class="link">기획</a></li>
+                                                    <li><a href="##" class="link">인프라</a></li>
+                                                    <li><a href="##" class="link">디자인</a></li>
+                                                    <li><a href="##" class="link direct">직접입력</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <input type="text" class="box_register" placeholder="직업을 입력해주세요">
+                                        <em class="incomplete" style="display:block">선택해 주세요.</em>
+                                    </div>
+                                    <strong class="tit_register">개인 정보 수집 및 이용 동의</strong>
+                                    <span class="check_inp">
+                                        <input type="checkbox" id="agree1" checked="">
+                                        <label for="agree1" class="lbl_check">(필수) 개인정보 수집 및 이용에 동의합니다.</label>
+                                    </span>
+                                    <div class="box_agree">
+                                        <ul>
+                                            <li>- 수집 목적 : NHN FORWARD 참가 등록 및 등록자 확인, 경품 추첨</li>
+                                            <li>- 수집 항목 : 이름, 휴대폰 번호, 이메일, 소속 회사・학교명, 직업</li>
+                                            <li><strong>- 보유 기간 : NHN FORWARD 행사일로부터 90일간 보유 후 파기</strong></li>
+                                        </ul>
+                                        <p class="desc_agree">동의를 거부하실 수 있으나, 동의하지 않으실 경우 서비스 이용이 제한될 수 있습니다.<br>이벤트 당첨자 경품 발송을 위해 ‘온 페이퍼’ 업체를 통해 개인정보 처리 업무를 위탁합니다.</p>
+                                    </div>
+                                    <span class="check_inp">
+                                        <input type="checkbox" id="agree2">
+                                        <label for="agree2" class="lbl_check">(선택) 프로모션 및 마케팅 소식 수신, 마케팅 활용에 동의합니다.</label>
+                                    </span>
+                                    <div class="box_agree">
+                                        <ul>
+                                            <li>- 수집 목적: NHN 마케팅 활용(NHN 소식)</li>
+                                            <li>- 수집 항목: 이름, 휴대폰 번호, 이메일</li>
+                                            <li><strong>- 보유 기간 : NHN FORWARD 행사일로부터 90일간 보유 후 파기</strong></li>
+                                        </ul>
+                                        <p class="desc_agree">동의하지 않으셔도 NHN FORWARD 행사에 참여하실 수 있습니다.</p>
+                                    </div>
+                                    <div class="wrap_btn">
+                                        <button type="submit" class="btn btn_md bg_bluegradi">등록하기</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </section>
+                    <button type="button" class="btn_top"><span class="blind">top 이동</span></button>
+                </div>
+            </div>
+            <footer id="footer">
+                <strong class="footer_logo"><span class="blind">NHN FORWARD</span></strong>
+                <div class="footer_info">
+                    <strong class="blind">협력사</strong>
+                    <ul class="list_partners">
+                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="footer_nhn"><span class="blind">NHN</span></a></li>
+                        <li><a href="#" class="footer_nhncloud"><span class="blind">NHN Cloud</span></a></li>
+                        <li><a href="#" class="footer_payco"><span class="blind">PATCO</span></a></li>
+                        <li><a href="#" class="footer_hangame"><span class="blind">HANGAME</span></a></li>
+                        <li><a href="#" class="footer_dooray"><span class="blind">Dooray</span></a></li>
+                    </ul>
+                    <strong class="blind">약관</strong>
+                    <ul class="list_terms">
+                        <li><a href="#">개인 정보 처리 방침</a></li>
+                        <li><a href="#">행동 강령</a></li>
+                        <li>문의<a href="mailto:forward@nhn.com" class="link_mail">forward@nhn.com</a></li>
+                    </ul>
+                    <p class="copyright">© NHN Corp. All rights reserved.</p>
+                </div>
+                <div class="footer_route">
+                    <div class="area_select"><!-- on 클래스 추가시 셀렉트박스 활성화-->
+                        <a href="##" class="link_select">지난 NHN FORWARD 보기</a>
+                        <ul class="list_select">
+                            <li><a href="#" target="_blank">NHN FORWARD 2020</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2019 서울</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2019 경남창원</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2018</a></li>
+                        </ul>
+                    </div>
+                    <ul class="list_route">
+                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="logo_github"><span class="blind">github 페이지로 이동</span></a></li>
+                        <li><a href="#" class="logo_facebook"><span class="blind">facebook 페이지로 이동</span></a></li>
+                        <li><a href="#" class="logo_youtub"><span class="blind">YouTube 페이지로 이동</span></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview,.caseview_mo{position:fixed;top:250px;right:20px;padding:5px;background:#000;z-index:700}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+            <a href="#"  onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','block');$('.member_name').css('display','block');$('.link_login').addClass('on');$('.link_login').text('로그아웃');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 로그인/행사 진행</a>
+            <a href="#" onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','none');$('.member_name').css('display','none');$('.link_register').css('display','block');$('.link_login').removeClass('on');$('.link_login').text('로그인');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 행사 진행 후 등록</a>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            //header fixed
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $("header").addClass("fixed");
+                } else {
+                    $("header").removeClass("fixed");
+                }
+            });
+
+            //selectbox on
+            $('.link_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            //top button
+            var btnTop = $('.btn_top');
+            $(window).on('scroll', function() {  
+                var footerHei = $('footer').outerHeight();
+                var sT = $(window).scrollTop();
+                var val = $(document).height() - $(window).height() - footerHei;
+
+                if (sT >= val)
+                    btnTop.addClass('on')
+                else
+                    btnTop.removeClass('on')
+
+                if ($(window).scrollTop() > 300) {
+                    btnTop.addClass('show');
+                } else {
+                    btnTop.removeClass('show');
+                }
+            });
+
+            btnTop.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
+
+            $('a.box_register').on('click',function(){
+                $('.job_select').toggleClass('open');
+            });
+
+            $('.link.direct').on('click',function(){
+                $('.cont_select').addClass('direct');
+                $('.job_select').removeClass('open');
+            });
+
+            //mobile menu button
+            $('.btn_gnbopen').click(function() {
+                $('header').addClass('open');
+                $('body').css({'overflow':'hidden','touch-action':'none'});
+            });
+
+            $('.btn_gnbclose').click(function() {
+                $('header').removeClass('open');
+                $('body').removeAttr( 'style' );
+            });      
+        
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

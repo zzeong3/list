@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>UI Guide</title>
+  <link rel="stylesheet" href="../css/ui.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/vs2015.min.css">
+  <style>
+    .ui_guide{min-width:800px;max-width:1000px;margin:80px auto}
+    .ui_guide .nav_tab .nav_menu{border-bottom:1px solid #ddd;}
+    .ui_guide .nav_tab .menu_item{position:relative;display:inline-block;text-align:center;margin-left:30px}
+    .ui_guide .nav_tab .menu_item:first-of-type{margin-left:0}
+    .ui_guide .nav_tab .menu_item a{display:block;padding:10px 0;color:#242424;opacity:.3;font-size:20px;font-weight:700}
+    .ui_guide .nav_tab .menu_item.selected::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background-color:#ff3429}
+    .ui_guide .nav_tab .menu_item.selected a{opacity:1}
+    .ui_guide .nav_content{position:relative;margin-top:80px}
+    .ui_guide .nav_content .guide_page{display:none}
+    .ui_guide .nav_content .guide_page.selected{display:block}
+    .ui_guide .guide_tit{font-size:60px;color:#242424}
+    .ui_guide .uio_cont .item{margin-top:60px}
+    .ui_guide .uio_cont .item .lst_tit{display:block;font-size:20px;color:#242424}
+    .ui_guide .uio_cont .item .sub_tit{display:block;margin-top:30px;font-size:17px}
+    .ui_guide .uio_cont .item .txt_desc{display:block;margin-top:40px;}
+  </style>
+</head>
+<body>
+<div class="ui_guide">
+  <div class="nav_tab">
+    <ul class="nav_menu">
+      <li class="menu_item selected" data-tab="tab-color">
+        <a href="#none">color</a>
+      </li>
+      <li class="menu_item" data-tab="tab-title">
+        <a href="#none">title</a>
+      </li>
+      <li class="menu_item" data-tab="tab-button">
+        <a href="#none">button</a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav_content">
+    <div id="tab-color" class="guide_page selected">
+      <h2 class="guide_tit">Color</h2>
+      <span class="txt_desc">설명문구</span>
+      <div class="uio_cont">
+        <div class="item">
+          <strong class="lst_tit">Large</strong>
+          <p class="sub_tit">* Default:</p>
+<pre><code class="html hljs xml">
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn_lg"</span>&gt;</span>Normal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn_lg is_active"</span>&gt;</span>Pressed<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn_lg is_inactive"</span>&gt;</span>Inactive<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn_lg"</span> <span class="hljs-attr">disabled</span>=<span class="hljs-string">""</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  </code></pre>
+        </div>
+      </div>
+    </div>
+    <div id="tab-title" class="guide_page">
+      <h2 class="guide_tit">Title</h2>
+    </div>
+    <div id="tab-button" class="guide_page">
+      <h2 class="guide_tit">Button</h2>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+  $('.nav_menu .menu_item').click(function(){
+		var tab_id = $(this).attr('data-tab');
+
+		$('.nav_menu .menu_item').removeClass('selected');
+		$('.nav_content .guide_page').removeClass('selected');
+
+		$(this).addClass('selected');
+		$("#"+tab_id).addClass('selected');
+	})
+</script>
+</body>
+</html>

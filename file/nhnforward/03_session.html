@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>세션 | NHN FORWORD</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/ui.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header><!-- [D] 스크롤시 fixed 클래스 추가 / 모바일 메뉴 오픈시 open 클래스 추가 -->
+                <h1><a href="#" class="logo_nhnforward"><span class="blind">NHN FORWORD</span></a></h1>
+                <nav id="gnb"><!-- [D] 행사 진행 후 등록 버튼 생성시 eventopen 클래스 추가 -->
+                    <ul class="list_gnb">
+                        <li><a href="#">소개</a></li><!-- [D] on 클래스 추가시 활성화 -->
+                        <li class="on"><a href="#">세션</a></li>
+                        <li><a href="#">프런트엔드 상담소</a></li>
+                        <li><a href="#">핸즈온 랩</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </nav>
+                <div class="top_status">
+                    <div class="inner_status">
+                        <span class="ico_member ico_payco" style="display:none"><span class="blind">payco</span></span>
+                        <em class="member_name" style="display:none"><a href="#" class="txt_name">abcdefgabcdefgabcdefgabcdefg</a>님</em>
+                        <a href="#" class="link_register">등록</a>
+                        <a href="#" class="link_login">로그인</a><!-- [D] on클래스 추가시 로그인 -->
+                    </div>
+                    <div class="area_select"><!-- [D] on 클래스 추가시 셀렉트 박스 활성화 -->
+                        <a href="##" class="link_select">KOR</a>
+                        <ul class="list_select">
+                            <li class="on"><a href="#">KOR</a></li><!-- [D] 선택시 on 클래스 추가(모바일) -->
+                            <li><a href="#">JPN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn_gnbopen"><span class="blind">열기</span></button>
+                <button type="button" class="btn_gnbclose"><span class="blind">닫기</span></button>
+            </header>
+            <div id="container">
+                <div id="content" class="cont_sub">
+                    <section>
+                        <div class="wrap_top_sub">
+                            <div class="top_sub">
+                                <div class="inner_sub">
+                                    <h2>세션</h2>
+                                    <div class="area_obj">
+                                        <div class="obj obj_yellow"></div>
+                                        <div class="obj obj_red"></div>
+                                        <div class="obj obj_blue"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wrap_session">
+                            <p class="desc_session">* 모든 영상은 코로나 19 생활 방역 수칙을 준수하여<br>
+                                안전하게 촬영하였습니다.</p>
+                            <div class="wrap_state_pc open"><!-- [D] PC필터, open 클래스 추가시 필터 오픈-->
+                                <button type="button" class="btn_filter">필터</button>
+                                <div class="box_filter">
+                                    <div class="info_filter">
+                                        <strong class="tit_filter">주제</strong>
+                                        <ul class="list_filter">
+                                            <li><button type="button" class="cloud on">클라우드</button></li><!-- [D] on 클래스 추가시 활성화 -->
+                                            <li><button type="button" class="machinelearning">머신러닝</button></li>
+                                            <li><button type="button" class="reinforcementlearning">강화학습</button></li>
+                                            <li><button type="button" class="backend">백엔드</button></li>
+                                            <li><button type="button" class="frontend">프런트엔드</button></li>
+                                            <li><button type="button" class="mobile">모바일</button></li>
+                                            <li><button type="button" class="infra">인프라</button></li>
+                                            <li><button type="button" class="devops">DevOps</button></li>
+                                            <li><button type="button" class="plan">기획</button></li>
+                                            <li><button type="button" class="ux">UX</button></li>
+                                            <li><button type="button" class="bigdata">빅데이터</button></li>
+                                            <li><button type="button" class="game">게임</button></li>
+                                            <li><button type="button" class="opensource">오픈소스</button></li>
+                                            <li><button type="button" class="architecture">아키텍처</button></li>
+                                            <li><button type="button" class="platform">플랫폼</button></li>
+                                            <li><button type="button" class="productivity">생산성</button></li>
+                                            <li><button type="button" class="performance">성능</button></li>
+                                            <li><button type="button" class="security">정보보안</button></li>
+                                            <li><button type="button" class="lounge">라운지</button></li>
+                                            <li><button type="button" class="keynote">키노트</button></li>
+                                        </ul>
+                                        <button type="button" class="btn_refresh">재설정</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="wrap_state_mo"><!-- [D] Mobile 필터 -->
+                                <div class="box_state"><!-- [D] fixed 클래스 추가시 메뉴 고정 -->
+                                    <button type="button" class="btn_filter">필터</button>
+                                </div>
+                            </div>
+            
+                            <section class="info_sesston">
+                                <h3>12. 13.(월) 오전 10시</h3>
+                                <ul class="list_sesston">
+                                    <li>
+                                        <div class="thumb_session"><!--  [D]행사후 -->
+                                            <img src="images/img_ppt_01.png" alt=""><!-- [D] 운영 이미지 img_ppt_01~ 26 -->
+                                            <span class="blind">재생시간</span>
+                                            <span class="time">33:00</span>
+                                        </div>
+                                        <div class="cont_session">
+                                            <span class="txt">실습 과정</span>
+                                            <strong class="tit">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                                            <div class="area_label">
+                                                <em class="game">게임</em>
+                                                <em class="machinelearning">머신러닝</em>
+                                                <em class="plan">기획</em>
+                                            </div>
+                                            <a href="#" class="link_sesston">발표자료</a>
+                                        </div>
+                                        <dl class="info_presenter">
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름이름이름이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">회사명회사명회사명회사명</dd>
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">회사명</dd>
+                                        </dl>
+                                        <a href="#" class="link"><span class="blind">상세 페이지로 이동</span></a>
+                                    </li>
+                                    <li>
+                                        <div class="thumb_session before"><!--  [D]행사전 before 클래스 추가 -->
+                                            <img src="images/img_ppt_01.png" alt=""><!-- [D]운영 이미지 img_ppt_01~ 26 -->
+                                            <span class="blind">재생시간</span>
+                                            <span class="time">33:00</span>
+                                        </div>
+                                        <div class="cont_session">
+                                            <strong class="tit">일이삼사오육칠팔구십</strong>
+                                            <div class="area_label">
+                                                <em class="game">게임</em>
+                                                <em class="frontend">프론트엔드</em>
+                                            </div>
+                                        </div>
+                                        <dl class="info_presenter">
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">회사명회사명</dd>
+                                        </dl>
+                                        <a href="#" class="link"><span class="blind">상세 페이지로 이동</span></a>
+                                    </li>
+                                    <li>
+                                        <div class="thumb_session">
+                                            <img src="images/thumb_before_yellow.png" alt=""><!-- [D] thumb_before_blue / _red / _green / _yellow -->
+                                        </div>
+                                        <div class="cont_session">
+                                            <strong class="tit">abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefg</strong>
+                                            <div class="area_label">
+                                                <em class="game">게임</em>
+                                                <em class="mobile">모바일</em>
+                                            </div>
+                                        </div>
+                                        <dl class="info_presenter">
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">abcdefgabcabcdefgabc</dd>
+                                        </dl>
+                                        <a href="#" class="link"><span class="blind">상세 페이지로 이동</span></a>
+                                    </li>
+                                </ul>
+                            </section>
+
+                            <section class="info_sesston">
+                                <h3>12.13(월) 오후 2시</h3>
+                                <ul class="list_sesston">
+                                    <li>
+                                        <div class="thumb_session">
+                                            <img src="images/thumb_before_green.png" alt=""><!-- [D] thumb_before_blue / _red / _green / _yellow --> 
+                                        </div>
+                                        <div class="cont_session">
+                                            <span class="txt">실습 과정</span>
+                                            <strong class="tit">일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                                            <div class="area_label">
+                                                <em class="game">게임</em>
+                                                <em class="machinelearning">머신러닝</em>
+                                                <em class="plan">기획</em>
+                                            </div>
+                                        </div>
+                                        <dl class="info_presenter">
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름이름이름이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">회사명회사명회사명회사명</dd>
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">회사명</dd>
+                                        </dl>
+                                        <a href="#" class="link"><span class="blind">상세 페이지로 이동</span></a>
+                                    </li>
+                                    <li>
+                                        <div class="thumb_session">
+                                            <img src="images/thumb_before_blue.png" alt=""><!-- [D] thumb_before_blue / _red / _green / _yellow --> 
+                                        </div>
+                                        <div class="cont_session">
+                                            <strong class="tit">일이삼사오육칠팔구십</strong>
+                                            <div class="area_label">
+                                                <em class="game">게임</em>
+                                                <em class="frontend">프론트엔드</em>
+                                            </div>
+                                        </div>
+                                        <dl class="info_presenter">
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">회사명회사명</dd>
+                                        </dl>
+                                        <a href="#" class="link"><span class="blind">상세 페이지로 이동</span></a>
+                                    </li>
+                                    <li>
+                                        <div class="thumb_session">
+                                            <img src="images/thumb_before_red.png" alt=""><!-- [D] thumb_before_blue / _red / _green / _yellow --> 
+                                        </div>
+                                        <div class="cont_session">
+                                            <strong class="tit">abcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefgabcdefg</strong>
+                                            <div class="area_label">
+                                                <em class="game">게임</em>
+                                                <em class="mobile">모바일</em>
+                                            </div>
+                                        </div>
+                                        <dl class="info_presenter">
+                                            <dt class="blind">발표자</dt>
+                                            <dd class="name">이름이름</dd>
+                                            <dt class="blind">소속</dt>
+                                            <dd class="belong">abcdefgabcabcdefgabc</dd>
+                                        </dl>
+                                        <a href="#" class="link"><span class="blind">상세 페이지로 이동</span></a>
+                                    </li>
+                                </ul>
+                            </section>
+                           
+                        </div>
+                    </section>
+                    <button type="button" class="btn_top"><span class="blind">top 이동</span></button>
+                </div>
+            </div>
+            <footer id="footer">
+                <strong class="footer_logo"><span class="blind">NHN FORWARD</span></strong>
+                <div class="footer_info">
+                    <strong class="blind">협력사</strong>
+                    <ul class="list_partners">
+                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="footer_nhn"><span class="blind">NHN</span></a></li>
+                        <li><a href="#" class="footer_nhncloud"><span class="blind">NHN Cloud</span></a></li>
+                        <li><a href="#" class="footer_payco"><span class="blind">PATCO</span></a></li>
+                        <li><a href="#" class="footer_hangame"><span class="blind">HANGAME</span></a></li>
+                        <li><a href="#" class="footer_dooray"><span class="blind">Dooray</span></a></li>
+                    </ul>
+                    <strong class="blind">약관</strong>
+                    <ul class="list_terms">
+                        <li><a href="#">개인 정보 처리 방침</a></li>
+                        <li><a href="#">행동 강령</a></li>
+                        <li>문의<a href="mailto:forward@nhn.com" class="link_mail">forward@nhn.com</a></li>
+                    </ul>
+                    <p class="copyright">© NHN Corp. All rights reserved.</p>
+                </div>
+                <div class="footer_route">
+                    <div class="area_select"><!-- on 클래스 추가시 셀렉트박스 활성화-->
+                        <a href="##" class="link_select">지난 NHN FORWARD 보기</a>
+                        <ul class="list_select">
+                            <li><a href="#" target="_blank">NHN FORWARD 2020</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2019 서울</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2019 경남창원</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2018</a></li>
+                        </ul>
+                    </div>
+                    <ul class="list_route">
+                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="logo_github"><span class="blind">github 페이지로 이동</span></a></li>
+                        <li><a href="#" class="logo_facebook"><span class="blind">facebook 페이지로 이동</span></a></li>
+                        <li><a href="#" class="logo_youtub"><span class="blind">YouTube 페이지로 이동</span></a></li>
+                    </ul>
+                </div>
+            </footer>
+
+            <!-- 모바일 날짜선택 레이어 -->
+            <div class="dimmed"></div>
+          
+            <!-- 모바일 필터 레이어 -->
+            <div class="layer_session layer_filter">
+                <strong class="tit_layer">필터</strong>
+                <div class="wrap_filter">
+                    <ul class="list_filter">
+                        <li><button type="button" class="cloud on">클라우드</button><!-- [D] on 클래스 추가시 활성화 --></li>
+=                        <li><button type="button" class="machinelearning">머신러닝</button></li>
+                        <li><button type="button" class="reinforcementlearning">강화학습</button></li>
+                        <li><button type="button" class="backend">백엔드</button></li>
+                        <li><button type="button" class="frontend">프런트엔드</button></li>
+                        <li><button type="button" class="mobile">모바일</button></li>
+                        <li><button type="button" class="infra">인프라</button></li>
+                        <li><button type="button" class="devops">DevOps</button></li>
+                        <li><button type="button" class="plan">기획</button></li>
+                        <li><button type="button" class="ux">UX</button></li>
+                        <li><button type="button" class="bigdata">빅데이터</button></li>
+                        <li><button type="button" class="game">게임</button></li>
+                        <li><button type="button" class="opensource">오픈소스</button></li>
+                        <li><button type="button" class="architecture">아키텍처</button></li>
+                        <li><button type="button" class="platform">플랫폼</button></li>
+                        <li><button type="button" class="productivity">생산성</button></li>
+                        <li><button type="button" class="performance">성능</button></li>
+                        <li><button type="button" class="security">정보보안</button></li>
+                        <li><button type="button" class="lounge">라운지</button></li>
+                        <li><button type="button" class="keynote">키노트</button></li>
+                    </ul>
+                </div>
+                <div class="info_state">
+                    <button type="button" class="btn_refresh">재설정</button>
+                </div>
+                <button type="button" class="btn_close"><span class="blind">레이어 닫기</span></button>
+            </div>
+        </div>
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview,.caseview_mo{position:fixed;top:250px;right:20px;padding:5px;background:#000;z-index:700}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+            <a href="#"  onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','block');$('.member_name').css('display','block');$('.link_login').addClass('on');$('.link_login').text('로그아웃');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 로그인/행사 진행</a>
+            <a href="#" onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','none');$('.member_name').css('display','none');$('.link_register').css('display','block');$('.link_login').removeClass('on');$('.link_login').text('로그인');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 행사 진행 후 등록</a>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        
+        <script>
+            //필터 open
+            $('.wrap_state_pc .btn_filter').click(function () {
+                var _this = $(this),
+                $item_guide = _this.closest('.wrap_state_pc');
+                $item_guide.toggleClass('open');
+                if ($item_guide.hasClass('open')) {
+                    $('html, body').stop().animate({ scrollTop: (_this.offset().top) - 100 }, 500);
+                }
+            });
+
+            //필터 메뉴 활성화
+            $('.list_filter li button').click(function() {
+                $('.list_filter li button').removeClass('on');
+                $(this).addClass('on');
+            });
+
+            $('.list_time li button').click(function() {
+                $('.list_time li button').removeClass('on');
+                $(this).addClass('on');
+            });
+
+
+            //날짜 fixed MO
+            var filterMO = ($(".box_state").offset().top)-65;
+            $(window).scroll(function() {
+                var window = $(this).scrollTop();
+                if(filterMO <= window) {
+                    $(".box_state").addClass("fixed");
+                    }else{
+                    $(".box_state").removeClass("fixed");
+                }
+            });
+
+            //레이어 on/off
+            $('.btn_time').click(function() {
+                $('.dimmed').css('display', 'block');
+                $('.layer_time').css('display', 'block');
+                $('body').css({'overflow':'hidden','touch-action':'none'})
+            });
+
+            $('.wrap_state_mo .btn_filter').click(function() {
+                $('.dimmed').css('display', 'block');
+                $('.layer_filter').css('display', 'block');
+                $('body').css({'overflow':'hidden','touch-action':'none'})
+            });
+            
+            $('.btn_close').click(function() {
+                $('.dimmed').css('display', 'none');
+                $('.layer_session').css('display', 'none');
+                $('body').removeAttr( 'style' );
+            });
+            
+            //header fixed
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $("header").addClass("fixed");
+                } else {
+                    $("header").removeClass("fixed");
+                }
+            });
+
+            //selectbox on
+            $('.link_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            //top button
+            var btnTop = $('.btn_top');
+            $(window).on('scroll', function() {  
+                var footerHei = $('footer').outerHeight();
+                var sT = $(window).scrollTop();
+                var val = $(document).height() - $(window).height() - footerHei;
+
+                if (sT >= val)
+                    btnTop.addClass('on')
+                else
+                    btnTop.removeClass('on')
+
+                if ($(window).scrollTop() > 300) {
+                    btnTop.addClass('show');
+                } else {
+                    btnTop.removeClass('show');
+                }
+            });
+
+            btnTop.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
+
+            $('.box_register').on('click',function(){
+                $(this).parent().toggleClass('open');
+                $(this).addClass('select');
+            });
+
+            $('.link.direct').on('click',function(){
+                $('.cont_select').addClass('direct');
+            });
+
+            //mobile menu button
+            $('.btn_gnbopen').click(function() {
+                $('header').addClass('open');
+                $('body').css({'overflow':'hidden','touch-action':'none'});
+            });
+
+            $('.btn_gnbclose').click(function() {
+                $('header').removeClass('open');
+                $('body').removeAttr( 'style' );
+            });      
+        
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>메인 | NHN FORWORD</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/ui.css">
+    </head>
+    <body>
+        <div id="skip">
+            <a href="#gnb">주메뉴 바로가기</a>
+            <a href="#container">본문 바로가기</a>
+        </div>
+        <div class="wrap">
+            <header><!-- [D] 스크롤시 fixed 클래스 추가 / 모바일 메뉴 오픈시 open 클래스 추가 -->
+                <h1><a href="#" class="logo_nhnforward"><span class="blind">NHN FORWORD</span></a></h1>
+                <nav id="gnb"><!-- [D] 행사 진행 후 등록 버튼 생성시 eventopen 클래스 추가 -->
+                    <ul class="list_gnb">
+                        <li><a href="#">소개</a></li>
+                        <li><a href="#">세션</a></li>
+                        <li><a href="#">프런트엔드 상담소</a></li>
+                        <li><a href="#">핸즈온 랩</a></li>
+                        <li><a href="#">자주 묻는 질문</a></li>
+                    </ul>
+                </nav>
+                <div class="top_status">
+                    <div class="inner_status">
+                        <span class="ico_member ico_payco" style="display:none"><span class="blind">payco</span></span>
+                        <!--
+                            구글 :
+                            <span class="ico_member ico_google" style="display:none"><span class="blind">google</span></span>
+                            페이스북 :
+                            <span class="ico_member ico_facebook" style="display:none"><span class="blind">facebook</span></span>
+                            깃허브 :
+                            <span class="ico_member ico_ico_github" style="display:none"><span class="blind">github</span></span>
+                        -->
+                        <em class="member_name" style="display:none"><a href="#" class="txt_name">abcdefgabcdefgabcdefgabcdefg</a>님</em>
+                        <a href="#" class="link_register">등록</a>
+                        <a href="#" class="link_login">로그인</a><!-- [D] on클래스 추가시 로그인 -->
+                    </div>
+                    <div class="area_select"><!-- [D] on 클래스 추가시 셀렉트 박스 활성화 -->
+                        <a href="##" class="link_select">KOR</a>
+                        <ul class="list_select">
+                            <li class="on"><a href="#">KOR</a></li><!-- [D] 선택시 on 클래스 추가(모바일) -->
+                            <li><a href="#">JPN</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn_gnbopen"><span class="blind">열기</span></button>
+                <button type="button" class="btn_gnbclose"><span class="blind">닫기</span></button>
+            </header>
+            <div id="container">
+                <div class="spot">
+                    <div class="inner_spot">
+                        <span class="subtit_sopt"><span class="blind">Small Steps Big Difference</span></span>
+                        <strong class="tit_spot"><span class="blind">NHN FORWARD</span></strong>
+                        <dl class="list_info">
+                            <dt class="blind">일시 및 장소</dt>
+                            <dd><span class="num">2021. 12. 13.~14.</span> 온라인</dd>
+                            <dt class="blind">행사명</dt>
+                            <dd>NHN 기술 콘퍼런스</dd>
+                        </dl>
+                        <a href="#" class="btn btn_md line_black">등록하기</a>
+                        <a href="#" class="btn btn_md line_black">登録はこちらがでをっッァ</a>
+                        <a href="##" class="link_scroll"><span class="blind">Scroll Down</span></a>
+                    </div>
+                    <div class="area_obj"><!-- [D] 스크롤시 scroll 클래스 추가, 스크롤 올렸을때 origin 클래스 추가 -->
+                        <div class="obj obj_yellow"></div>
+                        <div class="obj obj_red"></div>
+                        <div class="obj obj_blue"></div>
+                        <div class="obj obj_green"></div>
+                    </div>
+                </div>
+                <!-- [D] 행사 오픈 -->
+                <div class="spot open" style="display:none">
+                    <div class="inner_spot">
+                        <span class="subtit_sopt"><span class="blind">Small Steps Big Difference</span></span>
+                        <dl class="list_info">
+                            <dt class="blind">일시 및 장소</dt>
+                            <dd><span class="num">2021. 12. 13.~14.</span> 온라인</dd><!-- [D] 행사 오픈 -->
+                        </dl>
+                       <!-- <p class="desc_info">보내주신 성원에 감사드립니다. 내년에도 유익한 내용으로 다시 만나요!</p> [D]  행사 이후 -->
+                        <div class="area_video">
+                            <iframe allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="100" height="100" src="https://www.youtube.com/embed/iDyovWEmAdA?autoplay=0&amp;playsinline=1&amp;rel=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fforward.nhn.com&amp;widgetid=9" id="widget10" data-gtm-yt-inspected-1_25="true"></iframe>
+                        </div>
+                        <a href="#" class="btn btn_md line_black">세션 목록 보기</a>
+                        <a href="##" class="link_scroll"><span class="blind">Scroll Down</span></a>
+                        <div class="area_obj">
+                            <div class="obj obj_yellow"></div>
+                            <div class="obj obj_red"></div>
+                            <div class="obj obj_blue"></div>
+                            <div class="obj obj_green"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="content">
+                    <section>
+                        <h2>일정</h2>
+                        <div class="wrap_section" style="left:0"><!-- [D]모바일에서 터치 스크롤시 left:-233px씩 이동 -->
+                            <ul class="list_section">
+                                <li>
+                                    <div class="cont_thumb"><!--  [D]행사후 -->
+                                        <img src="images/img_ppt_01.png" alt=""><!-- 운영 이미지 img_ppt_01~ 26 -->
+                                        <span class="blind">재생시간</span>
+                                        <span class="time">33:00</span>
+                                    </div>
+                                    <div class="cont_desc">
+                                        <strong class="tit">제목일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</strong>
+                                        <div class="presenter">
+                                            <span class="blind">소속</span>
+                                            <span class="txt">NHN 게임서버엔진팀</span>
+                                            <span class="blind">이름</span>
+                                            <span class="txt">전민철</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="link"><span class="blind">상세페이지로 이동</span></a>
+                                </li>
+                                <li>
+                                    <div class="cont_thumb before"><!--  [D]행사전 before 클래스 추가 -->
+                                        <img src="images/img_ppt_01.png" alt=""><!-- 운영 이미지 img_ppt_01~ 26 -->
+                                        <span class="blind">재생시간</span>
+                                        <span class="time">33:00</span>
+                                    </div>
+                                    <div class="cont_desc">
+                                        <strong class="tit">제목일이삼사오육칠팔</strong>
+                                        <div class="presenter">
+                                            <span class="blind">소속</span>
+                                            <span class="txt">NHN 일이삼사오육칠팔구십</span>
+                                            <span class="blind">이름</span>
+                                            <span class="txt">일이삼사오</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="link"><span class="blind">상세페이지로 이동</span></a>
+                                </li>
+                                <li>
+                                    <div class="cont_thumb">
+                                        <img src="images/thumb_before_yellow.png" alt=""><!-- thumb_before_blue / _red / _green / _yellow -->
+                                    </div>
+                                    <div class="cont_desc">
+                                        <strong class="tit">제목일이삼사오육칠팔</strong>
+                                        <div class="presenter">
+                                            <span class="blind">소속</span>
+                                            <span class="txt">NHN 게임서버엔진팀</span>
+                                            <span class="blind">이름</span>
+                                            <span class="txt">전민철</span>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="link"><span class="blind">상세페이지로 이동</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <button type="button" class="btn_top"><span class="blind">top 이동</span></button>
+                </div>
+            </div>
+            <footer id="footer">
+                <strong class="footer_logo"><span class="blind">NHN FORWARD</span></strong>
+                <div class="footer_info">
+                    <strong class="blind">협력사</strong>
+                    <ul class="list_partners">
+                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="footer_nhn"><span class="blind">NHN</span></a></li>
+                        <li><a href="#" class="footer_nhncloud"><span class="blind">NHN Cloud</span></a></li>
+                        <li><a href="#" class="footer_payco"><span class="blind">PATCO</span></a></li>
+                        <li><a href="#" class="footer_hangame"><span class="blind">HANGAME</span></a></li>
+                        <li><a href="#" class="footer_dooray"><span class="blind">Dooray</span></a></li>
+                    </ul>
+                    <strong class="blind">약관</strong>
+                    <ul class="list_terms">
+                        <li><a href="#">개인 정보 처리 방침</a></li>
+                        <li><a href="#">행동 강령</a></li>
+                        <li>문의<a href="mailto:forward@nhn.com" class="link_mail">forward@nhn.com</a></li>
+                    </ul>
+                    <p class="copyright">© NHN Corp. All rights reserved.</p>
+                </div>
+                <div class="footer_route">
+                    <div class="area_select"><!-- on 클래스 추가시 셀렉트박스 활성화-->
+                        <a href="##" class="link_select">지난 NHN FORWARD 보기</a>
+                        <ul class="list_select">
+                            <li><a href="#" target="_blank">NHN FORWARD 2020</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2019 서울</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2019 경남창원</a></li>
+                            <li><a href="#" target="_blank">NHN FORWARD 2018</a></li>
+                        </ul>
+                    </div>
+                    <ul class="list_route">
+                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="logo_github"><span class="blind">github 페이지로 이동</span></a></li>
+                        <li><a href="#" class="logo_facebook"><span class="blind">facebook 페이지로 이동</span></a></li>
+                        <li><a href="#" class="logo_youtub"><span class="blind">YouTube 페이지로 이동</span></a></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+
+        <!-- [D] 마크업 확인용 실배포시 제외 -->
+        <style>
+            .caseview,.caseview_mo{position:fixed;top:250px;right:20px;padding:5px;background:#000;z-index:700}
+            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
+            .caseview a:hover,.caseview_mo a:hover{color:red}
+            .caseview .point_view,.caseview_mo .point_view{color:gold}
+        </style>
+        <div class="caseview">
+            <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+            <a href="#"  onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','block');$('.member_name').css('display','block');$('.link_login').addClass('on');$('.link_login').text('로그아웃');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 로그인/행사 진행</a>
+            <a href="#" onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','none');$('.member_name').css('display','none');$('.link_register').css('display','block');$('.link_login').removeClass('on');$('.link_login').text('로그인');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 행사 진행 후 등록</a>
+            <a href="#">[화면] 공개전 썸네일</a>
+            <a href="#" onclick="$('.list_section li:last-of-type .cont_thumb img').attr('src', 'images/thumb_before_blue.png');return false;">ㄴ blue.ver</a>
+            <a href="#" onclick="$('.list_section li:last-of-type .cont_thumb img').attr('src', 'images/thumb_before_red.png');return false;">ㄴ red.ver</a>
+            <a href="#" onclick="$('.list_section li:last-of-type .cont_thumb img').attr('src', 'images/thumb_before_green.png');return false;">ㄴ green.ver</a>
+            <a href="#" onclick="$('.list_section li:last-of-type .cont_thumb img').attr('src', 'images/thumb_before_yellow.png');return false;">ㄴ yellow.ver</a>
+        </div>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script>
+            //scroll button
+            $('.link_scroll').on('click', function(){
+                var target = $('#content').offset().top;
+                $('html, body').stop().animate({scrollTop : target}, 800);
+            })
+
+            //header fixed
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                if (scroll >= 50) {
+                    $("header").addClass("fixed");
+                } else {
+                    $("header").removeClass("fixed");
+                }
+
+                if (scroll >= 20) {
+                    $(".area_obj").removeClass("origin");
+                    $(".area_obj").addClass("scroll");
+                }
+                
+                if (scroll == 0) {
+                    $(".area_obj").removeClass("scroll");
+                    $(".area_obj").addClass("origin");
+                }     
+    
+            });
+
+            //selectbox on
+            $('.link_select').click(function() {
+                $(this).parent().toggleClass('on');
+            });
+
+            //top button
+            var btnTop = $('.btn_top');
+            $(window).on('scroll', function() {  
+                var footerHei = $('footer').outerHeight();
+                var sT = $(window).scrollTop();
+                var val = $(document).height() - $(window).height() - footerHei;
+
+                if (sT >= val)
+                    btnTop.addClass('on')
+                else
+                    btnTop.removeClass('on')
+
+                if ($(window).scrollTop() > 300) {
+                    btnTop.addClass('show');
+                } else {
+                    btnTop.removeClass('show');
+                }
+            });
+
+            btnTop.on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({scrollTop:0}, '300');
+            });
+
+            //mobile menu button
+            $('.btn_gnbopen').click(function() {
+                $('header').addClass('open');
+                $('body').css({'overflow':'hidden','touch-action':'none'});
+            });
+
+            $('.btn_gnbclose').click(function() {
+                $('header').removeClass('open');
+                $('body').removeAttr( 'style' );
+            });      
+            
+            //caseview
+            $('.caseview .btn_toggle_caseview').click(function() {
+                $(this).siblings('.caseview a').toggle();
+            });
+        </script>
+    </body>
+</html>
