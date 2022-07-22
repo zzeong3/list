@@ -100,6 +100,12 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 .cont_resume .list_item .name {position:relative}
 .cont_resume .list_item .name:before {position:absolute;left:-15px;top:9px;width:4px;height:4px;border-radius:2px;background:#048ec8;content:""}
 .cont_resume .list_item .name a {display:inline-block;font-weight:bold;font-size:15px;color:#048ec8;word-break:break-all}
+.cont_resume .list_item .name a:after {display:inline-block;margin:7px 0 0 3px;width: 5px;height: 5px;border-top:1px solid #048ec8;border-right:solid 1px #048ec8;vertical-align:top;-webkit-transform: rotate(45deg);transform: rotate(45deg);content:""}
+.cont_resume .list_item .name a:hover:after {animation:arrRight .7s infinite}
+@keyframes arrRight {
+    0%,50%,100% {transform:translateX(0) rotate(45deg)}
+    25%,75% {transform:translateX(3px) rotate(45deg)}
+}
 .cont_resume .list_item .name .txt_category {padding-right:4px}
 .cont_resume .list_item .period {letter-spacing:0}
 .cont_resume .list_item .period::before,
