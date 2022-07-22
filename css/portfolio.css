@@ -62,7 +62,7 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 .list .item .thumb .inner_thumb {display:table-cell;vertical-align:middle;background:#000}
 .list .item:hover .thumb {box-shadow:0px 0px 0px 6px #048ec8}
 .list .item .list_item {padding:15px 2px 0}
-.list .item .list_item .name {font-weight:bold;font-size:18px;line-height:24px}
+.list .item .list_item .name {font-weight:bold;font-size:18px;line-height:24px;word-break:keep-all;word-wrap:break-word}
 .list .item .list_item .name .txt_category {position:absolute;right:20px;top:25px;padding:4px 10px 2px;width:55px;height:20px;border-radius:20px;box-sizing:border-box;background:#048ec8;font-weight:bold;font-size:11px;line-height:12px;color:#fff;text-align:center}
 .list .item .list_item .name .txt_tit {display:block;margin-top:3px;letter-spacing:-0.5px}
 .list .item .list_item .period {margin-top:5px;font-size:12px;letter-spacing:1px}
