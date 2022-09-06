@@ -114,6 +114,15 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 .cont_resume .list_item .num_persent {overflow:hidden}
 .cont_resume .list_item .tag {padding-left:10px;color:#048ec8;letter-spacing:0}
 
+/* study */
+.cont_study {padding-top:50px}
+.cont_study h1 {float:left;width:100px;margin-top:-16px;padding-right:20px;font-size:22px;color:#444;background:#fff;letter-spacing:0}
+.cont_study .list_study {padding:30px 10px 40px 0;border-top:1px solid #c7c7c7}
+.cont_study .list_study li {overflow:hidden;margin-bottom:16px}
+.cont_study .list_study .tit {width:100px;margin-right:20px;font-size:18px;line-height:21px;color:#048ec8}
+.cont_study .list_study .cont a {display:block;margin-top:5px;font-size:14px;line-height:21px;color:#222;text-decoration:underline}
+
+
 
 
 /* 해상도 대응 */

@@ -1,6 +1,16 @@
 {
     "data" : [
         {   
+            "img" : "study",
+            "category" : "study",
+            "tit": "공부중",
+            "link": "study.html",
+            "period": "00.00.00",
+            "persent": "100%",
+            "tags" : "#html #scss #gulp #jquery #vue #interection",
+            "desc" : "공부중"
+        },
+        {   
             "img" : "zzeong1",
             "category" : "반응형",
             "tit": "개인 포트폴리오",

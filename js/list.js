@@ -78,7 +78,7 @@ function create_dom(data){
                     .append(
                         $('<div class="inner">')
                             .append(
-                                $('<a target="_blank" class="thumb" title="새창으로 페이지 이동">').attr({ href : link })
+                                $('<a class="thumb" title="새창으로 페이지 이동">').attr({ href : link })
                                 .append(
                                     $('<span class="inner_thumb">')
                                     .append(
