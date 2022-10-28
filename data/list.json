@@ -1,14 +1,14 @@
 {
     "data" : [
         {   
-            "img" : "study",
+            "img" : "react",
             "category" : "study",
-            "tit": "공부중",
-            "link": "study.html",
-            "period": "00.00.00",
+            "tit": "react 개인 포트폴리오 진행중",
+            "link": "https://zzeong3.github.io/_ah_yoga/#/",
+            "period": "22.09.19 ~",
             "persent": "100%",
-            "tags" : "#html #scss #gulp #jquery #vue #interection",
-            "desc" : "공부중"
+            "tags" : "#react",
+            "desc" : "react 기반으로 scss redux 개인 포트폴리오 진행중"
         },
         {   
             "img" : "zzeong1",
