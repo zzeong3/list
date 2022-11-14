@@ -150,6 +150,7 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 
     .cont_resume .list_project {padding-left:61px}
     .list .item {width:33.333%;}
+    .list .item .inner {min-height:auto}
 }
 @media screen and (max-width:749px) {
     .list .item {width:50%;}
@@ -159,7 +160,6 @@ img {display:inline-block;width:100%;height:auto;vertical-align:top}
 
 @media screen and (max-width:539px) {
     .list .head_portfolio {padding:14px 20px 14px}
-    .list .item .inner {min-height:auto}
     .list .content {padding:50px 20px 20px}
     .list .item {width:100%;padding:10px 0}
     .list .item .thumb {float:left;width:80px;height:80px;box-shadow:0px 0px 0px 2px #048ec8}
