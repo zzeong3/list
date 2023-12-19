@@ -1,175 +1,174 @@
 {
-    "data" : [
-        {   
-            "img" : "react",
-            "category" : "react",
+    "data": [
+        {
+            "img": "React",
+            "category": "react",
             "tit": " 개인 포트폴리오",
             "link": "https://zzeong3.github.io/_ah_yoga/#/",
             "period": "22.10.04 ~ 22.11.15",
             "persent": "100%",
-            "tags" : "#react #redux-saga #scss #design",
-            "desc" : "Redux로 양방향 data 관리, Redux-Saga로 api 요청. 게시판 data를 localstorage에 저장하고 CRUD 기능. Youtube Api data 관리. Flickr Api data를 가져오고 data 검색 기능. 페이지 로드 시간을 단축을 위한 이미지 캐싱. 반응형 style 적용. 컴포넌트 재사용 편의를 위해 폴더 분리. 스크롤, 메뉴 등의 효과"
+            "tags": "#react #redux-saga #scss #design",
+            "desc": "Redux로 양방향 data 관리, Redux-Saga로 api 요청. 게시판 data를 localstorage에 저장하고 CRUD 기능. Youtube Api data 관리. Flickr Api data를 가져오고 data 검색 기능. 페이지 로드 시간을 단축을 위한 이미지 캐싱. 반응형 style 적용. 컴포넌트 재사용 편의를 위해 폴더 분리. 스크롤, 메뉴 등의 효과"
         },
-        {   
-            "img" : "gulp",
-            "category" : "gulp",
+        {
+            "img": "Gulp",
+            "category": "gulp",
             "tit": "개인 포트폴리오",
             "link": "https://zzeong3.github.io/veronica/index.html",
             "period": "20.01.11 ~ 20.04.17",
             "persent": "100%",
-            "tags" : "#html #scss #gulp #jquery #design",
-            "desc" : "프로젝트 전체를 작업해 볼 수는 스터디가 있어 작업하게 된 개인포트폴리오. 실무에서는 접해보지 못했던 디자인 부터 쿠키, form 유효성 검사, 지도 api를 적용해 볼 수 있었다. scss, gulp, jquery를 정리하고 새로 배울 수 있었던 프로젝트."
+            "tags": "#html #scss #gulp #jquery #design",
+            "desc": "프로젝트 전체를 작업해 볼 수는 스터디가 있어 작업하게 된 개인포트폴리오. 실무에서는 접해보지 못했던 디자인 부터 쿠키, form 유효성 검사, 지도 api를 적용해 볼 수 있었다. scss, gulp, jquery를 정리하고 새로 배울 수 있었던 프로젝트."
         },
-        {   
-            "img" : "portfolio20",
-            "category" : "M",
+        {
+            "img": "portfolio24",
+            "category": "react",
+            "tit": "줌인터넷 스타줌",
+            "link": "https://star.zum.com/hero?cm=front_gnb",
+            "period": "23.00. ~ 23.00.",
+            "persent": "50%",
+            "tags": "#react #nextJS #tailwindCSS",
+            "desc": "next 환경에서 tailwindcss로 컴포넌트 구현"
+        },
+        {
+            "img": "portfolio23",
+            "category": "react",
+            "tit": "줌인터넷 부동산 상세페이지",
+            "link": "https://invest.zum.com/land/map?cm=invest_main_gnb",
+            "period": "23.00. ~ 23.00.",
+            "persent": "50%",
+            "tags": "#react #emotionCSS",
+            "desc": "react 환경에서 emotioncss로 상세페이지 컴포넌트 구현"
+        },
+        {
+            "img": "portfolio22",
+            "category": "PC",
+            "tit": "줌인터넷 인베스팅뷰 소개페이지",
+            "link": "file/investingview-web/intro_pc.html",
+            "period": "22.12. ~ 22.12.",
+            "persent": "100%",
+            "tags": "#html #sass #vanillaJS",
+            "desc": "바닐라스크립트로 인터렉션 구현"
+        },
+        {
+            "img": "portfolio21",
+            "category": "M",
+            "tit": "줌인터넷 인베스팅뷰 소개페이지",
+            "link": "file/investingview-web/intro_m.html",
+            "period": "22.12. ~ 22.12.",
+            "persent": "100%",
+            "tags": "#html #sass #vanillaJS",
+            "desc": "바닐라스크립트로 인터렉션 구현"
+        },
+        {
+            "img": "portfolio20",
+            "category": "M",
             "tit": "nhn 한게임 리브랜딩 프로모션",
             "link": "file/hangame_rebranding/m/event.html",
             "period": "22.03.24 ~ 22.03.29",
             "persent": "100%",
-            "tags" : "#html #css #jquery",
-            "desc" : "swiper slide 라이브러리 활용으로 페이지 구현"
+            "tags": "#html #css #jquery",
+            "desc": "swiper slide 라이브러리 활용으로 페이지 구현"
         },
-        {   
-            "img" : "portfolio19",
-            "category" : "PC",
+        {
+            "img": "portfolio19",
+            "category": "PC",
             "tit": "nhn 에듀 학업 성취도 진단평가 응시화면",
             "link": "file/ibt/03_replay.html",
             "period": "21.11.1 ~ 21.11.15",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "어떤 형태의 문제 데이터가 들어오든 잘 적용 될 수 있게 유연한 UI 구현"
+            "tags": "#html #css",
+            "desc": "어떤 형태의 문제 데이터가 들어오든 잘 적용 될 수 있게 유연한 UI 구현"
         },
-        {   
-            "img" : "portfolio18",
-            "category" : "반응형",
-            "tit": "nhn forward",
-            "link": "https://forward.nhn.com/2021/home/",
-            "period": "21.09.01 ~ 21.10.21",
-            "persent": "100%",
-            "tags" : "#html #css #jquery",
-            "desc" : "반응형 페이지, css3 메인 모션 적용"
-        },
-        {   
-            "img" : "portfolio17",
-            "category" : "PC",
-            "tit": "nhn 에듀 AI 학력경시대회",
-            "link": "https://competition.iamservice.net/competition/",
-            "period": "21.03.17 ~ 21.06.21",
-            "persent": "100%",
-            "tags" : "#html #css #jquery",
-            "desc" : "4월, 5월 7월 순차적으로 오픈 한 긴 프로젝트. 기본 레이아웃으로 큰 이슈는 없는 페이지나, 긴 프로젝트이었던 만큼 타팀과의 협업이 중시되었던 프로젝트"
-        },
-        {   
-            "img" : "portfolio16",
-            "category" : "PC",
+        {
+            "img": "portfolio16",
+            "category": "PC",
             "tit": "사람인 영상면접 온보딩",
             "link": "file/video_interview/onboarding.html",
             "period": "20.07.28 ~ 20.07.29",
             "persent": "100%",
-            "tags" : "#html #css #jquery",
-            "desc" : "영상면접 시작 화면으로 원 모션이 들어감"
+            "tags": "#html #css #jquery",
+            "desc": "영상면접 시작 화면으로 원 모션이 들어감"
         },
-        {   
-            "img" : "portfolio15",
-            "category" : "PC",
+        {
+            "img": "portfolio15",
+            "category": "PC",
             "tit": "사람인 영상면접",
             "link": "file/video_interview/video_interview.html",
             "period": "20.07.20 ~ 20.07.24",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "영상면접 일정이 있을 때와 없을 때 타입이 나뉨. 면접 일정 있을 때는 상단 원에 모션이 들어감."
+            "tags": "#html #css",
+            "desc": "영상면접 일정이 있을 때와 없을 때 타입이 나뉨. 면접 일정 있을 때는 상단 원에 모션이 들어감."
         },
-        {   
-            "img" : "portfolio14",
-            "category" : "PC,M",
+        {
+            "img": "portfolio14",
+            "category": "PC,M",
             "tit": "사람인 채용 템플릿",
             "link": "file/templete/editor.html",
             "period": "19.05.10 ~ 19.05.15",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "에디터+브라우저에서는 display:inline-block 이슈로 한글을 써지지 않는 이슈 등 에디터 환경으로 예상치 못한 이슈 많았던 프로젝트. 기획, 디자인, 개발의 커뮤니케이션이 많이 필요했고, 많은 검색과 테스트로 에디터 이슈에 대응함. 페이지별로 있는 동일한 css를 한파일로 묶어 운영이 편리하게 함."
+            "tags": "#html #css",
+            "desc": "에디터+브라우저에서는 display:inline-block 이슈로 한글을 써지지 않는 이슈 등 에디터 환경으로 예상치 못한 이슈 많았던 프로젝트. 기획, 디자인, 개발의 커뮤니케이션이 많이 필요했고, 많은 검색과 테스트로 에디터 이슈에 대응함. 페이지별로 있는 동일한 css를 한파일로 묶어 운영이 편리하게 함."
         },
-        {   
-            "img" : "portfolio13",
-            "category" : "M",
-            "tit": "사람인 채용정보 홈",
-            "link": "https://m.saramin.co.kr/recruit-home",
-            "period": "19.12.03 ~ 19.12.06",
-            "persent": "100%",
-            "tags" : "#html #css #jquery",
-            "desc" : "배경 모서리의 둥근 부분을 어떻게 처리할지 고민을 했던 프로젝트. css3 도형 변형으로 이미지 사용을 최소화 하고자 함."
-        },
-        {   
-            "img" : "portfolio10",
-            "category" : "PC",
+        {
+            "img": "portfolio10",
+            "category": "PC",
             "tit": "사람인 기업정보 개편",
             "link": "file/company_interview/info.html",
             "period": "18.12.19 ~ 18.01.03",
             "persent": "10r0%",
-            "tags" : "#html #css",
-            "desc" : "기업 업종에 따라서 컬러 템플릿이 있어 초기 작업 시 잘 고려하여 운영이 쉽게 작업. 개수마다 넓이가 달라지는 다양한 형태의 리스트에는 CSS만으로 컨트롤 할 수 있게 작업"
+            "tags": "#html #css",
+            "desc": "기업 업종에 따라서 컬러 템플릿이 있어 초기 작업 시 잘 고려하여 운영이 쉽게 작업. 개수마다 넓이가 달라지는 다양한 형태의 리스트에는 CSS만으로 컨트롤 할 수 있게 작업"
         },
-        {   
-            "img" : "portfolio8",
-            "category" : "PC",
+        {
+            "img": "portfolio8",
+            "category": "PC",
             "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
             "link": "https://www.saramin.co.kr/zf_user/helpdesk/idpw-find",
             "period": "18.03.19 ~ 18.04.03",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "기존 테이블로 되어진 불필요한 코드 제거로 UI 간소화. 웹표준/접근성 향상으로 코드품질 개선"
+            "tags": "#html #css",
+            "desc": "기존 테이블로 되어진 불필요한 코드 제거로 UI 간소화. 웹표준/접근성 향상으로 코드품질 개선"
         },
-        {   
-            "img" : "portfolio8-1",
-            "category" : "M",
+        {
+            "img": "portfolio8-1",
+            "category": "M",
             "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
             "link": "http://m.saramin.co.kr/helpdesk/person-find-id",
             "period": "18.03.19 ~ 18.04.03",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "기존 페이지가 없었음. 모바일을 통해 아이디/비밀번호 변경 할 수 있게 됨"
+            "tags": "#html #css",
+            "desc": "기존 페이지가 없었음. 모바일을 통해 아이디/비밀번호 변경 할 수 있게 됨"
         },
-        {   
-            "img" : "portfolio7",
-            "category" : "M",
+        {
+            "img": "portfolio7",
+            "category": "M",
             "tit": "카카오 번역서비스",
             "link": "https://translate.kakao.com/m/",
             "period": "17.10.18 ~ 17.10.19",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "채팅창으로 된 작업은 처음 해보아 흥미로웠던 작업.아이폰 키패드 높이 이슈가 있었지만, 개발자들과의 커뮤니케이션으로 무사히 오픈을 마칠 수 있었음."
+            "tags": "#html #css",
+            "desc": "채팅창으로 된 작업은 처음 해보아 흥미로웠던 작업.아이폰 키패드 높이 이슈가 있었지만, 개발자들과의 커뮤니케이션으로 무사히 오픈을 마칠 수 있었음."
         },
-        {   
-            "img" : "portfolio6",
-            "category" : "M",
+        {
+            "img": "portfolio6",
+            "category": "M",
             "tit": "Daum 백과사전 통합아티클",
             "link": "https://m.search.daum.net/search?w=enc&articleId=11230&q=%ED%83%9C%EC%A1%B0",
             "period": "16.11.21 ~ 16.11.25",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "페이지 레이아웃이 정해지지 않고, 위아래로 콘텐츠가 위치할 수 있는 경우의 수가 많아 라인, 여백 등으로 이슈가 있었지만 css선택자를 이용해 많은 경우의 수를 대응했던 작업."
+            "tags": "#html #css",
+            "desc": "페이지 레이아웃이 정해지지 않고, 위아래로 콘텐츠가 위치할 수 있는 경우의 수가 많아 라인, 여백 등으로 이슈가 있었지만 css선택자를 이용해 많은 경우의 수를 대응했던 작업."
         },
-        {   
-            "img" : "portfolio3",
-            "category" : "반응형",
-            "tit": "Daum 티스토리 스킨 개편",
-            "link": "https://blog.kinesis.kr/85?category=534845",
-            "period": "15.11.03 ~ 15.11.12",
-            "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "PC/Tablet/M 대응 + 메뉴/댓글 기능 + 해상도마다 레이아웃 위치도 많이 바뀌는 편이라 생각할 것이 많았지만, 그만큼 재미있게 작업했던 프로젝트."
-        },
-        {   
-            "img" : "portfolio1",
-            "category" : "PC",
+        {
+            "img": "portfolio1",
+            "category": "PC",
             "tit": "Daum 백과사전",
             "link": "https://100.daum.net/",
             "period": "14.08.19 ~ 14.10.31",
             "persent": "100%",
-            "tags" : "#html #css",
-            "desc" : "처음으로 맡았던 장기 프로젝트로 우여곡절도 많았지만, 장기 프로젝트에서 느낄 수 있는 일정 관리 및 커뮤니케이션 등 새로운 점을 많이 배우고 느낄 수 있었던 프로젝트."
+            "tags": "#html #css",
+            "desc": "처음으로 맡았던 장기 프로젝트로 우여곡절도 많았지만, 장기 프로젝트에서 느낄 수 있는 일정 관리 및 커뮤니케이션 등 새로운 점을 많이 배우고 느낄 수 있었던 프로젝트."
         }
-        
     ]
 }
