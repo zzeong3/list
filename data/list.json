@@ -1,7 +1,7 @@
 {
     "data": [
         {
-            "img": "React",
+            "img": "react",
             "category": "react",
             "tit": " 개인 포트폴리오",
             "link": "https://zzeong3.github.io/_ah_yoga/#/",
@@ -11,7 +11,7 @@
             "desc": "Redux로 양방향 data 관리, Redux-Saga로 api 요청. 게시판 data를 localstorage에 저장하고 CRUD 기능. Youtube Api data 관리. Flickr Api data를 가져오고 data 검색 기능. 페이지 로드 시간을 단축을 위한 이미지 캐싱. 반응형 style 적용. 컴포넌트 재사용 편의를 위해 폴더 분리. 스크롤, 메뉴 등의 효과"
         },
         {
-            "img": "Gulp",
+            "img": "gulp",
             "category": "gulp",
             "tit": "개인 포트폴리오",
             "link": "https://zzeong3.github.io/veronica/index.html",
@@ -25,7 +25,7 @@
             "category": "react",
             "tit": "줌인터넷 스타줌",
             "link": "https://star.zum.com/hero?cm=front_gnb",
-            "period": "23.00. ~ 23.00.",
+            "period": "23.08.21 ~ 23.08.31",
             "persent": "50%",
             "tags": "#react #nextJS #tailwindCSS",
             "desc": "next 환경에서 tailwindcss로 컴포넌트 구현"
@@ -35,7 +35,7 @@
             "category": "react",
             "tit": "줌인터넷 부동산 상세페이지",
             "link": "https://invest.zum.com/land/map?cm=invest_main_gnb",
-            "period": "23.00. ~ 23.00.",
+            "period": "23.06.19 ~ 23.06.23",
             "persent": "50%",
             "tags": "#react #emotionCSS",
             "desc": "react 환경에서 emotioncss로 상세페이지 컴포넌트 구현"
@@ -45,7 +45,7 @@
             "category": "PC",
             "tit": "줌인터넷 인베스팅뷰 소개페이지",
             "link": "file/investingview-web/intro_pc.html",
-            "period": "22.12. ~ 22.12.",
+            "period": "23.01.05 ~ 23.01.06",
             "persent": "100%",
             "tags": "#html #sass #vanillaJS",
             "desc": "바닐라스크립트로 인터렉션 구현"
@@ -55,7 +55,7 @@
             "category": "M",
             "tit": "줌인터넷 인베스팅뷰 소개페이지",
             "link": "file/investingview-web/intro_m.html",
-            "period": "22.12. ~ 22.12.",
+            "period": "23.01.03 ~ 23.01.04",
             "persent": "100%",
             "tags": "#html #sass #vanillaJS",
             "desc": "바닐라스크립트로 인터렉션 구현"
