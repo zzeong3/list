@@ -482,6 +482,10 @@ img {
 	overflow: hidden;
 	margin-bottom: 16px;
 }
+.cont_resume .list_resume li:nth-child(1) .name a,
+.cont_resume .list_resume li:nth-child(2) .name a {
+	color: #324c8b;
+}
 .cont_resume .list_resume .tit {
 	float: left;
 	width: 130px;
@@ -529,6 +533,11 @@ img {
 	background: #048ec8;
 	content: '';
 }
+
+.cont_resume .list_resume li:nth-child(1) .name:before,
+.cont_resume .list_resume li:nth-child(2) .name:before {
+	background: #324c8b;
+}
 .cont_resume .list_item .name a {
 	display: inline-block;
 	font-weight: bold;
@@ -542,11 +551,16 @@ img {
 	width: 5px;
 	height: 5px;
 	border-top: 1px solid #048ec8;
-	border-right: solid 1px #048ec8;
+	border-right: 1px solid #048ec8;
 	vertical-align: top;
 	-webkit-transform: rotate(45deg);
 	transform: rotate(45deg);
 	content: '';
+}
+
+.cont_resume .list_resume li:nth-child(1) .name a:after,
+.cont_resume .list_resume li:nth-child(2) .name a:after {
+	border-color: #324c8b;
 }
 .cont_resume .list_item .name a:hover:after {
 	animation: arrRight 0.7s infinite;
@@ -586,6 +600,11 @@ img {
 	padding-left: 10px;
 	color: #048ec8;
 	letter-spacing: 0;
+}
+
+.cont_resume .list_resume li:nth-child(1) .tag,
+.cont_resume .list_resume li:nth-child(2) .tag {
+	color: #324c8b;
 }
 
 /* study */

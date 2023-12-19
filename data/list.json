@@ -2,8 +2,8 @@
     "data": [
         {
             "img": "react",
-            "category": "react",
-            "tit": " 개인 포트폴리오",
+            "category": "React",
+            "tit": "개인 포트폴리오",
             "link": "https://zzeong3.github.io/_ah_yoga/#/",
             "period": "22.10.04 ~ 22.11.15",
             "persent": "100%",
@@ -12,7 +12,7 @@
         },
         {
             "img": "gulp",
-            "category": "gulp",
+            "category": "Gulp",
             "tit": "개인 포트폴리오",
             "link": "https://zzeong3.github.io/veronica/index.html",
             "period": "20.01.11 ~ 20.04.17",
@@ -22,7 +22,7 @@
         },
         {
             "img": "portfolio24",
-            "category": "react",
+            "category": "React",
             "tit": "줌인터넷 스타줌",
             "link": "https://star.zum.com/hero?cm=front_gnb",
             "period": "23.08.21 ~ 23.08.31",
@@ -32,7 +32,7 @@
         },
         {
             "img": "portfolio23",
-            "category": "react",
+            "category": "React",
             "tit": "줌인터넷 부동산 상세페이지",
             "link": "https://invest.zum.com/land/map?cm=invest_main_gnb",
             "period": "23.06.19 ~ 23.06.23",
@@ -81,6 +81,16 @@
             "desc": "어떤 형태의 문제 데이터가 들어오든 잘 적용 될 수 있게 유연한 UI 구현"
         },
         {
+            "img": "portfolio18",
+            "category": "반응형",
+            "tit": "nhn forward",
+            "link": "file/nhnforward/01_main.html",
+            "period": "21.09.01 ~ 21.10.21",
+            "persent": "100%",
+            "tags": "#html #css #jquery",
+            "desc": "반응형 페이지, css3 메인 모션 적용"
+        },
+        {
             "img": "portfolio16",
             "category": "PC",
             "tit": "사람인 영상면접 온보딩",
@@ -102,7 +112,7 @@
         },
         {
             "img": "portfolio14",
-            "category": "PC,M",
+            "category": "PC",
             "tit": "사람인 채용 템플릿",
             "link": "file/templete/editor.html",
             "period": "19.05.10 ~ 19.05.15",
@@ -115,7 +125,7 @@
             "category": "PC",
             "tit": "사람인 기업정보 개편",
             "link": "file/company_interview/info.html",
-            "period": "18.12.19 ~ 18.01.03",
+            "period": "18.12.19 ~ 19.01.03",
             "persent": "10r0%",
             "tags": "#html #css",
             "desc": "기업 업종에 따라서 컬러 템플릿이 있어 초기 작업 시 잘 고려하여 운영이 쉽게 작업. 개수마다 넓이가 달라지는 다양한 형태의 리스트에는 CSS만으로 컨트롤 할 수 있게 작업"
