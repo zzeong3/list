@@ -47,7 +47,7 @@
             "link": "file/investingview-web/intro_pc.html",
             "period": "23.01.05 ~ 23.01.06",
             "persent": "100%",
-            "tags": "#html #sass #vanillaJS",
+            "tags": "#html #scss #vanillaJS",
             "desc": "바닐라스크립트로 인터렉션 구현"
         },
         {
@@ -57,7 +57,7 @@
             "link": "file/investingview-web/intro_m.html",
             "period": "23.01.03 ~ 23.01.04",
             "persent": "100%",
-            "tags": "#html #sass #vanillaJS",
+            "tags": "#html #scss #vanillaJS",
             "desc": "바닐라스크립트로 인터렉션 구현"
         },
         {

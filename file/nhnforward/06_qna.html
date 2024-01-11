@@ -1,256 +1,294 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>자주 묻는 질문 | NHN FORWORD</title>
-        <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/ui.css">
-    </head>
-    <body>
-        <div id="skip">
-            <a href="#gnb">주메뉴 바로가기</a>
-            <a href="#container">본문 바로가기</a>
-        </div>
-        <div class="wrap">
-            <header><!-- [D] 스크롤시 fixed 클래스 추가 / 모바일 메뉴 오픈시 open 클래스 추가 -->
-                <h1><a href="#" class="logo_nhnforward"><span class="blind">NHN FORWORD</span></a></h1>
-                <nav id="gnb"><!-- [D] 행사 진행 후 등록 버튼 생성시 eventopen 클래스 추가 -->
-                    <ul class="list_gnb">
-                        <li><a href="#">소개</a></li><!-- [D] on 클래스 추가시 활성화 -->
-                        <li><a href="#">세션</a></li>
-                        <li><a href="#">프런트엔드 상담소</a></li>
-                        <li><a href="#">핸즈온 랩</a></li>
-                        <li class="on"><a href="#">자주 묻는 질문</a></li>
-                    </ul>
-                </nav>
-                <div class="top_status">
-                    <div class="inner_status">
-                        <span class="ico_member ico_payco" style="display:none"><span class="blind">payco</span></span>
-                        <em class="member_name" style="display:none"><a href="#" class="txt_name">abcdefgabcdefgabcdefgabcdefg</a>님</em>
-                        <a href="#" class="link_register">등록</a>
-                        <a href="#" class="link_login">로그인</a><!-- [D] on클래스 추가시 로그인 -->
-                    </div>
-                    <div class="area_select"><!-- [D] on 클래스 추가시 셀렉트 박스 활성화 -->
-                        <a href="##" class="link_select">KOR</a>
-                        <ul class="list_select">
-                            <li class="on"><a href="#">KOR</a></li><!-- [D] 선택시 on 클래스 추가(모바일) -->
-                            <li><a href="#">JPN</a></li>
-                        </ul>
-                    </div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자주 묻는 질문 | NHN FORWORD</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/ui.css">
+</head>
+
+<body>
+    <div id="skip">
+        <a href="#gnb">주메뉴 바로가기</a>
+        <a href="#container">본문 바로가기</a>
+    </div>
+    <div class="wrap">
+        <header><!-- [D] 스크롤시 fixed 클래스 추가 / 모바일 메뉴 오픈시 open 클래스 추가 -->
+            <h1><a href="01_main.html" class="logo_nhnforward"><span class="blind">NHN FORWORD</span></a></h1>
+            <nav id="gnb"><!-- [D] 행사 진행 후 등록 버튼 생성시 eventopen 클래스 추가 -->
+                <ul class="list_gnb">
+                    <li><a href="02_introduce.html">소개</a></li><!-- [D] on 클래스 추가시 활성화 -->
+                    <li><a href="03_session.html">세션</a></li>
+                    <li><a href="04_frondend.html">프런트엔드 상담소</a></li>
+                    <li><a href="05_handson.html">핸즈온 랩</a></li>
+                    <li class="on"><a href="06_qna.html">자주 묻는 질문</a></li>
+                </ul>
+            </nav>
+            <div class="top_status">
+                <div class="inner_status">
+                    <span class="ico_member ico_payco" style="display:none"><span class="blind">payco</span></span>
+                    <em class="member_name" style="display:none"><a href="#"
+                            class="txt_name">abcdefgabcdefgabcdefgabcdefg</a>님</em>
+                    <a href="#" class="link_register">등록</a>
+                    <a href="#" class="link_login">로그인</a><!-- [D] on클래스 추가시 로그인 -->
                 </div>
-                <button type="button" class="btn_gnbopen"><span class="blind">열기</span></button>
-                <button type="button" class="btn_gnbclose"><span class="blind">닫기</span></button>
-            </header>
-            <div id="container">
-                <div id="content" class="cont_sub">
-                    <section>
-                        <div class="wrap_top_sub">
-                            <div class="top_sub">
-                                <div class="inner_sub">
-                                    <h2>자주 묻는 질문</h2>
-                                    <p class="intro_sub type2">추가로 궁금하신 점은<br class="mo_br"> 이메일(forward@nhn.com)로<br class="mo_br"> 문의해 주시기 바랍니다.</p>
-                                    <div class="area_obj">
-                                        <div class="obj obj_yellow"></div>
-                                        <div class="obj obj_red"></div>
-                                        <div class="obj obj_blue"></div>
-                                    </div>
+                <div class="area_select"><!-- [D] on 클래스 추가시 셀렉트 박스 활성화 -->
+                    <a href="##" class="link_select">KOR</a>
+                    <ul class="list_select">
+                        <li class="on"><a href="#">KOR</a></li><!-- [D] 선택시 on 클래스 추가(모바일) -->
+                        <li><a href="#">JPN</a></li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn_gnbopen"><span class="blind">열기</span></button>
+            <button type="button" class="btn_gnbclose"><span class="blind">닫기</span></button>
+        </header>
+        <div id="container">
+            <div id="content" class="cont_sub">
+                <section>
+                    <div class="wrap_top_sub">
+                        <div class="top_sub">
+                            <div class="inner_sub">
+                                <h2>자주 묻는 질문</h2>
+                                <p class="intro_sub type2">추가로 궁금하신 점은<br class="mo_br"> 이메일(forward@nhn.com)로<br
+                                        class="mo_br"> 문의해 주시기 바랍니다.</p>
+                                <div class="area_obj">
+                                    <div class="obj obj_yellow"></div>
+                                    <div class="obj obj_red"></div>
+                                    <div class="obj obj_blue"></div>
                                 </div>
                             </div>
                         </div>
-                        <div class="wrap_qna">
-                            <div class="info_qna">
-                                <div class="item_qna open"><!-- open 클래스 추가시 내용 펼침 -->
-                                    <strong class="tit_qna">
-                                        [신청방법] 참가 등록은 언제, 어떻게 신청하나요?
-                                            <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
-                                    </strong>
-                                    <div class="cont_qna">
-                                        <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변</p>
-                                    </div>
-                                </div>
-                                <div class="item_qna">
-                                        <strong class="tit_qna">
-                                            [신청방법] 본인 참가 등록 현황을 알고 싶습니다
-                                            <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
-                                        </strong>
-                                        <div class="cont_qna">
-                                            <p>
-                                                참가 신청하시면 자동으로 참가가 확정되며, 11월 13일 이후 입력한 이메일 주소로 안내 메일을 보내드립니다.<br>
-                                                안내 메일을 받지 못한 경우, NHN FORWARD 운영진(nhnforward@nhn.com)에게 연락 주시기 바랍니다.
-                                            </p>
-                                        </div>
-                                </div>
-                                <div class="item_qna">
-                                    <strong class="tit_qna">
-                                        [참가 미신청] 당일 참가 신청(등록)을 할 수 있나요?
-                                        <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
-                                    </strong>
-                                    <div class="cont_qna">
-                                        <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변</p>
-                                    </div>
-                                </div>
-                                <div class="item_qna">
-                                    <strong class="tit_qna">
-                                        [참가권양도] 개인사정으로 참석이 어려워 참가권을 양도(혹은 대리참석)하고 싶습니다. 가능한가요?
-                                        <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
-                                    </strong>
-                                    <div class="cont_qna">
-                                        <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변</p>
-                                    </div>
-                                </div>
-                                <div class="item_qna">
-                                    <strong class="tit_qna">
-                                        [신청방법] 행사 당일 참가 신청할 수 있나요?
-                                        <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
-                                    </strong>
-                                    <div class="cont_qna">
-                                        <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변</p>
-                                    </div>
-                                </div>
-                                <div class="item_qna">
-                                    <strong class="tit_qna">
-                                        [신청방법] 신청 시 직군 제한이 있나요?
-                                        <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
-                                    </strong>
-                                    <div class="cont_qna">
-                                        <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변</p>
-                                    </div>
-                                </div>  
-                            </div> 
-                        </div>
-                    </section>
-                    <button type="button" class="btn_top"><span class="blind">top 이동</span></button>
-                </div>
-            </div>
-            <footer id="footer">
-                <strong class="footer_logo"><span class="blind">NHN FORWARD</span></strong>
-                <div class="footer_info">
-                    <strong class="blind">협력사</strong>
-                    <ul class="list_partners">
-                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="footer_nhn"><span class="blind">NHN</span></a></li>
-                        <li><a href="#" class="footer_nhncloud"><span class="blind">NHN Cloud</span></a></li>
-                        <li><a href="#" class="footer_payco"><span class="blind">PATCO</span></a></li>
-                        <li><a href="#" class="footer_hangame"><span class="blind">HANGAME</span></a></li>
-                        <li><a href="#" class="footer_dooray"><span class="blind">Dooray</span></a></li>
-                    </ul>
-                    <strong class="blind">약관</strong>
-                    <ul class="list_terms">
-                        <li><a href="#">개인 정보 처리 방침</a></li>
-                        <li><a href="#">행동 강령</a></li>
-                        <li>문의<a href="mailto:forward@nhn.com" class="link_mail">forward@nhn.com</a></li>
-                    </ul>
-                    <p class="copyright">© NHN Corp. All rights reserved.</p>
-                </div>
-                <div class="footer_route">
-                    <div class="area_select"><!-- on 클래스 추가시 셀렉트박스 활성화-->
-                        <a href="##" class="link_select">지난 NHN FORWARD 보기</a>
-                        <ul class="list_select">
-                            <li><a href="#" target="_blank">NHN FORWARD 2020</a></li>
-                            <li><a href="#" target="_blank">NHN FORWARD 2019 서울</a></li>
-                            <li><a href="#" target="_blank">NHN FORWARD 2019 경남창원</a></li>
-                            <li><a href="#" target="_blank">NHN FORWARD 2018</a></li>
-                        </ul>
                     </div>
-                    <ul class="list_route">
-                        <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="logo_github"><span class="blind">github 페이지로 이동</span></a></li>
-                        <li><a href="#" class="logo_facebook"><span class="blind">facebook 페이지로 이동</span></a></li>
-                        <li><a href="#" class="logo_youtub"><span class="blind">YouTube 페이지로 이동</span></a></li>
+                    <div class="wrap_qna">
+                        <div class="info_qna">
+                            <div class="item_qna open"><!-- open 클래스 추가시 내용 펼침 -->
+                                <strong class="tit_qna">
+                                    [신청방법] 참가 등록은 언제, 어떻게 신청하나요?
+                                    <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
+                                </strong>
+                                <div class="cont_qna">
+                                    <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_qna">
+                                <strong class="tit_qna">
+                                    [신청방법] 본인 참가 등록 현황을 알고 싶습니다
+                                    <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
+                                </strong>
+                                <div class="cont_qna">
+                                    <p>
+                                        참가 신청하시면 자동으로 참가가 확정되며, 11월 13일 이후 입력한 이메일 주소로 안내 메일을 보내드립니다.<br>
+                                        안내 메일을 받지 못한 경우, NHN FORWARD 운영진(nhnforward@nhn.com)에게 연락 주시기 바랍니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_qna">
+                                <strong class="tit_qna">
+                                    [참가 미신청] 당일 참가 신청(등록)을 할 수 있나요?
+                                    <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
+                                </strong>
+                                <div class="cont_qna">
+                                    <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_qna">
+                                <strong class="tit_qna">
+                                    [참가권양도] 개인사정으로 참석이 어려워 참가권을 양도(혹은 대리참석)하고 싶습니다. 가능한가요?
+                                    <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
+                                </strong>
+                                <div class="cont_qna">
+                                    <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_qna">
+                                <strong class="tit_qna">
+                                    [신청방법] 행사 당일 참가 신청할 수 있나요?
+                                    <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
+                                </strong>
+                                <div class="cont_qna">
+                                    <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item_qna">
+                                <strong class="tit_qna">
+                                    [신청방법] 신청 시 직군 제한이 있나요?
+                                    <button type="button" class="btn_qna"><span class="blind">답변 보기</span></button>
+                                </strong>
+                                <div class="cont_qna">
+                                    <p>답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변답변
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <button type="button" class="btn_top"><span class="blind">top 이동</span></button>
+            </div>
+        </div>
+        <footer id="footer">
+            <strong class="footer_logo"><span class="blind">NHN FORWARD</span></strong>
+            <div class="footer_info">
+                <strong class="blind">협력사</strong>
+                <ul class="list_partners">
+                    <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="footer_nhn"><span
+                                class="blind">NHN</span></a></li>
+                    <li><a href="#" class="footer_nhncloud"><span class="blind">NHN Cloud</span></a></li>
+                    <li><a href="#" class="footer_payco"><span class="blind">PATCO</span></a></li>
+                    <li><a href="#" class="footer_hangame"><span class="blind">HANGAME</span></a></li>
+                    <li><a href="#" class="footer_dooray"><span class="blind">Dooray</span></a></li>
+                </ul>
+                <strong class="blind">약관</strong>
+                <ul class="list_terms">
+                    <li><a href="#">개인 정보 처리 방침</a></li>
+                    <li><a href="#">행동 강령</a></li>
+                    <li>문의<a href="mailto:forward@nhn.com" class="link_mail">forward@nhn.com</a></li>
+                </ul>
+                <p class="copyright">© NHN Corp. All rights reserved.</p>
+            </div>
+            <div class="footer_route">
+                <div class="area_select"><!-- on 클래스 추가시 셀렉트박스 활성화-->
+                    <a href="##" class="link_select">지난 NHN FORWARD 보기</a>
+                    <ul class="list_select">
+                        <li><a href="#" target="_blank">NHN FORWARD 2020</a></li>
+                        <li><a href="#" target="_blank">NHN FORWARD 2019 서울</a></li>
+                        <li><a href="#" target="_blank">NHN FORWARD 2019 경남창원</a></li>
+                        <li><a href="#" target="_blank">NHN FORWARD 2018</a></li>
                     </ul>
                 </div>
-            </footer>
-        </div>
+                <ul class="list_route">
+                    <li><a href="https://www.nhn.com/ko/index.nhn" target="_blank" class="logo_github"><span
+                                class="blind">github 페이지로 이동</span></a></li>
+                    <li><a href="#" class="logo_facebook"><span class="blind">facebook 페이지로 이동</span></a></li>
+                    <li><a href="#" class="logo_youtub"><span class="blind">YouTube 페이지로 이동</span></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
 
-        <!-- [D] 마크업 확인용 실배포시 제외 -->
-        <style>
-            .caseview,.caseview_mo{position:fixed;top:250px;right:20px;padding:5px;background:#000;z-index:700}
-            .caseview a,.caseview_mo a{display:block;padding:5px;color:#fff}
-            .caseview a:hover,.caseview_mo a:hover{color:red}
-            .caseview .point_view,.caseview_mo .point_view{color:gold}
-        </style>
-        <div class="caseview">
-            <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
-            <a href="#"  onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','block');$('.member_name').css('display','block');$('.link_login').addClass('on');$('.link_login').text('로그아웃');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 로그인/행사 진행</a>
-            <a href="#" onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','none');$('.member_name').css('display','none');$('.link_register').css('display','block');$('.link_login').removeClass('on');$('.link_login').text('로그인');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면] 행사 진행 후 등록</a>
-        </div>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        
-        <script>
-            //자주 하는 질문
-            $('.item_qna .btn_qna').click(function () {
-                var _this = $(this),
+    <!-- [D] 마크업 확인용 실배포시 제외 -->
+    <style>
+        .caseview,
+        .caseview_mo {
+            position: fixed;
+            top: 250px;
+            right: 20px;
+            padding: 5px;
+            background: #000;
+            z-index: 700
+        }
+
+        .caseview a,
+        .caseview_mo a {
+            display: block;
+            padding: 5px;
+            color: #fff
+        }
+
+        .caseview a:hover,
+        .caseview_mo a:hover {
+            color: red
+        }
+
+        .caseview .point_view,
+        .caseview_mo .point_view {
+            color: gold
+        }
+    </style>
+    <div class="caseview">
+        <a href="#none" class="btn_toggle_caseview">케이스뷰 접기/펼치기</a>
+        <a href="#"
+            onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','block');$('.member_name').css('display','block');$('.link_login').addClass('on');$('.link_login').text('로그아웃');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면]
+            로그인/행사 진행</a>
+        <a href="#"
+            onclick="$('#gnb').addClass('eventopen');$('.ico_member').css('display','none');$('.member_name').css('display','none');$('.link_register').css('display','block');$('.link_login').removeClass('on');$('.link_login').text('로그인');$('.spot.open').css('display','block');$('.spot:first-of-type').css('display','none');return false;">[화면]
+            행사 진행 후 등록</a>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        //자주 하는 질문
+        $('.item_qna .btn_qna').click(function () {
+            var _this = $(this),
                 $item_qna = _this.closest('.item_qna');
-                $item_qna.toggleClass('open');
-                if ($item_qna.hasClass('open')) {
-                    $('html, body').stop().animate({ scrollTop: (_this.offset().top) - 100 }, 500);
-                }
-            });
+            $item_qna.toggleClass('open');
+            if ($item_qna.hasClass('open')) {
+                $('html, body').stop().animate({ scrollTop: (_this.offset().top) - 100 }, 500);
+            }
+        });
 
-            //header fixed
-            $(window).scroll(function() {
-                var scroll = $(window).scrollTop();
-                if (scroll >= 50) {
-                    $("header").addClass("fixed");
-                } else {
-                    $("header").removeClass("fixed");
-                }
-            });
+        //header fixed
+        $(window).scroll(function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 50) {
+                $("header").addClass("fixed");
+            } else {
+                $("header").removeClass("fixed");
+            }
+        });
 
-            //selectbox on
-            $('.link_select').click(function() {
-                $(this).parent().toggleClass('on');
-            });
+        //selectbox on
+        $('.link_select').click(function () {
+            $(this).parent().toggleClass('on');
+        });
 
-            //top button
-            var btnTop = $('.btn_top');
-            $(window).on('scroll', function() {  
-                var footerHei = $('footer').outerHeight();
-                var sT = $(window).scrollTop();
-                var val = $(document).height() - $(window).height() - footerHei;
+        //top button
+        var btnTop = $('.btn_top');
+        $(window).on('scroll', function () {
+            var footerHei = $('footer').outerHeight();
+            var sT = $(window).scrollTop();
+            var val = $(document).height() - $(window).height() - footerHei;
 
-                if (sT >= val)
-                    btnTop.addClass('on')
-                else
-                    btnTop.removeClass('on')
+            if (sT >= val)
+                btnTop.addClass('on')
+            else
+                btnTop.removeClass('on')
 
-                if ($(window).scrollTop() > 300) {
-                    btnTop.addClass('show');
-                } else {
-                    btnTop.removeClass('show');
-                }
-            });
+            if ($(window).scrollTop() > 300) {
+                btnTop.addClass('show');
+            } else {
+                btnTop.removeClass('show');
+            }
+        });
 
-            btnTop.on('click', function(e) {
-                e.preventDefault();
-                $('html, body').animate({scrollTop:0}, '300');
-            });
+        btnTop.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({ scrollTop: 0 }, '300');
+        });
 
-            $('.box_register').on('click',function(){
-                $(this).parent().toggleClass('open');
-                $(this).addClass('select');
-            });
+        $('.box_register').on('click', function () {
+            $(this).parent().toggleClass('open');
+            $(this).addClass('select');
+        });
 
-            $('.link.direct').on('click',function(){
-                $('.cont_select').addClass('direct');
-            });
+        $('.link.direct').on('click', function () {
+            $('.cont_select').addClass('direct');
+        });
 
-            //mobile menu button
-            $('.btn_gnbopen').click(function() {
-                $('header').addClass('open');
-                $('body').css({'overflow':'hidden','touch-action':'none'});
-            });
+        //mobile menu button
+        $('.btn_gnbopen').click(function () {
+            $('header').addClass('open');
+            $('body').css({ 'overflow': 'hidden', 'touch-action': 'none' });
+        });
 
-            $('.btn_gnbclose').click(function() {
-                $('header').removeClass('open');
-                $('body').removeAttr( 'style' );
-            });      
-        
-            //caseview
-            $('.caseview .btn_toggle_caseview').click(function() {
-                $(this).siblings('.caseview a').toggle();
-            });
-        </script>
-    </body>
+        $('.btn_gnbclose').click(function () {
+            $('header').removeClass('open');
+            $('body').removeAttr('style');
+        });
+
+        //caseview
+        $('.caseview .btn_toggle_caseview').click(function () {
+            $(this).siblings('.caseview a').toggle();
+        });
+    </script>
+</body>
+
 </html>

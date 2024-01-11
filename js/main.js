@@ -1,8 +1,8 @@
 //텍스트 모션
-consoleText(['Semantic markup', 'Web accessibility', 'CSS3 / SASS', 'Vanilla javascript', 'Effective communication'], 'text', [
+consoleText(['Semantic markup', 'Web accessibility', 'CSS3 / SCSS', 'Vanilla javascript', 'Effective communication'], 'text', [
 	'Semantic markup',
 	'Web accessibility',
-	'CSS3/SASS',
+	'CSS3/SCSS',
 	'Vanilla javascript',
 	'Effective communication',
 ]);
