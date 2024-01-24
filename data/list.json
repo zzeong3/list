@@ -121,6 +121,16 @@
             "desc": "에디터+브라우저에서는 display:inline-block 이슈로 한글을 써지지 않는 이슈 등 에디터 환경으로 예상치 못한 이슈 많았던 프로젝트. 기획, 디자인, 개발의 커뮤니케이션이 많이 필요했고, 많은 검색과 테스트로 에디터 이슈에 대응함. 페이지별로 있는 동일한 css를 한파일로 묶어 운영이 편리하게 함."
         },
         {
+            "img": "portfolio13",
+            "category": "M",
+            "tit": "사람인 채용정보 홈",
+            "link": "file/recruit_home/main.html",
+            "period": "19.12.03 ~ 19.12.06",
+            "persent": "100%",
+            "tags": "#html #css #jquery",
+            "desc": "배경 모서리의 둥근 부분을 어떻게 처리할지 고민을 했던 프로젝트. css3 도형 변형으로 이미지 사용을 최소화 하고자 함."
+        },
+        {
             "img": "portfolio10",
             "category": "PC",
             "tit": "사람인 기업정보 개편",
