@@ -28,7 +28,7 @@
             "period": "23.08.21 ~ 23.08.31",
             "persent": "50%",
             "tags": "#react #nextJS #tailwindCSS",
-            "desc": "next 환경에서 tailwindcss로 컴포넌트 구현"
+            "desc": "SNS / 이 시간 많이보는 소식 / 투표설문조사 UI 컴포넌트 구현 후, 스토리북으로 공유. 컴포넌트 완성 후 전체적인 레이아웃 작업"
         },
         {
             "img": "portfolio23",
@@ -38,7 +38,7 @@
             "period": "23.06.19 ~ 23.06.23",
             "persent": "50%",
             "tags": "#react #emotionCSS",
-            "desc": "react 환경에서 emotioncss로 상세페이지 컴포넌트 구현"
+            "desc": "상세페이지 UI 컴포넌트 구현, emotionCSS 공통 스타일 분리"
         },
         {
             "img": "portfolio22",
@@ -48,7 +48,7 @@
             "period": "23.01.05 ~ 23.01.06",
             "persent": "100%",
             "tags": "#html #scss #vanillaJS",
-            "desc": "바닐라스크립트로 인터렉션 구현"
+            "desc": "SCSS 사용하여 UI 개발, vanillaJS 스크롤 모션 구현"
         },
         {
             "img": "portfolio21",
@@ -58,7 +58,7 @@
             "period": "23.01.03 ~ 23.01.04",
             "persent": "100%",
             "tags": "#html #scss #vanillaJS",
-            "desc": "바닐라스크립트로 인터렉션 구현"
+            "desc": "SCSS 사용하여 UI 개발, vanillaJS 스크롤 모션 구현"
         },
         {
             "img": "portfolio20",
@@ -68,7 +68,7 @@
             "period": "22.03.24 ~ 22.03.29",
             "persent": "100%",
             "tags": "#html #css #jquery",
-            "desc": "swiper slide 라이브러리 활용으로 페이지 구현"
+            "desc": "프로모션 UI 개발, swiper 라이브러리로 슬라이드 모션 구현"
         },
         {
             "img": "portfolio19",
@@ -88,7 +88,7 @@
             "period": "21.09.01 ~ 21.09.16",
             "persent": "100%",
             "tags": "#html #css #jquery",
-            "desc": "반응형 페이지, css3 메인 모션 적용"
+            "desc": "반응형으로 UI 개발, CSS3로 메인 도형 모션 구현"
         },
         {
             "img": "portfolio16",
@@ -98,7 +98,7 @@
             "period": "20.07.28 ~ 20.07.29",
             "persent": "100%",
             "tags": "#html #css #jquery",
-            "desc": "영상면접 시작 화면으로 원 모션이 들어감"
+            "desc": "CSS3로 물방울 모션 구현, swiper로 slide 구현"
         },
         {
             "img": "portfolio15",
@@ -118,7 +118,7 @@
             "period": "19.05.10 ~ 19.05.15",
             "persent": "100%",
             "tags": "#html #css",
-            "desc": "에디터+브라우저에서는 display:inline-block 이슈로 한글을 써지지 않는 이슈 등 에디터 환경으로 예상치 못한 이슈 많았던 프로젝트. 기획, 디자인, 개발의 커뮤니케이션이 많이 필요했고, 많은 검색과 테스트로 에디터 이슈에 대응함. 페이지별로 있는 동일한 css를 한파일로 묶어 운영이 편리하게 함."
+            "desc": "에디터+브라우저에서는 display:inline-block 이슈로 한글을 써지지 않는 이슈 등 에디터 환경으로 예상치 못한 이슈 많았던 프로젝트. 하나의 마크업 클래스네이밍으로 type 변환 가능하게 작업. 페이지별로 있는 동일한 css를 한파일로 묶어 운영이 편리하게 함."
         },
         {
             "img": "portfolio13",
@@ -168,7 +168,7 @@
             "period": "17.10.18 ~ 17.10.19",
             "persent": "100%",
             "tags": "#html #css",
-            "desc": "채팅창으로 된 작업은 처음 해보아 흥미로웠던 작업.아이폰 키패드 높이 이슈가 있었지만, 개발자들과의 커뮤니케이션으로 무사히 오픈을 마칠 수 있었음."
+            "desc": "채팅창으로 된 작업은 처음 해보아 흥미로웠던 작업. 아이폰 키패드 높이 이슈(position:fixed)가 있었지만 개발자들과의 커뮤니케이션으로 해결."
         },
         {
             "img": "portfolio6",
