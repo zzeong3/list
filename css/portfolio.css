@@ -295,7 +295,7 @@ img {
 	min-height: 255px;
 	border-radius: 5px;
 	box-sizing: border-box;
-	background: #17141d;
+	background: #231f29;
 	box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
 	vertical-align: top;
 	transition: 0.2s;
@@ -305,7 +305,7 @@ img {
 .list .item .inner .btn_detail {
 	position: absolute;
 	right: 10px;
-	bottom: 15px;
+	bottom: 17px;
 	display: inline-block;
 	width: 20px;
 	height: 20px;
@@ -399,6 +399,7 @@ img {
 }
 .list .item .list_item .tag {
 	display: block;
+	padding-right: 20px;
 	font-size: 14px;
 	font-weight: bold;
 	letter-spacing: 1px;
