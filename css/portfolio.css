@@ -417,7 +417,7 @@ img {
 	font-size: 15px;
 	line-height: 23px;
 	box-sizing: border-box;
-	padding: 35px 0 15px;
+	padding: 35px 0 20px;
 	opacity: 0;
 	background: rgba(0, 0, 0, 0.85);
 	transform: translateY(10px);
