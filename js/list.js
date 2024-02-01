@@ -60,8 +60,24 @@ function create_dom(data) {
 						$('<dt class="screen_out">').text('관련태그'),
 						$('<dd class="tag">').text(tags),
 						$('<dt class="screen_out">').text('프로젝트 설명'),
-						$('<dd class="desc">').text(desc)
-					)
+						$('<dd class="desc">').append(
+							$('<div class="inner_desc">')
+								.html(desc.replace(/\n/g, '<br>'))
+								.append(
+									$('<button type="button" class="btn_close">')
+										.on('click', function () {
+											$(this).closest('.item').removeClass('active');
+										})
+										.append($('<span class="screen_out">').text('프로젝트 상세설명 닫기'))
+								)
+						)
+					),
+					$('<button type="button" class="btn_detail">')
+						.on('click', function () {
+							$('.item').removeClass('active');
+							$(this).closest('.item').addClass('active');
+						})
+						.append($('<span class="screen_out">').text('프로젝트 상세설명'))
 				)
 			)
 		); //$wrap append ends
