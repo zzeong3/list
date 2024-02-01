@@ -279,7 +279,6 @@ img {
 }
 .list .item {
 	float: left;
-	overflow: hidden;
 	padding: 15px;
 	width: 25%;
 	box-sizing: border-box;
@@ -293,13 +292,16 @@ img {
 	padding: 18px 15px;
 	width: 100%;
 	min-height: 255px;
-	border-radius: 5px;
 	box-sizing: border-box;
 	background: #231f29;
 	box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
 	vertical-align: top;
 	transition: 0.2s;
 	color: #fff;
+}
+
+.list .item.active .inner {
+	box-shadow: 10px 10px 0px 0px rgb(35, 31, 41);
 }
 
 .list .item .inner .btn_detail {
@@ -415,12 +417,19 @@ img {
 	font-size: 15px;
 	line-height: 23px;
 	box-sizing: border-box;
-	padding: 30px 15px 15px;
+	padding: 35px 0 15px;
 	opacity: 0;
 	background: rgba(0, 0, 0, 0.85);
-	transform: translateY(300px);
-	transition: transform 0.35s ease;
+	transform: translateY(10px);
+	transition: all 0.35s ease;
+	overflow: hidden;
+}
+
+.list .item .list_item .desc .cont_desc {
+	padding: 0 20px;
+	height: 100%;
 	overflow-y: auto;
+	box-sizing: border-box;
 }
 
 .list .item.active .list_item .desc {
@@ -435,7 +444,7 @@ img {
 .list .item .list_item .btn_close {
 	position: absolute;
 	right: 20px;
-	top: 0;
+	top: 8px;
 	width: 20px;
 	height: 20px;
 }
@@ -809,6 +818,9 @@ img {
 		width: 80px;
 		height: 80px;
 		box-shadow: 0px 0px 0px 2px #048ec8;
+	}
+	.list .item:hover {
+		transform: translateY(0);
 	}
 	.list .item:hover .thumb {
 		box-shadow: 0px 0px 0px 4px #048ec8;
