@@ -419,10 +419,10 @@ img {
 	box-sizing: border-box;
 	padding: 35px 0 20px;
 	opacity: 0;
+	visibility: hidden;
 	background: rgba(0, 0, 0, 0.85);
 	transform: translateY(10px);
 	transition: all 0.35s ease;
-	overflow: hidden;
 }
 
 .list .item .list_item .desc .cont_desc {
@@ -435,6 +435,7 @@ img {
 .list .item.active .list_item .desc {
 	opacity: 1;
 	transform: translateY(0px);
+	visibility: visible;
 }
 
 .list .item.active .btn_detail {
