@@ -70,6 +70,7 @@ button {
 }
 body {
 	background: #100e17;
+	min-width: 320px;
 }
 body,
 th,
@@ -529,10 +530,11 @@ img {
 }
 .head_resume strong .job {
 	display: inline-block;
-	margin-top: 9px;
-	font-size: 15px;
+	margin-top: 8px;
+	font-size: 14px;
+	font-weight: normal;
 	line-height: 18px;
-	color: #d6d6d6;
+	color: #999;
 	vertical-align: top;
 	letter-spacing: 0;
 }
@@ -645,8 +647,9 @@ img {
 	display: block;
 	margin-top: 4px;
 	font-size: 13px;
+	font-weight: normal;
 	line-height: 13px;
-	color: #adadad;
+	color: #999;
 	letter-spacing: 0;
 }
 
@@ -808,12 +811,13 @@ img {
 		padding: 14px 20px 14px;
 	}
 	.list .content {
-		padding: 50px 20px 20px;
+		padding: 50px 10px 20px;
 	}
 	.list .item {
 		width: 100%;
-		padding: 10px 0;
+		padding: 10px 15px;
 	}
+	/*
 	.list .item .thumb {
 		float: left;
 		width: 80px;
@@ -844,7 +848,7 @@ img {
 		padding-right: 50px;
 		font-size: 16px;
 		line-height: 18px;
-	}
+	} */
 
 	.cont_resume .list_item {
 		padding: 10px 0 0 67px;
