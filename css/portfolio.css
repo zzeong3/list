@@ -292,7 +292,7 @@ img {
 	position: relative;
 	padding: 18px 15px;
 	width: 100%;
-	min-height: 255px;
+	min-height: 355px;
 	box-sizing: border-box;
 	background: #231f29;
 	box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 1);
@@ -816,6 +816,10 @@ img {
 	.list .item {
 		width: 100%;
 		padding: 10px 15px;
+	}
+
+	.list .item .inner {
+		min-height: 305px;
 	}
 
 	.list .item .inner .btn_detail {
