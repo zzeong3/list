@@ -1,0 +1,192 @@
+@charset "UTF-8";
+//font style
+@mixin font-style($size: null, $weight: null, $line-height: null) {
+	@if $size {
+		font-size: $size;
+	}
+	@if $weight {
+		font-weight: $weight;
+	}
+	@if $line-height {
+		line-height: $line-height;
+	}
+}
+html, body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, table, th, td, figure{font-family:"Noto Sans CJK KR", "Apple SD Gothic Neo", Arial, sans-serif;}
+:root,.lightmode{
+	--kong-black:#181A26;
+	--kong-black-sub:#242635;
+	--kong-point:#2BDA4E;
+	--kong-green: #70BF54;
+	--kong-gy-3: #003E1F;
+	--line-basic:#3A3A3A;
+	--text-description:#8F8F8F;
+	--ico-nav:url('../../common/img/ico/ico-nav2-dark@2x.png');
+	--kbs-white:#ffffff;
+	--kbs-black:#1E1F21;
+	--disabled-color:#3A3A3A;
+}
+
+.e_ {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	word-wrap: break-word;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	display: -webkit-box;
+}
+body {background: var(--bg-fill);overflow-x: hidden;scrollbar-gutter: stable;
+	&.is-active{overflow: hidden;}
+}
+.sticky{position: relative; z-index: 100;
+	&__cont{position: absolute; bottom:0;left: 0; width: 100%;}
+}
+.popup{position: absolute; bottom:17px;right: 16px; max-width: 400px; width: calc(100% - 32px); opacity: 0; transform: translateY(100%); z-index: 100;
+	&__close{position: absolute;width: 24px;height: 24px;top: 8px;right: 8px;background: url(../../common/img/ico/ico-group50.png) no-repeat -1px -450px;background-size: 50px 1150px;z-index: 10;}
+	&__banner{display: block;
+		img{width: 100%; display: block;}
+	}
+}
+#wrap{
+	//common
+	[data-bg-color="wh"]{
+		.btn{color: var(--kbs-white);
+			&::before{background:var(--kbs-black);}
+			&__link{
+				&--line{color:var(--kbs-black);
+					&::before{border-color:var(--kbs-black)}
+				}
+			}
+		}
+	}
+	// button
+	.btn{position: relative; padding: 16px 16px 16px 32px; color: var(--kbs-white); @include font-style(18px, 700, 26px); display: inline-block; border-radius: 60px;
+		&::before{display: block; content: ""; position: absolute; top:0;left: 0; width: 100%;height: 100%; background:var(--kong-gy-3); border-radius: 60px; box-sizing: border-box; transition: 0.2s;}
+		&:hover{
+			&::before{transform: scale(1.08); transition: 0.3s;}
+		}
+		span{position: relative; display: flex; align-items: center; gap: 0 8px; z-index: 1;
+			&:after{display: inline-block;content: "";width: 25px;height: 25px;background-image: url(../img/ico/ico-arrow-link-white.png);background-repeat:no-repeat;background-position:0 0;background-size:25px auto}}
+		&__link{
+			&--white{color: var(--kong-gy-3); 
+				&::before{background:var(--kbs-white);}
+				span {
+					&:after{
+						background-image: url(../img/ico/ico-arrow-link-green.png);
+					}
+				}
+			}		
+		}
+		&-close{position: absolute;background: url(../img/ico/ico-close.png) no-repeat center / 100%;top: 13px;right: 24px; z-index: 10;}
+	}
+	.indicator{margin-top: 8px; display: flex; align-items: center; justify-content: center; gap:0 16px;
+		.btn__arrow{width: 24px;height: 24px;background-repeat:no-repeat;background-position:0 0;background-size: 24px;padding: 0;transition: 0.3s;
+			&::before{display: none;}
+			&.prev{background-image:url(../img/ico/btn-left.png)}
+			&.prev.swiper-button-disabled{background-image:url(../img/ico/btn-left-disable.png)}
+			&.next{background-image:url(../img/ico/btn-right.png)}
+			&.next.swiper-button-disabled{background-image:url(../img/ico/btn-right-disable.png)}
+		}
+	}
+	.swiper-container-horizontal{
+		.pagination{width: auto; font-size: 14px; line-height: 20px; text-align: center;color:var(--kong-gy-3); display: flex; align-items: center; gap: 0 4px;
+			span{font-family: "Noto Sans CJK KR", "Apple SD Gothic Neo", Arial, sans-serif;}
+			.swiper-pagination-current{font-weight:bold;color:var(--kong-gy-3);}
+		}
+	}
+	/* header */
+	header.sticky{
+		.logo{position: relative;left: 0;top: 0;transform: initial;width: auto;height: auto;background: initial;border-radius: 0;
+		}
+	}
+	header{position:fixed;top:0;left:0;right:0;width:100%;height:50px;background-color:var(--bg-fill);border-bottom:1px solid var(--line-basic);display: block; padding: 0; z-index:200; border-bottom:0;
+		.header{
+			&__gnb{height:100%; padding: 0 24px; display: flex;align-items: center;justify-content: space-between;}
+			&__logo{position: relative; left: 0; top: 0; transform: initial; width: auto;
+				a{width: 60px;background-image: url(../img/common/logo-kbs-type2.svg) !important;background-size: 59px !important;background-repeat: no-repeat !important;}
+			}
+			&__nav{display: grid; align-items: center; height: 100%; overflow-y: auto; background:#fff url('../img/common/img_bg_nav.png')no-repeat center/cover;  box-sizing: border-box;
+				&-list{display: grid; gap: 66px 0; padding: 40px 24px; box-sizing: border-box;text-align: center;
+				}
+				&-button {
+					margin:0 auto;
+				}
+				&-menu1{
+					a {
+						width:60px;height:19px;
+						background:url(../img/common/txt_nav1.png) no-repeat 0 0;background-size:60px auto;
+					}
+				}
+				&-menu2{
+					a {
+						width:126px;height:23px;
+						background:url(../img/common/txt_nav2.png) no-repeat 0 0;background-size:126px auto;
+					}
+				}
+				&-menu3{
+					a {
+						width:77px;height:23px;
+						background:url(../img/common/txt_nav3.png) no-repeat 0 0;background-size:77px auto;
+					}
+				}
+				&-menu4{
+					a {
+						width:32px;height:19px;
+						background:url(../img/common/txt_nav4.png) no-repeat 0 0;background-size:32px auto;
+					}
+				}
+				&-menu5{
+					a {
+						width:73px;height:24px;
+						background:url(../img/common/txt_nav5.png) no-repeat 0 0;background-size:73px auto;
+					}
+				}
+				@media(max-width:767px) {
+					&{background-image: url('../img/common/img_bg_nav_m.png');}
+				}
+			}
+			&__btn-gnb{width: 24px;height: 24px;display: flex;flex-wrap: wrap;flex-direction: column;align-items: center;justify-content: center;gap: 3px 0;
+				background-image: url('../img/ico/ico-nav.png'); background-size: 24px auto; background-position: center;
+			}
+		}
+		#allmenu{position: fixed; top:0; left: 0; width: 100%; height: 100%; clip-path: circle(0% at 96% 2%); display: none; z-index: 201;
+			&.is-active{animation: clip-path-circle 0.7s linear forwards;}
+			&.close{animation: clip-path-close 0.2s forwards;}
+			@keyframes clip-path-circle {
+				0%{clip-path: circle(0% at 96% 2%);opacity: 1;}
+				100%{clip-path: circle(140% at 96% 2%);opacity: 1;}
+			}
+			@keyframes clip-path-close {
+				0%{clip-path: circle(140% at 96% 2%); opacity: 1;}
+				100%{clip-path: circle(140% at 96% 2%); opacity: 0;}
+			}
+		}
+	}
+}
+/* footer */
+footer {
+	.footer-app {
+		dt {
+			.ico {
+				width:16px;height:16px;
+				background:url(../img/ico/ico-app-download.png) no-repeat 0 0;background-size:16px auto;
+			}
+		}
+	}
+}
+/* motion */
+.fade-up,.fade-in{opacity: 0;}
+.fade-in.is-active{animation: fade-in 0.7s forwards;}
+.fade-up.is-active{animation: fade-up 0.7s forwards;}
+@keyframes fade-in {
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@keyframes fade-up {
+	0%{opacity:0; transform: translate3d(0,20px,0);}
+	100%{opacity:1; transform: translate3d(0,0px,0);}
+}
+footer *, footer ul, footer li, footer strong, footer dt, footer dd {
+	font-family: 'Noto Sans','Apple SD Gothic Neo','애플 SD 산돌고딕 Neo','Helvetica Neue','Roboto','sans-serif';
+}
