@@ -1,204 +1,224 @@
 {
-    "data": [
-        {
-            "img": "react",
-            "category": "React",
-            "tit": "개인 포트폴리오",
-            "link": "https://zzeong3.github.io/_ah_yoga/#/",
-            "period": "22.10.04 ~ 22.11.15",
-            "persent": "100%",
-            "tags": "#react #redux-saga #scss #design",
-            "desc": "ㄴ Redux로 양방향 data 관리, Redux-Saga로 api 요청.\nㄴ 게시판 data를 localstorage에 저장하고 CRUD 기능.\nㄴ Youtube Api data 관리.\nㄴ Flickr Api data를 가져오고 data 검색 기능.\nㄴ 페이지 로드 시간을 단축을 위한 이미지 캐싱.\nㄴ 반응형 style 적용.\nㄴ 컴포넌트 재사용 편의를 위해 폴더 분리.\nㄴ 스크롤, 메뉴 등의 효과"
-        },
-        {
-            "img": "gulp",
-            "category": "Gulp",
-            "tit": "개인 포트폴리오",
-            "link": "https://zzeong3.github.io/veronica/index.html",
-            "period": "20.01.11 ~ 20.04.17",
-            "persent": "100%",
-            "tags": "#html #scss #gulp #jquery #design",
-            "desc": "ㄴ 디자인\nㄴ 팝업 쿠키\nㄴ form 유효성 검사\nㄴ 지도 api 적용"
-        },
-        {
-            "img": "portfolio24",
-            "category": "React",
-            "tit": "줌인터넷 스타줌",
-            "link": "https://star.zum.com/hero?cm=front_gnb",
-            "period": "23.08.21 ~ 23.08.31",
-            "persent": "50%",
-            "tags": "#react #nextJS #tailwindCSS #storybook",
-            "desc": "ㄴ React 기술 활용: 스타트줌 프로젝트에서 Next.js 환경에서 작업, Tailwind CSS로 스타일링으로 UI 컴포넌트 개발진행. 개발자와 병렬적인 작업을 진행, 각 컴포넌트를 재사용 가능하도록 구현하여 유지보수성을 향상시킴\n\nㄴ UI 컴포넌트 구현 및 스토리북 활용: SNS, 소식, 투표설문조사 UI 컴포넌트를 구현. 이를 스토리북으로 공유하여 개발자와 협업하며 업무를 진행\n\nㄴ 전반적인 레이아웃 작업: 프로젝트의 완성을 위해 개발한 컴포넌트들을 통합하여 전체적인 레이아웃 작업.\n\nㄴ Tailwind 스타일링 ie 대응으로 낮은 버전 사용 (after, before 사용 어려움) 추후 ie 대응 정책이 없어지고 높은 버전으로 리펙토링"
-        },
-        {
-            "img": "portfolio23",
-            "category": "React",
-            "tit": "줌인터넷 부동산 상세페이지",
-            "link": "https://invest.zum.com/land/map?cm=invest_main_gnb",
-            "period": "23.06.19 ~ 23.06.23",
-            "persent": "50%",
-            "tags": "#react #emotionCSS",
-            "desc": "ㄴ 상세페이지 UI 컴포넌트 구현: 주어진 업무 중 상세페이지의 UI 컴포넌트를 전반적으로 구현\n\nㄴ Emotion CSS 활용: Emotion CSS를 활용하여 프로젝트의 스타일링 수행. Theme과 props를 효과적으로 활용하여 공통 스타일을 분리하여 코드의 재사용성을 높이고 유지보수를 용이하게 함\n\nㄴ React 기술 적용: 프로젝트에서 React를 사용하여 컴포넌트 기반의 개발을 수행. 이를 통해 모듈화된 코드를 작성하여 생산성과 코드 품질을 높임"
-        },
-        {
-            "img": "portfolio22",
-            "category": "PC",
-            "tit": "줌인터넷 인베스팅뷰 소개페이지",
-            "link": "file/investingview-web/intro_pc.html",
-            "period": "23.01.05 ~ 23.01.06",
-            "persent": "100%",
-            "tags": "#html #scss #vanillaJS",
-            "desc": "ㄴ UI 개발: 소개페이지의 PC 및 Mobile UI를 전담하여 개발\n\nㄴ VanillaJS로 스크롤 모션 구현: 페이지 내 스크롤에 반응하는 동적인 효과를 주기 위해 VanillaJS를 활용하여 스크롤 모션을 구현, 이를 통해 사용자에게 더 흥미로운 경험을 제공\n\nㄴ SCSS를 사용한 스타일링: SCSS를 활용하여 코드의 가독성을 높이고 스타일링을 보다 효율적으로 관리"
-        },
-        {
-            "img": "portfolio21",
-            "category": "M",
-            "tit": "줌인터넷 인베스팅뷰 소개페이지",
-            "link": "file/investingview-web/intro_m.html",
-            "period": "23.01.03 ~ 23.01.04",
-            "persent": "100%",
-            "tags": "#html #scss #vanillaJS",
-            "desc": "ㄴ UI 개발: 소개페이지의 PC 및 Mobile UI를 전담하여 개발\n\nㄴ VanillaJS로 스크롤 모션 구현: 페이지 내 스크롤에 반응하는 동적인 효과를 주기 위해 VanillaJS를 활용하여 스크롤 모션을 구현, 이를 통해 사용자에게 더 흥미로운 경험을 제공\n\nㄴ SCSS를 사용한 스타일링: SCSS를 활용하여 코드의 가독성을 높이고 스타일링을 보다 효율적으로 관리"
-        },
-        {
-            "img": "portfolio20",
-            "category": "M",
-            "tit": "nhn 한게임 리브랜딩 프로모션",
-            "link": "file/hangame_rebranding/m/event.html",
-            "period": "22.03.24 ~ 22.03.29",
-            "persent": "100%",
-            "tags": "#html #css #jquery",
-            "desc": "ㄴ Mobile 프로모션 UI 개발: 한게임의 리브랜딩 프로모션에서 Mobile 환경에 맞는 UI를 개발\n\nㄴ Swiper 라이브러리를 활용한 슬라이드 탭 구현: 프로모션에서 다양한 콘텐츠를 사용자에게 전달하기 위해 Swiper 라이브러리를 활용하여 슬라이드 탭을 구현\n\nㄴ HTML / CSS / jQuery 활용: 프로모션 작업에서는 기본적인 웹 기술인 HTML과 CSS뿐만 아니라, jQuery를 사용하여 동적인 요소에 대한 조작을 수행. 이를 통해 빠르고 효율적인 UI 개발 진행"
-        },
-        {
-            "img": "portfolio19",
-            "category": "PC",
-            "tit": "nhn 에듀 학업 성취도 진단평가 응시화면",
-            "link": "file/ibt/03_replay.html",
-            "period": "21.11.1 ~ 21.11.15",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC UI 개발: 사용자들이 편리하게 시험을 응시하고 결과를 확인할 수 있도록 직관적이고 사용하기 쉬운 UI 인터페이스를 구현\n\nㄴ 유연한 UI 구현: 어떤 형태의 문제 데이터(이미지, 텍스트)가 들어오더라도 유연하게 대응할 수 있도록 UI를 구현. 이를 통해 새로운 유형의 문제나 데이터가 추가될 때 빠르게 대응할 수 있도록 함"
-        },
-        {
-            "img": "portfolio18",
-            "category": "반응형",
-            "tit": "nhn forward",
-            "link": "file/nhnforward/01_main.html",
-            "period": "21.09.01 ~ 21.09.16",
-            "persent": "100%",
-            "tags": "#html #css #jquery",
-            "desc": "ㄴ 반응형 UI 개발: 다양한 디바이스에서 최적화된 경험을 제공하도록 UI를 설계하고 구현\n\nㄴ CSS3로 메인 도형 모션 구현 / jQuery 활용 : 페이지의 시각적인 효과를 증강하기 위해 CSS3 / jQuery를 활용하여 메인 도형에 모션을 구현. 이를 통해 사용자들에게 더 흥미로운 경험을 제공\n\nㄴ 다국어(일본어) 대응: 다국어 지원을 위해 페이지를 일본어 대응. 사용자가 언어 설정을 변경할 때 즉각적으로 반영되도록 구현하여 다양한 국가와 언어 환경에서 페이지를 사용할 수 있도록 함\n\nㄴ 웹폰트 이슈 : 한국어/일본어/영어 만 사용하는데 불필요한 언어로 인한 용량 이슈로 렌더링 늦어짐. 검색 하던 중 폰트 수정/추가하는 프로그램 발견 (프로그램 이름이 생각 안남..) 한국어/일본어/영어/특수기호만 찾아 넣어 폰트 변환 후 적용"
-        },
-        {
-            "img": "portfolio25",
-            "category": "PC",
-            "tit": "nhn NSAT 학력 경시대회",
-            "link": "file/nsat/00_home.html",
-            "period": "21.03.15 ~ 21.03.31",
-            "persent": "100%",
-            "tags": "#html #css #jquery",
-            "desc": "ㄴ PC UI 개발: 기본 레이아웃으로 경시대회 위한 안내, 접수, 응시, 정답발표, 이벤트 메뉴가 나뉜 2depth 페이지로 form/table 등 다양한 UI 케이스를 대응, \n\nㄴjQuery 활용: GNB, 시험응시 list에 jQuery 활용하여 사용자가 페이지를 명확하고 이용하기 쉽게 구현"
-        },
-        {
-            "img": "portfolio16",
-            "category": "PC",
-            "tit": "사람인 영상면접 온보딩",
-            "link": "file/video_interview/onboarding.html",
-            "period": "20.07.28 ~ 20.07.29",
-            "persent": "100%",
-            "tags": "#html #css #jquery",
-            "desc": "ㄴ PC UI 개발: 사람인 영상면접 온보딩 페이지 UI 개발\n\nㄴ CSS3로 물방울 모션 구현: 페이지의 시각적인 효과를 증강하기 위해 CSS3를 활용하여 물방울 모션을 구현. 이를 통해 웹 페이지에 생동감을 불어넣고 사용자들에게 더 흥미로운 경험을 제공\n\nㄴ Swiper 라이브러리를 활용한 슬라이드 구현: Swiper 라이브러리를 활용하여 페이지 내에서 슬라이드를 구현\n\nㄴ jQuery 활용: jQuery를 사용하여 웹 페이지의 동적인 부분을 처리"
-        },
-        {
-            "img": "portfolio15",
-            "category": "PC",
-            "tit": "사람인 영상면접",
-            "link": "file/video_interview/video_interview.html",
-            "period": "20.07.20 ~ 20.07.24",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC UI 개발: 사용자들이 편리하게 서비스를 이용할 수 있도록 직관적이고 유연한 UI를 구현\n\nㄴ 다양한 영상면접 관련 타입의 UI 개발: 영상면접 서비스에는 다양한 타입의 UI가 필요함. 영상면접 스케줄 리스트, 알림, 영상면접 진행 등 다양한 기능을 가진 UI를 개발하여 사용자가 서비스를 효과적으로 활용할 수 있도록 함\n\nㄴ 페이지 상단에 있는 원 모션 구현: 사용자의 시선을 끌기 위해 페이지 상단에 있는 원 모션을 CSS를 사용하여 구현. 이를 통해 시각적인 효과를 부여하여 사용자의 관심을 끌고 서비스에 대한 인상을 높임"
-        },
-        {
-            "img": "portfolio13",
-            "category": "M",
-            "tit": "사람인 채용정보 홈",
-            "link": "file/recruit_home/main.html",
-            "period": "19.12.03 ~ 19.12.06",
-            "persent": "100%",
-            "tags": "#html #css #jquery",
-            "desc": "ㄴ Mobile UI 개발:  모바일 사용자들이 편리하게 채용 정보를 확인 할 수 있도록 직관적이고 세련된 UI를 구현\n\nㄴ CSS3 도형 변형을 통한 배경 모서리 처리: 프로젝트에서 배경의 모서리를 둥글게 처리하기 위해 CSS3의 도형 변형 기술을 사용\n\nㄴ 이미지 사용 최소화를 위한 노력: 사용자 경험을 향상시키기 위해 이미지 사용을 최소화하고자 노력, CSS를 통한 스타일링과 기존의 리소스를 최대한 활용하고자 함"
-        },
-        {
-            "img": "portfolio14",
-            "category": "PC",
-            "tit": "사람인 채용 템플릿",
-            "link": "file/templete/editor.html",
-            "period": "19.05.10 ~ 19.05.15",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC UI 개발: 다양한 채용 정보가 효과적으로 전달될 수 있도록 디자인된 UI를 구현\n\nㄴ 에디터 이슈 대응: 프로젝트 중 에디터+브라우저에서의 display:inline-block 이슈에 대응하여, 한글이 써지지 않는 문제 등을 해결. 사용자가 편리하게 채용 정보를 입력하고 수정할 수 있도록 환경을 최적화\n\nㄴ 클래스 네이밍으로 타입 변환 가능하도록 작업 : 클래스 네이밍을 통해 타입 변환을 용이하게 함. 이는 향후 유지보수를 간편하게 만들어줌\n\nㄴ 프로젝트 구조 및 유지보수 향상: 템플릿을 사용하는 다양한 페이지에서 중복되는 CSS를 하나의 파일로 통합하여 운영을 편리하게 만듬. 이는 프로젝트의 구조를 개선하고 유지보수를 향상시킴"
-        },
-        {
-            "img": "portfolio10",
-            "category": "PC",
-            "tit": "사람인 기업정보 개편",
-            "link": "file/company_interview/info.html",
-            "period": "18.12.19 ~ 19.01.03",
-            "persent": "10r0%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC UI 개발: 기존 기업 정보 페이지를 새롭게 디자인하고 구현하는 UI 개발 작업을 수행\n\nㄴ 컬러 템플릿 고려: 기업 업종에 따라 다양한 컬러 템플릿을 고려하여 초기 작업 시 잘 고려함. 이로써 페이지가 다양한 기업에 적용될 때 일관된 디자인을 유지할 수 있도록 함\n\nㄴ 유동적인 리스트 디자인: 다양한 형태의 리스트가 존재하며, 리스트의 개수에 따라 넓이가 달라지는 동적인 구조를 고려하여 CSS 선택자를 사용해 리스트 갯수를 유동적으로 조절할 수 있도록 작업"
-        },
-        {
-            "img": "portfolio8",
-            "category": "PC",
-            "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
-            "link": "https://www.saramin.co.kr/zf_user/helpdesk/idpw-find",
-            "period": "18.03.19 ~ 18.04.03",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC, Mobile UI 개발: 프로젝트에서는 PC 및 Mobile 환경에서의 UI를 개발. 사용자가 아이디나 비밀번호를 찾는 과정을 새롭게 구현하는 작업을 수행\n\nㄴ 불필요한 코드 제거로 UI 간소화: 기존에 사용되던 테이블로 되어진 코드 중 불필요한 부분을 제거하여 UI를 간소화. 이로써 코드의 가독성을 높이고 불필요한 리소스를 최소화 함\n\nㄴ 웹 표준/접근성 향상: 웹표준과 접근성을 고려하여 코드를 개선. 웹표준 준수와 접근성 향상은 사용자 경험을 향상시키고, 다양한 기기 및 브라우저에서의 호환성을 강화하는 데 도움"
-        },
-        {
-            "img": "portfolio8-1",
-            "category": "M",
-            "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
-            "link": "http://m.saramin.co.kr/helpdesk/person-find-id",
-            "period": "18.03.19 ~ 18.04.03",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC, Mobile UI 개발: 프로젝트에서는 PC 및 Mobile 환경에서의 UI를 개발. 사용자가 아이디나 비밀번호를 찾는 과정을 새롭게 구현하는 작업을 수행\n\nㄴ 불필요한 코드 제거로 UI 간소화: 기존에 사용되던 테이블로 되어진 코드 중 불필요한 부분을 제거하여 UI를 간소화. 이로써 코드의 가독성을 높이고 불필요한 리소스를 최소화 함\n\nㄴ 웹 표준/접근성 향상: 웹표준과 접근성을 고려하여 코드를 개선. 웹표준 준수와 접근성 향상은 사용자 경험을 향상시키고, 다양한 기기 및 브라우저에서의 호환성을 강화하는 데 도움"
-        },
-        {
-            "img": "portfolio7",
-            "category": "M",
-            "tit": "카카오 번역서비스",
-            "link": "https://translate.kakao.com/m/",
-            "period": "17.10.18 ~ 17.10.19",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ Mobile UI 개발: 프로젝트에서는 주로 모바일 환경에서의 UI 개발을 수행. 사용자가 번역 서비스를 편리하게 이용할 수 있도록 모바일 인터페이스를 개발\n\nㄴ 아이폰 키패드 높이 이슈 해결: 개발 중에는 아이폰 키패드의 높이와 관련된 이슈(position: fixed)가 발생하였음. 이를 개발자 간의 소통을 통해 position: absolute 속성을 이용하여 조정하여 해결"
-        },
-        {
-            "img": "portfolio6",
-            "category": "M",
-            "tit": "Daum 백과사전 통합아티클",
-            "link": "https://m.search.daum.net/search?w=enc&articleId=11230&q=%ED%83%9C%EC%A1%B0",
-            "period": "16.11.21 ~ 16.11.25",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ Mobile UI 개발: 해당 프로젝트에서는 모바일 기기에서 Daum 백과사전을 통합하여 제공하는 것이 목표. 이를 위해 모바일 환경에서의 UI 개발을 수행.\n\nㄴ 다양한 페이지 레이아웃 대응: 프로젝트 도중 페이지 레이아웃이 명확하게 결정되지 않은 상태에서, 위아래로 콘텐츠가 자유롭게 위치할 수 있는 다양한 경우의 수가 발생 이에 대응하기 위해 CSS 선택자를 적절히 활용하여 많은 경우의 수를 고려하여 작업함"
-        },
-        {
-            "img": "portfolio1",
-            "category": "PC",
-            "tit": "Daum 백과사전",
-            "link": "https://100.daum.net/",
-            "period": "14.08.19 ~ 14.10.31",
-            "persent": "100%",
-            "tags": "#html #css",
-            "desc": "ㄴ PC UI 개발: 사용자가 더 효과적으로 정보를 검색하고 활용할 수 있도록 UI 구현\n\nㄴ 장기 프로젝트: 이 프로젝트는 첫 장기 프로젝트로서, 오랜 기간 동안 프로젝트에 참여하면서 프로젝트 일정을 관리하고, 팀 내에서의 커뮤니케이션 능력을 향상시킬 수 있는 기회를 제공"
-        }
-    ]
+  "data": [
+    {
+      "img": "react",
+      "category": "React",
+      "tit": "개인 포트폴리오",
+      "link": "https://zzeong3.github.io/_ah_yoga/#/",
+      "period": "22.10.04 ~ 22.11.15",
+      "persent": "100%",
+      "tags": "#react #redux-saga #scss #design",
+      "desc": "ㄴ Redux로 양방향 data 관리, Redux-Saga로 api 요청.\nㄴ 게시판 data를 localstorage에 저장하고 CRUD 기능.\nㄴ Youtube Api data 관리.\nㄴ Flickr Api data를 가져오고 data 검색 기능.\nㄴ 페이지 로드 시간을 단축을 위한 이미지 캐싱.\nㄴ 반응형 style 적용.\nㄴ 컴포넌트 재사용 편의를 위해 폴더 분리.\nㄴ 스크롤, 메뉴 등의 효과"
+    },
+    {
+      "img": "gulp",
+      "category": "Gulp",
+      "tit": "개인 포트폴리오",
+      "link": "https://zzeong3.github.io/veronica/index.html",
+      "period": "20.01.11 ~ 20.04.17",
+      "persent": "100%",
+      "tags": "#html #scss #gulp #jquery #design",
+      "desc": "ㄴ 디자인\nㄴ 팝업 쿠키\nㄴ form 유효성 검사\nㄴ 지도 api 적용"
+    },
+    {
+      "img": "portfolio27",
+      "category": "M",
+      "tit": "사전예약 플립/폴드7",
+      "link": "file/preorder/mo-flip.html",
+      "period": "25.07.07 ~ 25.07.08",
+      "persent": "90%",
+      "tags": "#html(Thymeleaf) #SCSS #vanillaJS #jquery",
+      "desc": "ㄴ UI 개발: 사전예약 페이지의 PC 및 Mobile UI를 전담하여 개발\n\nㄴ VanillaJS로 모션 구현: 페이지 내 스크롤에 반응하는 동적인 효과를 주기 위해 VanillaJS를 활용하여 스크롤 모션을 구현, gnb및 네이게이션 모션 구현, 잭팟 슬롯머신 모션 구현\n\nㄴ SCSS를 사용한 스타일링: SCSS를 활용하여 코드의 가독성을 높이고 스타일링을 보다 효율적으로 관리"
+    },
+    {
+      "img": "portfolio26",
+      "category": "PC",
+      "tit": "사전예약 플립/폴드7",
+      "link": "file/preorder/pc-flip.html",
+      "period": "25.07.09 ~ 25.07.10",
+      "persent": "70%",
+      "tags": "#html(Thymeleaf) #SCSS #vanillaJS #jquery",
+      "desc": "ㄴ UI 개발: 사전예약 페이지의 PC 및 Mobile UI를 전담하여 개발\n\nㄴ VanillaJS로 모션 구현: 페이지 내 스크롤에 반응하는 동적인 효과를 주기 위해 VanillaJS를 활용하여 스크롤 모션을 구현, gnb및 네이게이션 모션 구현, 잭팟 슬롯머신 모션 구현\n\nㄴ SCSS를 사용한 스타일링: SCSS를 활용하여 코드의 가독성을 높이고 스타일링을 보다 효율적으로 관리"
+    },
+    {
+      "img": "portfolio24",
+      "category": "React",
+      "tit": "줌인터넷 스타줌",
+      "link": "https://star.zum.com/hero?cm=front_gnb",
+      "period": "23.08.21 ~ 23.08.31",
+      "persent": "50%",
+      "tags": "#react #nextJS #tailwindCSS #storybook",
+      "desc": "ㄴ React 기술 활용: 스타트줌 프로젝트에서 Next.js 환경에서 작업, Tailwind CSS로 스타일링으로 UI 컴포넌트 개발진행. 개발자와 병렬적인 작업을 진행, 각 컴포넌트를 재사용 가능하도록 구현하여 유지보수성을 향상시킴\n\nㄴ UI 컴포넌트 구현 및 스토리북 활용: SNS, 소식, 투표설문조사 UI 컴포넌트를 구현. 이를 스토리북으로 공유하여 개발자와 협업하며 업무를 진행\n\nㄴ 전반적인 레이아웃 작업: 프로젝트의 완성을 위해 개발한 컴포넌트들을 통합하여 전체적인 레이아웃 작업.\n\nㄴ Tailwind 스타일링 ie 대응으로 낮은 버전 사용 (after, before 사용 어려움) 추후 ie 대응 정책이 없어지고 높은 버전으로 리펙토링"
+    },
+    {
+      "img": "portfolio23",
+      "category": "React",
+      "tit": "줌인터넷 부동산 상세페이지",
+      "link": "https://invest.zum.com/land/map?cm=invest_main_gnb",
+      "period": "23.06.19 ~ 23.06.23",
+      "persent": "50%",
+      "tags": "#react #emotionCSS",
+      "desc": "ㄴ 상세페이지 UI 컴포넌트 구현: 주어진 업무 중 상세페이지의 UI 컴포넌트를 전반적으로 구현\n\nㄴ Emotion CSS 활용: Emotion CSS를 활용하여 프로젝트의 스타일링 수행. Theme과 props를 효과적으로 활용하여 공통 스타일을 분리하여 코드의 재사용성을 높이고 유지보수를 용이하게 함\n\nㄴ React 기술 적용: 프로젝트에서 React를 사용하여 컴포넌트 기반의 개발을 수행. 이를 통해 모듈화된 코드를 작성하여 생산성과 코드 품질을 높임"
+    },
+    {
+      "img": "portfolio22",
+      "category": "PC",
+      "tit": "줌인터넷 인베스팅뷰 소개페이지",
+      "link": "file/investingview-web/intro_pc.html",
+      "period": "23.01.05 ~ 23.01.06",
+      "persent": "100%",
+      "tags": "#html #scss #vanillaJS",
+      "desc": "ㄴ UI 개발: 소개페이지의 PC 및 Mobile UI를 전담하여 개발\n\nㄴ VanillaJS로 스크롤 모션 구현: 페이지 내 스크롤에 반응하는 동적인 효과를 주기 위해 VanillaJS를 활용하여 스크롤 모션을 구현, 이를 통해 사용자에게 더 흥미로운 경험을 제공\n\nㄴ SCSS를 사용한 스타일링: SCSS를 활용하여 코드의 가독성을 높이고 스타일링을 보다 효율적으로 관리"
+    },
+    {
+      "img": "portfolio21",
+      "category": "M",
+      "tit": "줌인터넷 인베스팅뷰 소개페이지",
+      "link": "file/investingview-web/intro_m.html",
+      "period": "23.01.03 ~ 23.01.04",
+      "persent": "100%",
+      "tags": "#html #scss #vanillaJS",
+      "desc": "ㄴ UI 개발: 소개페이지의 PC 및 Mobile UI를 전담하여 개발\n\nㄴ VanillaJS로 스크롤 모션 구현: 페이지 내 스크롤에 반응하는 동적인 효과를 주기 위해 VanillaJS를 활용하여 스크롤 모션을 구현, 이를 통해 사용자에게 더 흥미로운 경험을 제공\n\nㄴ SCSS를 사용한 스타일링: SCSS를 활용하여 코드의 가독성을 높이고 스타일링을 보다 효율적으로 관리"
+    },
+    {
+      "img": "portfolio20",
+      "category": "M",
+      "tit": "nhn 한게임 리브랜딩 프로모션",
+      "link": "file/hangame_rebranding/m/event.html",
+      "period": "22.03.24 ~ 22.03.29",
+      "persent": "100%",
+      "tags": "#html #css #jquery",
+      "desc": "ㄴ Mobile 프로모션 UI 개발: 한게임의 리브랜딩 프로모션에서 Mobile 환경에 맞는 UI를 개발\n\nㄴ Swiper 라이브러리를 활용한 슬라이드 탭 구현: 프로모션에서 다양한 콘텐츠를 사용자에게 전달하기 위해 Swiper 라이브러리를 활용하여 슬라이드 탭을 구현\n\nㄴ HTML / CSS / jQuery 활용: 프로모션 작업에서는 기본적인 웹 기술인 HTML과 CSS뿐만 아니라, jQuery를 사용하여 동적인 요소에 대한 조작을 수행. 이를 통해 빠르고 효율적인 UI 개발 진행"
+    },
+    {
+      "img": "portfolio19",
+      "category": "PC",
+      "tit": "nhn 에듀 학업 성취도 진단평가 응시화면",
+      "link": "file/ibt/03_replay.html",
+      "period": "21.11.1 ~ 21.11.15",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC UI 개발: 사용자들이 편리하게 시험을 응시하고 결과를 확인할 수 있도록 직관적이고 사용하기 쉬운 UI 인터페이스를 구현\n\nㄴ 유연한 UI 구현: 어떤 형태의 문제 데이터(이미지, 텍스트)가 들어오더라도 유연하게 대응할 수 있도록 UI를 구현. 이를 통해 새로운 유형의 문제나 데이터가 추가될 때 빠르게 대응할 수 있도록 함"
+    },
+    {
+      "img": "portfolio18",
+      "category": "반응형",
+      "tit": "nhn forward",
+      "link": "file/nhnforward/01_main.html",
+      "period": "21.09.01 ~ 21.09.16",
+      "persent": "100%",
+      "tags": "#html #css #jquery",
+      "desc": "ㄴ 반응형 UI 개발: 다양한 디바이스에서 최적화된 경험을 제공하도록 UI를 설계하고 구현\n\nㄴ CSS3로 메인 도형 모션 구현 / jQuery 활용 : 페이지의 시각적인 효과를 증강하기 위해 CSS3 / jQuery를 활용하여 메인 도형에 모션을 구현. 이를 통해 사용자들에게 더 흥미로운 경험을 제공\n\nㄴ 다국어(일본어) 대응: 다국어 지원을 위해 페이지를 일본어 대응. 사용자가 언어 설정을 변경할 때 즉각적으로 반영되도록 구현하여 다양한 국가와 언어 환경에서 페이지를 사용할 수 있도록 함\n\nㄴ 웹폰트 이슈 : 한국어/일본어/영어 만 사용하는데 불필요한 언어로 인한 용량 이슈로 렌더링 늦어짐. 검색 하던 중 폰트 수정/추가하는 프로그램 발견 (프로그램 이름이 생각 안남..) 한국어/일본어/영어/특수기호만 찾아 넣어 폰트 변환 후 적용"
+    },
+    {
+      "img": "portfolio25",
+      "category": "PC",
+      "tit": "nhn NSAT 학력 경시대회",
+      "link": "file/nsat/00_home.html",
+      "period": "21.03.15 ~ 21.03.31",
+      "persent": "100%",
+      "tags": "#html #css #jquery",
+      "desc": "ㄴ PC UI 개발: 기본 레이아웃으로 경시대회 위한 안내, 접수, 응시, 정답발표, 이벤트 메뉴가 나뉜 2depth 페이지로 form/table 등 다양한 UI 케이스를 대응, \n\nㄴjQuery 활용: GNB, 시험응시 list에 jQuery 활용하여 사용자가 페이지를 명확하고 이용하기 쉽게 구현"
+    },
+    {
+      "img": "portfolio16",
+      "category": "PC",
+      "tit": "사람인 영상면접 온보딩",
+      "link": "file/video_interview/onboarding.html",
+      "period": "20.07.28 ~ 20.07.29",
+      "persent": "100%",
+      "tags": "#html #css #jquery",
+      "desc": "ㄴ PC UI 개발: 사람인 영상면접 온보딩 페이지 UI 개발\n\nㄴ CSS3로 물방울 모션 구현: 페이지의 시각적인 효과를 증강하기 위해 CSS3를 활용하여 물방울 모션을 구현. 이를 통해 웹 페이지에 생동감을 불어넣고 사용자들에게 더 흥미로운 경험을 제공\n\nㄴ Swiper 라이브러리를 활용한 슬라이드 구현: Swiper 라이브러리를 활용하여 페이지 내에서 슬라이드를 구현\n\nㄴ jQuery 활용: jQuery를 사용하여 웹 페이지의 동적인 부분을 처리"
+    },
+    {
+      "img": "portfolio15",
+      "category": "PC",
+      "tit": "사람인 영상면접",
+      "link": "file/video_interview/video_interview.html",
+      "period": "20.07.20 ~ 20.07.24",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC UI 개발: 사용자들이 편리하게 서비스를 이용할 수 있도록 직관적이고 유연한 UI를 구현\n\nㄴ 다양한 영상면접 관련 타입의 UI 개발: 영상면접 서비스에는 다양한 타입의 UI가 필요함. 영상면접 스케줄 리스트, 알림, 영상면접 진행 등 다양한 기능을 가진 UI를 개발하여 사용자가 서비스를 효과적으로 활용할 수 있도록 함\n\nㄴ 페이지 상단에 있는 원 모션 구현: 사용자의 시선을 끌기 위해 페이지 상단에 있는 원 모션을 CSS를 사용하여 구현. 이를 통해 시각적인 효과를 부여하여 사용자의 관심을 끌고 서비스에 대한 인상을 높임"
+    },
+    {
+      "img": "portfolio13",
+      "category": "M",
+      "tit": "사람인 채용정보 홈",
+      "link": "file/recruit_home/main.html",
+      "period": "19.12.03 ~ 19.12.06",
+      "persent": "100%",
+      "tags": "#html #css #jquery",
+      "desc": "ㄴ Mobile UI 개발:  모바일 사용자들이 편리하게 채용 정보를 확인 할 수 있도록 직관적이고 세련된 UI를 구현\n\nㄴ CSS3 도형 변형을 통한 배경 모서리 처리: 프로젝트에서 배경의 모서리를 둥글게 처리하기 위해 CSS3의 도형 변형 기술을 사용\n\nㄴ 이미지 사용 최소화를 위한 노력: 사용자 경험을 향상시키기 위해 이미지 사용을 최소화하고자 노력, CSS를 통한 스타일링과 기존의 리소스를 최대한 활용하고자 함"
+    },
+    {
+      "img": "portfolio14",
+      "category": "PC",
+      "tit": "사람인 채용 템플릿",
+      "link": "file/templete/editor.html",
+      "period": "19.05.10 ~ 19.05.15",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC UI 개발: 다양한 채용 정보가 효과적으로 전달될 수 있도록 디자인된 UI를 구현\n\nㄴ 에디터 이슈 대응: 프로젝트 중 에디터+브라우저에서의 display:inline-block 이슈에 대응하여, 한글이 써지지 않는 문제 등을 해결. 사용자가 편리하게 채용 정보를 입력하고 수정할 수 있도록 환경을 최적화\n\nㄴ 클래스 네이밍으로 타입 변환 가능하도록 작업 : 클래스 네이밍을 통해 타입 변환을 용이하게 함. 이는 향후 유지보수를 간편하게 만들어줌\n\nㄴ 프로젝트 구조 및 유지보수 향상: 템플릿을 사용하는 다양한 페이지에서 중복되는 CSS를 하나의 파일로 통합하여 운영을 편리하게 만듬. 이는 프로젝트의 구조를 개선하고 유지보수를 향상시킴"
+    },
+    {
+      "img": "portfolio10",
+      "category": "PC",
+      "tit": "사람인 기업정보 개편",
+      "link": "file/company_interview/info.html",
+      "period": "18.12.19 ~ 19.01.03",
+      "persent": "10r0%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC UI 개발: 기존 기업 정보 페이지를 새롭게 디자인하고 구현하는 UI 개발 작업을 수행\n\nㄴ 컬러 템플릿 고려: 기업 업종에 따라 다양한 컬러 템플릿을 고려하여 초기 작업 시 잘 고려함. 이로써 페이지가 다양한 기업에 적용될 때 일관된 디자인을 유지할 수 있도록 함\n\nㄴ 유동적인 리스트 디자인: 다양한 형태의 리스트가 존재하며, 리스트의 개수에 따라 넓이가 달라지는 동적인 구조를 고려하여 CSS 선택자를 사용해 리스트 갯수를 유동적으로 조절할 수 있도록 작업"
+    },
+    {
+      "img": "portfolio8",
+      "category": "PC",
+      "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
+      "link": "https://www.saramin.co.kr/zf_user/helpdesk/idpw-find",
+      "period": "18.03.19 ~ 18.04.03",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC, Mobile UI 개발: 프로젝트에서는 PC 및 Mobile 환경에서의 UI를 개발. 사용자가 아이디나 비밀번호를 찾는 과정을 새롭게 구현하는 작업을 수행\n\nㄴ 불필요한 코드 제거로 UI 간소화: 기존에 사용되던 테이블로 되어진 코드 중 불필요한 부분을 제거하여 UI를 간소화. 이로써 코드의 가독성을 높이고 불필요한 리소스를 최소화 함\n\nㄴ 웹 표준/접근성 향상: 웹표준과 접근성을 고려하여 코드를 개선. 웹표준 준수와 접근성 향상은 사용자 경험을 향상시키고, 다양한 기기 및 브라우저에서의 호환성을 강화하는 데 도움"
+    },
+    {
+      "img": "portfolio8-1",
+      "category": "M",
+      "tit": "사람인 개인,기업 아이디/비밀번호 찾기 개편",
+      "link": "http://m.saramin.co.kr/helpdesk/person-find-id",
+      "period": "18.03.19 ~ 18.04.03",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC, Mobile UI 개발: 프로젝트에서는 PC 및 Mobile 환경에서의 UI를 개발. 사용자가 아이디나 비밀번호를 찾는 과정을 새롭게 구현하는 작업을 수행\n\nㄴ 불필요한 코드 제거로 UI 간소화: 기존에 사용되던 테이블로 되어진 코드 중 불필요한 부분을 제거하여 UI를 간소화. 이로써 코드의 가독성을 높이고 불필요한 리소스를 최소화 함\n\nㄴ 웹 표준/접근성 향상: 웹표준과 접근성을 고려하여 코드를 개선. 웹표준 준수와 접근성 향상은 사용자 경험을 향상시키고, 다양한 기기 및 브라우저에서의 호환성을 강화하는 데 도움"
+    },
+    {
+      "img": "portfolio7",
+      "category": "M",
+      "tit": "카카오 번역서비스",
+      "link": "https://translate.kakao.com/m/",
+      "period": "17.10.18 ~ 17.10.19",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ Mobile UI 개발: 프로젝트에서는 주로 모바일 환경에서의 UI 개발을 수행. 사용자가 번역 서비스를 편리하게 이용할 수 있도록 모바일 인터페이스를 개발\n\nㄴ 아이폰 키패드 높이 이슈 해결: 개발 중에는 아이폰 키패드의 높이와 관련된 이슈(position: fixed)가 발생하였음. 이를 개발자 간의 소통을 통해 position: absolute 속성을 이용하여 조정하여 해결"
+    },
+    {
+      "img": "portfolio6",
+      "category": "M",
+      "tit": "Daum 백과사전 통합아티클",
+      "link": "https://m.search.daum.net/search?w=enc&articleId=11230&q=%ED%83%9C%EC%A1%B0",
+      "period": "16.11.21 ~ 16.11.25",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ Mobile UI 개발: 해당 프로젝트에서는 모바일 기기에서 Daum 백과사전을 통합하여 제공하는 것이 목표. 이를 위해 모바일 환경에서의 UI 개발을 수행.\n\nㄴ 다양한 페이지 레이아웃 대응: 프로젝트 도중 페이지 레이아웃이 명확하게 결정되지 않은 상태에서, 위아래로 콘텐츠가 자유롭게 위치할 수 있는 다양한 경우의 수가 발생 이에 대응하기 위해 CSS 선택자를 적절히 활용하여 많은 경우의 수를 고려하여 작업함"
+    },
+    {
+      "img": "portfolio1",
+      "category": "PC",
+      "tit": "Daum 백과사전",
+      "link": "https://100.daum.net/",
+      "period": "14.08.19 ~ 14.10.31",
+      "persent": "100%",
+      "tags": "#html #css",
+      "desc": "ㄴ PC UI 개발: 사용자가 더 효과적으로 정보를 검색하고 활용할 수 있도록 UI 구현\n\nㄴ 장기 프로젝트: 이 프로젝트는 첫 장기 프로젝트로서, 오랜 기간 동안 프로젝트에 참여하면서 프로젝트 일정을 관리하고, 팀 내에서의 커뮤니케이션 능력을 향상시킬 수 있는 기회를 제공"
+    }
+  ]
 }
