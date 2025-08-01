@@ -1,0 +1,159 @@
+@charset "utf-8";
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+/*
+ Styling
+*/
+body {
+  font: 16px/1.5em "Overpass", "Open Sans", Helvetica, sans-serif;
+  color: #333;
+  font-weight: 300;
+}
+
+.tabset > label {
+  position: relative;
+  display: inline-block;
+  padding: 15px 15px 25px;
+  border: 1px solid transparent;
+  border-bottom: 0;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tabset > label::after {
+  content: "";
+  position: absolute;
+  left: 15px;
+  bottom: 10px;
+  width: 22px;
+  height: 4px;
+  background: #8d8d8d;
+}
+
+.tabset > label:hover,
+.tabset > input:focus + label {
+  color: #06c;
+}
+
+.tabset > label:hover::after,
+.tabset > input:focus + label::after,
+.tabset > input:checked + label::after {
+  background: #06c;
+}
+
+.tabset > input:checked + label {
+  border-color: #ccc;
+  border-bottom: 1px solid #fff;
+  margin-bottom: -1px;
+}
+
+.tab-panel {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+
+/*
+ Demo purposes only
+*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 30px;
+}
+
+.tabset {
+  max-width: 65em;
+}
+
+.btn_confirm{display:block;margin:29px auto 0;width:150px;height:50px;background: #303231 url('../img/event/btn_confirm.png') no-repeat center;text-indent:-9999px;border:none}
+
+$primary = #225CFF
+$gray = #C8CCD4
+
+body
+  font-family: "Roboto", sans-serif
+
+.radio
+  position: relative
+  cursor: pointer
+  line-height: 20px
+  font-size: 14px
+  margin: 15px
+  .label
+    position: relative
+    display: block
+    float: left
+    margin-right: 10px
+    width: 20px
+    height: 20px
+    border: 2px solid $gray
+    border-radius: 100%
+    -webkit-tap-highlight-color: transparent
+    &:after
+      content: ''
+      position: absolute
+      top 3px
+      left 3px
+      width 10px
+      height 10px
+      border-radius 100%
+      background $primary
+      transform scale(0)
+      transition all .2s ease
+      opacity .08
+      pointer-events: none
+  &:hover
+    .label:after
+      transform scale(3.6)
+    
+  
+input[type="radio"]:checked + .label
+  border-color $primary
+  &:after
+    transform scale(1)
+    transition all .2s cubic-bezier(.35,.9,.4,.9)
+    opacity 1
+
+.cntr
+  position absolute
+  top calc(50% - 10px)
+  left 0
+  width 100%
+  text-align center
+
+.hidden
+  display none
+  
+//dribbble 
+.credit
+  position: fixed
+  right: 20px
+  bottom: 20px
+  transition: all .2s ease
+  -webkit-user-select: none
+  user-select: none
+  opacity: .6
+  img
+    width: 72px
+  &:hover
+    transform: scale(.95)

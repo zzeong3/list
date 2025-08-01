@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url("https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+:root {
+  font-size: 15px;
+}
+@media screen and (min-width: 360px) {
+  :root {
+    font-size: 16px;
+  }
+}
+
+/* ==================== */
+/*     서브 컨텐츠         */
+/* ==================== */
+.preorder-sub {
+  margin: 0;
+  /* ==================== */
+  /*      공통 NOTICE        */
+  /* ==================== */
+}
+.preorder-sub .container {
+  padding-top: 90px;
+}
+.preorder-sub .container .tabs {
+  height: 23.889vw;
+  background: url(/common/img/preorder/mw-organize-tab1_on.jpg) 0 0 no-repeat;
+  background-size: 100% auto;
+  display: flex;
+}
+.preorder-sub .container .tabs li {
+  width: 50%;
+}
+.preorder-sub .container .tabs.second {
+  height: 23.889vw;
+  background: url(/common/img/preorder/mw-organize-tab2_on.jpg) 0 0 no-repeat;
+  background-size: 100% auto;
+}
+.preorder-sub .container .tab_contents {
+  padding: 24px 24px 0;
+}
+.preorder-sub .container .tab_contents .accBoxinner {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url(/common/img/preorder/mw-organize-bnf-box2.png) 0 0 repeat-y;
+  background-size: 100% auto;
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner {
+  position: relative;
+  width: 84%;
+  background: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner .accordion-txt {
+  padding-bottom: 0;
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner .accordion-txt img {
+  width: 262px;
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner .arrow-down {
+  position: absolute;
+  top: 35px;
+  left: 91%;
+  width: 0.5125rem;
+  height: 0.5125rem;
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner .accordion-content {
+  padding: 0;
+  margin: 0 14px 15px;
+  border-top: 1px solid #d9d9d9;
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner .accordion-content .link_btton {
+  text-indent: -999999px;
+  position: absolute;
+  bottom: 39px;
+  left: 50%;
+  height: 15%;
+  width: 82%;
+  transform: translate(-50%);
+}
+.preorder-sub .container .tab_contents .accBoxinner .accordion.common-inner:last-child {
+  margin-bottom: 0;
+}
+.preorder-sub .container .tab_contents .accBoxinner.tab2 {
+  background: url(/common/img/preorder/mw-organize-bnf2-box2.jpg) 0 0 repeat-y;
+  background-size: 100% auto;
+}
+.preorder-sub .container .banner {
+  padding: 0 24px 58px;
+  position: relative;
+}
+.preorder-sub .container .banner .link_btton {
+  text-indent: -999999px;
+  position: absolute;
+  bottom: 21%;
+  left: 50%;
+  height: 11%;
+  width: 73%;
+  transform: translate(-50%);
+}
+.preorder-sub .container .button-section {
+  position: relative;
+}
+.preorder-sub .container .button-section .order_btn {
+  position: absolute;
+  text-indent: -999999px;
+  bottom: 49px;
+  left: 50%;
+  height: 29%;
+  width: 84%;
+  transform: translate(-50%);
+}
+.preorder-sub .common-notice-wrp {
+  background: #1d1d1d;
+  position: relative;
+  z-index: 10;
+}
+.preorder-sub .common-notice-wrp img {
+  margin-bottom: 2rem;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu .title-wrp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu .title-wrp .arrow-down {
+  border-bottom: #fff solid 2px;
+  border-right: #fff solid 2px;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item {
+  padding: 1rem 1.5rem;
+  background: #1d1d1d;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-top: 1px solid rgba(221, 221, 221, 0.2);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.8px;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item.active .arrow-down {
+  top: 0.125rem;
+  transform: rotate(225deg);
+  border-bottom: #ff00a8 solid 2px;
+  border-right: #ff00a8 solid 2px;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul {
+  margin-top: 1rem;
+  list-style: none;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul .notice-title,
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul .notice-desc {
+  font-size: 0.875rem;
+  margin-top: 0.9375rem;
+  margin-bottom: 0.9375rem;
+  margin-left: -0.375rem;
+  font-weight: 400;
+  color: #999;
+  word-break: keep-all;
+  padding-left: 1.25rem;
+  text-indent: -0.5rem;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul .notice-title {
+  font-weight: 800;
+  color: #aaa;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul .notice-title-sub {
+  font-size: 0.875rem;
+  margin-top: 0.9375rem;
+  margin-left: -0.375rem;
+  font-weight: 400;
+  color: #999;
+  margin-top: 0;
+  padding-left: 1.25rem;
+  text-indent: -0.8rem;
+  word-break: keep-all;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul li {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #999;
+  letter-spacing: -0.8px;
+  position: relative;
+  padding-left: 0.75rem;
+  margin-bottom: 0.3125rem;
+  word-break: keep-all;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #999;
+  top: -0.125rem;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item.active {
+  background-color: #1d1d1d;
+}
+.preorder-sub .common-notice-wrp .common-notice-menu-item.active > .common-notice-content {
+  max-height: max-content;
+  opacity: 1;
+}
+.preorder-sub .common-notice-wrp .common-notice-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding-left: 0.625rem;
+}
+.preorder-sub .common-notice-wrp .common-notice-content.active {
+  padding: 1.25rem;
+}

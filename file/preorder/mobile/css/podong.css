@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+body {
+    
+}
+/* 포동 인덱스 */
+.podong_index {background:#F9F9F9;}
+.podong_index img {width:100%}
+.podong_wrap {padding-top:95px;}
+.podong_wrap .pobox {padding:33.333vw 8.889vw;}
+.podong_cnt1 {height:144.167vw;padding-top:13.889vw;background:url('/mobile/img/main/podong/podong_kv_bg.png') 50% 100% no-repeat;background-size:100%;}
+.podong_tit {margin:0 auto;}
+.podong_cnt1 .podong_tit.txt1 {width:82.389vw;}
+.podong_cnt1 .podong_tit.txt2 {width:64.583vw;height:9.583vw;margin-top:12px;}
+.podong_cnt1 .podong_kv {width:90vw;margin:0 auto;position:relative;top:11%;}
+.podong_cnt2 .podong_tit.txt1 {}
+.podong_cnt2 .objBox {margin-bottom:17.778vw;}
+.podong_cnt2 .objBox p {margin-bottom:4.444vw;}
+.podong_cnt2 .objBox p:last-child {margin-bottom:0;}
+.podong_cnt3 {background:#A5EFA4;}
+.podong_cnt3 .podong_tit.txt1 {width:76.389vw;margin-bottom:11.111vw;}
+.podong_cnt3 .obj_btn {width:30%;height:8vw;bottom:7.2%;}
+.podong_cnt3 .objBox {position:relative;}
+.podong_cnt3 .objBox .podong-gif-emo {position:absolute;width:33.3vw;height:33.3vw;left:50%;transform:translateX(-50%);top:25%;}
+
+
+
+
+
+.podong_cnt4 {background:#5561C9;}
+.podong_cnt4 .podong_tit.txt1 {width:100%;margin-bottom:16.667vw;}
+.podong_cnt4 .objBox p {margin-bottom:11.111vw;}
+.podong_cnt4 .objBox p:last-child {margin-bottom:0;}
+.podong_cnt4 .podong_tit.txt2 {margin:20vw 0 5.556vw;}
+.podong_cnt5,.podong_cnt6 {background:#000;}
+.podong_cnt5 .podong_tit.txt1 {width:68.611vw;margin-bottom:11.111vw;}
+.podong_cnt6 .podong_tit.txt1 {width:62.083vw;height:20vw;margin-bottom:8.889vw;}
+
+.podong_cnt5 .color_tab_wrap {position:relative;}
+.podong_cnt5 .color_tab_wrap .color_btns{display:flex; position:absolute; top:58%; left:50%; z-index:2; transform : translateX(-50%);}
+.podong_cnt5 .color_tab_wrap .color_btns .tc-tab {border:1px solid transparent;border-radius:6px;overflow:hidden;width:30px;height:30px;margin-right:8px;}
+.podong_cnt5 .color_tab_wrap .color_btns .tc-tab:last-child {margin-right:0}
+.podong_cnt5 .color_tab_wrap .color_btns .tc-tab.tc-selected{border-color:#333;}
+.podong_cnt5 .color_tab_wrap .color_btns .tc-tab img{max-width:100%;}
+.podong_cnt5 .color_tab_wrap .groupWrap {position:relative;}
+.podong_cnt5 .color_tab_wrap .groupWrap .group{display:none;}
+.podong_cnt5 .color_tab_wrap .groupWrap .group.show{display:block;}
+.podong_cnt5 .color_tab_wrap .groupWrap .bnfBtn{width: 81.7%;height: 9.2%;border-radius: 29px;left: 50%;bottom: 5.4%;transform: translate(-50% ,0);}
+.podong_cnt5 .bt-txt {margin:24px 0 -3px;text-align:center;font-size:14px;color:#fff;font-weight:700;}
+.podong_cnt5  .ip283_icon .icon svg {left:4px;}
+.podong_cnt5  .ip283_icon .icon svg:nth-child(2) {top:-15px;}
+
+.podong_wrap .pobox.podong_cnt5 {padding-bottom:16.667vw;}
+.podong_wrap .pobox.podong_cnt6 {padding-top:16.667vw;}
+.podong_cnt6 .objBox_txt {margin: 8.889vw auto;width: max-content;}
+.podong_cnt6 .objBox_txt span {color:#fff;font-size:20px;font-weight:400;}
+.podong_cnt6 .objBox_txt span em {color:#FAE100;font-weight:700;}
+.podong_cnt6 .objBox_txt ul {margin-top:2.778vw;}
+.podong_cnt6 .objBox_txt ul li {color:#B1B1B1;font-size:14px;}
+.podong_cnt6 .btnCont .basic_btn {margin-top:0;}
+
+.podong_cnt6 .objBox {position:relative;}
+.podong_cnt6 .objBox .coupon_img1 {position:absolute;width:69.861vw;left: 50%;transform: translate(-50%,0);}
+.podong_cnt6 .objBox .coupon_img2 {width:82.222vw;}
+
+.btnCont {width:100%;text-align:center;}
+.btnCont .basic_btn {position:relative;font-size:16px;color:#fff;height:56px;width:296px;background:url('/mobile/img/main/podong/podong_btn_common.png') 50% 50% no-repeat;background-size:100%;/* margin-top:17.778vw; */}
+.btnCont .basic_btn.tooltip::before{content:"";position:absolute;width:228px;height:64.5px;background:url('/mobile/img/main/podong/podong_cont01_btn_tip.png') 50% 50% no-repeat;background-size: 100%;left: -15px;top: -62%;z-index: 9;}
+.btnCont .basic_btn span {position:relative;display:inline-block;letter-spacing: -0.58px;}
+.btnCont .basic_btn span::before{content:"";position:absolute;width:12px;height:17.5px;background:url('/mobile/img/main/podong/Union.png') 50% 50% no-repeat;background-size:10.5px 17.5px;right:-21px;top: 50%;transform:translate(0, -50%);}
+.btnCont .basic_btn_txt {color:#aaa;font-size:14px;margin-top:9.444vw;}
+.btnCont .basic_btn_txt span {display:inline-block;border-bottom:1px solid #aaa;padding-bottom:3px;}
+.btnCont_txt {position:relative;font-size:12px;color:#555;margin-top:4.444vw;text-align:center;margin:4.444vw auto 0;width: max-content;}
+.btnCont_txt:before{content:"* ";position:absolute;left:-9px;top:2px;}
+
+.podong_btn_wrap {display:none;}
+#btnRsv-podong {position:relative;display: block;width: 100%;background: linear-gradient(90deg, #8724FF 0%, #FF00A8 99.9%);box-sizing: border-box;text-align: center;vertical-align: middle;position: fixed;bottom: 0;z-index: 999;border: none;height: 15.556vw;color:#fff;font-size:4.444vw;letter-spacing:-0.8px;text-indent:44px;}
+#btnRsv-podong::before{content:"";position:absolute;width:18.333vw;height:22.222vw;left:9.167vw;bottom:0;background:url('/mobile/img/main/podong/podong_btn_03.png') 50% 50% no-repeat;background-size:100%;}
+#btnRsv-podong::after{content:"";position:absolute;width:5.556vw;height:5.556vw;right:8.889vw;top:50%;transform:translate(0, -50%);background:url('/mobile/img/main/podong/podong_btn_02.png') 50% 50% no-repeat;background-size:100%;}
+
+/* 하단 공통 영역 */
+.mb32 {margin-bottom:8.889vw !important;}
+.mb40 {margin-bottom:11.111vw !important;}
+.bottom_offer_wrap {background:#000;padding:120px 8.889vw;}
+.btm_offer {padding-bottom:33.333vw;}
+.btm_offer .btm_ofr_tit,.btm_offer .objBox{margin:0 auto;}
+.btm_offer .objBox {position:relative;}
+.btm_offer .objBox.cardBox .inner_obj {position:absolute;left:50%;top:58px;transform: translate(-50%);}
+.btm_offer .tit_num {width:50px;height:50px;margin:0 auto 10px;}
+.btm_ofr_txt {color:#aaa;font-size:14px;text-align:center;margin-top:28px;}
+.obj_btn {position: absolute;left: 50%;text-indent: -99999px;transform: translate(-50%);height: 9%;width: 50%;bottom: 7.7%;}
+
+.offer_kv .btm_ofr_tit{width:66.111vw;}
+.offer_kv .objBox{width:77.639vw;}
+.offer_01 .btm_ofr_tit{width:56.667vw;}
+.offer_02 .btm_ofr_tit{width:64.167vw;}
+.offer_03 .btm_ofr_tit{width:79.306vw;}
+.offer_04 .btm_ofr_tit{width:70.417vw;}
+.offer_05 .btm_ofr_tit{width:80.417vw;}
+.offer_06 .btm_ofr_tit{width:84.306vw;}
+.offer_07 .btm_ofr_tit{width:58.194vw;}
+.offer_08 .btm_ofr_tit{width:84.444vw;}
+.offer_09 .btm_ofr_tit{width:70.417vw;}
+.offer_10 .btm_ofr_tit{width:60.417vw;}
+.offer_11 .btm_ofr_tit{width:63.5vw;}
+
+.offer_02 .objBox .inner_obj{width:48.611vw;}
+.offer_03 .objBox .inner_obj{width:66.667vw;}
+.offer_04 .objBox .inner_obj{width:69.861vw;}
+.offer_05 .objBox .inner_obj{width:63.889vw;}
+.offer_06 .objBox .inner_obj{width:59.444vw;}
+.offer_07 .objBox .inner_obj{width:55vw;}
+.offer_08 .objBox .inner_obj{width:66.250vw;}
+.offer_09 .objBox .inner_obj{display:flex;}
+.offer_09 .objBox .inner_obj:nth-child(1) {margin-bottom:16px;}
+.offer_09 .objBox .inner_obj:nth-child(1) img {width:38.889vw;}
+.offer_09 .objBox .inner_obj:nth-child(1) img:last-child {margin-left:auto;}
+.offer_10 .objBox img{margin-bottom:8px;}
+.offer_10 .objBox img:last-child {margin-bottom:0;}
+
+.offer_04 .obj_btn {bottom:10.7%;}
+.offer_05 .obj_btn {bottom:6.7%;}
+.offer_08 .obj_btn {width:82%;height:12.6%;bottom:7.3%;}
+
+.offer_11 {background:#000;}
+
+/* 슬라이드 영역 */
+.podong_cnt7 {background:#1A1D3D;}
+.podong_cnt7 .podong_tit {margin-bottom:40px;width:71.389vw;}
+.podong_section {position:relative;}
+.podong_section .swiper-button-wrap {position: absolute;width: 127%;top: 50%;left: 50%;z-index: 99;transform: translate(-50%);}
+.podong_section .swiper-button-prev {width:44px;height:44px;background: url(../img/main/podong/podong_slide_prev.png) 0 0 no-repeat;background-size: cover;left: 20px;right: auto;top:50%;margin-top:-12px;}
+.podong_section .swiper-button-next {width:44px;height:44px;background: url(../img/main/podong/podong_slide_next.png) 0 0 no-repeat;background-size: cover;right: 20px;left: auto;top:50%;margin-top:-12px;}
+.podong_section .swiper-pagination {bottom:-30px;}
+.podong_section .swiper-pagination-bullet {background:#fff;opacity:0.5;width:10px;height:10px;}
+.podong_section .swiper-pagination-bullet-active {background:#FF00A8;opacity:1;}
+
+/* 패럴렉스 영역 */
+.podongParallax_wrap {background:#000;padding:0 32px 60px;}
+.podongParallax_wrap .btm_ofr_tit {width:59.167vw;margin:0 auto;}
+.podongParallax_wrap .btm_ofr_tab {width:58.056vw;margin:0 auto;}
+#promotion {padding:0 !important;}
+.pin-spacer {margin-top:0 !important;}
+
+.podongBox {width:28.611vw;margin:16.111vw auto 0;}
+
+
+
+
+
+
+
+
+
+
+

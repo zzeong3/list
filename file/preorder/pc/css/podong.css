@@ -1,0 +1,169 @@
+/* @charset "utf-8"; */
+
+body {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-overflow-scrolling: touch;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+.ip283_cp.ty02 {background:#fff; padding:130px 0 0;}
+#index_bottom_offer {background:#000;}
+.podong_wrap .btm_common.common_03 {padding-bottom:120px;background:#000;}
+#index_bottom_offer2 {background:#000;}
+/* 포동 인덱스 */
+.podong_wrap section {text-align:center;}
+.podong_wrap .contBtn {position:relative;width:500px;height:80px;background:url('/pc/img/main/podong_btn_bg.png') 50% 50% no-repeat;display:flex;justify-content:center;align-items:center;margin:0 auto;}
+.podong_wrap .contBtn span {color:#fff;font-size:22px;font-weight:700;}
+.podong_wrap .contBtn span:after {content:'';display:inline-block;width:11px;height:18px;background:url('/pc/img/main/podong_btn_arrow.png') 50% 50% no-repeat;display:inline-block;margin-left:10px;}
+.podong_kv {position:relative;height:calc(100vh - 210px);background:#F9F9F9;background:url('/pc/img/main/podong_kv_bg_v2.png') center 100% no-repeat;}
+.podong_kv:before {content:none;position:absolute;width:100%;height:360px;background:#A5EFA4;left:0;bottom:0;}
+.podong_kv .podong_kv_inner {position:relative;width:1120px;margin:0 auto;height:100%;}
+.podong_kv .podong_kv_inner > p {position:absolute;}
+.podong_kv .podong_kv_inner .podong-kv-title {top:120px;}
+.podong_kv .podong_kv_inner .podong-kv-object {right:-45px; bottom:9%;}
+.podong_kv .ip283_icon {margin:0;position:absolute;bottom:40px;left:50%;transform:translateX(-50%);}
+.podong_kv .icon {width:100%; display:flex; flex-direction:column;}
+
+
+.podong_cnt_01 {background:#F9F9F9;padding:160px 0;}
+.podong_cnt_01 .podong-tit-wrap {margin-bottom:60px;}
+.podong_cnt_01 .podong-object-wrap + .podong-object-wrap {margin-top:24px;}
+.podong_cnt_01 .contBtn {margin-top:80px;}
+.podong_cnt_01 .contBtn:before {content:'';position:absolute;width:300px;height:80px;background:url('/pc/img/main/balloon01.png') 50% 50% no-repeat;left:-11px;top:-37px;}
+.podong_cnt_01 .info-gift-area {margin-top:32px;}
+.podong_cnt_01 .info-gift-area .giftResultBtn {padding:6px 0;margin-bottom:16px;color:#aaa;font-size:16px;font-weight:700;border-bottom:1px solid #aaa;}
+.podong_cnt_01 .info-gift-area .bottom-txt {color:#888;font-size:12px;line-height:24px;font-size:16px;}
+
+.podong_cnt_02 {background:#A5EFA4;padding:160px 0;}
+.podong_cnt_02 .podong-tit-wrap {margin-bottom:60px;}
+.podong_cnt_02 .podong-object-wrap {position:relative;}
+.podong_cnt_02 .podong-object-wrap .podongBnfBtn {position:absolute;left:50%;transform:translateX(-50%);text-indent:-99999px;width:160px;height:34px;bottom:3.1%;}
+.podong_cnt_02 .podong-object-wrap .podong-gif-emo {position:absolute;top:42%;left:50%;transform:translateX(-50%);width:240px;height:240px;}
+.podong_cnt_02 .podong-object-wrap .podong-gif-emo img {width:100%;}
+
+
+
+
+.podong_cnt_03 {background:#5561C9;padding:160px 0;}
+.podong_cnt_03 .podong-tit-wrap {margin-bottom:60px;} 
+.podong_cnt_03 ul {display:flex;justify-content:center;flex-direction:column;}
+.podong_cnt_03 ul li + li {margin-top:80px;}
+.podong_cnt_03 .bt-content {margin-top:140px;}
+
+
+.podong_cnt_04 {background:#000;padding:160px 0;}
+.podong_cnt_04 .podong-tit-wrap {margin-bottom:60px;} 
+.podong_cnt_04 .cardBox .color_tab_wrap .color_btns {left:50%;transform:translateX(-50%);bottom:34.5%;}
+.podong_cnt_04 .cardBox .bnfBtn {position:absolute;width:320px;height:56px;bottom:5.5%;}
+.podong_cnt_04 .cardBox-txt {margin-top:24px;color:#fff;font-size:16px;font-weight:700;}
+.podong_cnt_04 .ip283_icon {margin:0;position:absolute;bottom:9%;left:50%;transform:translateX(-50%);}
+.podong_cnt_04 .icon {width:100%; display:flex; flex-direction:column;align-items:center;}
+
+.podong_cnt_05 {background:#000;padding:160px 0;}
+.podong_cnt_05 .podong-tit-wrap {margin-bottom:40px;} 
+.podong_cnt_05 .coupon-info {margin:40px 0 48px;}
+.podong_cnt_05 .coupon-info .title {margin-bottom:16px;font-size:24px;font-weight:700;color:#fff;}
+.podong_cnt_05 .coupon-info .title span {color:#FAE100;}
+.podong_cnt_05 .coupon-info .info-list {color:#B1B1B1;font-size:16px;line-height:24px;width:17%;margin:0 auto;text-align:left;}
+
+.podong_cnt_06 .podong-link {position:relative;margin-top:38px;font-size:16px;font-weight:700;color:#aaa;display:inline-block;padding:0 18px 6px 0;border-bottom:1px solid #aaa;}
+.podong_cnt_06 .podong-link:after {position:absolute;top:3.2px;right:0;content:'';display:inline-block;width:9px;height:13px;background:url('../img/main/podong-link-arrow.png') no-repeat 0 0 / 100% auto;}
+
+
+
+
+.podong_btn_wrap {display:none;}
+#btnRsv-pcpodong {position:relative;display: block;width: 100%;height:80px;background: linear-gradient(90deg, #8724FF 0%, #FF00A8 99.9%);box-sizing: border-box;text-align: center;vertical-align: middle;position: fixed;bottom: 0;z-index: 999;border: none;color:#fff;font-size:25px;letter-spacing:-0.8px;text-indent:44px;font-weight:700;}
+#btnRsv-pcpodong span {position:relative;display:flex;justify-content:center;align-items:center;}
+#btnRsv-pcpodong span:before {content:'';position:absolute;top:-180%;left:50%;transform:translateX(-250%);display:inline-block;width:115px;height:120px;background:url('/pc/img/main/floatBtn_character.png') 50% 50% no-repeat;}
+#btnRsv-pcpodong span:after {content:'';display:inline-block;width:28px;height:28px;background:url('/pc/img/main/float_btn_arrow.png') 50% 50% no-repeat;margin-left:24px;} 
+
+
+
+
+
+
+
+.podong_btn_wrap {display:none;}
+#btnRsv-podong {position:relative;display: block;width: 100%;background: linear-gradient(90deg, #8724FF 0%, #FF00A8 99.9%);box-sizing: border-box;text-align: center;vertical-align: middle;position: fixed;bottom: 0;z-index: 999;border: none;height: 15.556vw;color:#fff;font-size:4.444vw;letter-spacing:-0.8px;text-indent:44px;}
+#btnRsv-podong::before{content:"";position:absolute;width:18.333vw;height:22.222vw;left:9.167vw;bottom:0;background:url('/mobile/img/main/podong/podong_btn_03.png') 50% 50% no-repeat;background-size:100%;}
+#btnRsv-podong::after{content:"";position:absolute;width:5.556vw;height:5.556vw;right:8.889vw;top:50%;transform:translate(0, -50%);background:url('/mobile/img/main/podong/podong_btn_02.png') 50% 50% no-repeat;background-size:100%;}
+
+/* 하단 공통 영역 */
+.mb32 {margin-bottom:8.889vw !important;}
+.mb40 {margin-bottom:11.111vw !important;}
+.bottom_offer_wrap {background:#000;padding:0 8.889vw;}
+.btm_offer {padding-bottom:33.333vw;}
+.btm_offer .btm_ofr_tit,.btm_offer .objBox{margin:0 auto;}
+.btm_offer .objBox {position:relative;}
+.btm_offer .objBox.cardBox .inner_obj {position:absolute;left:50%;top:32px;transform: translate(-50%);}
+.btm_offer .tit_num {width:50px;height:50px;margin:0 auto 10px;}
+.btm_ofr_txt {color:#aaa;font-size:14px;text-align:center;margin-top:28px;}
+.obj_btn {position: absolute;left: 50%;text-indent: -99999px;transform: translate(-50%);height: 9%;width: 50%;bottom: 7.7%;}
+
+.offer_kv .btm_ofr_tit{width:66.111vw;}
+.offer_kv .objBox{width:77.639vw;}
+.offer_01 .btm_ofr_tit{width:56.667vw;}
+.offer_02 .btm_ofr_tit{width:64.167vw;}
+.offer_03 .btm_ofr_tit{width:79.306vw;}
+.offer_04 .btm_ofr_tit{width:70.417vw;}
+.offer_05 .btm_ofr_tit{width:80.417vw;}
+.offer_06 .btm_ofr_tit{width:84.306vw;}
+.offer_07 .btm_ofr_tit{width:58.194vw;}
+.offer_08 .btm_ofr_tit{width:84.444vw;}
+.offer_09 .btm_ofr_tit{width:70.417vw;}
+.offer_10 .btm_ofr_tit{width:60.417vw;}
+.offer_11 .btm_ofr_tit{width:51.389vw;}
+
+.offer_02 .objBox .inner_obj{width:48.611vw;}
+.offer_03 .objBox .inner_obj{width:66.667vw;}
+.offer_04 .objBox .inner_obj{width:69.861vw;}
+.offer_05 .objBox .inner_obj{width:63.889vw;}
+.offer_06 .objBox .inner_obj{width:59.444vw;}
+.offer_07 .objBox .inner_obj{width:55vw;}
+.offer_08 .objBox .inner_obj{width:66.250vw;}
+.offer_09 .objBox .inner_obj{display:flex;}
+.offer_09 .objBox .inner_obj:nth-child(1) {margin-bottom:16px;}
+.offer_09 .objBox .inner_obj:nth-child(1) img {width:38.889vw;}
+.offer_09 .objBox .inner_obj:nth-child(1) img:last-child {margin-left:auto;}
+.offer_10 .objBox img:nth-child(1) {margin-bottom:8px;}
+
+.offer_04 .obj_btn {bottom:10.7%;}
+.offer_05 .obj_btn {bottom:6.7%;}
+.offer_08 .obj_btn {width:82%;height:12.6%;bottom:7.3%;}
+
+/* 패럴렉스 영역 */
+.podongParallax_wrap {background:#000;padding:30px 32px 60px;}
+.podongParallax_wrap .btm_ofr_tit {width:289px;margin:0 auto 12px;}
+.podongParallax_wrap .btm_ofr_tab {width:252px;margin:0 auto 30px;}
+#promotion {padding:0 !important;}
+.pin-spacer {margin-top:0 !important;}
+
+.podongParallax_wrap .guide-item img{width:100%}
+
+.podong_cnt_06 {background:#1A1D3D;padding:160px 0;}
+.podong_cnt_06 .podong_tit {margin-bottom:42px;}
+.podong_cnt_06 .podong-Swiper {position:relative;padding:0 0 50px;}
+.podong_cnt_06 .podong-Swiper .swiper-slide {width:296px !important;}
+.podong_cnt_06 .podong-Swiper .swiper-slide:before {content:'';width:100%;height:100%;background:#00000070;position:absolute;top:0;left:0;}
+.podong_cnt_06 .podong-Swiper .swiper-slide.swiper-slide-active:before {display:none;}
+.podong_cnt_06 .podong-Swiper .swiper-pagination .swiper-pagination-bullet {width:10px;height:10px;background:#808080;border-color:#808080;}
+.podong_cnt_06 .podong-Swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {background:#FF00A8;border-color:#FF00A8;}
+.podong_cnt_06 .podong-Swiper .swiper-pagination {position:absolute;bottom:0;}
+.podong_cnt_06 .podong-Swiper .swiper-button-next {width:45px;height:45px;background:url('../img/main/podong_slide_next_btn.png') no-repeat 0 0 / 100% auto;right:40.9%;transform:translateY(-50%);opacity:1;}
+.podong_cnt_06 .podong-Swiper .swiper-button-prev {width:45px;height:45px;background:url('../img/main/podong_slide_prev_btn_01.png') no-repeat 0 0 / 100% auto;left:40.9%;transform:translateY(-50%);opacity:1;}
+
+
+
+
+
+
+
+
+
+
+
+
